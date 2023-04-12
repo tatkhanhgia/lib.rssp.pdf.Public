@@ -1,1 +1,3 @@
-vn.mobileid.exsig.StringCoordinatesExtraction#<init>(LPdfReader;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#instance-init#
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

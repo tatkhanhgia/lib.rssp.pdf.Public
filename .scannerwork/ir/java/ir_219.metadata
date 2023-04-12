@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getLtvVerification()Lcom/itextpdf/text/pdf/security/LtvVerificationMI;
-com.itextpdf.text.pdf.security.LtvVerificationMI#instance-init#
-com.itextpdf.text.pdf.security.LtvVerificationMI#<init>(Lcom/itextpdf/text/pdf/PdfStamperMI;)V
+com.itextpdf.text.pdf.PdfStamperMI#mergeVerification()V

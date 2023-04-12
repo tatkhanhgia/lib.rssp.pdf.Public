@@ -1,1 +1,18 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCheckMark(Z[F)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getAppearance()LPdfTemplate;
+null
+java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+java.text.SimpleDateFormat#instance-init#
+java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;
+java.lang.StringBuilder#toString()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#createBlankN0()V
+java.lang.StringBuilder#instance-init#
+java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V
+java.lang.IllegalStateException#instance-init#
+java.lang.StringBuilder#<init>()V
+java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+java.lang.IllegalStateException#<init>(Ljava/lang/String;)V
+java.util.Calendar#getTime()Ljava/util/Date;
+java.lang.Math#min(II)I
+==
+getFieldName com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getFieldName()Ljava/lang/String;
+isInvisible com.itextpdf.text.pdf.PdfSignatureAppearanceMI#isInvisible()Z

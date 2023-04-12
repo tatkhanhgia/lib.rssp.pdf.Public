@@ -1,15 +1,15 @@
 
-Fvn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;µ
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaH H("1*¶
-1I I(€
-~
-I I(
-%0java.lang.String"__id*T
+Qvn.mobileid.exsig.PDFSignatureProperties#getSignerCertificate()Ljava/lang/String;µ
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaP P()"1*Â
+1Q Q( Œ
+‰
+Q Q( 
+%0java.lang.String"__id*_
 
-__unknown_file (8*6*
-(vn.mobileid.exsig.PDFSignatureProperties"
-reason"$
-I I(
+__unknown_file (C*A*
+(vn.mobileid.exsig.PDFSignatureProperties"
+signerCertificate"$
+Q Q(!
 
 %0java.lang.StringB,*
 (vn.mobileid.exsig.PDFSignatureProperties

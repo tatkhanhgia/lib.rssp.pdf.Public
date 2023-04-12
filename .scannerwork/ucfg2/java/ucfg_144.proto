@@ -1,9 +1,18 @@
 
-7vn.mobileid.exsig.PDFSignatureProperties#getFontSize()F·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java‚ ‚("1*%
+\vn.mobileid.exsig.PDFSignatureProperties#getTextAlignment()Lvn/mobileid/exsig/TextAlignment;·
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaŠ Š(,"1*â
 1
-ƒ ƒ("
+‹ ‹(™
+–
 
-ƒ ƒ(
-""B,*
-(vn.mobileid.exsig.PDFSignaturePropertiesP
+‹ ‹(%
+%0vn.mobileid.exsig.TextAlignment"__id*[
+
+__unknown_file (?*=*
+(vn.mobileid.exsig.PDFSignatureProperties"
+textAlignment"5
+
+‹ ‹('
+%
+%0vn.mobileid.exsig.TextAlignmentB,*
+(vn.mobileid.exsig.PDFSignatureProperties

@@ -1,1 +1,2 @@
-vn.mobileid.exsig.TextAlignment#<init>(Ljava/lang/String;II)V
+vn.mobileid.exsig.TextPlusY#length()I
+java.lang.String#length()I

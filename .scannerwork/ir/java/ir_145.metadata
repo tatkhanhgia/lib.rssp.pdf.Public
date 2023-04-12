@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#setImage([BLvn/mobileid/exsig/ImageProfile;Lvn/mobileid/exsig/ImageAlgin;)V
+vn.mobileid.exsig.PDFSignatureProperties#getLayer0Icon()[B

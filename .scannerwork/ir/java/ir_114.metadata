@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getPdfData()[B
+vn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;

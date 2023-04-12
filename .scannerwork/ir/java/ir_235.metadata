@@ -1,5 +1,4 @@
-vn.mobileid.exsig.TextPlusY#toString()Ljava/lang/String;
-java.lang.StringBuilder#instance-init#
-java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-java.lang.StringBuilder#<init>()V
-java.lang.StringBuilder#toString()Ljava/lang/String;
+vn.mobileid.exsig.TextPlusY#yCoordAt(I)F
+java.lang.IndexOutOfBoundsException#<init>()V
+java.lang.String#length()I
+java.lang.IndexOutOfBoundsException#instance-init#

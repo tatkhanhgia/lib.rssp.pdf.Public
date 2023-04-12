@@ -1,4 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#close()V
-null
-==
-mergeVerification com.itextpdf.text.pdf.PdfStamperMI#mergeVerification()V
+com.itextpdf.text.pdf.PdfStamperMI#getOverContent(I)LPdfContentByte;

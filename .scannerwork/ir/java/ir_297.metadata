@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getTopLayer()LPdfTemplate;
-null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCheckText(Z[F)V

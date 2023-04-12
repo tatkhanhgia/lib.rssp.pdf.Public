@@ -1,19 +1,18 @@
 
-Üvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$MyLocationTextExtractionStrategy#getMyPoints()Ljava/util/List;º
-ØC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/StringCoordinatesExtraction.javaÌ& Ì(1"1*¸
+pvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation#getText()Ljava/lang/String;º
+ØC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/StringCoordinatesExtraction.javaç ç(!"1*Á
 1
-Ó Ó(ƒ
-¡
+é é(≠
+™
 
-Ó Ó(
-%0java.util.List"__id*ñ
+é é(
+%0java.lang.String"__id*~
 
-__unknown_file (z*xj
-hvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$MyLocationTextExtractionStrategy"
+__unknown_file (b*`V
+Tvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation"
+Text"&
 
-myPoints"$
-
-Ó Ó( 
-
-%0java.util.ListBlj
-hvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$MyLocationTextExtractionStrategyH
+é é(
+
+%0java.lang.StringBXV
+Tvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocationH

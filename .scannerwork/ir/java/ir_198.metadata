@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#addJavaScript(Ljava/lang/String;Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;LPdfFileSpecification;)V

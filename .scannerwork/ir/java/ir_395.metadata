@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setMimeType(Ljava/lang/String;)V
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setSignDate(Ljava/util/Calendar;)V

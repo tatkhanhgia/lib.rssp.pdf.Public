@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setXmlLocator(LXmlLocator;)V
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setXpathConstructor(LXpathConstructor;)V

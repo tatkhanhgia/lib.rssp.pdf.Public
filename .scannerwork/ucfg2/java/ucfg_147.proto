@@ -1,18 +1,19 @@
 
-Pvn.mobileid.exsig.PDFSignatureProperties#getTextColor()Lvn/mobileid/exsig/Color;∑
-™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaé é( "1*Œ
+Hvn.mobileid.exsig.PDFSignatureProperties#getEncoding()Ljava/lang/String;∑
+™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javañ ñ( "1*ø
 1
-è è(ç
-ä
+ó ó(Ö
+Ç
 
-è è(
-%0vn.mobileid.exsig.Color"__id*W
+ó ó(
+%0java.lang.String"__id*V
 
-__unknown_file (;*9*
-(vn.mobileid.exsig.PDFSignatureProperties"
-	textColor"-
+__unknown_file (:*8*
+(vn.mobileid.exsig.PDFSignatureProperties"
 
-è è(
-
-%0vn.mobileid.exsig.ColorB,*
+encoding"&
+
+ó ó(
+
+%0java.lang.StringB,*
 (vn.mobileid.exsig.PDFSignatureProperties

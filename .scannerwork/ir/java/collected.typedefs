@@ -123,11 +123,7 @@ getVersion7com.itextpdf.text.pdf.security.PdfPKCS7V4#getVersion()I}
 verifySigAttributesBcom.itextpdf.text.pdf.security.PdfPKCS7V4#verifySigAttributes([B)Z]
 verifyTimestampImprintCcom.itextpdf.text.pdf.security.PdfPKCS7V4#verifyTimestampImprint()Zjava.lang.Object Ü
 -com.itextpdf.text.pdf.security.LtvTimestampMIA
-<init>7com.itextpdf.text.pdf.security.LtvTimestampMI#<init>()Vjava.lang.Object ü
-(vn.mobileid.exsig.TestConvertTextToImage<
-<init>2vn.mobileid.exsig.TestConvertTextToImage#<init>()VK
-mainCvn.mobileid.exsig.TestConvertTextToImage#main([Ljava/lang/String;)VV
-writeToFileGvn.mobileid.exsig.TestConvertTextToImage#writeToFile([BLjava/io/File;)Vjava.lang.Objectê
+<init>7com.itextpdf.text.pdf.security.LtvTimestampMI#<init>()Vjava.lang.Object ê
 vn.mobileid.exsig.ColorD
 getAwtColor5vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;W
 valueOfLvn.mobileid.exsig.Color#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/Color;D
@@ -343,7 +339,7 @@ getVersion8com.itextpdf.text.pdf.security.PdfPKCS7CMS#getVersion()I~
 -vn.mobileid.exsig.TextPlusYExtractionStrategyA
 <init>7vn.mobileid.exsig.TextPlusYExtractionStrategy#<init>()Vf
 getResultantTextRvn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantText()Ljava/lang/String;{
-getResultantTextPlusYbvn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantTextPlusY()Lvn/mobileid/exsig/TextPlusY; —
+getResultantTextPlusYbvn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantTextPlusY()Lvn/mobileid/exsig/TextPlusY; Á
 vn.mobileid.exsig.PdfProfileCMSU
 addLayer0IconDvn.mobileid.exsig.PdfProfileCMS#addLayer0Icon([BLjava/lang/String;)Vd
 appendSignautreQvn.mobileid.exsig.PdfProfileCMS#appendSignautre(Ljava/util/List;)Ljava/util/List;U
@@ -351,7 +347,7 @@ getVersion8com.itextpdf.text.pdf.security.PdfPKCS7CMS#getVersion()I~
 generateHash?vn.mobileid.exsig.PdfProfileCMS#generateHash(Ljava/util/List;)Vi
 generateHashMultipleFilesLvn.mobileid.exsig.PdfProfileCMS#generateHashMultipleFiles(Ljava/util/List;)V[
 setRevocationDataFvn.mobileid.exsig.PdfProfileCMS#setRevocationData([BLjava/util/List;)Va
-setSignerCertificateIvn.mobileid.exsig.PdfProfileCMS#setSignerCertificate(Ljava/lang/String;)Vvn.mobileid.exsig.PdfProfile —
+setSignerCertificateIvn.mobileid.exsig.PdfProfileCMS#setSignerCertificate(Ljava/lang/String;)Vjava.io.Serializablevn.mobileid.exsig.PdfProfile —
 vn.mobileid.exsig.CmsProfilea
 appendSignautreNvn.mobileid.exsig.CmsProfile#appendSignautre(Ljava/util/List;)Ljava/util/List;L
 generateHash<vn.mobileid.exsig.CmsProfile#generateHash(Ljava/util/List;)V b

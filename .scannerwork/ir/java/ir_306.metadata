@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getOriginalout()Ljava/io/OutputStream;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getTempFile()Ljava/io/File;

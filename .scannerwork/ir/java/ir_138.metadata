@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#isPlaceAll()Z
+vn.mobileid.exsig.PDFSignatureProperties#getPosition()Ljava/lang/String;

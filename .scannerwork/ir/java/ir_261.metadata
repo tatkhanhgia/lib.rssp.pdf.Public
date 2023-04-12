@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSignDate(Ljava/util/Calendar;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getUnderlyingSource()LRandomAccessSource;
+null

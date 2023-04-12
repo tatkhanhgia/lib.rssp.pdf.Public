@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setPageAction(LPdfName;LPdfAction;I)V
+com.itextpdf.text.pdf.PdfStamperMI#setTransition(LPdfTransition;I)V

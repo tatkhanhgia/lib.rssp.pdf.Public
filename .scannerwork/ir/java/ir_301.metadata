@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#createBlankN0()V
-null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setStamper(Lcom/itextpdf/text/pdf/PdfStamperMI;)V

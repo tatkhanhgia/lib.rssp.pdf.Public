@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;CZ)V
-null
+com.itextpdf.text.pdf.PdfStamperMI#setMoreInfo(Ljava/util/Map;)V

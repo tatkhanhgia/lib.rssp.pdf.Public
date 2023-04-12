@@ -69,6 +69,10 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
 
     private String signerCertificate;
 
+    public PdfProfileCMS() {
+        super();
+    }        
+    
     public PdfProfileCMS(Algorithm algorithm) {
         super(PdfForm.B, algorithm);
     }

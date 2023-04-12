@@ -1,31 +1,369 @@
 
->com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7()[B¹
-¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7CMS.java† †(!"1*ú
-1
-‡ ‡(ÒÏ
+4com.itextpdf.text.pdf.security.PdfPKCS7CMS#verify()Z¹
+¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7CMS.javaã ã("17"18"20*ð
+13
+ø5 ø(;
+}
 
-‡ ‡(J
-%0"scom.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7([BLTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B*J
+øS ø(]
+%17byte[]"__id*Z
+
+__unknown_file (>*<,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+
+digestAttrÖ
+Ó
+
+ø5 ø(^
+%18boolean"java.util.Arrays#equals([B[B)Z*0
+
+__unknown_file ("
+java.util.Arrays*6
+
+__unknown_file (
+
+msgDigestBytesbyte[]*+
+
+__unknown_file (
+
+%17byte[]*
+11*Å
+14
+ô$ ô(*{
+y
+
+ôB ô(I
+%8byte[]"__id*W
+
+__unknown_file (;*9,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"	
+RSAdataÔ
+Ñ
+
+ô$ ô(J
+%9boolean"java.util.Arrays#equals([B[B)Z*0
+
+__unknown_file ("
+java.util.Arrays*6
+
+__unknown_file (
+
+msgDigestBytesbyte[]**
+
+__unknown_file (
+
+%8byte[]˜
+•
+
+õ õ(!"
+%10java.security.MessageDigest"__id*]
+
+__unknown_file (A*?,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+encContDigest|
+z
+
+õ) õ(0
+%11byte[]"__id*W
+
+__unknown_file (;*9,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"	
+RSAdataÀ½
+
+õ õ(1
+%12void"'java.security.MessageDigest#update([B)V*@
+
+__unknown_file ($
+"
+%10java.security.MessageDigest*+
+
+__unknown_file (
+
+%11byte[]2
+update([B)˜
+•
+
+ö9 ö(F"
+%13java.security.MessageDigest"__id*]
+
+__unknown_file (A*?,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+encContDigest’
+
+ö9 ö(O
+%14byte[]"&java.security.MessageDigest#digest()[B*@
+
+__unknown_file ($
+"
+%13java.security.MessageDigest2digest()
+}
+
+öQ ö([
+%15byte[]"__id*Z
+
+__unknown_file (>*<,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+
+digestAttrË
+È
+
+ö+ ö(\
+%16boolean"java.util.Arrays#equals([B[B)Z*0
+
+__unknown_file ("
+java.util.Arrays*+
+
+__unknown_file (
+
+%14byte[]*+
+
+__unknown_file (
+
+%15byte[]*
+13* 
+15
+ï. ï(;—
+”
+
+ï. ï(;!
+%5java.security.MessageDigest"__id*]
+
+__unknown_file (A*?,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+messageDigest
+
+ï. ï(D
+%6byte[]"&java.security.MessageDigest#digest()[B*?
+
+__unknown_file (#
+!
+%5java.security.MessageDigest2digest()Z
+X
+
+ï ï(E
+msgDigestBytesbyte[]"__id**
+
+__unknown_file (
+
+%6byte[]{
+y
+
+ó ó(
+%7byte[]"__id*W
+
+__unknown_file (;*9,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"	
+RSAdata*
+13
+14*™
+16
+î# î(-~
+|
+
+î# î(-
+%4byte[]"__id*Z
+
+__unknown_file (>*<,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+
+sigAttrDer*
+4
+15*—
+17
+î î({
+y
+
+î î(
+%3byte[]"__id*W
+
+__unknown_file (;*9,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"	
+sigAttr*
+15
+16*³
+18
+è& è(4—
+”
+
+ê ê(%!
+%0java.security.MessageDigest"__id*]
+
+__unknown_file (A*?,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+messageDigest
+
+ê ê(.
+%1byte[]"&java.security.MessageDigest#digest()[B*?
+
+__unknown_file (#
+!
+%0java.security.MessageDigest2digest()N
+L
+
+ê ê(/
+mdbyte[]"__id**
+
+__unknown_file (
+
+%1byte[]M
+K
+
+ë ë(:
+	imphashedbyte[]"__id*"
+
+__unknown_file (
+""Ï
+Ì
+
+ì ì(7
+%2boolean"java.util.Arrays#equals([B[B)Z*0
+
+__unknown_file ("
+java.util.Arrays**
+
+__unknown_file (
+
+mdbyte[]*1
+
+__unknown_file (
+
+	imphashedbyte[]*
+1*%
+1
+ƒ	 ƒ	("
+
+„	 „	(
+""*Ü
+2
+€	 €	("Š
+‡
+
+€	 €	("
+%28java.security.Signature"__id*S
+
+__unknown_file (7*5,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+sig{
+y
+
+€	* €	(0
+%29byte[]"__id*V
+
+__unknown_file (:*8,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+digest»¸
+
+€	 €	(1
+%30boolean"#java.security.Signature#verify([B)Z*<
+
+__unknown_file ( 
+
+%28java.security.Signature*+
+
+__unknown_file (
+
+%29byte[]2
+verify([B)*
+1*Œ
+3
+þ þ(Š
+‡
+
+þ þ(
+%24java.security.Signature"__id*S
+
+__unknown_file (7*5,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+sig˜
+•
+
+þ þ(,"
+%25java.security.MessageDigest"__id*]
+
+__unknown_file (A*?,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+messageDigest’
+
+þ þ(5
+%26byte[]"&java.security.MessageDigest#digest()[B*@
+
+__unknown_file ($
+"
+%25java.security.MessageDigest2digest()¸µ
+
+þ þ(6
+%27void"#java.security.Signature#update([B)V*<
+
+__unknown_file ( 
+
+%24java.security.Signature*+
+
+__unknown_file (
+
+%26byte[]2
+update([B)*
+2*•
+4
+ý ý(|
+z
+
+ý ý(
+%23byte[]"__id*W
+
+__unknown_file (;*9,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"	
+RSAdata*
+2
+3*&
+20
+å å("
+
+å å( 
+""*ö
+10
+úD ú(W
+}
+
+úX ú(b
+%21byte[]"__id*Z
+
+__unknown_file (>*<,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+
+sigAttrDerÝ
+Ú
+
+úD ú(c
+%22boolean"Ccom.itextpdf.text.pdf.security.PdfPKCS7CMS#verifySigAttributes([B)Z*J
 
 __unknown_file (.,
-*com.itextpdf.text.pdf.security.PdfPKCS7CMS*"
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS*+
 
-__unknown_file (
-""*"
-
-__unknown_file (
-""*"
-
-__unknown_file (
-""*"
-
-__unknown_file (
-""*"
-
-__unknown_file (
-""2FgetEncodedPKCS7([BLTSAClient;[BLjava/util/Collection;LCryptoStandard;)"
+__unknown_file (
 
-‡ ‡(K
-
-%0B.,
-*com.itextpdf.text.pdf.security.PdfPKCS7CMSH
+%21byte[]*
+1*÷
+11
+ù ù(e|
+z
+
+ú8 ú(?
+%19byte[]"__id*W
+
+__unknown_file (;*9,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"	
+sigAttrÝ
+Ú
+
+ú$ ú(@
+%20boolean"Ccom.itextpdf.text.pdf.security.PdfPKCS7CMS#verifySigAttributes([B)Z*J
+
+__unknown_file (.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS*+
+
+__unknown_file (
+
+%19byte[]*
+10
+1B.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMSHP

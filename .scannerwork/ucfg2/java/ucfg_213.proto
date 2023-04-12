@@ -1,18 +1,19 @@
 
-Mcom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getContact()Ljava/lang/String;½
-°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.javaÛ Û("1*Ä
+Pcom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getSignDate()Ljava/util/Calendar;½
+°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.javaí í()"1*É
 1
-Ü Ü(Š
-‡
+î î(
+Š
 
-Ü Ü(
-%0java.lang.String"__id*[
+î î(
+%0java.util.Calendar"__id*\
 
-__unknown_file (?*=0
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"	
-contact"&
+__unknown_file (@*>0
+.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"
 
-Ü Ü(
-
-%0java.lang.StringB20
+signDate"(
+
+î î(
+
+%0java.util.CalendarB20
 .com.itextpdf.text.pdf.PdfSignatureAppearanceMIH

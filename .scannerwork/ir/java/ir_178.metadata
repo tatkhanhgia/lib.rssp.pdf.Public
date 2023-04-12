@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfStamperMI#setRotateContents(Z)V
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V
+null

@@ -1,4 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#addNamedDestination(Ljava/lang/String;ILPdfDestination;)Z
-null
-==
-getReader com.itextpdf.text.pdf.PdfStamperMI#getReader()LPdfReader;
+com.itextpdf.text.pdf.PdfStamperMI#<init>()V

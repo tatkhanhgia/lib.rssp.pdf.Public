@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getSignatureGraphic()LImage;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer(I)LPdfTemplate;
+null

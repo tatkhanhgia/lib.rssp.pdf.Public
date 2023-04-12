@@ -1,5 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setVisibleSignature(LRectangle;ILjava/lang/String;)V
-null
-java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V
-java.lang.String#indexOf(I)I
-java.lang.IllegalArgumentException#instance-init#
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getRenderingMode()Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$RenderingMode;

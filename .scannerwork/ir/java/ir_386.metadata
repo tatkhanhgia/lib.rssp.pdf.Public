@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#<init>(LPdfStamperImp;)V
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getStamper()Lcom/itextpdf/text/pdf/PdfStamperMI;

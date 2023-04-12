@@ -1,27 +1,15 @@
 
-Jcom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getTempFile()Ljava/io/File;½
-°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.java¼
- ¼
-("1*½
+=com.itextpdf.text.pdf.PdfSignatureAppearanceMI#isPreClosed()Z½
+°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.javaù
+ ù
+("1*%
 1
-½
- ½
-(‡
-„
+ú
+ ú
+("
 
-½
- ½
-(
-%0java.io.File"__id*\
-
-__unknown_file (@*>0
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"
-
-tempFile""
-
-½
- ½
-(
-
-%0java.io.FileB20
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMIH
+ú
+ ú
+(
+""B20
+.com.itextpdf.text.pdf.PdfSignatureAppearanceMIHP

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setImage(LImage;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setImageScale(F)V

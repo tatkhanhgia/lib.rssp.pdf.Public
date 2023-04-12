@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getXpathConstructor()LXpathConstructor;
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#close()V

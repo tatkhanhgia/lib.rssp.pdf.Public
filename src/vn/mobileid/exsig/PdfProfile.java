@@ -155,6 +155,14 @@ public class PdfProfile extends Profile {
     protected transient Map<Integer, String> pageAndPosition;
     protected transient float[] boxSize;
 
+    public PdfProfile() throws NullPointerException {
+        super(PdfForm.B, Algorithm.SHA256);
+        this.textContent = "KÝ BỞI: {signby}\nLÝ DO: {reason}\nNƠI KÝ: {location}\nNGÀY KÝ: {date}";
+        this.fontName = DefaultFont.Times.getPath();
+        this.fontSize = 13;
+        this.header = "Mobile-ID Remote Signing service by:";
+    }  
+    
     public PdfProfile(PdfForm form, Algorithm algorithm) {
         super(form, algorithm);
         this.textContent = "KÝ BỞI: {signby}\nLÝ DO: {reason}\nNƠI KÝ: {location}\nNGÀY KÝ: {date}";

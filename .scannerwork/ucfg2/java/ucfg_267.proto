@@ -1,45 +1,114 @@
 
-Qcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithm()Ljava/lang/String;¹
-¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7CMS.javaú ú($"1*î
+mcom.itextpdf.text.pdf.security.PdfPKCS7CMS#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;¹
+¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7CMS.java» »(#"4*°
+2
+À À(!ÜÙ
+
+À. À(B
+%3java.lang.String"Qcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithm()Ljava/lang/String;*J
+
+__unknown_file (.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS2getDigestAlgorithm()‡
+„
+
+ÀD À(L
+%4java.lang.String"__id*X
+
+__unknown_file (<*:,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+
+provider·
+´
+
+À À(M
+%5java.security.Signature"bjava.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;*7
+
+__unknown_file ("
+java.security.Signature*4
+
+__unknown_file (
+
+%3java.lang.String*4
+
+__unknown_file (
+
+%4java.lang.Stringw
+u
+
+À À(M$
+	signaturejava.security.Signature"__id*;
+
+__unknown_file (
+
+%5java.security.Signature*
+1*Þ
+3
+¾ ¾(!ÜÙ
+
+¾. ¾(B
+%1java.lang.String"Qcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithm()Ljava/lang/String;*J
+
+__unknown_file (.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS2getDigestAlgorithm()ï
+ì
+
+¾ ¾(C
+%2java.security.Signature"Pjava.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;*7
+
+__unknown_file ("
+java.security.Signature*4
+
+__unknown_file (
+
+%1java.lang.Stringw
+u
+
+¾ ¾(C$
+	signaturejava.security.Signature"__id*;
+
+__unknown_file (
+
+%2java.security.Signature*
+1*
+4
+¼ ¼(^
+\
+
+¼ ¼($
+	signaturejava.security.Signature"__id*"
+
+__unknown_file (
+""‡
+„
+
+½ ½(
+%0java.lang.String"__id*X
+
+__unknown_file (<*:,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+
+provider*
+2
+3*Ë
 1
-û û(ØÕ
+Â Â(ƒ€
 
-û û(!
-%0java.lang.String"Ocom.itextpdf.text.pdf.security.PdfPKCS7CMS#getHashAlgorithm()Ljava/lang/String;*J
+Â Â(
+
+%6void"=java.security.Signature#initSign(Ljava/security/PrivateKey;)V*B
 
-__unknown_file (.,
-*com.itextpdf.text.pdf.security.PdfPKCS7CMS2getHashAlgorithm()p
-n
-
-û û(*
-%1java.lang.String"__concat*&
-
-û û(!
-
-%0java.lang.String*
-
-û$ û(*
-withäá
-
-û- û(E
-%2java.lang.String"Ucom.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncryptionAlgorithm()Ljava/lang/String;*J
+__unknown_file (&
+$
+	signaturejava.security.Signature*=
 
-__unknown_file (.,
-*com.itextpdf.text.pdf.security.PdfPKCS7CMS2getEncryptionAlgorithm()€
-~
+__unknown_file (!
+
+keyjava.security.PrivateKey2$initSign(Ljava/security/PrivateKey;)"4
 
-û û(E
-%3java.lang.String"__concat*&
+Ã Ã(&
+$
+	signaturejava.security.Signature:-
 
-û û(*
-
-%1java.lang.String*&
-
-û- û(E
-
-%2java.lang.String"&
-
-û û(F
-
-%3java.lang.StringB.,
-*com.itextpdf.text.pdf.security.PdfPKCS7CMSH
+»$ »(2
+keyjava.security.PrivateKeyB.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS

@@ -1,2 +1,3 @@
-com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V
-null
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption(ILjava/lang/String;Ljava/lang/String;I)V
+==
+setEncryption com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V

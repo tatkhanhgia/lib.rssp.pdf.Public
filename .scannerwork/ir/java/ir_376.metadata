@@ -1,1 +1,2 @@
-vn.mobileid.exsig.PdfProfileCMS#setSignerCertificate(Ljava/lang/String;)V
+vn.mobileid.exsig.PdfProfileCMS#checkLock(LPdfDictionary;)Z
+null

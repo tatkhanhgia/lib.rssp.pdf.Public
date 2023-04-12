@@ -1,18 +1,18 @@
 
-Lvn.mobileid.exsig.PDFSignatureProperties#getPageAndPosition()Ljava/util/Map;·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java«# «(5"1*À
+5vn.mobileid.exsig.PDFSignatureProperties#getImage()[B·
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java³ ³("1*¦
 1
-¬ ¬(‰
-†
+´ ´(w
+u
 
-¬ ¬(
-%0java.util.Map"__id*]
+´ ´(
+%0byte[]"__id*S
 
-__unknown_file (A*?*
-(vn.mobileid.exsig.PDFSignatureProperties"
-pageAndPosition"#
+__unknown_file (7*5*
+(vn.mobileid.exsig.PDFSignatureProperties"
+image"
 
-¬ ¬(
-
-%0java.util.MapB,*
+´ ´(
+
+%0byte[]B,*
 (vn.mobileid.exsig.PDFSignatureProperties

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setFieldLockDict(LPdfSigLockDictionary;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSigPosList(Ljava/util/List;)V

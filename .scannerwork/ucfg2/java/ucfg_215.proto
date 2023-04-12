@@ -1,19 +1,16 @@
 
-Pcom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getSignDate()Ljava/util/Calendar;½
-°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.javaí í()"1*É
+Tcom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getRangeStream()Ljava/io/InputStream;½
+°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.java (%"1*ç
 1
-î î(
-Š
+( (G¿
+¼
 
-î î(
-%0java.util.Calendar"__id*\
+‘3 ‘(H
+%0"Xcom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getUnderlyingSource()LRandomAccessSource;*N
 
-__unknown_file (@*>0
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"
+__unknown_file (20
+.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"
 
-signDate"(
-
-î î(
-
-%0java.util.CalendarB20
+‘ ‘(R
+""B20
 .com.itextpdf.text.pdf.PdfSignatureAppearanceMIH
