@@ -1154,9 +1154,9 @@ public class PdfSignatureAppearanceMI {
                         rect.getWidth() / 2 + MARGIN,
                         0,
                         rect.getRight(),
-                        rect.getHeight() - (rect.getHeight() * (1 - TOP_SECTION))));                
+                        rect.getHeight() - (rect.getHeight() * (1 - TOP_SECTION))));
             } else {
-                t.setBoundingBox(new Rectangle(ctPosition[0], ctPosition[1], ctPosition[2], ctPosition[3]));                
+                t.setBoundingBox(new Rectangle(ctPosition[0], ctPosition[1], ctPosition[2], ctPosition[3]));
             }
             writer.addDirectTemplateSimple(t, new PdfName("n4"));
             Font font;
@@ -1740,7 +1740,10 @@ public class PdfSignatureAppearanceMI {
                 }
                 if (originalout != null) {
                     try {
-                        tempFile.delete();
+                        if (!tempFile.delete()) {
+                            originalout.close();
+                            return;
+                        }
                     } catch (Exception ee) {
                     }
                 }
