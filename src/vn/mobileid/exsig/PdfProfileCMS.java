@@ -39,12 +39,14 @@ import com.itextpdf.text.pdf.security.PdfPKCS7;
 import com.itextpdf.text.pdf.security.PdfPKCS7CMS;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
+import java.awt.SecondaryLoop;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -61,7 +63,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author Minhgalc
  */
-public class PdfProfileCMS extends PdfProfile {
+public class PdfProfileCMS extends PdfProfile implements Serializable{
 
     private transient final Logger log = LoggerFactory.getLogger(PdfProfileCMS.class);
 
