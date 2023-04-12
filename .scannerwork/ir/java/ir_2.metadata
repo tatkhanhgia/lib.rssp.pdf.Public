@@ -1,0 +1,7 @@
+com.itextpdf.text.pdf.security.LtvVerificationMI#addVerification(Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;)Z
+com.itextpdf.text.pdf.security.LtvVerificationMI$ValidationData#<init>()V
+java.lang.IllegalStateException#instance-init#
+java.lang.IllegalStateException#<init>(Ljava/lang/String;)V
+com.itextpdf.text.pdf.security.LtvVerificationMI$ValidationData#instance-init#
+com.itextpdf.text.pdf.security.LtvVerificationMI#getSignatureHashKey(Ljava/lang/String;)LPdfName;
+com.itextpdf.text.pdf.security.LtvVerificationMI#buildOCSPResponse([B)[B

@@ -1,0 +1,4 @@
+com.itextpdf.text.pdf.security.PdfPKCS7_v4#getDigestAlgorithm()Ljava/lang/String;
+==
+getHashAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7_v4#getHashAlgorithm()Ljava/lang/String;
+getEncryptionAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7_v4#getEncryptionAlgorithm()Ljava/lang/String;

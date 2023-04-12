@@ -1,0 +1,2 @@
+com.itextpdf.text.pdf.security.PdfPKCS7_CMS#update([BII)V
+java.security.Signature#update([BII)V

@@ -1,0 +1,3 @@
+com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getEncodedPKCS7()[B
+==
+getEncodedPKCS7 com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getEncodedPKCS7([BLTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B

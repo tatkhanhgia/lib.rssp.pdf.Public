@@ -1,0 +1,5 @@
+com.itextpdf.text.pdf.security.PdfPKCS7_v4#verify()Z
+java.security.Signature#update([B)V
+java.security.Signature#verify([B)Z
+java.util.Arrays#equals([B[B)Z
+com.itextpdf.text.pdf.security.PdfPKCS7_v4#verifySigAttributes([B)Z

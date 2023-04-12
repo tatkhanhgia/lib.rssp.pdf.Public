@@ -1,0 +1,3 @@
+com.itextpdf.text.pdf.PdfStamperMI#addSignature(Ljava/lang/String;IFFFF)LPdfFormField;
+==
+addAnnotation com.itextpdf.text.pdf.PdfStamperMI#addAnnotation(LPdfAnnotation;I)V

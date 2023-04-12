@@ -1,0 +1,3 @@
+com.itextpdf.text.pdf.security.LtvVerificationMI#merge()V
+com.itextpdf.text.pdf.security.LtvVerificationMI#updateDss()V
+com.itextpdf.text.pdf.security.LtvVerificationMI#createDss()V

@@ -1,0 +1,5 @@
+com.itextpdf.text.pdf.security.LtvVerificationMI#getSignatureHashKey(Ljava/lang/String;)LPdfName;
+null
+java.io.ByteArrayInputStream#instance-init#
+java.io.ByteArrayInputStream#<init>([B)V
+com.itextpdf.text.pdf.security.LtvVerificationMI#hashBytesSha1([B)[B

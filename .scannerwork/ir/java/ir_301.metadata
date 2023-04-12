@@ -1,0 +1,3 @@
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getRangeStream()Ljava/io/InputStream;
+null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getUnderlyingSource()LRandomAccessSource;

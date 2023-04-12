@@ -1,0 +1,2 @@
+com.itextpdf.text.pdf.security.LtvVerificationMI#hashBytesSha1([B)[B
+java.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;

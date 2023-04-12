@@ -1,0 +1,43 @@
+
+Dcom.itextpdf.text.pdf.security.LtvVerificationMI#hashBytesSha1([B)[B¿
+²C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/LtvVerificationMI.java¹ ¹('"1*Û
+1
+º º((ï
+ì
+
+º º(<!
+%0java.security.MessageDigest"Xjava.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;*;
+
+__unknown_file ("
+java.security.MessageDigest*$
+
+__unknown_file (
+SHA1x
+v
+
+º º(=!
+shjava.security.MessageDigest"__id*?
+
+__unknown_file (#
+!
+%0java.security.MessageDigest¿¼
+
+» »(
+%1byte[]"(java.security.MessageDigest#digest([B)[B*?
+
+__unknown_file (#
+!
+shjava.security.MessageDigest*)
+
+__unknown_file (
+
+bbyte[]2
+digest([B)"
+
+» »(
+
+%1byte[]:
+
+¹( ¹(0
+bbyte[]B4"2
+0com.itextpdf.text.pdf.security.LtvVerificationMI

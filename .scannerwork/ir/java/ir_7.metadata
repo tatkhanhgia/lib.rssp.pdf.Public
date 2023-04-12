@@ -1,0 +1,4 @@
+com.itextpdf.text.pdf.security.LtvVerificationMI#updateDss()V
+null
+com.itextpdf.text.pdf.security.LtvVerificationMI#deleteOldReferences(LPdfArray;LPdfArray;)V
+com.itextpdf.text.pdf.security.LtvVerificationMI#outputDss(LPdfDictionary;LPdfDictionary;LPdfArray;LPdfArray;LPdfArray;)V
