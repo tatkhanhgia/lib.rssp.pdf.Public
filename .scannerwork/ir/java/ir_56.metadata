@@ -1,5 +1,2 @@
-vn.mobileid.exsig.PdfProfile#getPersonalID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;
-null
-java.lang.String#length()I
-java.lang.String#substring(I)Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#containsHTMLChars(Ljava/lang/String;)Z
 java.lang.String#contains(Ljava/lang/CharSequence;)Z

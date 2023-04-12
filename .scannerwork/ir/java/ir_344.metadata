@@ -1,5 +1,4 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#verify()Z
-java.security.Signature#update([B)V
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#verifySigAttributes([B)Z
-java.security.Signature#verify([B)Z
-java.util.Arrays#equals([B[B)Z
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#buildUnauthenticatedAttributes([B)LASN1EncodableVector;
+null
+java.io.ByteArrayInputStream#instance-init#
+java.io.ByteArrayInputStream#<init>([B)V

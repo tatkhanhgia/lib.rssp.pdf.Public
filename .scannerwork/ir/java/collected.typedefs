@@ -27,10 +27,9 @@
 valuesDvn.mobileid.exsig.ImageAlgin#values()[Lvn/mobileid/exsig/ImageAlgin;java.lang.Enumz
 vn.mobileid.exsig.TextFinderH
 <init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.Object&
-"com.itextpdf.text.pdf.AcroFieldsV4 b
-vn.mobileid.exsig.PdfVerify/
-<init>%vn.mobileid.exsig.PdfVerify#<init>()Vjava.lang.Object Ù"
-vn.mobileid.exsig.PdfProfileR
+"com.itextpdf.text.pdf.AcroFieldsV4 ¶#
+vn.mobileid.exsig.PdfProfile0
+<init>&vn.mobileid.exsig.PdfProfile#<init>()VR
 addLayer0IconAvn.mobileid.exsig.PdfProfile#addLayer0Icon([BLjava/lang/String;)Vx
 addMoreSignaturePosition\vn.mobileid.exsig.PdfProfile#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;)VI
 addRootCertificate3vn.mobileid.exsig.PdfProfile#addRootCertificate(Z)Va
@@ -77,7 +76,9 @@ setDSImagezvn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobile
 setVisibleSignatureivn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ví
 setVisibleSignature{vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VÅ
 setVisibleSignaturejvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Vk
-setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)V Ö
+setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)V b
+vn.mobileid.exsig.PdfVerify/
+<init>%vn.mobileid.exsig.PdfVerify#<init>()Vjava.lang.Object Ö
 vn.mobileid.exsig.TextPlusXY0
 <init>&vn.mobileid.exsig.TextPlusXY#<init>()V2
 getPage'vn.mobileid.exsig.TextPlusXY#getPage()I,
@@ -339,8 +340,9 @@ getVersion8com.itextpdf.text.pdf.security.PdfPKCS7CMS#getVersion()I~
 -vn.mobileid.exsig.TextPlusYExtractionStrategyA
 <init>7vn.mobileid.exsig.TextPlusYExtractionStrategy#<init>()Vf
 getResultantTextRvn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantText()Ljava/lang/String;{
-getResultantTextPlusYbvn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantTextPlusY()Lvn/mobileid/exsig/TextPlusY; Á
-vn.mobileid.exsig.PdfProfileCMSU
+getResultantTextPlusYbvn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantTextPlusY()Lvn/mobileid/exsig/TextPlusY; ú
+vn.mobileid.exsig.PdfProfileCMS3
+<init>)vn.mobileid.exsig.PdfProfileCMS#<init>()VU
 addLayer0IconDvn.mobileid.exsig.PdfProfileCMS#addLayer0Icon([BLjava/lang/String;)Vd
 appendSignautreQvn.mobileid.exsig.PdfProfileCMS#appendSignautre(Ljava/util/List;)Ljava/util/List;U
 checkPermissionBvn.mobileid.exsig.PdfProfileCMS#checkPermission(Ljava/util/List;)ZO

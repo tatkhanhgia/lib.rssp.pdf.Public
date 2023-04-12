@@ -1,7 +1,6 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;
 java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#initVerify(Ljava/security/PublicKey;)V
 java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;
+java.security.Signature#initSign(Ljava/security/PrivateKey;)V
 ==
 getDigestAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;
-getFilterSubtype com.itextpdf.text.pdf.security.PdfPKCS7V4#getFilterSubtype()LPdfName;

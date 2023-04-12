@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getOcsp()LBasicOCSPResp;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getCRLs()Ljava/util/Collection;

@@ -1,15 +1,15 @@
 
-Qcom.itextpdf.text.pdf.XmlSignatureAppearanceMI#getDescription()Ljava/lang/String;»
-°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/XmlSignatureAppearanceMI.javan n( "1*Â
-1o o(Œ
-‰
-o o(
-%0java.lang.String"__id*_
+_com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getCertificate()Ljava/security/cert/Certificate;»
+°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/XmlSignatureAppearanceMI.javaf f(%"1*â
+1g g(ž
+›
+g g($
+%0java.security.cert.Certificate"__id*c
 
-__unknown_file (C*A0
-.com.itextpdf.text.pdf.XmlSignatureAppearanceMI"
-description"$
-o o(
-
-%0java.lang.StringB20
+__unknown_file (G*E0
+.com.itextpdf.text.pdf.XmlSignatureAppearanceMI"
+signCertificate"2
+g g(&
+$
+%0java.security.cert.CertificateB20
 .com.itextpdf.text.pdf.XmlSignatureAppearanceMIH

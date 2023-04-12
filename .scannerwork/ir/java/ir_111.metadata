@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#instance-init#
-java.util.Calendar#getInstance()Ljava/util/Calendar;
+vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;

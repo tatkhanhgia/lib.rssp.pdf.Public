@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfile#sign(LSigningMethodSync;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+vn.mobileid.exsig.PdfProfile#createTemporalFile(LSigningMethodAsync;Ljava/util/List;Ljava/util/List;)[B

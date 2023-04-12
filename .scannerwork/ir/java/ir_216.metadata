@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#markUsed(LPdfObject;)V
+com.itextpdf.text.pdf.PdfStamperMI#getPdfLayers()Ljava/util/Map;

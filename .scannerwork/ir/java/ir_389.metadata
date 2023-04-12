@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getCertificate()Ljava/security/cert/Certificate;
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setStamper(Lcom/itextpdf/text/pdf/PdfStamperMI;)V

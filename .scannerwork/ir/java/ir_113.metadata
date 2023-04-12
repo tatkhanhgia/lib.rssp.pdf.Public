@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#setPdfData([B)V
+vn.mobileid.exsig.PDFSignatureProperties#getPdfData()[B

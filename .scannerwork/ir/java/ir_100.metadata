@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#findOcsp(LASN1Sequence;)V
-null
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getOcsp()LBasicOCSPResp;

@@ -1,1 +1,2 @@
-vn.mobileid.exsig.CmsProfile#<init>(LPKCS7Form;LAlgorithm;)V
+vn.mobileid.exsig.PdfProfileCMS#checkLock(LPdfDictionary;)Z
+null

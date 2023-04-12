@@ -1,5 +1,2 @@
-vn.mobileid.exsig.TextPlusY#charAt(I)C
-java.lang.IndexOutOfBoundsException#<init>()V
+vn.mobileid.exsig.TextPlusY#length()I
 java.lang.String#length()I
-java.lang.String#charAt(I)C
-java.lang.IndexOutOfBoundsException#instance-init#

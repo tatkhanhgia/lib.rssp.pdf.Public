@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getPage()I
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getFieldName()Ljava/lang/String;

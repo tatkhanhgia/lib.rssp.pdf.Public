@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getSignerCertificate()Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#setReason(Ljava/lang/String;)V

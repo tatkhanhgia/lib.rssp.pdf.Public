@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getFontSize()F
+vn.mobileid.exsig.PDFSignatureProperties#getFontName()Ljava/lang/String;

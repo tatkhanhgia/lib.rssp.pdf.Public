@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+vn.mobileid.exsig.PDFSignatureProperties#getTimeMillis()J

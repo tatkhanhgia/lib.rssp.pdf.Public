@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#setSignName(Ljava/lang/String;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSignName()Ljava/lang/String;

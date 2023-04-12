@@ -1,2 +1,2 @@
-com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BIZ)V
 null

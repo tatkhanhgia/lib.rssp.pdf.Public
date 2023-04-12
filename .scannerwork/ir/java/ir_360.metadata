@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.SignaturePosition#getPage()I
+com.itextpdf.text.pdf.SignaturePosition#<init>(ILRectangle;)V

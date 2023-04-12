@@ -1,1 +1,2 @@
-vn.mobileid.exsig.PDFSignatureProperties#getPdfData()[B
+vn.mobileid.exsig.PDFSignatureProperties#instance-init#
+java.util.Calendar#getInstance()Ljava/util/Calendar;

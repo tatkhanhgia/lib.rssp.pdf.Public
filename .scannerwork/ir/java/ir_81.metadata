@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithmOid()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSigningInfoVersion()I

@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#makePackage(LPdfName;)V
-null
+com.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;LPdfFileSpecification;)V

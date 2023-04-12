@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#isEmbedded()Z
+vn.mobileid.exsig.PDFSignatureProperties#getEncoding()Ljava/lang/String;

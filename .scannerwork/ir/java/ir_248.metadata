@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getReason()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getCertificationLevel()I

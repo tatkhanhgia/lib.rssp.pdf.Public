@@ -1,1 +1,2 @@
-vn.mobileid.exsig.TextAlignment#instance-init#
+com.itextpdf.text.pdf.security.MakeSignatureMI#signDeferred(LPdfReader;Ljava/lang/String;Ljava/io/OutputStream;LExternalSignatureContainer;)V
+null

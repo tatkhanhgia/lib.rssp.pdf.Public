@@ -1,6 +1,5 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#initSign(Ljava/security/PrivateKey;)V
-==
-getDigestAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithm()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#setExternalDigest([B[BLjava/lang/String;)V
+null
+java.security.NoSuchAlgorithmException#instance-init#
+java.lang.String#equals(Ljava/lang/Object;)Z
+java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V

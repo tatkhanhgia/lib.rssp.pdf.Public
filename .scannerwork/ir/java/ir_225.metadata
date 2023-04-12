@@ -1,5 +1,6 @@
-com.itextpdf.text.pdf.security.MakeSignatureMI#signExternalContainer(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;LExternalSignatureContainer;I)V
+com.itextpdf.text.pdf.security.MakeSignatureMI#signDetached(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;LExternalDigest;LExternalSignature;[Ljava/security/cert/Certificate;Ljava/util/Collection;LOcspClient;LTSAClient;ILMakeSignature/CryptoStandard;LSignaturePolicyIdentifier;)V
 null
+com.itextpdf.text.pdf.security.MakeSignatureMI#processCrl(Ljava/security/cert/Certificate;Ljava/util/Collection;)Ljava/util/Collection;
 java.util.HashMap#<init>()V
 java.io.IOException#instance-init#
 java.io.IOException#<init>(Ljava/lang/String;)V

@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobileid/exsig/DefaultFont;Lvn/mobileid/exsig/DefaultFont;)V
-vn.mobileid.exsig.DefaultFont#getValue()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#setTextContent(Ljava/lang/String;FF)V

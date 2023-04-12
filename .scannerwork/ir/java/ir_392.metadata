@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getMimeType()Ljava/lang/String;
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setDescription(Ljava/lang/String;)V

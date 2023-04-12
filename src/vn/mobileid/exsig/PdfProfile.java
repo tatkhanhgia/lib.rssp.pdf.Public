@@ -156,7 +156,7 @@ public class PdfProfile extends Profile {
     protected transient float[] boxSize;
 
     public PdfProfile() throws NullPointerException {
-        super(PdfForm.B, Algorithm.SHA256);
+        super();
         this.textContent = "KÝ BỞI: {signby}\nLÝ DO: {reason}\nNƠI KÝ: {location}\nNGÀY KÝ: {date}";
         this.fontName = DefaultFont.Times.getPath();
         this.fontSize = 13;

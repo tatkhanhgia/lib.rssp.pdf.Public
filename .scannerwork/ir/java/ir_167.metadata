@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setMoreInfo(Ljava/util/Map;)V
+com.itextpdf.text.pdf.PdfStamperMI#getMoreInfo()Ljava/util/Map;

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer2Font()LFont;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer2Text()Ljava/lang/String;

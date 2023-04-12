@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#setImage([BLvn/mobileid/exsig/ImageProfile;)V
+vn.mobileid.exsig.PDFSignatureProperties#getImageAlign()Lvn/mobileid/exsig/ImageAlgin;

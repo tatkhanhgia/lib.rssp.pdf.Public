@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfStamperMI#makePackage(LPdfCollection;)V
+com.itextpdf.text.pdf.PdfStamperMI#makePackage(LPdfName;)V
+null

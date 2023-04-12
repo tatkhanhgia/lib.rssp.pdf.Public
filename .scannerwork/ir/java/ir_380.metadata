@@ -1,7 +1,1 @@
-vn.mobileid.exsig.CmsProfile#generateHash(Ljava/util/List;)V
-null
-java.lang.String#instance-init#
-java.util.Calendar#getInstance()Ljava/util/Calendar;
-java.io.ByteArrayInputStream#instance-init#
-java.io.ByteArrayInputStream#<init>([B)V
-java.lang.String#<init>(Ljava/lang/String;)V
+vn.mobileid.exsig.CmsProfile#<init>(LPKCS7Form;LAlgorithm;)V

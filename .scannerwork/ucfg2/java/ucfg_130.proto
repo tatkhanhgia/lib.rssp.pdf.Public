@@ -1,19 +1,18 @@
 
-Vvn.mobileid.exsig.PDFSignatureProperties#getImageAlign()Lvn/mobileid/exsig/ImageAlgin;∑
-™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaª ª(&"1*Ÿ
+Zvn.mobileid.exsig.PDFSignatureProperties#getImageProfile()Lvn/mobileid/exsig/ImageProfile;∑
+™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java∑ ∑(*"1*ﬂ
 1
-º º(ì
-ê
+∏ ∏(ó
+î
 
-º º("
-%0vn.mobileid.exsig.ImageAlgin"__id*X
+∏ ∏($
+%0vn.mobileid.exsig.ImageProfile"__id*Z
 
-__unknown_file (<*:*
-(vn.mobileid.exsig.PDFSignatureProperties"
+__unknown_file (>*<*
+(vn.mobileid.exsig.PDFSignatureProperties"
+imageProfile"4
 
-imageAlign"2
-
-º º($
-"
-%0vn.mobileid.exsig.ImageAlginB,*
+∏ ∏(&
+$
+%0vn.mobileid.exsig.ImageProfileB,*
 (vn.mobileid.exsig.PDFSignatureProperties

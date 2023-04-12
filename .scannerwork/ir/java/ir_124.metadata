@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getTimeFormat()Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#setSigningTime(Ljava/util/Calendar;Ljava/lang/String;)V

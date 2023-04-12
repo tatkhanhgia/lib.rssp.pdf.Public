@@ -1,2 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addFieldMDP(LPdfDictionary;LPdfDictionary;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addDocMDP(LPdfDictionary;)V
 null

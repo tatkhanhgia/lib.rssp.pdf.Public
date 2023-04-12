@@ -1,1 +1,2 @@
-vn.mobileid.exsig.PdfVerify#instance-init#
+vn.mobileid.exsig.PdfProfile#checkLock(LPdfDictionary;)Z
+null

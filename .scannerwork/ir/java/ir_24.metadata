@@ -1,2 +1,2 @@
-vn.mobileid.exsig.PdfProfile#<init>(LPdfForm;LAlgorithm;)V
+vn.mobileid.exsig.PdfProfile#<init>()V
 vn.mobileid.exsig.DefaultFont#getPath()Ljava/lang/String;

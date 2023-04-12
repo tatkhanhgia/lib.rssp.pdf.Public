@@ -1,5 +1,4 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#setExternalDigest([B[BLjava/lang/String;)V
-null
-java.security.NoSuchAlgorithmException#instance-init#
-java.lang.String#equals(Ljava/lang/Object;)Z
-java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;
+==
+getHashAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getHashAlgorithm()Ljava/lang/String;
+getEncryptionAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncryptionAlgorithm()Ljava/lang/String;

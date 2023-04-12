@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfile#setTextContent(Ljava/lang/String;)V
+vn.mobileid.exsig.PdfProfile#setCertified(Z)V

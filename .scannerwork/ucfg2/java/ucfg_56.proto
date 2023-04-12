@@ -1,229 +1,215 @@
 
-bvn.mobileid.exsig.PdfProfile#getPersonalID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;«
-žC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PdfProfile.java   ( "11*™
+Cvn.mobileid.exsig.PdfProfile#containsHTMLChars(Ljava/lang/String;)Z«
+žC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PdfProfile.javaã ã(%"11*%
+2
+í í("
+
+í í(
+""*Ú
 3
-± ±("T
-R
+ì ì(S
+Q
 
-±- ±(@
-%14java.lang.String"__id*%
+ì$ ì(A
+%16java.lang.String"__id*$
 
-__unknown_file (	
-CCCD:wu
+__unknown_file (
+</u>ëè
 
-±- ±(I
-
-%15int"java.lang.String#length()I*5
+ì ì(B
+%17boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
 
-__unknown_file (
-
-%14java.lang.String2length()ÊÇ
-
-± ±(J
-%16java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*7
-
-__unknown_file (
-
-valuejava.lang.String*(
-
-__unknown_file (
-
-
-%15int2substring(I)g
-e
-
-± ±(J
-resultjava.lang.String"__id*5
+__unknown_file (
+
+contentjava.lang.String*5
 
 __unknown_file (
 
-%16java.lang.String*
-1*Ü
+%16java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+1*Ù
 4
-° °(T
+ë ë(R
+P
+
+ë$ ë(C
+%14java.lang.String"__id*#
+
+__unknown_file (
+<u>ëè
+
+ë ë(D
+%15boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
+
+__unknown_file (
+
+contentjava.lang.String*5
+
+__unknown_file (
+
+%14java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+3*Û
+5
+ê ê(T
 R
 
-°# °(6
+ê$ ê(C
 %12java.lang.String"__id*%
 
 __unknown_file (	
-CCCD:éæ
+</bi>ëè
 
-° °(7
-%13boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*7
+ê ê(D
+%13boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
 
-__unknown_file (
-
-valuejava.lang.String*5
-
-__unknown_file (
-
-%12java.lang.String2"contains(Ljava/lang/CharSequence;)*	
-3
-8
-1*•
-5
-­ ­("Q
-O
-
-­- ­(J
-%9java.lang.String"__id*#
-
-__unknown_file (
-HC:vt
-
-­- ­(S
-
-%10int"java.lang.String#length()I*4
-
-__unknown_file (
-
-%9java.lang.String2length()ÊÇ
-
-­ ­(T
-%11java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*7
-
-__unknown_file (
-
-valuejava.lang.String*(
-
-__unknown_file (
-
-
-%10int2substring(I)g
-e
-
-­ ­(T
-resultjava.lang.String"__id*5
+__unknown_file (
+
+contentjava.lang.String*5
 
 __unknown_file (
 
-%11java.lang.String*
-1*Ô
+%12java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+4*Ú
 6
-¬ ¬(Q
+é é(S
+Q
+
+é$ é(E
+%10java.lang.String"__id*$
+
+__unknown_file (
+<bi>ëè
+
+é é(F
+%11boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
+
+__unknown_file (
+
+contentjava.lang.String*5
+
+__unknown_file (
+
+%10java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+5*×
+7
+è è(R
+P
+
+è$ è(>
+%8java.lang.String"__id*$
+
+__unknown_file (
+</i>éæ
+
+è è(?
+%9boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
+
+__unknown_file (
+
+contentjava.lang.String*4
+
+__unknown_file (
+
+%8java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+6*Ö
+8
+ç ç(Q
 O
 
-¬# ¬(@
-%7java.lang.String"__id*#
+ç$ ç(@
+%6java.lang.String"__id*#
 
 __unknown_file (
-HC:çä
+<i>éæ
 
-¬ ¬(A
-%8boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*7
+ç ç(A
+%7boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
 
-__unknown_file (
-
-valuejava.lang.String*4
+__unknown_file (
+
+contentjava.lang.String*4
 
 __unknown_file (
 
-%7java.lang.String2"contains(Ljava/lang/CharSequence;)*
-4
-5*“
-7
-© ©("S
-Q
+%6java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+7*×
+9
+æ æ(R
+P
 
-©- ©(A
-%4java.lang.String"__id*%
+æ$ æ(<
+%4java.lang.String"__id*$
 
-__unknown_file (	
-CMND:us
+__unknown_file (
+</b>éæ
 
-©- ©(J	
-%5int"java.lang.String#length()I*4
+æ æ(=
+%5boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
+
+__unknown_file (
+
+contentjava.lang.String*4
 
 __unknown_file (
 
-%4java.lang.String2length()ÈÅ
+%4java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+8*×
+10
+å å(Q
+O
 
-© ©(K
-%6java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*7
+å$ å(>
+%2java.lang.String"__id*#
 
-__unknown_file (
-
-valuejava.lang.String*'
-
-__unknown_file (
-	
-%5int2substring(I)f
-d
+__unknown_file (
+<b>éæ
 
-© ©(K
-resultjava.lang.String"__id*4
+å å(?
+%3boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
 
-__unknown_file (
-
-%6java.lang.String*
-1*«
-8
-¦@ ¦(CS
-Q
-
-§ §(N
-valuejava.lang.String"__id*"
-
-__unknown_file (
-""S
-Q
-
-¨# ¨(7
-%2java.lang.String"__id*%
-
-__unknown_file (	
-CMND:çä
-
-¨ ¨(8
-%3boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*7
-
-__unknown_file (
-
-valuejava.lang.String*4
+__unknown_file (
+
+contentjava.lang.String*4
 
 __unknown_file (
 
 %2java.lang.String2"contains(Ljava/lang/CharSequence;)*
-6
-7*˜
-10
-£, £(0ÔÑ
-
-£, £(?
-%0java.security.Principal"Jjava.security.cert.X509Certificate#getSubjectDN()Ljava/security/Principal;*H
-
-__unknown_file (,
-*
-cert"java.security.cert.X509Certificate2getSubjectDN()¦£
-
-£, £(J
-%1java.lang.String"4java.security.Principal#toString()Ljava/lang/String;*;
-
-__unknown_file (
-
-%0java.security.Principal2
-toString()*
-8
-1*q
+2
+9*Ú
 11
-¡ ¡(V
-T
+ä ä(S
+Q
 
-¡ ¡(
-resultjava.lang.String"__id*$
+ä ä('
+%0java.lang.String"__id*%
 
-__unknown_file (
-NULL*
-10
-1*;
+__unknown_file (	
+<br/>éæ
+
+ä ä((
+%1boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*9
+
+__unknown_file (
+
+contentjava.lang.String*4
+
+__unknown_file (
+
+%0java.lang.String2"contains(Ljava/lang/CharSequence;)*
+2
+10*%
 1
-¶ ¶("*
+ï ï("
 
-¶ ¶(
-
-resultjava.lang.String:8
+ï ï(
+"":)
 
- !  (5*
-cert"java.security.cert.X509CertificateB 
-vn.mobileid.exsig.PdfProfile
+ã& ã(4
+contentjava.lang.StringB 
+vn.mobileid.exsig.PdfProfileP

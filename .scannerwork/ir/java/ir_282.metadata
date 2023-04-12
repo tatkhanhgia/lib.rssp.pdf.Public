@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setReuseAppearance(Z)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer(I)LPdfTemplate;
+null

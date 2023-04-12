@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getText()Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#getBoxSize()Ljava/lang/String;

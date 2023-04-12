@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#setTextContent(Ljava/lang/String;)V
+vn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;

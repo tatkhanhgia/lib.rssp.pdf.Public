@@ -1,18 +1,18 @@
 
-Gvn.mobileid.exsig.PDFSignatureProperties#getBoxSize()Ljava/lang/String;∑
-™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaü ü("1*æ
+Fvn.mobileid.exsig.PDFSignatureProperties#getOffset()Ljava/lang/String;∑
+™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaõ õ("1*Ω
 1
-† †(Ñ
-Å
+ú ú(É
+Ä
 
-† †(
-%0java.lang.String"__id*U
+ú ú(
+%0java.lang.String"__id*T
 
-__unknown_file (9*7*
-(vn.mobileid.exsig.PDFSignatureProperties"	
-boxSize"&
+__unknown_file (8*6*
+(vn.mobileid.exsig.PDFSignatureProperties"
+offset"&
 
-† †(
+ú ú(
 
 %0java.lang.StringB,*
 (vn.mobileid.exsig.PDFSignatureProperties

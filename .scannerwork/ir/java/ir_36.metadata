@@ -1,1 +1,3 @@
-vn.mobileid.exsig.PdfProfile#setCheckText(Z)V
+vn.mobileid.exsig.PdfProfile#setCheckMark(ZLjava/lang/String;)V
+==
+setCheckMarkPosition vn.mobileid.exsig.PdfProfile#setCheckMarkPosition(Ljava/lang/String;)V

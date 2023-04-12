@@ -1,18 +1,18 @@
 
-ncom.itextpdf.text.pdf.PdfStamperMI#getXmlSignatureAppearance()Lcom/itextpdf/text/pdf/XmlSignatureAppearanceMI;±
-¤C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfStamperMI.java´$ ´(="1*ö
+kcom.itextpdf.text.pdf.PdfStamperMI#getSignatureAppearance()Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;±
+¤C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfStamperMI.java¬$ ¬(:"1*ó
 1
-µ µ(ž
-›
+­ ­(›
+˜
 
-µ µ(4
-%0.com.itextpdf.text.pdf.XmlSignatureAppearanceMI"__id*Q
+­ ­(4
+%0.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"__id*N
 
-__unknown_file (5*3$
-"com.itextpdf.text.pdf.PdfStamperMI"
-	sigXmlApp"D
+__unknown_file (2*0$
+"com.itextpdf.text.pdf.PdfStamperMI"
+sigApp"D
 
-µ µ(6
+­ ­(6
 4
-%0.com.itextpdf.text.pdf.XmlSignatureAppearanceMIB&$
+%0.com.itextpdf.text.pdf.PdfSignatureAppearanceMIB&$
 "com.itextpdf.text.pdf.PdfStamperMIH

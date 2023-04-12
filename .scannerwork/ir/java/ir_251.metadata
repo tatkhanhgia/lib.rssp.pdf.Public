@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLocation()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setReasonCaption(Ljava/lang/String;)V

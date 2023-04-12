@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getCertificationLevel()I
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCertificationLevel(I)V
