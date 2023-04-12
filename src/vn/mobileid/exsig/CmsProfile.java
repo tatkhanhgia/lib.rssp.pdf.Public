@@ -175,7 +175,7 @@ class CmsVerify {
                 Collection x509CertCollection = certStore.getMatches(new Selector() {
                     @Override
                     public Object clone() {
-                        return null;
+                        return new Object();
                     }
 
                     @Override

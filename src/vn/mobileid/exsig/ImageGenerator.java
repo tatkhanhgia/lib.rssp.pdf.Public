@@ -125,7 +125,7 @@ public class ImageGenerator {
         Color color = new Color(0, 0, 0);
         BufferedImage border = CreateBackground(width, height);
         Graphics2D graphics = (Graphics2D) border.getGraphics();
-        graphics.setStroke(new BasicStroke(height / 30));
+        graphics.setStroke(new BasicStroke((float)height / 30));
         graphics.setColor(color);
         int boxCoordinate = (height - height * 4 / 5) / 2;
         int h1 = height - 2 * boxCoordinate;
@@ -140,7 +140,7 @@ public class ImageGenerator {
                 new FontPath()
                         .getClass()
                         .getResourceAsStream(titleFont))
-                .deriveFont((float) (height / 12));
+                .deriveFont((float) ((double)height / 12));
         
         graphics.setPaint(color);
         graphics.setFont(title);
@@ -207,6 +207,7 @@ public class ImageGenerator {
             } catch (IOException exx) {
                 exx.printStackTrace();
                 Logger.getLogger(ImageGenerator.class.getName()).log(Level.SEVERE, null, exx);
+                return;
             }
             int width = bi.getWidth() + bi2.getWidth();
             int height = bi2.getHeight();
@@ -251,7 +252,7 @@ public class ImageGenerator {
         Color color = new Color(0, 0, 0);
         BufferedImage border = CreateBackground(width, height);
         Graphics2D graphics = (Graphics2D) border.getGraphics();
-        graphics.setStroke(new BasicStroke(height / 30));
+        graphics.setStroke(new BasicStroke((float)height / 30));
         graphics.setColor(color);
         int boxCoordinate = (height - height * 4 / 5) / 2;        
         int h1 = height - 2 * boxCoordinate;
@@ -267,7 +268,7 @@ public class ImageGenerator {
         Font title = Font.createFont(
                 Font.TRUETYPE_FONT,
                 new File(titleFont))
-                .deriveFont((float) (height / 12));
+                .deriveFont((float) ((double)height / 12));
         
         graphics.setPaint(color);
         graphics.setFont(title);
@@ -317,7 +318,7 @@ public class ImageGenerator {
         graphics.setFont(sig);
 
 //        graphics.drawString(temp, fixSpace, height / 2);
-        graphics.drawString(temp, 0, height / 2);
+        graphics.drawString(temp, 0, (float)height / 2);
         
         byte[] bArray;
         try ( ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
@@ -346,7 +347,7 @@ public class ImageGenerator {
         Color color = new Color(0, 0, 0);
         BufferedImage border = CreateBackground(width, height);
         Graphics2D graphics = (Graphics2D) border.getGraphics();
-        graphics.setStroke(new BasicStroke(height / 30));
+        graphics.setStroke(new BasicStroke((float)height / 30));
         graphics.setColor(color);
         int boxCoordinate = (height - height * 4 / 5) / 2;
         int h1 = height - 2 * boxCoordinate;
@@ -359,7 +360,7 @@ public class ImageGenerator {
         Font title = Font.createFont(
                 Font.TRUETYPE_FONT,
                 titleFont)
-                .deriveFont((float) (height / 12));
+                .deriveFont((float) ((double)height / 12));
         
         graphics.setPaint(color);
         graphics.setFont(title);
@@ -391,7 +392,7 @@ public class ImageGenerator {
         graphics.setFont(sig);
 
 //        graphics.drawString(temp, fixSpace, height / 2);
-        graphics.drawString(temp, 0, height / 2);
+        graphics.drawString(temp, 0, (float)height / 2);
         
         byte[] bArray;
         try ( ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
@@ -420,7 +421,7 @@ public class ImageGenerator {
         Color color = new Color(0, 0, 0);
         BufferedImage border = CreateBackground(width, height);
         Graphics2D graphics = (Graphics2D) border.getGraphics();
-        graphics.setStroke(new BasicStroke(height / 30));
+        graphics.setStroke(new BasicStroke((float)height / 30));
         graphics.setColor(color);
         int boxCoordinate = (height - height * 4 / 5) / 2;
         int h1 = height - 2 * boxCoordinate;
@@ -436,7 +437,7 @@ public class ImageGenerator {
                 Font.TRUETYPE_FONT,
                 input
         )
-                .deriveFont((float) (height / 12));
+                .deriveFont((float) ((double)height / 12));
         
         graphics.setPaint(color);
         graphics.setFont(title);
@@ -485,7 +486,7 @@ public class ImageGenerator {
         graphics.setFont(sig);
 
 //        graphics.drawString(temp, fixSpace, height / 2);
-        graphics.drawString(temp, 0, height / 2);
+        graphics.drawString(temp, 0,(float) height / 2);
         
         byte[] bArray;
         try ( ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
@@ -516,6 +517,7 @@ public class ImageGenerator {
             } catch (IOException exx) {
                 exx.printStackTrace();
                 Logger.getLogger(ImageGenerator.class.getName()).log(Level.SEVERE, null, exx);
+                return;
             }
             int width = bi.getWidth() + bi2.getWidth();
             int height = bi2.getHeight();
