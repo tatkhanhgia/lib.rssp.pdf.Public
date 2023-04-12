@@ -84,7 +84,9 @@ public class AcroFields_v4 extends AcroFields {
             throw new ExceptionConverter(e);
         } finally {
             try {
-                rg.close();
+                if (rg != null) {
+                    rg.close();
+                }
             } catch (IOException ex) {
                 Logger.getLogger(AcroFields_v4.class.getName()).log(Level.SEVERE, null, ex);
             }
