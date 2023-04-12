@@ -11,17 +11,17 @@ import java.io.IOException;
  *
  * @author USER
  */
-public class PdfReader_v4 extends PdfReader{
+public class PdfReaderV4 extends PdfReader{
 
-    public PdfReader_v4(byte[] src) throws IOException {
+    public PdfReaderV4(byte[] src) throws IOException {
         super(src);
     }
     
-    public PdfReader_v4(byte[] src , byte[] password) throws IOException {
+    public PdfReaderV4(byte[] src , byte[] password) throws IOException {
         super(src, password);
     }
     
-    public AcroFields_v4 getAcroFields_v4() {
-        return new AcroFields_v4(this, null);
+    public AcroFieldsV4 getAcroFields_v4() {
+        return new AcroFieldsV4(this, null);
     }
 }

@@ -10,7 +10,7 @@ import com.itextpdf.text.pdf.security.DigestAlgorithms;
 import com.itextpdf.text.pdf.security.MakeSignature;
 import com.itextpdf.text.pdf.security.OcspClient;
 import com.itextpdf.text.pdf.security.OcspClientBouncyCastle;
-import com.itextpdf.text.pdf.security.PdfPKCS7_v4;
+import com.itextpdf.text.pdf.security.PdfPKCS7V4;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
 import java.io.ByteArrayInputStream;
@@ -88,7 +88,7 @@ public class CmsProfile extends Profile {
 
         for (int i = 0; i < otherList.size(); i++) {
             BouncyCastleDigest digest = new BouncyCastleDigest();
-            PdfPKCS7_v4 sgn = new PdfPKCS7_v4(null, cert, algorithm.getValue(), null, digest, false);
+            PdfPKCS7V4 sgn = new PdfPKCS7V4(null, cert, algorithm.getValue(), null, digest, false);
 
             byte[] extSignature = Base64.decode(signatureList.get(i));
             sgn.setExternalDigest(extSignature, null, "RSA");
@@ -122,7 +122,7 @@ public class CmsProfile extends Profile {
         X509Certificate[] cert = this.certificates.toArray(new X509Certificate[certificates.size()]);
         for (int i = 0; i < dataToBeSign.size(); i++) {
             BouncyCastleDigest digest = new BouncyCastleDigest();
-            PdfPKCS7_v4 sgn = new PdfPKCS7_v4(null, cert, algorithm.getValue(), null, digest, false);
+            PdfPKCS7V4 sgn = new PdfPKCS7V4(null, cert, algorithm.getValue(), null, digest, false);
             byte[] hash = DigestAlgorithms.digest(
                     new ByteArrayInputStream(dataToBeSign.get(i)), digest.getMessageDigest(algorithm.getValue())
             );

@@ -23,7 +23,7 @@ import com.itextpdf.text.io.RandomAccessSource;
 import com.itextpdf.text.io.RandomAccessSourceFactory;
 import com.itextpdf.text.io.StreamUtil;
 import com.itextpdf.text.pdf.AcroFields;
-import com.itextpdf.text.pdf.AcroFields_v4;
+import com.itextpdf.text.pdf.AcroFieldsV4;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.ByteBuffer;
 import com.itextpdf.text.pdf.ColumnText;
@@ -34,7 +34,7 @@ import com.itextpdf.text.pdf.PdfNumber;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.PdfReader_v4;
+import com.itextpdf.text.pdf.PdfReaderV4;
 import com.itextpdf.text.pdf.PdfSignatureAppearanceMI;
 import com.itextpdf.text.pdf.PdfStamperMI;
 import com.itextpdf.text.pdf.PdfTemplate;
@@ -50,7 +50,7 @@ import com.itextpdf.text.pdf.security.MakeSignatureMI;
 import com.itextpdf.text.pdf.security.OcspClient;
 import com.itextpdf.text.pdf.security.OcspClientBouncyCastle;
 import com.itextpdf.text.pdf.security.PdfPKCS7;
-import com.itextpdf.text.pdf.security.PdfPKCS7_v4;
+import com.itextpdf.text.pdf.security.PdfPKCS7V4;
 import com.itextpdf.text.pdf.security.SignaturePermissions;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
@@ -1724,15 +1724,15 @@ class PdfVerify {
 
     public List<VerifyResult> verifySignature(byte[] signedData, String password, boolean revocationEnabled) {
         try {
-            PdfReader_v4.unethicalreading = true;
-            PdfReader_v4 reader;
+            PdfReaderV4.unethicalreading = true;
+            PdfReaderV4 reader;
             if (password == null) {
-                reader = new PdfReader_v4(signedData);
+                reader = new PdfReaderV4(signedData);
             } else {
-                reader = new PdfReader_v4(signedData, password.getBytes());
+                reader = new PdfReaderV4(signedData, password.getBytes());
             }
             Security.addProvider(new BouncyCastleProvider());
-            AcroFields_v4 acroFields = reader.getAcroFields_v4();
+            AcroFieldsV4 acroFields = reader.getAcroFields_v4();
             List<String> signatureNames = acroFields.getSignatureNames();
             List<VerifyResult> verifyResults = new ArrayList<>();
 
@@ -1748,7 +1748,7 @@ class PdfVerify {
                     boolean valid = true;
                     try {
                         form = "CMS";
-                        PdfPKCS7_v4 pkcs7 = acroFields.verifySignature_v4(signatureNames.get(i), "BC");
+                        PdfPKCS7V4 pkcs7 = acroFields.verifySignature_v4(signatureNames.get(i), "BC");
 //                        List<AcroFields_v4.FieldPosition> pos = acroFields.getFieldPositions(name);
                         if (!pkcs7.verify()) {
                             valid = false;

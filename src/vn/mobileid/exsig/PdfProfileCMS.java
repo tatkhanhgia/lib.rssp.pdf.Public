@@ -36,7 +36,7 @@ import com.itextpdf.text.pdf.security.ExternalSignatureContainer;
 import com.itextpdf.text.pdf.security.MakeSignature;
 import com.itextpdf.text.pdf.security.MakeSignatureMI;
 import com.itextpdf.text.pdf.security.PdfPKCS7;
-import com.itextpdf.text.pdf.security.PdfPKCS7_CMS;
+import com.itextpdf.text.pdf.security.PdfPKCS7CMS;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
 import java.io.ByteArrayInputStream;
@@ -318,7 +318,7 @@ public class PdfProfileCMS extends PdfProfile {
             RandomAccessSource readerSource = reader.getSafeFile().createSourceView();
             InputStream rg = new RASInputStream(new RandomAccessSourceFactory().createRanged(readerSource, gaps));
             BouncyCastleDigest digest = new BouncyCastleDigest();
-            PdfPKCS7_CMS sgn = new PdfPKCS7_CMS(null, null, algorithm.getValue(), null, digest, false);
+            PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
             byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, ocsp, crls, MakeSignature.CryptoStandard.CMS);
@@ -541,7 +541,7 @@ public class PdfProfileCMS extends PdfProfile {
             RandomAccessSource readerSource = reader.getSafeFile().createSourceView();
             InputStream rg = new RASInputStream(new RandomAccessSourceFactory().createRanged(readerSource, gaps));
             BouncyCastleDigest digest = new BouncyCastleDigest();
-            PdfPKCS7_CMS sgn = new PdfPKCS7_CMS(null, null, algorithm.getValue(), null, digest, false);
+            PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
             byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, ocsp, crls, MakeSignature.CryptoStandard.CMS);

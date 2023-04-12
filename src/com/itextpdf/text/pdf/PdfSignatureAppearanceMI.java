@@ -1741,8 +1741,7 @@ public class PdfSignatureAppearanceMI {
                 if (originalout != null) {
                     try {
                         if (!tempFile.delete()) {
-                            originalout.close();
-                            return;
+                            originalout.close();                            
                         }
                     } catch (Exception ee) {
                     }

@@ -8,7 +8,7 @@ package com.itextpdf.text.pdf;
 import com.itextpdf.text.ExceptionConverter;
 import com.itextpdf.text.io.RASInputStream;
 import com.itextpdf.text.io.RandomAccessSourceFactory;
-import com.itextpdf.text.pdf.security.PdfPKCS7_v4;
+import com.itextpdf.text.pdf.security.PdfPKCS7V4;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.Level;
@@ -18,13 +18,13 @@ import java.util.logging.Logger;
  *
  * @author USER
  */
-public class AcroFields_v4 extends AcroFields {
+public class AcroFieldsV4 extends AcroFields {
 
-    public AcroFields_v4(PdfReader_v4 reader, PdfWriter writer) {
+    public AcroFieldsV4(PdfReaderV4 reader, PdfWriter writer) {
         super(reader, writer);
     }
 
-    public PdfPKCS7_v4 verifySignature_v4(String name, String provider) {
+    public PdfPKCS7V4 verifySignature_v4(String name, String provider) {
         PdfDictionary v = getSignatureDictionary(name);
         if (v == null) {
             return null;
@@ -32,22 +32,22 @@ public class AcroFields_v4 extends AcroFields {
         try {
             PdfName sub = v.getAsName(PdfName.SUBFILTER);
             PdfString contents = v.getAsString(PdfName.CONTENTS);
-            PdfPKCS7_v4 pk = null;
+            PdfPKCS7V4 pk = null;
             if (sub.equals(PdfName.ADBE_X509_RSA_SHA1)) {
                 PdfString cert = v.getAsString(PdfName.CERT);
                 if (cert == null) {
                     cert = v.getAsArray(PdfName.CERT).getAsString(0);
                 }
-                pk = new PdfPKCS7_v4(contents.getOriginalBytes(), cert.getBytes(), provider);
+                pk = new PdfPKCS7V4(contents.getOriginalBytes(), cert.getBytes(), provider);
             } else {
-                pk = new PdfPKCS7_v4(contents.getOriginalBytes(), sub, provider);
+                pk = new PdfPKCS7V4(contents.getOriginalBytes(), sub, provider);
             }
             updateByteRange(pk, v);
             PdfString str = v.getAsString(PdfName.M);
             if (str != null) {
                 pk.setSignDate(PdfDate.decode(str.toString()));
             }
-            PdfObject obj = PdfReader_v4.getPdfObject(v.get(PdfName.NAME));
+            PdfObject obj = PdfReaderV4.getPdfObject(v.get(PdfName.NAME));
             if (obj != null) {
                 if (obj.isString()) {
                     pk.setSignName(((PdfString) obj).toUnicodeString());
@@ -69,7 +69,7 @@ public class AcroFields_v4 extends AcroFields {
         }
     }
 
-    private void updateByteRange(PdfPKCS7_v4 pkcs7, PdfDictionary v) {
+    private void updateByteRange(PdfPKCS7V4 pkcs7, PdfDictionary v) {
         PdfArray b = v.getAsArray(PdfName.BYTERANGE);
         RandomAccessFileOrArray rf = reader.getSafeFile();
         InputStream rg = null;
@@ -88,7 +88,7 @@ public class AcroFields_v4 extends AcroFields {
                     rg.close();
                 }
             } catch (IOException ex) {
-                Logger.getLogger(AcroFields_v4.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AcroFieldsV4.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
