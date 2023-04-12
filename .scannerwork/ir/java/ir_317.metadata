@@ -1,4 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setVisibleSignature(Ljava/lang/String;)V
-null
-java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V
-java.lang.IllegalArgumentException#instance-init#
+vn.mobileid.exsig.Test#main([Ljava/lang/String;)V
+vn.mobileid.exsig.Test#testShowTextAlignedVsSimpleColumnTopAlignment()V

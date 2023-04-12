@@ -1,5 +1,3 @@
-vn.mobileid.exsig.PdfProfile#getEnterpriseID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#verifyTimestampImprint()Z
 null
-java.lang.String#length()I
-java.lang.String#substring(I)Ljava/lang/String;
-java.lang.String#contains(Ljava/lang/CharSequence;)Z
+java.util.Arrays#equals([B[B)Z

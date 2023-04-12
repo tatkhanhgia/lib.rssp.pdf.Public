@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setStamper(Lcom/itextpdf/text/pdf/PdfStamperMI;)V
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#update([BII)V
+java.security.Signature#update([BII)V

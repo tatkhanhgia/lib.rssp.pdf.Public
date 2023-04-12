@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setTransition(LPdfTransition;I)V
+com.itextpdf.text.pdf.PdfStamperMI#markUsed(LPdfObject;)V

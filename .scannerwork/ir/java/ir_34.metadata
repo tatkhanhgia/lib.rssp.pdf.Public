@@ -1,7 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#initVerify(Ljava/security/PublicKey;)V
-java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;
-==
-getFilterSubtype com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getFilterSubtype()LPdfName;
-getDigestAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getDigestAlgorithm()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#setCheckMark(Z)V

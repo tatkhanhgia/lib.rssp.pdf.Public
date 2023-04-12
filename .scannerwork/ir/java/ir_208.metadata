@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#makePackage(LPdfCollection;)V
+com.itextpdf.text.pdf.PdfStamperMI#isFullCompression()Z

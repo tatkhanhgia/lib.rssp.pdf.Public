@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getContact()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getTopLayer()LPdfTemplate;
+null

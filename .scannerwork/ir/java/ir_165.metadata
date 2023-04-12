@@ -1,1 +1,2 @@
-vn.mobileid.exsig.PDFSignatureProperties#getFont()Lvn/mobileid/exsig/DefaultFont;
+com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;)V
+null

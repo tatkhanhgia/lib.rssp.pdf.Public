@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getHashAlgorithm()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#setSignInitial(Z)V

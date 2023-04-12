@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getDigestAlgorithmOid()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#setSigningTime(Ljava/util/Calendar;Ljava/lang/String;)V

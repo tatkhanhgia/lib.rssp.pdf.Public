@@ -1,4 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#buildUnauthenticatedAttributes([B)LASN1EncodableVector;
-null
-java.io.ByteArrayInputStream#instance-init#
-java.io.ByteArrayInputStream#<init>([B)V
+vn.mobileid.exsig.PdfProfile#setReason(Ljava/lang/String;)V

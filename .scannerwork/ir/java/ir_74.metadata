@@ -1,3 +1,1 @@
-vn.mobileid.exsig.PdfProfile#setCheckText(ZLjava/lang/String;)V
-==
-setCheckTextPosition vn.mobileid.exsig.PdfProfile#setCheckTextPosition(Ljava/lang/String;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#setReason(Ljava/lang/String;)V

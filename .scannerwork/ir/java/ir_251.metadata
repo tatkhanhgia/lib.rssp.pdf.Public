@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#getLocation()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setReason(Ljava/lang/String;)V

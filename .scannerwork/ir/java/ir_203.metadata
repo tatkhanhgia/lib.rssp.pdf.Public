@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#addJavaScript(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfStamperMI#setViewerPreferences(I)V

@@ -2,6 +2,4 @@ vn.mobileid.exsig.CmsProfile#appendSignautre(Ljava/util/List;)Ljava/util/List;
 null
 java.util.ArrayList#<init>()V
 java.util.Calendar#getInstance()Ljava/util/Calendar;
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#instance-init#
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#<init>(Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;Ljava/lang/String;Lcom/itextpdf/text/pdf/security/ExternalDigest;Z)V
 java.util.ArrayList#instance-init#

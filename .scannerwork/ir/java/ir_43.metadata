@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getSignCertificateChain()[Ljava/security/cert/Certificate;
+vn.mobileid.exsig.PdfProfile#setTextContent(Ljava/lang/String;FF)V

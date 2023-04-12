@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfReader_v4#<init>([B)V
+com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;CZ)V
+null

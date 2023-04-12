@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setEncryption(ZLjava/lang/String;Ljava/lang/String;I)V
-==
-setEncryption com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BIZ)V
+com.itextpdf.text.pdf.PdfStamperMI#getAcroFields()LAcroFields;

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#replacePage(LPdfReader;II)V
+com.itextpdf.text.pdf.PdfStamperMI#getOverContent(I)LPdfContentByte;

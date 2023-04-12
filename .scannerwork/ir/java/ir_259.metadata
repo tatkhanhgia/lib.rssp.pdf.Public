@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#getDigestEncryptionAlgorithmOid()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setContact(Ljava/lang/String;)V

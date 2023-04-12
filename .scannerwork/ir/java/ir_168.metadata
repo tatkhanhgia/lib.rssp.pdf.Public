@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfReader_v4#<init>([B[B)V
+com.itextpdf.text.pdf.PdfStamperMI#getMoreInfo()Ljava/util/Map;

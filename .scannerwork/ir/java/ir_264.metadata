@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#update([BII)V
-java.security.Signature#update([BII)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addDeveloperExtension(LPdfDeveloperExtension;)V

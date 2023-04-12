@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#setSignDate(Ljava/util/Calendar;)V
+vn.mobileid.exsig.PdfProfile#setBackground(Lvn/mobileid/exsig/Color;)V
+vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;

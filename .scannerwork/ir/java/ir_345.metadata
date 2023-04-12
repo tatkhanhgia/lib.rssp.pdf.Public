@@ -1,1 +1,4 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getOriginalout()Ljava/io/OutputStream;
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#buildUnauthenticatedAttributes([B)LASN1EncodableVector;
+null
+java.io.ByteArrayInputStream#instance-init#
+java.io.ByteArrayInputStream#<init>([B)V

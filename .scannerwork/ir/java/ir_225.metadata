@@ -1,3 +1,2 @@
-com.itextpdf.text.pdf.PdfStamperMI#getLtvVerification()Lcom/itextpdf/text/pdf/security/LtvVerificationMI;
-com.itextpdf.text.pdf.security.LtvVerificationMI#instance-init#
-com.itextpdf.text.pdf.security.LtvVerificationMI#<init>(Lcom/itextpdf/text/pdf/PdfStamperMI;)V
+com.itextpdf.text.pdf.security.MakeSignatureMI#signDetached(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;LExternalDigest;LExternalSignature;[Ljava/security/cert/Certificate;Ljava/util/Collection;LOcspClient;LTSAClient;ILMakeSignature/CryptoStandard;LSignaturePolicyInfo;)V
+com.itextpdf.text.pdf.security.MakeSignatureMI#signDetached(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;LExternalDigest;LExternalSignature;[Ljava/security/cert/Certificate;Ljava/util/Collection;LOcspClient;LTSAClient;ILMakeSignature/CryptoStandard;LSignaturePolicyInfo;)V

@@ -13,43 +13,7 @@
 getPath9vn.mobileid.exsig.DefaultFont#getPath()Ljava/lang/String;F
 getValue:vn.mobileid.exsig.DefaultFont#getValue()Ljava/lang/String;c
 valueOfXvn.mobileid.exsig.DefaultFont#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/DefaultFont;P
-valuesFvn.mobileid.exsig.DefaultFont#values()[Lvn/mobileid/exsig/DefaultFont;java.lang.Enum¥
-+com.itextpdf.text.pdf.security.PdfPKCS7_CMSU
-<init>Kcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#<init>([B[BLjava/lang/String;)VV
-getCRLsKcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getCRLs()Ljava/util/Collection;q
-getCertificates^com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getCertificates()[Ljava/security/cert/Certificate;h
-getDigestAlgorithmRcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getDigestAlgorithm()Ljava/lang/String;n
-getDigestAlgorithmOidUcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getDigestAlgorithmOid()Ljava/lang/String;Ç
-getDigestEncryptionAlgorithmOid_com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getDigestEncryptionAlgorithmOid()Ljava/lang/String;R
-getEncodedPKCS1?com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getEncodedPKCS1()[BR
-getEncodedPKCS7?com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getEncodedPKCS7()[BT
-getEncodedPKCS7Acom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getEncodedPKCS7([B)[Bp
-getEncryptionAlgorithmVcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getEncryptionAlgorithm()Ljava/lang/String;d
-getHashAlgorithmPcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getHashAlgorithm()Ljava/lang/String;Z
-getLocationKcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getLocation()Ljava/lang/String;V
-	getReasonIcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getReason()Ljava/lang/String;Å
-getSignCertificateChainfcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getSignCertificateChain()[Ljava/security/cert/Certificate;\
-getSignDateMcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getSignDate()Ljava/util/Calendar;Z
-getSignNameKcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getSignName()Ljava/lang/String;Ä
-getSigningCertificategcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getSigningCertificate()Ljava/security/cert/X509Certificate;]
-getSigningInfoVersionDcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getSigningInfoVersion()If
-getTimeStampDateRcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#getTimeStampDate()Ljava/util/Calendar;G
-
-getVersion9com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getVersion()I
-initSignaturencom.itextpdf.text.pdf.security.PdfPKCS7_CMS#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;~
-initSignaturemcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;U
-isRevocationValid@com.itextpdf.text.pdf.security.PdfPKCS7_CMS#isRevocationValid()Z=
-isTsp4com.itextpdf.text.pdf.security.PdfPKCS7_CMS#isTsp()Zk
-setExternalDigestVcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#setExternalDigest([B[BLjava/lang/String;)V[
-setLocationLcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#setLocation(Ljava/lang/String;)VW
-	setReasonJcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#setReason(Ljava/lang/String;)V]
-setSignDateNcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#setSignDate(Ljava/util/Calendar;)V[
-setSignNameLcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#setSignName(Ljava/lang/String;)V[
-signCertificateChainCcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#signCertificateChain()VC
-update9com.itextpdf.text.pdf.security.PdfPKCS7_CMS#update([BII)V?
-verify5com.itextpdf.text.pdf.security.PdfPKCS7_CMS#verify()Z[
-verifySigAttributesDcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#verifySigAttributes([B)Z_
-verifyTimestampImprintEcom.itextpdf.text.pdf.security.PdfPKCS7_CMS#verifyTimestampImprint()Zjava.lang.Object æ
+valuesFvn.mobileid.exsig.DefaultFont#values()[Lvn/mobileid/exsig/DefaultFont;java.lang.Enumæ
 %vn.mobileid.exsig.testCheckPermission9
 <init>/vn.mobileid.exsig.testCheckPermission#<init>()VH
 main@vn.mobileid.exsig.testCheckPermission#main([Ljava/lang/String;)Vjava.lang.Object∂
@@ -62,7 +26,8 @@ getVersion9com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getVersion()I
 valueOfVvn.mobileid.exsig.ImageAlgin#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/ImageAlgin;N
 valuesDvn.mobileid.exsig.ImageAlgin#values()[Lvn/mobileid/exsig/ImageAlgin;java.lang.Enumz
 vn.mobileid.exsig.TextFinderH
-<init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.Objectb
+<init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.Object&
+"com.itextpdf.text.pdf.AcroFieldsV4 b
 vn.mobileid.exsig.PdfVerify/
 <init>%vn.mobileid.exsig.PdfVerify#<init>()Vjava.lang.Object Ù"
 vn.mobileid.exsig.PdfProfileR
@@ -112,9 +77,7 @@ setDSImagezvn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobile
 setVisibleSignatureivn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ví
 setVisibleSignature{vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VÅ
 setVisibleSignaturejvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Vk
-setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)V …
-#com.itextpdf.text.pdf.AcroFields_v4ü
-verifySignature_v4àcom.itextpdf.text.pdf.AcroFields_v4#verifySignature_v4(Ljava/lang/String;Ljava/lang/String;)Lcom/itextpdf/text/pdf/security/PdfPKCS7_v4; Ö
+setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)V Ö
 vn.mobileid.exsig.TextPlusXY0
 <init>&vn.mobileid.exsig.TextPlusXY#<init>()V2
 getPage'vn.mobileid.exsig.TextPlusXY#getPage()I,
@@ -122,7 +85,43 @@ setDSImagezvn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobile
 getY$vn.mobileid.exsig.TextPlusXY#getY()F3
 setPage(vn.mobileid.exsig.TextPlusXY#setPage(I)V-
 setX%vn.mobileid.exsig.TextPlusXY#setX(F)V-
-setY%vn.mobileid.exsig.TextPlusXY#setY(F)Vjava.lang.ObjectÜ
+setY%vn.mobileid.exsig.TextPlusXY#setY(F)Vjava.lang.ObjectÄ
+)com.itextpdf.text.pdf.security.PdfPKCS7V4S
+<init>Icom.itextpdf.text.pdf.security.PdfPKCS7V4#<init>([B[BLjava/lang/String;)VT
+getCRLsIcom.itextpdf.text.pdf.security.PdfPKCS7V4#getCRLs()Ljava/util/Collection;o
+getCertificates\com.itextpdf.text.pdf.security.PdfPKCS7V4#getCertificates()[Ljava/security/cert/Certificate;f
+getDigestAlgorithmPcom.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;l
+getDigestAlgorithmOidScom.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithmOid()Ljava/lang/String;Ä
+getDigestEncryptionAlgorithmOid]com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestEncryptionAlgorithmOid()Ljava/lang/String;P
+getEncodedPKCS1=com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS1()[BP
+getEncodedPKCS7=com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7()[Bf
+getEncodedPKCS7Scom.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7([BLjava/util/Calendar;)[Bn
+getEncryptionAlgorithmTcom.itextpdf.text.pdf.security.PdfPKCS7V4#getEncryptionAlgorithm()Ljava/lang/String;b
+getHashAlgorithmNcom.itextpdf.text.pdf.security.PdfPKCS7V4#getHashAlgorithm()Ljava/lang/String;X
+getLocationIcom.itextpdf.text.pdf.security.PdfPKCS7V4#getLocation()Ljava/lang/String;T
+	getReasonGcom.itextpdf.text.pdf.security.PdfPKCS7V4#getReason()Ljava/lang/String;
+getSignCertificateChaindcom.itextpdf.text.pdf.security.PdfPKCS7V4#getSignCertificateChain()[Ljava/security/cert/Certificate;Z
+getSignDateKcom.itextpdf.text.pdf.security.PdfPKCS7V4#getSignDate()Ljava/util/Calendar;X
+getSignNameIcom.itextpdf.text.pdf.security.PdfPKCS7V4#getSignName()Ljava/lang/String;~
+getSigningCertificateecom.itextpdf.text.pdf.security.PdfPKCS7V4#getSigningCertificate()Ljava/security/cert/X509Certificate;[
+getSigningInfoVersionBcom.itextpdf.text.pdf.security.PdfPKCS7V4#getSigningInfoVersion()Id
+getTimeStampDatePcom.itextpdf.text.pdf.security.PdfPKCS7V4#getTimeStampDate()Ljava/util/Calendar;E
+
+getVersion7com.itextpdf.text.pdf.security.PdfPKCS7V4#getVersion()I}
+initSignaturelcom.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;|
+initSignaturekcom.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;S
+isRevocationValid>com.itextpdf.text.pdf.security.PdfPKCS7V4#isRevocationValid()Z;
+isTsp2com.itextpdf.text.pdf.security.PdfPKCS7V4#isTsp()Zi
+setExternalDigestTcom.itextpdf.text.pdf.security.PdfPKCS7V4#setExternalDigest([B[BLjava/lang/String;)VY
+setLocationJcom.itextpdf.text.pdf.security.PdfPKCS7V4#setLocation(Ljava/lang/String;)VU
+	setReasonHcom.itextpdf.text.pdf.security.PdfPKCS7V4#setReason(Ljava/lang/String;)V[
+setSignDateLcom.itextpdf.text.pdf.security.PdfPKCS7V4#setSignDate(Ljava/util/Calendar;)VY
+setSignNameJcom.itextpdf.text.pdf.security.PdfPKCS7V4#setSignName(Ljava/lang/String;)VY
+signCertificateChainAcom.itextpdf.text.pdf.security.PdfPKCS7V4#signCertificateChain()VA
+update7com.itextpdf.text.pdf.security.PdfPKCS7V4#update([BII)V=
+verify3com.itextpdf.text.pdf.security.PdfPKCS7V4#verify()ZY
+verifySigAttributesBcom.itextpdf.text.pdf.security.PdfPKCS7V4#verifySigAttributes([B)Z]
+verifyTimestampImprintCcom.itextpdf.text.pdf.security.PdfPKCS7V4#verifyTimestampImprint()Zjava.lang.Object Ü
 -com.itextpdf.text.pdf.security.LtvTimestampMIA
 <init>7com.itextpdf.text.pdf.security.LtvTimestampMI#<init>()Vjava.lang.Object ü
 (vn.mobileid.exsig.TestConvertTextToImage<
@@ -189,11 +188,7 @@ setPdfData8vn.mobileid.exsig.PDFSignatureProperties#setPdfData([B)V^
 setVisibleSignatureuvn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vü
 setVisibleSignatureávn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vç
 setVisibleSignaturevvn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Vw
-setVisibleSignature`vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)Vjava.lang.Objectå
-"com.itextpdf.text.pdf.PdfReader_v48
-<init>.com.itextpdf.text.pdf.PdfReader_v4#<init>([B)V:
-<init>0com.itextpdf.text.pdf.PdfReader_v4#<init>([B[B)Vn
-getAcroFields_v4Zcom.itextpdf.text.pdf.PdfReader_v4#getAcroFields_v4()Lcom/itextpdf/text/pdf/AcroFields_v4; ™
+setVisibleSignature`vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)Vjava.lang.Object™
 "com.itextpdf.text.pdf.PdfStamperMI6
 <init>,com.itextpdf.text.pdf.PdfStamperMI#<init>()VÑ
 addFileAttachmentocom.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)VV
@@ -239,43 +234,10 @@ setPdfData8vn.mobileid.exsig.PDFSignatureProperties#setPdfData([B)V^
 length%vn.mobileid.exsig.TextPlusY#length()IR
 subSequenceCvn.mobileid.exsig.TextPlusY#subSequence(II)Ljava/lang/CharSequence;D
 toString8vn.mobileid.exsig.TextPlusY#toString()Ljava/lang/String;4
-yCoordAt(vn.mobileid.exsig.TextPlusY#yCoordAt(I)Fjava.lang.CharSequencejava.lang.Object§
-*com.itextpdf.text.pdf.security.PdfPKCS7_v4T
-<init>Jcom.itextpdf.text.pdf.security.PdfPKCS7_v4#<init>([B[BLjava/lang/String;)VU
-getCRLsJcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getCRLs()Ljava/util/Collection;p
-getCertificates]com.itextpdf.text.pdf.security.PdfPKCS7_v4#getCertificates()[Ljava/security/cert/Certificate;g
-getDigestAlgorithmQcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getDigestAlgorithm()Ljava/lang/String;m
-getDigestAlgorithmOidTcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getDigestAlgorithmOid()Ljava/lang/String;Å
-getDigestEncryptionAlgorithmOid^com.itextpdf.text.pdf.security.PdfPKCS7_v4#getDigestEncryptionAlgorithmOid()Ljava/lang/String;Q
-getEncodedPKCS1>com.itextpdf.text.pdf.security.PdfPKCS7_v4#getEncodedPKCS1()[BQ
-getEncodedPKCS7>com.itextpdf.text.pdf.security.PdfPKCS7_v4#getEncodedPKCS7()[Bg
-getEncodedPKCS7Tcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getEncodedPKCS7([BLjava/util/Calendar;)[Bo
-getEncryptionAlgorithmUcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getEncryptionAlgorithm()Ljava/lang/String;c
-getHashAlgorithmOcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getHashAlgorithm()Ljava/lang/String;Y
-getLocationJcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getLocation()Ljava/lang/String;U
-	getReasonHcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getReason()Ljava/lang/String;Ä
-getSignCertificateChainecom.itextpdf.text.pdf.security.PdfPKCS7_v4#getSignCertificateChain()[Ljava/security/cert/Certificate;[
-getSignDateLcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getSignDate()Ljava/util/Calendar;Y
-getSignNameJcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getSignName()Ljava/lang/String;
-getSigningCertificatefcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getSigningCertificate()Ljava/security/cert/X509Certificate;\
-getSigningInfoVersionCcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getSigningInfoVersion()Ie
-getTimeStampDateQcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getTimeStampDate()Ljava/util/Calendar;F
-
-getVersion8com.itextpdf.text.pdf.security.PdfPKCS7_v4#getVersion()I~
-initSignaturemcom.itextpdf.text.pdf.security.PdfPKCS7_v4#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;}
-initSignaturelcom.itextpdf.text.pdf.security.PdfPKCS7_v4#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;T
-isRevocationValid?com.itextpdf.text.pdf.security.PdfPKCS7_v4#isRevocationValid()Z<
-isTsp3com.itextpdf.text.pdf.security.PdfPKCS7_v4#isTsp()Zj
-setExternalDigestUcom.itextpdf.text.pdf.security.PdfPKCS7_v4#setExternalDigest([B[BLjava/lang/String;)VZ
-setLocationKcom.itextpdf.text.pdf.security.PdfPKCS7_v4#setLocation(Ljava/lang/String;)VV
-	setReasonIcom.itextpdf.text.pdf.security.PdfPKCS7_v4#setReason(Ljava/lang/String;)V\
-setSignDateMcom.itextpdf.text.pdf.security.PdfPKCS7_v4#setSignDate(Ljava/util/Calendar;)VZ
-setSignNameKcom.itextpdf.text.pdf.security.PdfPKCS7_v4#setSignName(Ljava/lang/String;)VZ
-signCertificateChainBcom.itextpdf.text.pdf.security.PdfPKCS7_v4#signCertificateChain()VB
-update8com.itextpdf.text.pdf.security.PdfPKCS7_v4#update([BII)V>
-verify4com.itextpdf.text.pdf.security.PdfPKCS7_v4#verify()ZZ
-verifySigAttributesCcom.itextpdf.text.pdf.security.PdfPKCS7_v4#verifySigAttributes([B)Z^
-verifyTimestampImprintDcom.itextpdf.text.pdf.security.PdfPKCS7_v4#verifyTimestampImprint()Zjava.lang.Object †
+yCoordAt(vn.mobileid.exsig.TextPlusY#yCoordAt(I)Fjava.lang.CharSequencejava.lang.Objectô
+!com.itextpdf.text.pdf.PdfReaderV47
+<init>-com.itextpdf.text.pdf.PdfReaderV4#<init>([B)V9
+<init>/com.itextpdf.text.pdf.PdfReaderV4#<init>([B[B)V †
 -vn.mobileid.exsig.StringCoordinatesExtractionp
 getCoordinate_vn.mobileid.exsig.StringCoordinatesExtraction#getCoordinate(Ljava/lang/String;)Ljava/util/List;
 getCoordinatenvn.mobileid.exsig.StringCoordinatesExtraction#getCoordinate(Ljava/lang/String;I)Lvn/mobileid/exsig/TextPlusXY;h
@@ -338,7 +300,43 @@ setStamper`com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setStamper(Lcom/itext
 -testShowTextAlignedVsSimpleColumnTopAlignmentGvn.mobileid.exsig.Test#testShowTextAlignedVsSimpleColumnTopAlignment()Vjava.lang.Objectî
 vn.mobileid.exsig.test2+
 <init>!vn.mobileid.exsig.test2#<init>()V:
-main2vn.mobileid.exsig.test2#main([Ljava/lang/String;)Vjava.lang.Objectº
+main2vn.mobileid.exsig.test2#main([Ljava/lang/String;)Vjava.lang.Objectê
+*com.itextpdf.text.pdf.security.PdfPKCS7CMST
+<init>Jcom.itextpdf.text.pdf.security.PdfPKCS7CMS#<init>([B[BLjava/lang/String;)VU
+getCRLsJcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getCRLs()Ljava/util/Collection;p
+getCertificates]com.itextpdf.text.pdf.security.PdfPKCS7CMS#getCertificates()[Ljava/security/cert/Certificate;g
+getDigestAlgorithmQcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithm()Ljava/lang/String;m
+getDigestAlgorithmOidTcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithmOid()Ljava/lang/String;Å
+getDigestEncryptionAlgorithmOid^com.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestEncryptionAlgorithmOid()Ljava/lang/String;Q
+getEncodedPKCS1>com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS1()[BQ
+getEncodedPKCS7>com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7()[BS
+getEncodedPKCS7@com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7([B)[Bo
+getEncryptionAlgorithmUcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncryptionAlgorithm()Ljava/lang/String;c
+getHashAlgorithmOcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getHashAlgorithm()Ljava/lang/String;Y
+getLocationJcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getLocation()Ljava/lang/String;U
+	getReasonHcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getReason()Ljava/lang/String;Ä
+getSignCertificateChainecom.itextpdf.text.pdf.security.PdfPKCS7CMS#getSignCertificateChain()[Ljava/security/cert/Certificate;[
+getSignDateLcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getSignDate()Ljava/util/Calendar;Y
+getSignNameJcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getSignName()Ljava/lang/String;
+getSigningCertificatefcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getSigningCertificate()Ljava/security/cert/X509Certificate;\
+getSigningInfoVersionCcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getSigningInfoVersion()Ie
+getTimeStampDateQcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getTimeStampDate()Ljava/util/Calendar;F
+
+getVersion8com.itextpdf.text.pdf.security.PdfPKCS7CMS#getVersion()I~
+initSignaturemcom.itextpdf.text.pdf.security.PdfPKCS7CMS#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;}
+initSignaturelcom.itextpdf.text.pdf.security.PdfPKCS7CMS#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;T
+isRevocationValid?com.itextpdf.text.pdf.security.PdfPKCS7CMS#isRevocationValid()Z<
+isTsp3com.itextpdf.text.pdf.security.PdfPKCS7CMS#isTsp()Zj
+setExternalDigestUcom.itextpdf.text.pdf.security.PdfPKCS7CMS#setExternalDigest([B[BLjava/lang/String;)VZ
+setLocationKcom.itextpdf.text.pdf.security.PdfPKCS7CMS#setLocation(Ljava/lang/String;)VV
+	setReasonIcom.itextpdf.text.pdf.security.PdfPKCS7CMS#setReason(Ljava/lang/String;)V\
+setSignDateMcom.itextpdf.text.pdf.security.PdfPKCS7CMS#setSignDate(Ljava/util/Calendar;)VZ
+setSignNameKcom.itextpdf.text.pdf.security.PdfPKCS7CMS#setSignName(Ljava/lang/String;)VZ
+signCertificateChainBcom.itextpdf.text.pdf.security.PdfPKCS7CMS#signCertificateChain()VB
+update8com.itextpdf.text.pdf.security.PdfPKCS7CMS#update([BII)V>
+verify4com.itextpdf.text.pdf.security.PdfPKCS7CMS#verify()ZZ
+verifySigAttributesCcom.itextpdf.text.pdf.security.PdfPKCS7CMS#verifySigAttributes([B)Z^
+verifyTimestampImprintDcom.itextpdf.text.pdf.security.PdfPKCS7CMS#verifyTimestampImprint()Zjava.lang.Object º
 'com.itextpdf.text.pdf.SignaturePosition=
 getPage2com.itextpdf.text.pdf.SignaturePosition#getPage()I>
 setPage3com.itextpdf.text.pdf.SignaturePosition#setPage(I)Vjava.lang.Object Ÿ

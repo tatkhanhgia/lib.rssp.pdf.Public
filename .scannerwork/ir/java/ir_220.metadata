@@ -1,2 +1,4 @@
-com.itextpdf.text.pdf.PdfStamperMI#createSignature(LPdfReader;Ljava/io/OutputStream;C)Lcom/itextpdf/text/pdf/PdfStamperMI;
-com.itextpdf.text.pdf.PdfStamperMI#createSignature(LPdfReader;Ljava/io/OutputStream;CLjava/io/File;Z)Lcom/itextpdf/text/pdf/PdfStamperMI;
+com.itextpdf.text.pdf.PdfStamperMI#addNamedDestination(Ljava/lang/String;ILPdfDestination;)Z
+null
+==
+getReader com.itextpdf.text.pdf.PdfStamperMI#getReader()LPdfReader;

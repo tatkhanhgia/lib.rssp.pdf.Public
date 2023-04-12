@@ -1,9 +1,7 @@
-vn.mobileid.exsig.PdfProfile#appendSignautre(Ljava/util/List;)Ljava/util/List;
-java.util.ArrayList#<init>()V
-null
-java.util.ArrayList#instance-init#
-java.io.ByteArrayOutputStream#<init>()V
-java.io.ByteArrayOutputStream#instance-init#
+com.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;
+java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
+java.security.Signature#initVerify(Ljava/security/PublicKey;)V
+java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;
 ==
-enrichLTA vn.mobileid.exsig.PdfProfile#enrichLTA(LPdfReader;)[B
-enrichLT vn.mobileid.exsig.PdfProfile#enrichLT(LPdfReader;)[B
+getDigestAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;
+getFilterSubtype com.itextpdf.text.pdf.security.PdfPKCS7V4#getFilterSubtype()LPdfName;

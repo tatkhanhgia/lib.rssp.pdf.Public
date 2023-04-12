@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getAcroFields()LAcroFields;
+com.itextpdf.text.pdf.PdfStamperMI#addComments(LFdfReader;)V

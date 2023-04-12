@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#getSignName()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#<init>(LPdfStamperImp;)V
+java.util.GregorianCalendar#<init>()V
+java.util.GregorianCalendar#instance-init#
+==
+getNewSigName com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getNewSigName()Ljava/lang/String;

@@ -1,18 +1,47 @@
 
-_com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getStamper()Lcom/itextpdf/text/pdf/PdfStamperMI;½
-°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.javaù	 ù	(""1*è
+]com.itextpdf.text.pdf.security.PdfPKCS7CMS#getCertificates()[Ljava/security/cert/Certificate;¹
+¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7CMS.java¸	 ¸	(("1*ä
 1
-ú	 ú	(œ
-™
+¹	 ¹	(ˆ
+…
 
-ú	 ú	((
-%0"com.itextpdf.text.pdf.PdfStamperMI"__id*[
+¹	 ¹	(
+%0java.util.Collection"__id*U
 
-__unknown_file (?*=0
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"	
-stamper"8
+__unknown_file (9*7,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+certsˆ
+…
 
-ú	 ú	(*
-(
-%0"com.itextpdf.text.pdf.PdfStamperMIB20
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMIH
+¹	1 ¹	(6
+%1java.util.Collection"__id*U
+
+__unknown_file (9*7,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+certsyw
+
+¹	1 ¹	(=	
+%2int"java.util.Collection#size()I*8
+
+__unknown_file (
+
+%1java.util.Collection2size()`^
+
+¹	 ¹	(>*
+%3$java.security.cert.X509Certificate[]"$java.security.cert.X509Certificate[]£ 
+
+¹	 ¹	(?*
+%4$java.security.cert.X509Certificate[]"Djava.util.Collection#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*8
+
+__unknown_file (
+
+%0java.util.Collection*H
+
+__unknown_file (,
+*
+%3$java.security.cert.X509Certificate[]2toArray([Ljava/lang/Object;)":
+
+¹	 ¹	(@,
+*
+%4$java.security.cert.X509Certificate[]B.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMSH

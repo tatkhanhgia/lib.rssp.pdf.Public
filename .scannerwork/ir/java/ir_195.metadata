@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setFreeTextFlattening(Z)V
+com.itextpdf.text.pdf.PdfStamperMI#setThumbnail(LImage;I)V

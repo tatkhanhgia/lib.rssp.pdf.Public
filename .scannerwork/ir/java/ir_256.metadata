@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#getSigningInfoVersion()I
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getSignatureCreator()Ljava/lang/String;

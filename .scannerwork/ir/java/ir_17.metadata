@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#setSignaturePolicy(LSignaturePolicyIdentifier;)V
+vn.mobileid.exsig.ImageProfile#<init>(Ljava/lang/String;IIIII)V

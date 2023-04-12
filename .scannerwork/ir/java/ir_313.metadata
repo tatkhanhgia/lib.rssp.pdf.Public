@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getRect()LRectangle;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSigPosList(Ljava/util/List;)V

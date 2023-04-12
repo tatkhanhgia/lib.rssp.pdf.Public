@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfile#getBaseFont()LBaseFont;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSignCertificateChain()[Ljava/security/cert/Certificate;

@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.AcroFields_v4#<init>(Lcom/itextpdf/text/pdf/PdfReader_v4;LPdfWriter;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#findOcsp(LASN1Sequence;)V
+null

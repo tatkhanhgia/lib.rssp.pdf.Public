@@ -1,6 +1,3 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#initSign(Ljava/security/PrivateKey;)V
-==
-getDigestAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7_v4#getDigestAlgorithm()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getRangeStream()Ljava/io/InputStream;
+null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getUnderlyingSource()LRandomAccessSource;

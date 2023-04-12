@@ -1,1 +1,2 @@
-vn.mobileid.exsig.Color#getColor()Lcom/itextpdf/text/BaseColor;
+vn.mobileid.exsig.PDFSignatureProperties#instance-init#
+java.util.Calendar#getInstance()Ljava/util/Calendar;

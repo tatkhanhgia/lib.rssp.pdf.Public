@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setEncryption([Ljava/security/cert/Certificate;[II)V
-null
+com.itextpdf.text.pdf.PdfStamperMI#setFreeTextFlattening(Z)V

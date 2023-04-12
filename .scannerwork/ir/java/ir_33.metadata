@@ -1,6 +1,3 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#initSign(Ljava/security/PrivateKey;)V
+vn.mobileid.exsig.PdfProfile#setFont(Lvn/mobileid/exsig/DefaultFont;F)V
 ==
-getDigestAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getDigestAlgorithm()Ljava/lang/String;
+setFont vn.mobileid.exsig.PdfProfile#setFont(Lvn/mobileid/exsig/DefaultFont;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V

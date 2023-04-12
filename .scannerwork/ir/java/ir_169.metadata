@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.PdfReader_v4#getAcroFields_v4()Lcom/itextpdf/text/pdf/AcroFields_v4;
-com.itextpdf.text.pdf.AcroFields_v4#instance-init#
-com.itextpdf.text.pdf.AcroFields_v4#<init>(Lcom/itextpdf/text/pdf/PdfReader_v4;Lcom/itextpdf/text/pdf/PdfWriter;)V
+com.itextpdf.text.pdf.PdfStamperMI#setMoreInfo(Ljava/util/Map;)V

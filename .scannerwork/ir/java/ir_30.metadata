@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getDigestEncryptionAlgorithmOid()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+==
+setVisibleSignature vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V

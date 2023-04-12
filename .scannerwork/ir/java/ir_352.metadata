@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSigPosList(Ljava/util/List;)V
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#getCRLs()Ljava/util/Collection;

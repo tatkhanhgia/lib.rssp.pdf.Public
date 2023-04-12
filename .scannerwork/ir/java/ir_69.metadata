@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfProfile#setFont(Ljava/lang/String;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
-vn.mobileid.exsig.Color#getColor()Lcom/itextpdf/text/BaseColor;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#instance-init#

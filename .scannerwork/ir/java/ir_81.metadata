@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobileid/exsig/DefaultFont;Lvn/mobileid/exsig/DefaultFont;)V
-vn.mobileid.exsig.DefaultFont#getValue()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithmOid()Ljava/lang/String;

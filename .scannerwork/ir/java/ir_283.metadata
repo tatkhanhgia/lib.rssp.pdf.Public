@@ -1,1 +1,2 @@
-vn.mobileid.exsig.StringCoordinatesExtraction#<init>(LPdfReader;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer(I)LPdfTemplate;
+null

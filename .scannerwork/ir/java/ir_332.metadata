@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setRunDirection(I)V
-java.lang.RuntimeException#<init>(Ljava/lang/String;)V
-java.lang.RuntimeException#instance-init#
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#setSignDate(Ljava/util/Calendar;)V

@@ -1,19 +1,19 @@
 
-Jcom.itextpdf.text.pdf.security.PdfPKCS7_v4#getSignName()Ljava/lang/String;¹
-¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7_v4.javaæ æ("1*Á
+†vn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$MyLocationTextExtractionStrategy#getMyPoints()Ljava/util/List;¼
+¯C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/StringCoordinatesExtraction.javaí& í(1"1*ü
 1
-ç ç(‡
-„
+î î(Ä
+Á
 
-ç ç(
-%0java.lang.String"__id*X
+î î(
+%0java.util.List"__id*–
 
-__unknown_file (<*:,
-*com.itextpdf.text.pdf.security.PdfPKCS7_v4"
+__unknown_file (z*xj
+hvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$MyLocationTextExtractionStrategy"
 
-signName"&
+myPoints"$
 
-ç ç(
-
-%0java.lang.StringB.,
-*com.itextpdf.text.pdf.security.PdfPKCS7_v4H
+î î( 
+
+%0java.util.ListBlj
+hvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$MyLocationTextExtractionStrategyH

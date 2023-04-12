@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setFormFlattening(Z)V
+com.itextpdf.text.pdf.PdfStamperMI#setOutlines(Ljava/util/List;)V

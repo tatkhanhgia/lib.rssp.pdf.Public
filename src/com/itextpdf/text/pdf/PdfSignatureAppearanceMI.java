@@ -1608,7 +1608,9 @@ public class PdfSignatureAppearanceMI {
                 } catch (Exception ee) {
                 }
                 try {
-                    tempFile.delete();
+                    if(tempFile.delete()){
+                        throw e;
+                    }
                 } catch (Exception ee) {
                 }
                 throw e;

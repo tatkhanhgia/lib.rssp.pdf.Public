@@ -1,1 +1,4 @@
-com.itextpdf.text.pdf.PdfStamperMI#getMoreInfo()Ljava/util/Map;
+com.itextpdf.text.pdf.PdfStamperMI#close()V
+null
+==
+mergeVerification com.itextpdf.text.pdf.PdfStamperMI#mergeVerification()V

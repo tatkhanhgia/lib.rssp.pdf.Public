@@ -1,56 +1,44 @@
 
-icom.itextpdf.text.pdf.PdfStamperMI#getLtvVerification()Lcom/itextpdf/text/pdf/security/LtvVerificationMI;±
-§C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfStamperMI.java≤ ≤(/"3*∆
-2
-¥1 ¥(5xv
-
-¥ ¥(06
-%10com.itextpdf.text.pdf.security.LtvVerificationMI"0com.itextpdf.text.pdf.security.LtvVerificationMIè
-å
-
-¥ ¥(6
-%2"^com.itextpdf.text.pdf.security.LtvVerificationMI#<init>(Lcom/itextpdf/text/pdf/PdfStamperMI;)V*T
+%vn.mobileid.exsig.TextPlusY#length()I®
+ùC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/TextPlusY.java ("4*ı
+2 (P
+N
+ (
+textjava.lang.String"__id*"
 
-__unknown_file (8
-6
-%10com.itextpdf.text.pdf.security.LtvVerificationMI*B
+__unknown_file (
+""ã
+à
+ (
+textjava.lang.String"
+__arrayGet*2
 
-__unknown_file (&$
-"com.itextpdf.text.pdf.PdfStamperMI£
-†
-
-¥ ¥(66$
-"com.itextpdf.text.pdf.PdfStamperMI"
-verification"__id*T
+__unknown_file (
+
+%0java.util.List*"
 
-__unknown_file (8
-6
-%10com.itextpdf.text.pdf.security.LtvVerificationMI*
-1*Ω
-3
-≥ ≥(£
-†
-
-≥ ≥(6
-%00com.itextpdf.text.pdf.security.LtvVerificationMI"__id*T
+__unknown_file (
+""*
+3
+1*â
+3 (us
+ (#	
+%1int"java.lang.String#length()I*6
 
-__unknown_file (8*6$
-"com.itextpdf.text.pdf.PdfStamperMI"
-verification*
-2
-1*˝
-1
-µ µ(£
-†
-
-µ µ(6
-%30com.itextpdf.text.pdf.security.LtvVerificationMI"__id*T
+__unknown_file (
 
-__unknown_file (8*6$
-"com.itextpdf.text.pdf.PdfStamperMI"
-verification"F
-
-µ µ(8
-6
-%30com.itextpdf.text.pdf.security.LtvVerificationMIB&$
-"com.itextpdf.text.pdf.PdfStamperMIH
+textjava.lang.String2length()*
+2*Ñ
+4 ( p
+n
+ ( 
+%0java.util.List"__id*F
+
+__unknown_file (**(
+vn.mobileid.exsig.TextPlusY"
+texts*
+2*!
+1 ("
+ (
+""B
+vn.mobileid.exsig.TextPlusYHP

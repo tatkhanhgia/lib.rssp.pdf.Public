@@ -1,5 +1,2 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#setExternalDigest([B[BLjava/lang/String;)V
-null
-java.security.NoSuchAlgorithmException#instance-init#
-java.lang.String#equals(Ljava/lang/Object;)Z
-java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V
+vn.mobileid.exsig.PdfProfile#setFont(Ljava/lang/String;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
+vn.mobileid.exsig.Color#getColor()Lcom/itextpdf/text/BaseColor;

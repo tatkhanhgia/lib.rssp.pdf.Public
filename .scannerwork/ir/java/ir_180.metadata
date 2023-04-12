@@ -1,4 +1,2 @@
-com.itextpdf.text.pdf.PdfStamperMI#close()V
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V
 null
-==
-mergeVerification com.itextpdf.text.pdf.PdfStamperMI#mergeVerification()V

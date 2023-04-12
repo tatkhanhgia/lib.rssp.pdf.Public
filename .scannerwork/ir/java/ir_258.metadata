@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#getHashAlgorithm()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getContact()Ljava/lang/String;

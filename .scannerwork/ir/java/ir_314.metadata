@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getPageRect()LRectangle;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addDocMDP(LPdfDictionary;)V
+null

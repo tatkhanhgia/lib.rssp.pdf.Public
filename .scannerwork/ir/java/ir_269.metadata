@@ -1,4 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#verifySigAttributes([B)Z
-java.security.Signature#update([B)V
-com.itextpdf.text.pdf.security.PdfPKCS7_v4#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;
-java.security.Signature#verify([B)Z
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setPagesForInitials([I)V

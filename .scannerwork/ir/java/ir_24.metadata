@@ -1,3 +1,2 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getSignDate()Ljava/util/Calendar;
-==
-getTimeStampDate com.itextpdf.text.pdf.security.PdfPKCS7_CMS#getTimeStampDate()Ljava/util/Calendar;
+vn.mobileid.exsig.PdfProfile#<init>(LPdfForm;LAlgorithm;)V
+vn.mobileid.exsig.DefaultFont#getPath()Ljava/lang/String;

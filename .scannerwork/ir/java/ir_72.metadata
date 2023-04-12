@@ -1,3 +1,1 @@
-vn.mobileid.exsig.PdfProfile#setCheckMark(ZLjava/lang/String;)V
-==
-setCheckMarkPosition vn.mobileid.exsig.PdfProfile#setCheckMarkPosition(Ljava/lang/String;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#setSignName(Ljava/lang/String;)V

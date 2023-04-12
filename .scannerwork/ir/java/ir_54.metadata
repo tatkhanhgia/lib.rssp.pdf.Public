@@ -1,8 +1,5 @@
-vn.mobileid.exsig.testCheckPermission#main([Ljava/lang/String;)V
-java.util.ArrayList#<init>()V
-java.io.File#<init>(Ljava/lang/String;)V
-java.util.ArrayList#instance-init#
-vn.mobileid.exsig.PdfProfileCMS#instance-init#
-java.io.File#instance-init#
-java.nio.file.Files#readAllBytes(Ljava/nio/file/Path;)[B
-vn.mobileid.exsig.PdfProfileCMS#<init>(Lvn/mobileid/exsig/PdfForm;Lvn/mobileid/exsig/Algorithm;)V
+vn.mobileid.exsig.PdfProfile#verify([BZ)Ljava/util/List;
+vn.mobileid.exsig.PdfVerify#instance-init#
+vn.mobileid.exsig.PdfVerify#<init>()V
+==
+verifySignature vn.mobileid.exsig.PdfVerify#verifySignature([BLjava/lang/String;Z)Ljava/util/List;

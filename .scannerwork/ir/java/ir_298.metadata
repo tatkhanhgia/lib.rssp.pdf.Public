@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setContact(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCheckMark(Z[F)V

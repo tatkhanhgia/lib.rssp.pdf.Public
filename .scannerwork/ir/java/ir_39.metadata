@@ -1,5 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#verify()Z
-com.itextpdf.text.pdf.security.PdfPKCS7_CMS#verifySigAttributes([B)Z
-java.security.Signature#update([B)V
-java.security.Signature#verify([B)Z
-java.util.Arrays#equals([B[B)Z
+vn.mobileid.exsig.PdfProfile#setLocation(Ljava/lang/String;)V

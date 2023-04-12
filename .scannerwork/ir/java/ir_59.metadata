@@ -1,1 +1,1 @@
-vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)V
+vn.mobileid.exsig.PdfProfile#getBaseFont()LBaseFont;

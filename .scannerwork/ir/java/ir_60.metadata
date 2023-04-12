@@ -1,3 +1,2 @@
-vn.mobileid.exsig.PdfProfile#instance-init#
-java.util.ArrayList#<init>()V
-java.util.ArrayList#instance-init#
+vn.mobileid.exsig.PdfProfile#checkLock(LPdfDictionary;)Z
+null
