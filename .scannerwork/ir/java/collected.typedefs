@@ -27,7 +27,9 @@
 valuesDvn.mobileid.exsig.ImageAlgin#values()[Lvn/mobileid/exsig/ImageAlgin;java.lang.Enumz
 vn.mobileid.exsig.TextFinderH
 <init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.Object&
-"com.itextpdf.text.pdf.AcroFieldsV4 ¶#
+"com.itextpdf.text.pdf.AcroFieldsV4 b
+vn.mobileid.exsig.PdfVerify/
+<init>%vn.mobileid.exsig.PdfVerify#<init>()Vjava.lang.Object º#
 vn.mobileid.exsig.PdfProfile0
 <init>&vn.mobileid.exsig.PdfProfile#<init>()VR
 addLayer0IconAvn.mobileid.exsig.PdfProfile#addLayer0Icon([BLjava/lang/String;)Vx
@@ -76,9 +78,7 @@ setDSImagezvn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobile
 setVisibleSignatureivn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ví
 setVisibleSignature{vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VÅ
 setVisibleSignaturejvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Vk
-setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)V b
-vn.mobileid.exsig.PdfVerify/
-<init>%vn.mobileid.exsig.PdfVerify#<init>()Vjava.lang.Object Ö
+setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)Vjava.io.Serializable Ö
 vn.mobileid.exsig.TextPlusXY0
 <init>&vn.mobileid.exsig.TextPlusXY#<init>()V2
 getPage'vn.mobileid.exsig.TextPlusXY#getPage()I,

@@ -68,10 +68,9 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
     private transient final Logger log = LoggerFactory.getLogger(PdfProfileCMS.class);
 
     private String signerCertificate;
-
-    public PdfProfileCMS() {
-        super();
-    }        
+    
+    public PdfProfileCMS(){        
+    }
     
     public PdfProfileCMS(Algorithm algorithm) {
         super(PdfForm.B, algorithm);

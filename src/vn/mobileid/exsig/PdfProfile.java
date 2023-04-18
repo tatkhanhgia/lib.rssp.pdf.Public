@@ -59,6 +59,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.security.Security;
 import java.security.cert.CRL;
@@ -89,7 +90,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author Minhgalc
  */
-public class PdfProfile extends Profile {
+public class PdfProfile extends Profile implements Serializable {
 
     private transient final Logger log = LoggerFactory.getLogger(PdfProfile.class);
     protected transient boolean certified;
@@ -124,6 +125,7 @@ public class PdfProfile extends Profile {
     protected transient float[] checkTextPosition;
     protected transient boolean checkMark = false;
     protected transient boolean checkText = false;
+    protected transient boolean autoScale = false;
 
     protected transient TextFinder textFinder;
     protected transient List<SignaturePosition> sigPosList = new ArrayList<>();
@@ -155,20 +157,19 @@ public class PdfProfile extends Profile {
     protected transient Map<Integer, String> pageAndPosition;
     protected transient float[] boxSize;
 
-    public PdfProfile() throws NullPointerException {
-        super();
-        this.textContent = "KÝ BỞI: {signby}\nLÝ DO: {reason}\nNƠI KÝ: {location}\nNGÀY KÝ: {date}";
-        this.fontName = DefaultFont.Times.getPath();
-        this.fontSize = 13;
-        this.header = "Mobile-ID Remote Signing service by:";
-    }  
-    
+    public PdfProfile() {
+    }
+
     public PdfProfile(PdfForm form, Algorithm algorithm) {
         super(form, algorithm);
         this.textContent = "KÝ BỞI: {signby}\nLÝ DO: {reason}\nNƠI KÝ: {location}\nNGÀY KÝ: {date}";
         this.fontName = DefaultFont.Times.getPath();
         this.fontSize = 13;
         this.header = "Mobile-ID Remote Signing service by:";
+    }
+
+    public void setAutoScale(boolean autoScale) {
+        this.autoScale = autoScale;
     }
 
     public void setBackground(Color color) {
@@ -444,7 +445,15 @@ public class PdfProfile extends Profile {
         this.textColor = textColor.getColor();
     }
 
-    public void setFont(byte[] fontData, String encoding, boolean embedded, float fontSize, float lineSpacing, TextAlignment alignment, Color textColor) {
+    public void setFont(
+            byte[] fontData,
+            String encoding,
+            boolean embedded,
+            float fontSize,
+            float lineSpacing,
+            TextAlignment alignment,
+            Color textColor
+    ) {
         try {
             this.baseFont = BaseFont.createFont(
                     "myfont.ttf",
@@ -634,33 +643,71 @@ public class PdfProfile extends Profile {
             ct = new ColumnText(null);
             ct.setSimpleColumn(ph, rect.getLeft(), rect.getBottom(), rect.getRight(), rect.getTop(), maxFontSize, Element.ALIGN_LEFT);
             ct.setRunDirection(runDirection);
-            status = ct.go(true);       
-            if( status == 2){
-//                if( rect.getWidth() + 50 < 500){
-                    iRec = new Rectangle(
-                        0 + this.paddingLeft,
-                        0,
-                        rect.getWidth() + this.paddingRight+50,
-                        rect.getHeight()+10);
-//                } else {
-//                    iRec = new Rectangle(
-//                        0 + this.paddingLeft,
-//                        0,
-//                        rect.getWidth() + this.paddingRight,
-//                        rect.getHeight()+50);
-//                }
-                return -1;
+            status = ct.go(true);
+            if (this.autoScale) {
+                if (ColumnText.hasMoreText(status)) { //no more column                                    
+                    float precision = 0.5f;
+                    float min = 0;
+                    float max = maxFontSize;
+                    float size = maxFontSize;
+                    for (int k = 0; k < 50; ++k) { //just in case it doesn't converge
+                        size = (min + max) / 2;
+                        iRec = new Rectangle(
+                                iRec.getLeft() + this.paddingLeft,
+                                0,
+                                iRec.getRight() + this.paddingRight + 50,
+                                iRec.getTop() + 10);
+                        this.textFinder.width = (int) iRec.getRight();
+                        this.textFinder.height = (int) iRec.getTop();
+                        this.position.setRight(this.position.getRight() + 50);
+                        this.position.setTop(this.position.getTop() + 10);
+                        switch (imageProfile) {
+                            case IMAGE_LEFT:
+                                imageProfileLeft();
+                                break;
+                            case IMAGE_RIGHT:
+                                imageProfileRight();
+                                break;
+                            case IMAGE_BOTTOM:
+                                imageProfileBottom();
+                                break;
+                            case IMAGE_BOTTOM_TEXT_BOTTOM:
+                                imageProfileBottom();
+                                break;
+                            case IMAGE_TOP:
+                                imageProfileTop();
+                                break;
+                            case IMAGE_TOP_TEXT_TOP:
+                                imageProfileTop();
+                                break;
+                            case IMAGE_CENTER:
+                                imageProfileCenter();
+                                break;
+                            default:
+                                iRec = new Rectangle(
+                                        (position.getWidth() / 2 - (position.getWidth() * 0.9f) / 2) + this.paddingLeft,
+                                        position.getHeight() / 2 - (position.getHeight() * 0.9f) / 2,
+                                        (position.getWidth() / 2 + (position.getWidth() * 0.9f) / 2) - this.paddingRight,
+                                        position.getHeight() / 2 + (position.getHeight() * 0.9f) / 2);
+                        }
+                        ct = new ColumnText(null);
+                        font.setSize(size);
+                        ct.setSimpleColumn(new Phrase(text, font), iRec.getLeft(), iRec.getBottom(), iRec.getRight(), iRec.getTop(), size, Element.ALIGN_LEFT);
+                        ct.setRunDirection(runDirection);
+                        status = ct.go(true);
+                        if (!ColumnText.hasMoreText(status)) {
+                            if (max - min < size * precision) {
+                                return size;
+                            }
+                            min = size;
+                        } else {
+                            max = size;
+                        }
+                    }
+                    return size;
+                }
             }
-//            if ((status & ColumnText.NO_MORE_TEXT) != 0 ) {
-//                iRec = new Rectangle(
-//                        0 + this.paddingLeft,
-//                        0,
-//                        rect.getWidth() + this.paddingRight,
-//                        rect.getHeight()+50);
-//                
-//                return -1;
-//            }
-            
+
             float precision = 0.5f;
             float min = 0;
             float max = maxFontSize;
@@ -1097,10 +1144,10 @@ public class PdfProfile extends Profile {
 
                     PdfPCell textCell = new PdfPCell();
                     float finalFontSize = -1;
-                    while(finalFontSize <0){    
+                    while (finalFontSize <= 0) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT) + 1;
                     }
-                    
+                    System.out.println("FitText:" + finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
                     textCell.setVerticalAlignment(imageProfile.vertical);
@@ -1158,9 +1205,10 @@ public class PdfProfile extends Profile {
 
                     PdfPCell textCell = new PdfPCell();
                     float finalFontSize = -1;
-                    while(finalFontSize < 0){
+                    while (finalFontSize < 0) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT) - 1;
                     }
+                    System.out.println("FitText:" + finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
                     textCell.setVerticalAlignment(Element.ALIGN_MIDDLE);

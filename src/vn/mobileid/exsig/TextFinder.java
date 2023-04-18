@@ -13,8 +13,8 @@ class TextFinder {
     final int page;
     final int offsetX;
     final int offsetY;
-    final int width;
-    final int height;
+     int width;
+     int height;
     final String text;
     //update 03/08/2021
     final boolean placeAll;
