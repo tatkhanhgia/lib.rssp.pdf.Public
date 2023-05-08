@@ -6,7 +6,11 @@
 package vn.mobileid.exsig;
 
 import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.SignaturePosition;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,6 +35,9 @@ public class PDFSignatureProperties {
     protected Map<Integer, String> pageAndPosition;
     protected String position;
     protected int visibleSignatureType;
+    //Set Multiple Position
+    protected List<TextFinder> textFinderArray = new ArrayList<>();
+    protected List<SignaturePosition> sigPosLis = new ArrayList<>();
     //setImage
     protected byte[] image;
     protected ImageProfile imageProfile;
@@ -291,4 +298,106 @@ public class PDFSignatureProperties {
         return font;
     }
 
+    public List<TextFinder> getTextFinderArray() {
+        return textFinderArray;
+    }
+
+    public void addMoreSignaturePosition(String page, String offset, String boxSize, String text) throws Exception {
+        if (page == null) {
+            throw new Exception("page is null");
+        }
+        if (offset == null) {
+            throw new Exception("offset is null");
+        }
+        if (boxSize == null) {
+            throw new Exception("box size is null");
+        }
+        if (text == null) {
+            throw new Exception("finding text is null");
+        }
+        int pageNum;
+        try {
+            switch (page.toUpperCase()) {
+                case "FIRST":
+                    pageNum = 1;
+                    break;
+                case "LAST":
+                    pageNum = 0;
+                    break;
+                default:
+                    pageNum = Integer.parseInt(page);
+                    if (pageNum < 1) {
+                        throw new Exception("Invalid page number");
+                    }
+                    break;
+            }
+        } catch (Exception ex) {
+            throw new Exception("Invalid page number :", ex);
+        }
+
+        int[] iGrid = new int[2];
+        int[] iSize = new int[2];
+        try {
+            String[] sGrid = offset.replace("\n", "").replace("\t", "").replace(" ", "").split(",");
+            String[] sSize = boxSize.replace("\n", "").replace("\t", "").replace(" ", "").split(",");
+            for (int i = 0; i < 2; i++) {
+                iGrid[i] = Integer.parseInt(sGrid[i]);
+                iSize[i] = Integer.parseInt(sSize[i]);
+                if ((iSize[i] < 0)) {
+                    throw new Exception("Invalid position parameter");
+                }
+            }
+            this.textFinderArray.add(new TextFinder(pageNum, iGrid[0], iGrid[1], iSize[0], iSize[1], text, false));
+        } catch (Exception ex) {
+            throw new Exception("Invalid position parameter", ex);
+        }
+    }
+
+    public List<SignaturePosition> getSigPosLis() {
+        return sigPosLis;
+    }
+
+   public void addMoreSignaturePosition(String page, String position) throws Exception {
+        if (page == null) {
+            throw new Exception("page is null");
+        }
+        if (position == null) {
+            throw new Exception("position is null");
+        }
+        int pageNum;
+        try {
+            switch (page.toUpperCase()) {
+                case "FIRST":
+                    pageNum = 1;
+                    break;
+                case "LAST":
+                    pageNum = 0;
+                    break;
+                default:
+                    pageNum = Integer.parseInt(page);
+                    if (pageNum < 1) {
+                        throw new Exception("Invalid page number");
+                    }
+                    break;
+            }
+        } catch (Exception ex) {
+            throw new Exception("Invalid page number : ", ex);
+        }
+
+        int[] iGrid = new int[4];
+        try {
+            String[] sGrid = position.replace("\n", "").replace("\t", "").replace(" ", "").split(",");
+            for (int i = 0; i < 4; i++) {
+                iGrid[i] = Integer.parseInt(sGrid[i]);
+//                if ((iGrid[i] < 0)) {
+//                    throw new Exception("Invalid position parameter");
+//                }
+            }
+            this.sigPosLis.add(new SignaturePosition(pageNum, new Rectangle(iGrid[0], iGrid[1], iGrid[2], iGrid[3])));
+        } catch (Exception ex) {
+            throw new Exception("Invalid position parameter", ex);
+        }
+    }
+
+    
 }

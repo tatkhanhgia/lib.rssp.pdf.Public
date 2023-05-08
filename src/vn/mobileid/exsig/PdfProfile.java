@@ -1146,8 +1146,7 @@ public class PdfProfile extends Profile implements Serializable {
                     float finalFontSize = -1;
                     while (finalFontSize <= 0) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT) + 1;
-                    }
-                    System.out.println("FitText:" + finalFontSize);
+                    }                    
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
                     textCell.setVerticalAlignment(imageProfile.vertical);
@@ -1207,8 +1206,7 @@ public class PdfProfile extends Profile implements Serializable {
                     float finalFontSize = -1;
                     while (finalFontSize < 0) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT) - 1;
-                    }
-                    System.out.println("FitText:" + finalFontSize);
+                    }                    
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
                     textCell.setVerticalAlignment(Element.ALIGN_MIDDLE);
