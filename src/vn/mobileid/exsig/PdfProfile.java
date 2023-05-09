@@ -138,21 +138,21 @@ public class PdfProfile extends Profile implements Serializable {
 
     transient private BaseFont baseFont;
 
-    final private static String HTML_FONT_STYLE_BOLD_BEGIN = "<b>";
-    final private static String HTML_FONT_STYLE_BOLD_END = "</b>";
-    final private static String HTML_FONT_STYLE_ITALIC_BEGIN = "<i>";
-    final private static String HTML_FONT_STYLE_ITALIC_END = "</i>";
-    final private static String HTML_FONT_STYLE_BOLD_ITALIC_BEGIN = "<bi>";
-    final private static String HTML_FONT_STYLE_BOLD_ITALIC_END = "</bi>";
-    final private static String HTML_FONT_STYLE_UNDERLINE_BEGIN = "<u>";
-    final private static String HTML_FONT_STYLE_UNDERLINE_END = "</u>";
-    final private static String HTML_BREAK = "<br/>";
+    final private static transient String HTML_FONT_STYLE_BOLD_BEGIN = "<b>";
+    final private static transient String HTML_FONT_STYLE_BOLD_END = "</b>";
+    final private static transient String HTML_FONT_STYLE_ITALIC_BEGIN = "<i>";
+    final private static transient String HTML_FONT_STYLE_ITALIC_END = "</i>";
+    final private static transient String HTML_FONT_STYLE_BOLD_ITALIC_BEGIN = "<bi>";
+    final private static transient String HTML_FONT_STYLE_BOLD_ITALIC_END = "</bi>";
+    final private static transient String HTML_FONT_STYLE_UNDERLINE_BEGIN = "<u>";
+    final private static transient String HTML_FONT_STYLE_UNDERLINE_END = "</u>";
+    final private static transient String HTML_BREAK = "<br/>";
 
-    final private static String PREFIX_PERSONAL_CODE = "CMND:";
-    final private static String PREFIX_PERSONAL_PASSPORT_CODE = "HC:";
-    final private static String PREFIX_CITIZEN_CODE = "CCCD:";
-    final private static String PREFIX_ENTERPRISE_TAX_CODE = "MST:";
-    final private static String PREFIX_ENTERPRISE_BUDGET_CODE = "MNS:";
+    final private static transient String PREFIX_PERSONAL_CODE = "CMND:";
+    final private static transient String PREFIX_PERSONAL_PASSPORT_CODE = "HC:";
+    final private static transient String PREFIX_CITIZEN_CODE = "CCCD:";
+    final private static transient String PREFIX_ENTERPRISE_TAX_CODE = "MST:";
+    final private static transient String PREFIX_ENTERPRISE_BUDGET_CODE = "MNS:";
 
     protected transient Map<Integer, String> pageAndPosition;
     protected transient float[] boxSize;
@@ -1066,7 +1066,7 @@ public class PdfProfile extends Profile implements Serializable {
                 position.getHeight() - image.getScaledHeight() - imageProfile.border);
     }
 
-    protected void imageProfileCenter() {
+    protected void imageProfileCenter() {        
         image.scaleToFit((position.getRight() - position.getLeft() - imageProfile.border * 2),
                 (position.getTop() - position.getBottom() - imageProfile.border * 2)
         );
@@ -1263,7 +1263,7 @@ public class PdfProfile extends Profile implements Serializable {
         if (form.isTsa()) {
             tsaClient = new TSAClientBouncyCastle(tsaData[0], tsaData[1], tsaData[2], 8192, algorithm.getValue());
         }
-
+        
         for (int i = 0; i < tempDataList.size(); i++) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             BouncyCastleDigest digest = new BouncyCastleDigest();
@@ -1913,12 +1913,11 @@ class PdfVerify {
                         verifyResults.set(i, verifyResult);
                     }
                 }
-            }
-
-            return verifyResults;
+            }            
+               return verifyResults;
         } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
-    }
+    }    
 }

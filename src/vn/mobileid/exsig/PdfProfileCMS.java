@@ -80,8 +80,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
         super(form, algorithm);
     }
 
-    @Override
-    List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
+            @Override
+    public List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
 
         X509Certificate[] cert = this.certificates.toArray(new X509Certificate[certificates.size()]);
         List<byte[]> result = new ArrayList<>();

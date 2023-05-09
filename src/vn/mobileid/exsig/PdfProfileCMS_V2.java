@@ -41,6 +41,7 @@ import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -58,6 +59,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory;
 import org.bouncycastle.util.encoders.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.mobileid.serialize.ProfileJSONSerializer;
 
 /**
  *
@@ -656,7 +658,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         } catch (Exception e) {
             throw new Exception("Cannot generate hash: ", e);
         }
-        signingMethod.generateTempFile(hashList);
+        signingMethod.generateTempFile(hashList);             
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             try ( ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
@@ -1102,5 +1104,5 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public void clearSignaturePositions() {
         this.sigPosList.clear();
         this.textFinderArray.clear();
-    }
+    }    
 }
