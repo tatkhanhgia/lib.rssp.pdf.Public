@@ -1044,8 +1044,7 @@ public class PdfPKCS7CMS {
             attribute.add(new DERSequence(v));
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_SIGNING_TIME));
-            v.add(new DERSet(new DERUTCTime(signedDate)));
-            System.out.println("v:" + new DERUTCTime(signedDate));
+            v.add(new DERSet(new DERUTCTime(signedDate)));            
             attribute.add(new DERSequence(v));
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_MESSAGE_DIGEST));

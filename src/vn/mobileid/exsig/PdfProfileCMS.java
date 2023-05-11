@@ -154,13 +154,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             ByteBuffer bb = new ByteBuffer(spaceAvailable * 2);
             for (byte bi : signedContent) {
                 bb.appendHex(bi);
-            }
-
-            //Tesst
-            ByteArrayOutputStream te = new ByteArrayOutputStream();
-            bb.writeTo(te);
-            System.out.println("Content:" + new String(te.toByteArray()));
-            //Tesst
+            }          
 
             int remain = (spaceAvailable - signedContent.length) * 2;
             for (int k = 0; k < remain; ++k) {

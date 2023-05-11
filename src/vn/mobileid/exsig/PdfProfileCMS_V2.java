@@ -35,7 +35,6 @@ import com.itextpdf.text.pdf.security.ExternalBlankSignatureContainer;
 import com.itextpdf.text.pdf.security.ExternalSignatureContainer;
 import com.itextpdf.text.pdf.security.MakeSignature;
 import com.itextpdf.text.pdf.security.MakeSignatureMI;
-import com.itextpdf.text.pdf.security.PdfPKCS7;
 import com.itextpdf.text.pdf.security.PdfPKCS7CMS;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
@@ -70,6 +69,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     private transient final Logger log = LoggerFactory.getLogger(PdfProfileCMS_V2.class);
 
     private String signerCertificate;
+    protected List<Long> listTimeStamp = new ArrayList<>();
     protected transient List<TextFinder> textFinderArray = new ArrayList<>();
 
     public PdfProfileCMS_V2(Algorithm algorithm) {
@@ -82,7 +82,9 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
     @Override
     List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
-
+        Calendar signingTime = Calendar.getInstance();
+        signingTime.setTimeInMillis(timeMillis);
+        
         X509Certificate[] cert = this.certificates.toArray(new X509Certificate[certificates.size()]);
         List<byte[]> result = new ArrayList<>();
         TSAClient tsaClient = null;
@@ -94,7 +96,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             BouncyCastleDigest digest = new BouncyCastleDigest();
-            PdfPKCS7 sgn = new PdfPKCS7(null, cert, algorithm.getValue(), null, digest, false);
+            PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, cert, algorithm.getValue(), null, digest, false);
+            sgn.setSignDate(signingTime);
             PdfReader.unethicalreading = true;
             PdfReader reader;
             if (passwordList == null) {
@@ -345,6 +348,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             InputStream rg = new RASInputStream(new RandomAccessSourceFactory().createRanged(readerSource, gaps));
             BouncyCastleDigest digest = new BouncyCastleDigest();
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
+            sgn.setSignDate(signingTime);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
             byte[] sh = sgn.getAuthenticatedAttributeBytes(hash,signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
@@ -353,7 +357,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         }
     }
 
-    void generateHashMultipleFiles(List<PDFSignatureProperties> pdfSignaturePropertieses) throws Exception {
+    void generateHashMultipleFiles(List<PDFSignatureProperties> pdfSignaturePropertieses) throws Exception {       
         signatureId = "sig-"
                 + Calendar.getInstance().getTimeInMillis();
 
@@ -385,6 +389,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             Calendar signingTime = Calendar.getInstance();
             signingTime.setTimeInMillis(timeMillis);
             Date date = signingTime.getTime();
+            this.listTimeStamp.add(timeMillis);
             if (pdfSignatureProperties.getVisibleSignatureType() != 0) {
                 switch (pdfSignatureProperties.getVisibleSignatureType()) {
                     case 1:
@@ -565,6 +570,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         }
 
         for (int i = 0; i < tempDataList.size(); i++) {
+            Calendar signingTime = Calendar.getInstance();
+            signingTime.setTimeInMillis(listTimeStamp.get(i));
             PdfReader.unethicalreading = true;
             PdfReader reader;
             if (passwordList == null) {
@@ -596,7 +603,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
-            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash ,ocsp, crls, MakeSignature.CryptoStandard.CMS);
+            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(),ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
