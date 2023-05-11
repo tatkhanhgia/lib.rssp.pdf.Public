@@ -42,6 +42,7 @@ import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
 import java.awt.SecondaryLoop;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -63,15 +64,15 @@ import org.slf4j.LoggerFactory;
  *
  * @author Minhgalc
  */
-public class PdfProfileCMS extends PdfProfile implements Serializable{
+public class PdfProfileCMS extends PdfProfile implements Serializable {
 
     private transient final Logger log = LoggerFactory.getLogger(PdfProfileCMS.class);
 
     private String signerCertificate;
-    
-    public PdfProfileCMS(){        
+
+    public PdfProfileCMS() {
     }
-    
+
     public PdfProfileCMS(Algorithm algorithm) {
         super(PdfForm.B, algorithm);
     }
@@ -80,13 +81,15 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
         super(form, algorithm);
     }
 
-            @Override
+    @Override
     public List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
-
+        Calendar signingTime = Calendar.getInstance();
+//        signingTime.setTimeInMillis(Long.parseLong("1683715768258"));
+        signingTime.setTimeInMillis(timeMillis);
         X509Certificate[] cert = this.certificates.toArray(new X509Certificate[certificates.size()]);
         List<byte[]> result = new ArrayList<>();
         TSAClient tsaClient = null;
-        if (form!= null &&form.isTsa()) {
+        if (form != null && form.isTsa()) {
             tsaClient = new TSAClientBouncyCastle(tsaData[0], tsaData[1], tsaData[2], 8192, algorithm.getValue());
         }
 
@@ -94,7 +97,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             BouncyCastleDigest digest = new BouncyCastleDigest();
-            PdfPKCS7 sgn = new PdfPKCS7(null, cert, algorithm.getValue(), null, digest, false);
+            PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, cert, algorithm.getValue(), null, digest, false);
+            sgn.setSignDate(signingTime);
             PdfReader.unethicalreading = true;
             PdfReader reader;
             if (passwordList == null) {
@@ -137,6 +141,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
                     ocsp,
                     crls,
                     MakeSignature.CryptoStandard.CMS);
+
             int spaceAvailable = (int) (gaps[2] - gaps[1]) - 2;
             if ((spaceAvailable & 1) != 0) {
                 throw new DocumentException("Gap is not a multiple of 2");
@@ -150,6 +155,13 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
             for (byte bi : signedContent) {
                 bb.appendHex(bi);
             }
+
+            //Tesst
+            ByteArrayOutputStream te = new ByteArrayOutputStream();
+            bb.writeTo(te);
+            System.out.println("Content:" + new String(te.toByteArray()));
+            //Tesst
+
             int remain = (spaceAvailable - signedContent.length) * 2;
             for (int k = 0; k < remain; ++k) {
                 bb.append((byte) 48);
@@ -158,6 +170,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
             StreamUtil.CopyBytes(readerSource, gaps[2] - 1, gaps[3] + 1, baos);
 
             byte[] completeData = baos.toByteArray();
+
             reader.close();
 
             if (form.isRevocation()) {
@@ -181,7 +194,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
 
     @Override
     void generateHash(List<byte[]> dataToBeSign) throws Exception {
-
         Calendar signingTime = Calendar.getInstance();
         signingTime.setTimeInMillis(timeMillis);
         Date date = signingTime.getTime();
@@ -234,8 +246,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
                 initPosition(reader); //initPosition
                 sigTable = createImage(font);
                 //}
-                position.setRight(iRec.getRight()+position.getLeft());
-                position.setTop(position.getBottom()+iRec.getTop());
+                position.setRight(iRec.getRight() + position.getLeft());
+                position.setTop(position.getBottom() + iRec.getTop());
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
                 appearance.setSignDate(signingTime);
                 if (writeAll) {
@@ -264,9 +276,9 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
                 if (image != null) {
                     n2.addImage(image);
                 }
-                
+
                 PdfTemplate n0 = appearance.getLayer(0);
-                if (background != null) {                    
+                if (background != null) {
                     n0.addImage(background);
                 }
 
@@ -287,8 +299,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
                 } catch (Exception ex) {
                     throw new Exception("Can't add default border");
                 }
-                
-                if (layer0Icons != null) {                    
+
+                if (layer0Icons != null) {
                     for (Image layer0Icon : layer0Icons) {
                         n0.addImage(layer0Icon);
                     }
@@ -342,15 +354,20 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
             InputStream rg = new RASInputStream(new RandomAccessSourceFactory().createRanged(readerSource, gaps));
             BouncyCastleDigest digest = new BouncyCastleDigest();
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
+            sgn.setSignDate(signingTime);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
-            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, ocsp, crls, MakeSignature.CryptoStandard.CMS);
+            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
     }
 
     void generateHashMultipleFiles(List<PDFSignatureProperties> pdfSignaturePropertieses) throws Exception {
+        Calendar signingTime = Calendar.getInstance();
+        signingTime.setTimeInMillis(timeMillis);
+        Date date = signingTime.getTime();
+
         signatureId = "sig-"
                 + Calendar.getInstance().getTimeInMillis();
 
@@ -377,9 +394,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
             if (pdfSignatureProperties.getReason() != null) {
                 setReason(pdfSignatureProperties.getReason());
             }
-            Calendar signingTime = Calendar.getInstance();
-            signingTime.setTimeInMillis(timeMillis);
-            Date date = signingTime.getTime();
+
             if (pdfSignatureProperties.getVisibleSignatureType() != 0) {
                 switch (pdfSignatureProperties.getVisibleSignatureType()) {
                     case 1:
@@ -567,7 +582,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
-            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, ocsp, crls, MakeSignature.CryptoStandard.CMS);
+            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
@@ -846,7 +861,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable{
                             if (num.intValue() == 1) {
 //                                throw new DocumentException("Error:CERTIFIED_NO_CHANGES_ALLOWED!");
                                 return false;
-                            } 
+                            }
 //                            else if (num.intValue() == 2) {
 //                                continue;
 ////                                throw new DocumentException("Error:CERTIFIED_FILLING_FORM");

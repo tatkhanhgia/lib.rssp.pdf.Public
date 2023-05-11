@@ -115,11 +115,13 @@ public class PdfPKCS7CMS {
         }
 
         // Copy the certificates
-//        signCert = (X509Certificate) certChain[0];
-//        certs = new ArrayList<Certificate>();
-//        for (Certificate element : certChain) {
-//            certs.add(element);
-//        }
+        if (certChain != null) {
+            signCert = (X509Certificate) certChain[0];
+            certs = new ArrayList<Certificate>();
+            for (Certificate element : certChain) {
+                certs.add(element);
+            }
+        }
 
         // initialize and add the digest algorithms.
         digestalgos = new HashSet<String>();
@@ -860,17 +862,26 @@ public class PdfPKCS7CMS {
             // Add the digestAlgorithm
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(digestAlgorithmOid));
-            v.add(new DERNull());
+            v.add(DERNull.INSTANCE);
             signerinfo.add(new DERSequence(v));
 
             // add the authenticated attribute if present
-            if (secondDigest != null) {
-                signerinfo.add(new DERTaggedObject(false, 0, getAuthenticatedAttributeSet(secondDigest, ocsp, crlBytes, sigtype)));
+            if (secondDigest != null && signDate != null) {
+                signerinfo.add(
+                        new DERTaggedObject(
+                                false,
+                                0,
+                                getAuthenticatedAttributeSet(
+                                        secondDigest,
+                                        signDate.getTime(),
+                                        ocsp,
+                                        crlBytes,
+                                        sigtype)));
             }
             // Add the digestEncryptionAlgorithm
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(digestEncryptionAlgorithmOid));
-            v.add(new DERNull());
+            v.add(DERNull.INSTANCE);
             signerinfo.add(new DERSequence(v));
 
             // Add the digest
@@ -961,19 +972,47 @@ public class PdfPKCS7CMS {
      * <p>
      * <
      * pre>
-     * Calendar cal = Calendar.getInstance();
-     * PdfPKCS7 pk7 = new PdfPKCS7(key, chain, null, "SHA1", null, false);
-     * MessageDigest messageDigest = MessageDigest.getInstance("SHA1");
-     * byte buf[] = new byte[8192];
-     * int n;
-     * InputStream inp = sap.getRangeStream();
-     * while ((n = inp.read(buf)) &gt; 0) {
-     *    messageDigest.update(buf, 0, n);
-     * }
-     * byte hash[] = messageDigest.digest();
-     * byte sh[] = pk7.getAuthenticatedAttributeBytes(hash, cal);
-     * pk7.update(sh, 0, sh.length);
-     * byte sg[] = pk7.getEncodedPKCS7(hash, cal);
+     * Calendar cal = Calendar.getInstance(); PdfPKCS7 pk7 = new PdfPKCS7(key,
+     * chain, null, "SHA1", null, false); MessageDigest messageDigest =
+     * MessageDigest.getInstance("SHA1"); byte buf[] = new byte[8192]; int n;
+     * InputStream inp = sap.getRangeStream(); while ((n = inp.read(buf)) &gt;
+     * 0) { messageDigest.update(buf, 0, n); } byte hash[] =
+     * messageDigest.digest(); byte sh[] =
+     * pk7.getAuthenticatedAttributeBytes(hash, cal); pk7.update(sh, 0,
+     * sh.length); byte sg[] = pk7.getEncodedPKCS7(hash, cal);
+     * </pre>
+     *
+     * @param secondDigest the content digest
+     * @return the byte array representation of the authenticatedAttributes
+     * ready to be signed
+     */
+    public byte[] getAuthenticatedAttributeBytes(byte secondDigest[], Date signingTime, byte[] ocsp, Collection<byte[]> crlBytes, CryptoStandard sigtype) {
+        try {
+            return getAuthenticatedAttributeSet(secondDigest, signingTime, ocsp, crlBytes, sigtype).getEncoded(ASN1Encoding.DER);
+        } catch (Exception e) {
+            throw new ExceptionConverter(e);
+        }
+    }
+
+        /**
+     * When using authenticatedAttributes the authentication process is
+     * different. The document digest is generated and put inside the attribute.
+     * The signing is done over the DER encoded authenticatedAttributes. This
+     * method provides that encoding and the parameters must be exactly the same
+     * as in {@link #getEncodedPKCS7(byte[])}.
+     * <p>
+     * A simple example:
+     * <p>
+     * <
+     * pre>
+     * Calendar cal = Calendar.getInstance(); PdfPKCS7 pk7 = new PdfPKCS7(key,
+     * chain, null, "SHA1", null, false); MessageDigest messageDigest =
+     * MessageDigest.getInstance("SHA1"); byte buf[] = new byte[8192]; int n;
+     * InputStream inp = sap.getRangeStream(); while ((n = inp.read(buf)) &gt;
+     * 0) { messageDigest.update(buf, 0, n); } byte hash[] =
+     * messageDigest.digest(); byte sh[] =
+     * pk7.getAuthenticatedAttributeBytes(hash, cal); pk7.update(sh, 0,
+     * sh.length); byte sg[] = pk7.getEncodedPKCS7(hash, cal);
      * </pre>
      *
      * @param secondDigest the content digest
@@ -987,7 +1026,7 @@ public class PdfPKCS7CMS {
             throw new ExceptionConverter(e);
         }
     }
-
+    
     /**
      * This method provides that encoding and the parameters must be exactly the
      * same as in {@link #getEncodedPKCS7(byte[])}.
@@ -996,12 +1035,17 @@ public class PdfPKCS7CMS {
      * @return the byte array representation of the authenticatedAttributes
      * ready to be signed
      */
-    private DERSet getAuthenticatedAttributeSet(byte secondDigest[], byte[] ocsp, Collection<byte[]> crlBytes, CryptoStandard sigtype) {
+    private DERSet getAuthenticatedAttributeSet(byte secondDigest[], Date signedDate, byte[] ocsp, Collection<byte[]> crlBytes, CryptoStandard sigtype) {
         try {
             ASN1EncodableVector attribute = new ASN1EncodableVector();
             ASN1EncodableVector v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_CONTENT_TYPE));
             v.add(new DERSet(new ASN1ObjectIdentifier(SecurityIDs.ID_PKCS7_DATA)));
+            attribute.add(new DERSequence(v));
+            v = new ASN1EncodableVector();
+            v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_SIGNING_TIME));
+            v.add(new DERSet(new DERUTCTime(signedDate)));
+            System.out.println("v:" + new DERUTCTime(signedDate));
             attribute.add(new DERSequence(v));
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_MESSAGE_DIGEST));
@@ -1084,6 +1128,103 @@ public class PdfPKCS7CMS {
         }
     }
 
+    /**
+     * This method provides that encoding and the parameters must be exactly the
+     * same as in {@link #getEncodedPKCS7(byte[])}.
+     *
+     * @param secondDigest the content digest
+     * @return the byte array representation of the authenticatedAttributes
+     * ready to be signed
+     */
+    private DERSet getAuthenticatedAttributeSet(byte secondDigest[], byte[] ocsp, Collection<byte[]> crlBytes, CryptoStandard sigtype) {
+        try {
+            ASN1EncodableVector attribute = new ASN1EncodableVector();
+            ASN1EncodableVector v = new ASN1EncodableVector();
+            v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_CONTENT_TYPE));
+            v.add(new DERSet(new ASN1ObjectIdentifier(SecurityIDs.ID_PKCS7_DATA)));
+            attribute.add(new DERSequence(v));
+            v = new ASN1EncodableVector();
+            v = new ASN1EncodableVector();
+            v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_MESSAGE_DIGEST));
+            v.add(new DERSet(new DEROctetString(secondDigest)));
+            attribute.add(new DERSequence(v));
+            boolean haveCrl = false;
+            if (crlBytes != null) {
+                for (byte[] bCrl : crlBytes) {
+                    if (bCrl != null) {
+                        haveCrl = true;
+                        break;
+                    }
+                }
+            }
+            if (ocsp != null || haveCrl) {
+                v = new ASN1EncodableVector();
+                v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_ADBE_REVOCATION));
+
+                ASN1EncodableVector revocationV = new ASN1EncodableVector();
+
+                if (haveCrl) {
+                    ASN1EncodableVector v2 = new ASN1EncodableVector();
+                    for (byte[] bCrl : crlBytes) {
+                        if (bCrl == null) {
+                            continue;
+                        }
+                        ASN1InputStream t = new ASN1InputStream(new ByteArrayInputStream(bCrl));
+                        v2.add(t.readObject());
+                    }
+                    revocationV.add(new DERTaggedObject(true, 0, new DERSequence(v2)));
+                }
+
+                if (ocsp != null) {
+                    DEROctetString doctet = new DEROctetString(ocsp);
+                    ASN1EncodableVector vo1 = new ASN1EncodableVector();
+                    ASN1EncodableVector v2 = new ASN1EncodableVector();
+                    v2.add(OCSPObjectIdentifiers.id_pkix_ocsp_basic);
+                    v2.add(doctet);
+                    ASN1Enumerated den = new ASN1Enumerated(0);
+                    ASN1EncodableVector v3 = new ASN1EncodableVector();
+                    v3.add(den);
+                    v3.add(new DERTaggedObject(true, 0, new DERSequence(v2)));
+                    vo1.add(new DERSequence(v3));
+                    revocationV.add(new DERTaggedObject(true, 1, new DERSequence(vo1)));
+                }
+
+                v.add(new DERSet(new DERSequence(revocationV)));
+                attribute.add(new DERSequence(v));
+            }
+            if (sigtype == CryptoStandard.CADES) {
+                v = new ASN1EncodableVector();
+                v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_AA_SIGNING_CERTIFICATE_V2));
+
+                ASN1EncodableVector aaV2 = new ASN1EncodableVector();
+                String sha256Oid = DigestAlgorithms.getAllowedDigests(DigestAlgorithms.SHA256);
+
+                // If we look into X.690-0207, clause 11.5, we can see that using DER all the components of a sequence having
+                // default values shall not be included. According to RFC 5035, 5.4.1.1, definition of ESSCertIDv2, default
+                // AlgorithmIdentifier is sha256.
+                if (!sha256Oid.equals(digestAlgorithmOid)) {
+                    AlgorithmIdentifier algoId = new AlgorithmIdentifier(new ASN1ObjectIdentifier(digestAlgorithmOid));
+                    aaV2.add(algoId);
+                }
+
+                MessageDigest md = interfaceDigest.getMessageDigest(getHashAlgorithm());
+                byte[] dig = md.digest(signCert.getEncoded());
+                aaV2.add(new DEROctetString(dig));
+
+                v.add(new DERSet(new DERSequence(new DERSequence(new DERSequence(aaV2)))));
+                attribute.add(new DERSequence(v));
+            }
+
+            if (signaturePolicyIdentifier != null) {
+                attribute.add(new Attribute(PKCSObjectIdentifiers.id_aa_ets_sigPolicyId, new DERSet(signaturePolicyIdentifier)));
+            }
+
+            return new DERSet(attribute);
+        } catch (Exception e) {
+            throw new ExceptionConverter(e);
+        }
+    }
+    
     /*
      *	DIGITAL SIGNATURE VERIFICATION
      */
