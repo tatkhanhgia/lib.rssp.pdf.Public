@@ -644,14 +644,17 @@ public class PdfProfile extends Profile implements Serializable {
             ct.setSimpleColumn(ph, rect.getLeft(), rect.getBottom(), rect.getRight(), rect.getTop(), maxFontSize, Element.ALIGN_LEFT);
             ct.setRunDirection(runDirection);
             status = ct.go(true);
+            if(status != ColumnText.NO_MORE_COLUMN){
+                return maxFontSize;
+            }
             if (this.autoScale) {
                 if (ColumnText.hasMoreText(status)) { //no more column                                    
-                    float precision = 0.5f;
+                    float precision = 0.85f;
                     float min = 0;
                     float max = maxFontSize;
                     float size = maxFontSize;
                     for (int k = 0; k < 50; ++k) { //just in case it doesn't converge
-                        size = (min + max) / 2;
+                        size = (min + max) * precision;
                         iRec = new Rectangle(
                                 iRec.getLeft() + this.paddingLeft,
                                 0,
@@ -695,11 +698,8 @@ public class PdfProfile extends Profile implements Serializable {
                         ct.setSimpleColumn(new Phrase(text, font), iRec.getLeft(), iRec.getBottom(), iRec.getRight(), iRec.getTop(), size, Element.ALIGN_LEFT);
                         ct.setRunDirection(runDirection);
                         status = ct.go(true);
-                        if (!ColumnText.hasMoreText(status)) {
-                            if (max - min < size * precision) {
-                                return size;
-                            }
-                            min = size;
+                        if (status == ColumnText.NO_MORE_TEXT) {
+                            return size * precision;
                         } else {
                             max = size;
                         }
@@ -708,7 +708,7 @@ public class PdfProfile extends Profile implements Serializable {
                 }
             }
 
-            float precision = 0.5f;
+            float precision = 0.85f;
             float min = 0;
             float max = maxFontSize;
             float size = maxFontSize;
@@ -719,11 +719,12 @@ public class PdfProfile extends Profile implements Serializable {
                 ct.setSimpleColumn(new Phrase(text, font), rect.getLeft(), rect.getBottom(), rect.getRight(), rect.getTop(), size, Element.ALIGN_LEFT);
                 ct.setRunDirection(runDirection);
                 status = ct.go(true);
-                if ((status & ColumnText.NO_MORE_TEXT) != 0) {
-                    if (max - min < size * precision) {
-                        return size;
-                    }
-                    min = size;
+                if ((status & ColumnText.NO_MORE_TEXT) != 0) {           
+                        return size * precision;
+//                    if (max - min < size * precision) {
+//                        return size;
+//                    }
+//                    min = size / 2 ;
                 } else {
                     max = size;
                 }
@@ -1146,7 +1147,8 @@ public class PdfProfile extends Profile implements Serializable {
                     float finalFontSize = -1;
                     while (finalFontSize <= 0) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT) + 1;
-                    }                    
+                    }            
+                    System.out.println("Final:"+finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
                     textCell.setVerticalAlignment(imageProfile.vertical);

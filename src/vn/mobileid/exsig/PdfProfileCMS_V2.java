@@ -232,12 +232,11 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
             PdfStamperMI stamper = PdfStamperMI.createSignature(reader, baos, '\0', null, true);
             PdfSignatureAppearanceMI appearance = stamper.getSignatureAppearance();
-            if (position != null || textFinder != null || pageAndPosition != null || !textFinderArray.isEmpty()) {
-                //if (i == 0) {
+            if (position != null || textFinder != null || pageAndPosition != null || !textFinderArray.isEmpty()) {                
                 initPosition(reader); //initPosition
                 initPositionOfTextFinderArray(reader);
                 sigTable = createImage(font);
-                //}
+                
                 position.setRight(iRec.getRight() + position.getLeft());
                 position.setTop(position.getBottom() + iRec.getTop());
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
