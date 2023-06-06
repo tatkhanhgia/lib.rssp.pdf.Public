@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCheckText(Z[F)V
+vn.mobileid.exsig.PdfEsealCMS#instance-init#
+vn.mobileid.exsig.PdfEsealCMS$EsealIcon#<init>()V
+vn.mobileid.exsig.PdfEsealCMS$EsealIcon#instance-init#
+vn.mobileid.exsig.PdfEsealCMS$EsealTitle#instance-init#
+vn.mobileid.exsig.PdfEsealCMS$EsealTitle#<init>()V

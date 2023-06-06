@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCryptoDictionary(Lcom/itextpdf/text/pdf/PdfDictionary;)V
+com.itextpdf.text.pdf.PdfStamperMI#setPageAction(LPdfName;LPdfAction;I)V

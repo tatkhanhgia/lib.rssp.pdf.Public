@@ -1,4 +1,5 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#verifySigAttributes([B)Z
-com.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PublicKey;)Ljava/security/Signature;
-java.security.Signature#update([B)V
-java.security.Signature#verify([B)Z
+vn.mobileid.exsig.PdfProfile#getEnterpriseID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;
+null
+java.lang.String#length()I
+java.lang.String#substring(I)Ljava/lang/String;
+java.lang.String#contains(Ljava/lang/CharSequence;)Z

@@ -1,15 +1,23 @@
 
-=com.itextpdf.text.pdf.PdfSignatureAppearanceMI#isPreClosed()Z½
-°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.javaù
- ù
-("1*%
-1
-ú
- ú
-("
-
-ú
- ú
-(
-""B20
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMIHP
+Xcom.itextpdf.text.pdf.PdfReaderV4#getAcroFields_v4()Lcom/itextpdf/text/pdf/AcroFieldsV4;®
+£C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfReaderV4.java (("1*Â
+1  ($ZX
+ ((
+%0"com.itextpdf.text.pdf.AcroFieldsV4""com.itextpdf.text.pdf.AcroFieldsV4ž
+›
+ (+
+%1"Zcom.itextpdf.text.pdf.AcroFieldsV4#<init>(Lcom/itextpdf/text/pdf/PdfReaderV4;LPdfWriter;)V*F
+
+__unknown_file (*
+(
+%0"com.itextpdf.text.pdf.AcroFieldsV4*A
+
+__unknown_file (%#
+!com.itextpdf.text.pdf.PdfReaderV4*"
+
+__unknown_file (
+"""6
+ (,*
+(
+%0"com.itextpdf.text.pdf.AcroFieldsV4B%#
+!com.itextpdf.text.pdf.PdfReaderV4H

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getAcroFields()LAcroFields;
+vn.mobileid.exsig.PDFSignatureProperties#getOffset()Ljava/lang/String;

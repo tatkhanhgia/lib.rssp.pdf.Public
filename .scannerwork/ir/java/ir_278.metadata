@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getRenderingMode()Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$RenderingMode;
+com.itextpdf.text.pdf.security.MakeSignatureMI#instance-init#

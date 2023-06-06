@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#partialFormFlattening(Ljava/lang/String;)Z
+vn.mobileid.exsig.PDFSignatureProperties#setImage([BLvn/mobileid/exsig/ImageProfile;)V

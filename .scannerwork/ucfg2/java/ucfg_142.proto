@@ -1,19 +1,49 @@
 
-Hvn.mobileid.exsig.PDFSignatureProperties#getFontName()Ljava/lang/String;·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaþ þ( "1*¿
+cvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;I)Ljava/lang/String;º
+­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java° °(*"1*‹
 1
-ÿ ÿ(…
-‚
+± ±(q
+o
 
-ÿ ÿ(
-%0java.lang.String"__id*V
-
-__unknown_file (:*8*
-(vn.mobileid.exsig.PDFSignatureProperties"
+± ±(
+%0java.lang.String"__concat*
 
-fontName"&
+± ±(
+\"*)
 
-ÿ ÿ(
+± ±(
+
+fieldjava.lang.Stringo
+m
+
+± ±(#
+%1java.lang.String"__concat*&
+
+± ±(
 
-%0java.lang.StringB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+%0java.lang.String*
+
+± ±(#
+\":n
+l
+
+± ±(+
+%2java.lang.String"__concat*&
+
+± ±(#
+
+%1java.lang.String*
+
+±& ±(+
+"""&
+
+± ±(,
+
+%2java.lang.String:'
+
+°+ °(8
+fieldjava.lang.String: 
+
+__unknown_file (
+""B/"-
++vn.mobileid.serialize.ProfileJSONSerializer

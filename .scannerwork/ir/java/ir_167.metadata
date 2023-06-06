@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getMoreInfo()Ljava/util/Map;
+vn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;

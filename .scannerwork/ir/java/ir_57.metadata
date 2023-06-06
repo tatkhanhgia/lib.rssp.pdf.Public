@@ -1,5 +1,7 @@
-vn.mobileid.exsig.PdfProfile#getPersonalID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;
-null
-java.lang.String#length()I
-java.lang.String#substring(I)Ljava/lang/String;
-java.lang.String#contains(Ljava/lang/CharSequence;)Z
+vn.mobileid.serialize.CustomSerializer#deserialize([BLjava/lang/Class;)Ljava/io/Serializable;
+java.lang.Class#cast(Ljava/lang/Object;)Ljava/lang/Object;
+java.io.ObjectInputStream#instance-init#
+java.io.ByteArrayInputStream#instance-init#
+java.io.ByteArrayInputStream#<init>([B)V
+java.io.ObjectInputStream#<init>(Ljava/io/InputStream;)V
+java.io.ObjectInputStream#readObject()Ljava/lang/Object;

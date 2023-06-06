@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.security.MakeSignatureMI#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;CZ)V
+null

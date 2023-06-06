@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getOverContent(I)LPdfContentByte;
+vn.mobileid.exsig.PDFSignatureProperties#setSigningTime(JLjava/lang/String;)V

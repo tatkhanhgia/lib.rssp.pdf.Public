@@ -1,3 +1,1 @@
-vn.mobileid.exsig.PdfProfile#instance-init#
-java.util.ArrayList#<init>()V
-java.util.ArrayList#instance-init#
+vn.mobileid.exsig.PdfProfileCMS_V2#setRevocationData([BLjava/util/List;)V

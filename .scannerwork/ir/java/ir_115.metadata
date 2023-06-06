@@ -1,1 +1,3 @@
-vn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSignDate()Ljava/util/Calendar;
+==
+getTimeStampDate com.itextpdf.text.pdf.security.PdfPKCS7V4#getTimeStampDate()Ljava/util/Calendar;

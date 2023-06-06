@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getSignDate()Ljava/util/Calendar;
+com.itextpdf.text.pdf.PdfStamperMI#addViewerPreference(LPdfName;LPdfObject;)V

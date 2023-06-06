@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#instance-init#
+vn.mobileid.exsig.PdfProfile#setFont(Lvn/mobileid/exsig/DefaultFont;F)V
+==
+setFont vn.mobileid.exsig.PdfProfile#setFont(Lvn/mobileid/exsig/DefaultFont;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V

@@ -1,2 +1,3 @@
-vn.mobileid.exsig.PdfProfile#imageProfileBottom()V
-null
+vn.mobileid.exsig.PdfProfileCMS_Temp#createTemporalFile(LSigningMethodAsync;Ljava/util/List;Ljava/util/List;)[B
+==
+createTemporalFile vn.mobileid.exsig.PdfProfileCMS_Temp#createTemporalFile(LSigningMethodAsync;Ljava/util/List;)[B

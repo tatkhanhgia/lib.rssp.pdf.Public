@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSignatureCreator(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfStamperMI#makePackage(LPdfName;)V
+null

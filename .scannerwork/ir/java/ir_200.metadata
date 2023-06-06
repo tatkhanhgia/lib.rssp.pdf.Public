@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#makePackage(LPdfName;)V
-null
+vn.mobileid.exsig.PDFSignatureProperties#addLayer0Icon([BLjava/lang/String;)V

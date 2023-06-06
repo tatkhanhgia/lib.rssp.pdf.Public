@@ -1,6 +1,9 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;
-java.security.Signature#initSign(Ljava/security/PrivateKey;)V
+vn.mobileid.exsig.PdfProfile#appendSignautre(Ljava/util/List;)Ljava/util/List;
+java.util.ArrayList#<init>()V
+null
+java.util.ArrayList#instance-init#
+java.io.ByteArrayOutputStream#<init>()V
+java.io.ByteArrayOutputStream#instance-init#
 ==
-getDigestAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;
+enrichLTA vn.mobileid.exsig.PdfProfile#enrichLTA(LPdfReader;)[B
+enrichLT vn.mobileid.exsig.PdfProfile#enrichLT(LPdfReader;)[B

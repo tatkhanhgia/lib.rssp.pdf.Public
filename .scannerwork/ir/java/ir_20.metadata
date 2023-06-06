@@ -1,1 +1,3 @@
-vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)V
+vn.mobileid.exsig.PdfProfileCMS_V2#sign(LSigningMethodSync;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+==
+sign vn.mobileid.exsig.PdfProfileCMS_V2#sign(LSigningMethodSync;Ljava/util/List;)Ljava/util/List;

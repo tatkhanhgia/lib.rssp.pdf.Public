@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setLocationCaption(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
+==
+addFileAttachment com.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;LPdfFileSpecification;)V

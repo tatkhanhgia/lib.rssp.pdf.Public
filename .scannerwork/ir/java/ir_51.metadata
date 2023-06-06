@@ -1,9 +1,2 @@
-vn.mobileid.exsig.PdfProfile#appendSignautre(Ljava/util/List;)Ljava/util/List;
-java.util.ArrayList#<init>()V
+vn.mobileid.exsig.PdfProfileCMS_Temp#checkLock(LPdfDictionary;)Z
 null
-java.util.ArrayList#instance-init#
-java.io.ByteArrayOutputStream#<init>()V
-java.io.ByteArrayOutputStream#instance-init#
-==
-enrichLTA vn.mobileid.exsig.PdfProfile#enrichLTA(LPdfReader;)[B
-enrichLT vn.mobileid.exsig.PdfProfile#enrichLT(LPdfReader;)[B

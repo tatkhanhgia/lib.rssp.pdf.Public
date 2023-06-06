@@ -1,2 +1,6 @@
-vn.mobileid.exsig.PdfProfile#containsHTMLChars(Ljava/lang/String;)Z
-java.lang.String#contains(Ljava/lang/CharSequence;)Z
+vn.mobileid.serialize.CustomSerializer#serializer(Ljava/io/Serializable;)[B
+java.io.ObjectOutputStream#instance-init#
+java.io.ObjectOutputStream#<init>(Ljava/io/OutputStream;)V
+java.io.ObjectOutputStream#writeObject(Ljava/lang/Object;)V
+java.io.ByteArrayOutputStream#<init>()V
+java.io.ByteArrayOutputStream#instance-init#

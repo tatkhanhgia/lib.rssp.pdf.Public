@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getImportedPage(LPdfReader;I)LPdfImportedPage;
+vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;)V

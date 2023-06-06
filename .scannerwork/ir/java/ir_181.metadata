@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setEncryption(ILjava/lang/String;Ljava/lang/String;I)V
-==
-setEncryption com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V
+vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)V

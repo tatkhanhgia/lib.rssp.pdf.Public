@@ -1,18 +1,672 @@
 
-Qvn.mobileid.exsig.PDFSignatureProperties#getFont()Lvn/mobileid/exsig/DefaultFont;∑
-™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java¢ ¢(!"1*’
-1
-£ £(é
-ã
+avn.mobileid.serialize.ProfileJSONSerializer#writeClassField(Ljava/lang/Object;)Ljava/lang/String;∫
+≠C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.javaﬁ ﬁ()"46*‰
+46
+ﬂ  ﬂ(3FD
 
-£ £(#
-%0vn.mobileid.exsig.DefaultFont"__id*R
+ﬂ$ ﬂ(1
+%0java.lang.StringBuilder"java.lang.StringBuildert
+r
+
+ﬂ  ﬂ(3
+%1"!java.lang.StringBuilder#<init>()V*;
 
-__unknown_file (6*4*
-(vn.mobileid.exsig.PDFSignatureProperties"
-font"3
+__unknown_file (
+
+%0java.lang.StringBuilderu
+s
 
-£ £(%
-#
-%0vn.mobileid.exsig.DefaultFontB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+ﬂ ﬂ(4"
+builderjava.lang.StringBuilder"__id*;
+
+__unknown_file (
+
+%0java.lang.StringBuilderöó
+
+‡ ‡(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*8
+
+__unknown_file (
+
+objectjava.lang.Object2
+getClass()wu
+
+‡ ‡(&
+%3boolean"java.lang.Class#isEnum()Z*3
+
+__unknown_file (
+
+%2java.lang.Class2isEnum()*
+3
+45*©
+24
+ (`ëé
+
+ (`
+%22java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%21java.lang.String2append(Ljava/lang/String;)*
+7*’
+25
+' (_º
+π
+
+' (_
+%21java.lang.String"cvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;J)Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializer*5
+
+__unknown_file (
+
+%19java.lang.String*)
+
+__unknown_file (
+
+%20long*
+24*Ç
+26
+I (NÈÊ
+
+I (^
+%20long"4java.lang.reflect.Field#getLong(Ljava/lang/Object;)J*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field*8
+
+__unknown_file (
+
+objectjava.lang.Object2getLong(Ljava/lang/Object;)*
+25*¡
+27
+ (®•
+
+8 (G
+%19java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field2	getName()*
+26*©
+29
+Ó Ó(_ëé
+
+Ó Ó(_
+%18java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%17java.lang.String2append(Ljava/lang/String;)*
+7*‘
+30
+Ó' Ó(^ª
+∏
+
+Ó' Ó(^
+%17java.lang.String"cvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;I)Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializer*5
+
+__unknown_file (
+
+%15java.lang.String*(
+
+__unknown_file (
+
+
+%16int*
+29*ˇ
+31
+ÓI Ó(NÊ„
+
+ÓI Ó(]
+
+%16int"3java.lang.reflect.Field#getInt(Ljava/lang/Object;)I*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field*8
+
+__unknown_file (
+
+objectjava.lang.Object2getInt(Ljava/lang/Object;)*
+30*¡
+32
+Ó Ó(®•
+
+Ó8 Ó(G
+%15java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field2	getName()*
+31*ÿ
+10
+ˆ' ˆ(c¿
+Ω
+
+ˆ' ˆ(c
+%33java.lang.String"dvn.mobileid.serialize.ProfileJSONSerializer#writeBooleanField(Ljava/lang/String;Z)Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializer*5
+
+__unknown_file (
+
+%31java.lang.String*,
+
+__unknown_file (
+
+%32boolean*
+9*ã
+11
+ˆJ ˆ(OÚÔ
+
+ˆJ ˆ(b
+%32boolean"7java.lang.reflect.Field#getBoolean(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field*8
+
+__unknown_file (
+
+objectjava.lang.Object2getBoolean(Ljava/lang/Object;)*
+10*©
+34
+Ï Ï(eëé
+
+Ï Ï(e
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%13java.lang.String2append(Ljava/lang/String;)*
+7*¡
+12
+ˆ ˆ(®•
+
+ˆ9 ˆ(H
+%31java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field2	getName()*
+11*Ú
+35
+ÏI Ï(cŸ
+÷
+
+Ï' Ï(d
+%13java.lang.String"tvn.mobileid.serialize.ProfileJSONSerializer#writeStringField(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializer*5
+
+__unknown_file (
+
+%11java.lang.String*5
+
+__unknown_file (
+
+%12java.lang.Object*
+34*ó
+36
+ÏR Ï(W˛˚
+
+ÏR Ï(c
+%12java.lang.Object"Ajava.lang.reflect.Field#get(Ljava/lang/Object;)Ljava/lang/Object;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field*8
+
+__unknown_file (
+
+objectjava.lang.Object2get(Ljava/lang/Object;)*
+35*©
+14
+Ù Ù(cëé
+
+Ù Ù(c
+%30java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%29java.lang.String2append(Ljava/lang/String;)*
+7*¡
+37
+Ï Ï(®•
+
+Ï8 Ï(G
+%11java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field2	getName()*
+36*‡
+15
+ÙG Ù(a«
+ƒ
+
+Ù' Ù(b
+%29java.lang.String"bvn.mobileid.serialize.ProfileJSONSerializer#writeByteField(Ljava/lang/String;[B)Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializer*5
+
+__unknown_file (
+
+%27java.lang.String*5
+
+__unknown_file (
+
+%28java.lang.Object*
+14*î
+38
+È È(4e
+c
+
+È È(4
+typejava.lang.Object"__id*5
+
+__unknown_file (
+
+%10java.lang.Object*
+37
+27
+5
+17
+32
+22
+12*ó
+16
+ÙP Ù(U˛˚
+
+ÙP Ù(a
+%28java.lang.Object"Ajava.lang.reflect.Field#get(Ljava/lang/Object;)Ljava/lang/Object;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field*8
+
+__unknown_file (
+
+objectjava.lang.Object2get(Ljava/lang/Object;)*
+15*ó
+39
+È" È('˛˚
+
+È" È(3
+%10java.lang.Object"Ajava.lang.reflect.Field#get(Ljava/lang/Object;)Ljava/lang/Object;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field*8
+
+__unknown_file (
+
+objectjava.lang.Object2get(Ljava/lang/Object;)*
+38*¡
+17
+Ù Ù(®•
+
+Ù6 Ù(E
+%27java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field2	getName()*
+16*©
+19
+Ú Ú(bëé
+
+Ú Ú(b
+%26java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%25java.lang.String2append(Ljava/lang/String;)*
+7*…
+1
+à à(é
+ã
+
+à à("
+%49java.lang.String"]vn.mobileid.serialize.ProfileJSONSerializer#writeObject(Ljava/lang/Object;)Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializer*8
+
+__unknown_file (
+
+objectjava.lang.Object"'
+
+à à(#
+
+%49java.lang.String*Á
+2
+Ö Ö(¨©
+
+Ö Ö(%
+%48java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder2
+toString()"'
+
+Ö Ö(&
+
+%48java.lang.String*º
+3
+Ñ Ñ(õò
+
+Ñ Ñ(
+%46java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*8
+
+__unknown_file (
+
+objectjava.lang.Object2
+getClass()ÑÅ
+
+Ñ Ñ(+
+%47boolean"java.lang.Class#isInterface()Z*4
+
+__unknown_file (
+
+%46java.lang.Class2isInterface()*
+2
+1*‚
+4
+ˇ ˇ(€ÿ
+
+ˇ! ˇ(9
+
+%36int"8java.lang.StringBuilder#lastIndexOf(Ljava/lang/String;)I*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*!
+
+__unknown_file (
+,2lastIndexOf(Ljava/lang/String;)ÓÎ
+
+ˇ ˇ(:
+%37java.lang.StringBuilder"@java.lang.StringBuilder#deleteCharAt(I)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*(
+
+__unknown_file (
+
+
+%36int2deleteCharAt(I)√
+¿
+
+Ä Ä()
+%38java.lang.String"Lvn.mobileid.serialize.ProfileJSONSerializer#writeEndJSON()Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializerëé
+
+Ä Ä(*
+%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%38java.lang.String2append(Ljava/lang/String;)T
+R
+
+Å Å(
+%40java.io.PrintStream"__id*"
+
+__unknown_file (
+""¨©
+
+Å. Å(@
+%41java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder2
+toString()x
+v
+
+Å Å(@
+%42java.lang.String"__concat*
+
+Å Å(+
+
+\n\nClass:*'
+
+Å. Å(@
+
+%41java.lang.Stringr
+p
+
+Å Å(I
+%43java.lang.String"__concat*'
+
+Å Å(@
+
+%42java.lang.String*
+
+ÅC Å(I
+\n\n‹Ÿ
+
+Å Å(J
+%44void"0java.io.PrintStream#println(Ljava/lang/String;)V*8
+
+__unknown_file (
+
+%40java.io.PrintStream*5
+
+__unknown_file (
+
+%43java.lang.String2println(Ljava/lang/String;)¨©
+
+Ç Ç(%
+%45java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder2
+toString()"'
+
+Ç Ç(&
+
+%45java.lang.String*ö
+5
+„ „(Z
+X
+
+„ „( 
+fieldjava.lang.reflect.Field"__id*"
+
+__unknown_file (
+""£
+†
+
+„ „( 
+fieldjava.lang.reflect.Field"
+__arrayGet*@
+
+__unknown_file ($
+"
+enum_java.lang.reflect.Field[]*"
+
+__unknown_file (
+""*
+4
+43*î
+7
+˙ ˙(˝˙
+
+˙ ˙('
+%35java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*!
+
+__unknown_file (
+,2append(Ljava/lang/String;)*
+5*®
+9
+ˆ ˆ(dëé
+
+ˆ ˆ(d
+%34java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%33java.lang.String2append(Ljava/lang/String;)*
+7*”
+40
+Ë Ë(∫∑
+
+Ë Ë(-
+
+%9void")java.lang.reflect.Field#setAccessible(Z)V*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field* 
+
+__unknown_file (22setAccessible(Z)*
+39*◊
+20
+Ú' Ú(aæ
+ª
+
+Ú' Ú(a
+%25java.lang.String"cvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;D)Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializer*5
+
+__unknown_file (
+
+%23java.lang.String*+
+
+__unknown_file (
+
+%24double*
+19*∑
+43
+‰ ‰(õò
+
+‰ ‰(*
+%8boolean")java.lang.reflect.Field#isEnumConstant()Z*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field2isEnumConstant()*
+5
+40*à
+21
+ÚI Ú(NÔÏ
+
+ÚI Ú(`
+%24double"6java.lang.reflect.Field#getDouble(Ljava/lang/Object;)D*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field*8
+
+__unknown_file (
+
+objectjava.lang.Object2getDouble(Ljava/lang/Object;)*
+20*¡
+22
+Ú Ú(®•
+
+Ú8 Ú(G
+%23java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+fieldjava.lang.reflect.Field2	getName()*
+21*¿
+45
+· ·(ƒ
+¡
+
+· ·(+
+%4java.lang.String"Nvn.mobileid.serialize.ProfileJSONSerializer#writeStartJSON()Ljava/lang/String;*K
+
+__unknown_file (/"-
++vn.mobileid.serialize.ProfileJSONSerializerèå
+
+· ·(,
+%5java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+builderjava.lang.StringBuilder*4
+
+__unknown_file (
+
+%4java.lang.String2append(Ljava/lang/String;)öó
+
+‚ ‚(-
+%6java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*8
+
+__unknown_file (
+
+objectjava.lang.Object2
+getClass()π∂
+
+‚ ‚(A
+%7java.lang.reflect.Field[]"=java.lang.Class#getDeclaredFields()[Ljava/lang/reflect/Field;*3
+
+__unknown_file (
+
+%6java.lang.Class2getDeclaredFields()w
+u
+
+‚ ‚(B"
+enum_java.lang.reflect.Field[]"__id*=
+
+__unknown_file (!
+
+%7java.lang.reflect.Field[]*
+5:(
+
+ﬁ* ﬁ(7
+objectjava.lang.ObjectB/"-
++vn.mobileid.serialize.ProfileJSONSerializer

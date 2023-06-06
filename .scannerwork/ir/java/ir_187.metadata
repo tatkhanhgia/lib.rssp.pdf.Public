@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setFormFlattening(Z)V
+vn.mobileid.exsig.PDFSignatureProperties#getBoxSize()Ljava/lang/String;

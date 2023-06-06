@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#isPlaceAll()Z
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getOcsp()LBasicOCSPResp;

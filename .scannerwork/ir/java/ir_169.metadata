@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#replacePage(LPdfReader;II)V
+vn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;

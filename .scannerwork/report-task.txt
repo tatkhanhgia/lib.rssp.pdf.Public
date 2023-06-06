@@ -1,7 +1,7 @@
 organization=tatkhanhgia
 projectKey=tatkhanhgia_lib.rssp.pdf.Public
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.39905
+serverVersion=8.0.0.42104
 dashboardUrl=https://sonarcloud.io/dashboard?id=tatkhanhgia_lib.rssp.pdf.Public
-ceTaskId=AYd0xDJi0TrPb6bkSFWD
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYd0xDJi0TrPb6bkSFWD
+ceTaskId=AYiOapduqmDuQl6b_Yko
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYiOapduqmDuQl6b_Yko

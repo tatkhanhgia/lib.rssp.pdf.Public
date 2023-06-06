@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getLineSpacing()F
+vn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;I)Ljava/lang/String;

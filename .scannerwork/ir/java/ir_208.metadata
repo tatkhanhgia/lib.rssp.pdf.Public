@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setFullCompression()V
+vn.mobileid.exsig.PDFSignatureProperties#getTextAlignment()Lvn/mobileid/exsig/TextAlignment;

@@ -1,1 +1,10 @@
-vn.mobileid.exsig.PdfProfile#setSignInitial(Z)V
+vn.mobileid.exsig.TestCreateEseal#createDottedPdf(Ljava/lang/String;)V
+null
+java.io.FileOutputStream#instance-init#
+vn.mobileid.exsig.TestCreateEseal#<init>()V
+vn.mobileid.exsig.TestCreateEseal#instance-init#
+vn.mobileid.exsig.TestCreateEseal$DottedCells#instance-init#
+java.io.FileOutputStream#<init>(Ljava/lang/String;)V
+vn.mobileid.exsig.TestCreateEseal$DottedCells#<init>(Lvn/mobileid/exsig/TestCreateEseal;)V
+vn.mobileid.exsig.TestCreateEseal$DottedCell#instance-init#
+vn.mobileid.exsig.TestCreateEseal$DottedCell#<init>(Lvn/mobileid/exsig/TestCreateEseal;)V

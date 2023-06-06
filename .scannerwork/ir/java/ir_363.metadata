@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.SignaturePosition#getRectangle()LRectangle;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setReuseAppearance(Z)V
