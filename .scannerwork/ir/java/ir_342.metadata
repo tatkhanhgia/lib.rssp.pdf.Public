@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getUnderlyingSource()LRandomAccessSource;
-null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getPageRect()LRectangle;

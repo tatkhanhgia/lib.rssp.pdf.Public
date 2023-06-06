@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#setSignDate(Ljava/util/Calendar;)V
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7([B)[B
+==
+getEncodedPKCS7 com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7([BLTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B

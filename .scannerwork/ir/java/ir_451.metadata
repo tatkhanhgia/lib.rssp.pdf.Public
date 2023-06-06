@@ -1,1 +1,9 @@
-vn.mobileid.exsig.PdfProfileCMS#<init>(LAlgorithm;)V
+vn.mobileid.exsig.CmsProfile#generateHash(Ljava/util/List;)V
+null
+java.lang.String#instance-init#
+java.util.Calendar#getInstance()Ljava/util/Calendar;
+java.io.ByteArrayInputStream#instance-init#
+java.io.ByteArrayInputStream#<init>([B)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#instance-init#
+com.itextpdf.text.pdf.security.PdfPKCS7V4#<init>(Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;Ljava/lang/String;Lcom/itextpdf/text/pdf/security/ExternalDigest;Z)V
+java.lang.String#<init>(Ljava/lang/String;)V

@@ -1,1 +1,1 @@
-vn.mobileid.exsig.TextPlusXY#setPage(I)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSigningInfoVersion()I

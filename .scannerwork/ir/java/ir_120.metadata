@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getHashAlgorithm()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#verifyTimestampImprint()Z
+null
+java.util.Arrays#equals([B[B)Z

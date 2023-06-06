@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getWriter()LPdfStamperImp;
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setXmlLocator(LXmlLocator;)V

@@ -1,4 +1,2 @@
-vn.mobileid.exsig.TextPlusY#yCoordAt(I)F
-java.lang.IndexOutOfBoundsException#<init>()V
-java.lang.String#length()I
-java.lang.IndexOutOfBoundsException#instance-init#
+vn.mobileid.exsig.PdfEsealCMS#setEsealTitleFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
+null

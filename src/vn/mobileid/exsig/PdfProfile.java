@@ -968,7 +968,7 @@ public class PdfProfile extends Profile implements Serializable {
                 sigPosList.remove(0);
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
             throw new Exception("Can't init signature position", ex);
         }
     }
@@ -1940,6 +1940,7 @@ class PdfVerify {
             return verifyResults;
         } catch (Exception ex) {
             ex.printStackTrace();
+//            throw new Exception("Can't init signature position", ex);
         }
         return null;
     }

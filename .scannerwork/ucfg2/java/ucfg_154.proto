@@ -1,15 +1,16 @@
 
-Kvn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;µ
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaG G(#"1*¼
-1H H(†
-ƒ
-H H(
-%0java.lang.String"__id*Y
+Jvn.mobileid.exsig.PDFSignatureProperties#getTimeFormat()Ljava/lang/String;µ
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaq q(""1*»
+1r r(…
+‚
+r r(
+%0java.lang.String"__id*X
 
-__unknown_file (=*;*
-(vn.mobileid.exsig.PDFSignatureProperties"
-textContent"$
-H H(
+__unknown_file (<*:*
+(vn.mobileid.exsig.PDFSignatureProperties"
+
+timeFormat"$
+r r(
 
 %0java.lang.StringB,*
 (vn.mobileid.exsig.PDFSignatureProperties

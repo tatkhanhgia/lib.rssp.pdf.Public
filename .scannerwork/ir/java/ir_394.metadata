@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addFieldMDP(LPdfDictionary;LPdfDictionary;)V
-null
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#getReason()Ljava/lang/String;

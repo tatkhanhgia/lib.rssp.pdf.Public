@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfStamperMI#getMoreInfo()Ljava/util/Map;
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V
+null

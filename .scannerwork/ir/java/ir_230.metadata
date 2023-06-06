@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getUnderContent(I)LPdfContentByte;
+com.itextpdf.text.pdf.PdfStamperMI#getAcroFields()LAcroFields;

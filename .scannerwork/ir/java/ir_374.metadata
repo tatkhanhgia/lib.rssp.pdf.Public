@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setLayer4Text(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setOriginalout(Ljava/io/OutputStream;)V

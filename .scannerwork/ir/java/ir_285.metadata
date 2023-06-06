@@ -1,1 +1,3 @@
-vn.mobileid.exsig.TextAlignment#<init>(Ljava/lang/String;II)V
+com.itextpdf.text.pdf.PdfReaderV4#getAcroFields_v4()Lcom/itextpdf/text/pdf/AcroFieldsV4;
+com.itextpdf.text.pdf.AcroFieldsV4#<init>(Lcom/itextpdf/text/pdf/PdfReaderV4;LPdfWriter;)V
+com.itextpdf.text.pdf.AcroFieldsV4#instance-init#

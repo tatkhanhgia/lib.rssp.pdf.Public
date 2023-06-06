@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getImportedPage(LPdfReader;I)LPdfImportedPage;
+com.itextpdf.text.pdf.PdfStamperMI#partialFormFlattening(Ljava/lang/String;)Z

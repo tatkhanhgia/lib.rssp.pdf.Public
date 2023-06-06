@@ -1,61 +1,15 @@
 
-tvn.mobileid.serialize.ProfileJSONSerializer#writeStringField(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;∫
-≠C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java¿ ¿(*"1*î
-1
-¡ ¡(q
-o
-
-¡ ¡(
-%0java.lang.String"__concat*
-
-¡ ¡(
-\"*)
-
-¡ ¡(
-
-fieldjava.lang.Stringq
-o
-
-¡ ¡(%
-%1java.lang.String"__concat*&
-
-¡ ¡(
+Fvn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;µ
+™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaO O("1*∂
+1P P(Ä
+~
+P P(
+%0java.lang.String"__id*T
+
+__unknown_file (8*6*
+(vn.mobileid.exsig.PDFSignatureProperties"
+reason"$
+P P(
 
-%0java.lang.String*
-
-¡ ¡(%	
-\":\"Ñ
-Å
-
-¡ ¡(-
-%2java.lang.String"__concat*&
-
-¡ ¡(%
-
-%1java.lang.String*)
-
-¡( ¡(-
-
-valuejava.lang.Stringn
-l
-
-¡ ¡(4
-%3java.lang.String"__concat*&
-
-¡ ¡(-
-
-%2java.lang.String*
-
-¡0 ¡(4
-\""&
-
-¡ ¡(5
-
-%3java.lang.String:'
-
-¿+ ¿(8
-fieldjava.lang.String:'
-
-¿9 ¿(E
-valuejava.lang.StringB/"-
-+vn.mobileid.serialize.ProfileJSONSerializer
+%0java.lang.StringB,*
+(vn.mobileid.exsig.PDFSignatureProperties

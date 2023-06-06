@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#isEmbedded()Z
+com.itextpdf.text.pdf.PdfStamperMI#setMoreInfo(Ljava/util/Map;)V

@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfEsealCMS#setEsealTitle(Lvn/mobileid/exsig/PdfEsealCMS$EsealTitle;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getCertificationLevel()I

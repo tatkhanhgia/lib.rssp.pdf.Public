@@ -1,1 +1,1 @@
-vn.mobileid.exsig.CmsProfile#instance-init#
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getCertificate()Ljava/security/cert/Certificate;

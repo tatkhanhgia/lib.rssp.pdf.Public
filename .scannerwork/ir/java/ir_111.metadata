@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getReason()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#setExternalDigest([B[BLjava/lang/String;)V
+null
+java.security.NoSuchAlgorithmException#instance-init#
+java.lang.String#equals(Ljava/lang/Object;)Z
+java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V

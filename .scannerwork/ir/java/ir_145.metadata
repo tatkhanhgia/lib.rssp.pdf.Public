@@ -1,1 +1,1 @@
-vn.mobileid.exsig.Color#instance-init#
+vn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;F)Ljava/lang/String;

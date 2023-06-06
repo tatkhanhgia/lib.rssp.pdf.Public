@@ -1,1 +1,1 @@
-vn.mobileid.serialize.ProfileJSONSerializer#writeStartJSON()Ljava/lang/String;
+vn.mobileid.serialize.ProfileJSONSerializer#writeBooleanField(Ljava/lang/String;Z)Ljava/lang/String;

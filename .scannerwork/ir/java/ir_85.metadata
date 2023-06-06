@@ -1,2 +1,2 @@
-vn.mobileid.exsig.PdfProfile#imageProfileTop()V
+vn.mobileid.exsig.PdfProfile#checkLock(LPdfDictionary;)Z
 null

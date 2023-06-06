@@ -834,8 +834,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
             return true;
         } catch (Exception ex) {
-            ex.printStackTrace();
-            throw new Exception("Error while checking locked Document!");
+//            ex.printStackTrace();
+            throw new Exception("Error while checking locked Document!", ex);
         }
     }
 
@@ -978,7 +978,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
                                 sigPosList.add(new SignaturePosition(otherTextPlusXY.getPage(), new Rectangle(detectedLowerX, detectedLowerY, calculatedUpperX, calculatedUpperY)));
                             }
                         } catch (Exception ex) {
-                            ex.printStackTrace();
+                            throw new Exception("Error while detect text!", ex);
                         }
                     }
                 }
@@ -1059,7 +1059,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 //                sigPosList.remove(0);
 //            }
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
             throw new Exception("Can't init signature position", ex);
         }
     }

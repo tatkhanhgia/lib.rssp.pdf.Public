@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setReason(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getUnderlyingSource()LRandomAccessSource;
+null

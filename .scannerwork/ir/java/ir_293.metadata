@@ -1,1 +1,2 @@
-vn.mobileid.exsig.TextPlusY#getxCoord()F
+vn.mobileid.exsig.PdfEsealCMS#setEsealContentFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
+null

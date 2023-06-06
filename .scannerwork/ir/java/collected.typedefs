@@ -47,18 +47,7 @@
 valueOfVvn.mobileid.exsig.ImageAlgin#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/ImageAlgin;N
 valuesDvn.mobileid.exsig.ImageAlgin#values()[Lvn/mobileid/exsig/ImageAlgin;java.lang.Enumz
 vn.mobileid.exsig.TextFinderH
-<init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.ObjectÙ
-$vn.mobileid.exsig.PdfProfileCMS_Temp8
-<init>.vn.mobileid.exsig.PdfProfileCMS_Temp#<init>()VZ
-addLayer0IconIvn.mobileid.exsig.PdfProfileCMS_Temp#addLayer0Icon([BLjava/lang/String;)VÄ
-addMoreSignaturePositiondvn.mobileid.exsig.PdfProfileCMS_Temp#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;)V•
-addMoreSignaturePositionàvn.mobileid.exsig.PdfProfileCMS_Temp#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vi
-appendSignautreVvn.mobileid.exsig.PdfProfileCMS_Temp#appendSignautre(Ljava/util/List;)Ljava/util/List;Z
-checkPermissionGvn.mobileid.exsig.PdfProfileCMS_Temp#checkPermission(Ljava/util/List;)ZT
-generateHashDvn.mobileid.exsig.PdfProfileCMS_Temp#generateHash(Ljava/util/List;)Vn
-generateHashMultipleFilesQvn.mobileid.exsig.PdfProfileCMS_Temp#generateHashMultipleFiles(Ljava/util/List;)V`
-setRevocationDataKvn.mobileid.exsig.PdfProfileCMS_Temp#setRevocationData([BLjava/util/List;)Vf
-setSignerCertificateNvn.mobileid.exsig.PdfProfileCMS_Temp#setSignerCertificate(Ljava/lang/String;)Vjava.io.Serializablevn.mobileid.exsig.PdfProfile ∆
+<init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.Object∆
 "com.itextpdf.text.pdf.AcroFieldsV4ù
 verifySignature_v4Ücom.itextpdf.text.pdf.AcroFieldsV4#verifySignature_v4(Ljava/lang/String;Ljava/lang/String;)Lcom/itextpdf/text/pdf/security/PdfPKCS7V4; ú
 &vn.mobileid.serialize.CustomSerializer:

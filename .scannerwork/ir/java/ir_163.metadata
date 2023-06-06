@@ -1,1 +1,1 @@
-vn.mobileid.serialize.ProfileJSONSerializer#writeBooleanField(Ljava/lang/String;Z)Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#setSigningTime(JLjava/lang/String;)V

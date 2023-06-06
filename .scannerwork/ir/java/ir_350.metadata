@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSignatureEvent(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$SignatureEvent;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer(I)LPdfTemplate;
+null

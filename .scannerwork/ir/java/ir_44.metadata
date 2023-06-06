@@ -1,1 +1,6 @@
-vn.mobileid.exsig.PdfProfileCMS_Temp#<init>(LPdfForm;LAlgorithm;)V
+vn.mobileid.serialize.CustomSerializer#serializer(Ljava/io/Serializable;)[B
+java.io.ObjectOutputStream#instance-init#
+java.io.ObjectOutputStream#<init>(Ljava/io/OutputStream;)V
+java.io.ObjectOutputStream#writeObject(Ljava/lang/Object;)V
+java.io.ByteArrayOutputStream#<init>()V
+java.io.ByteArrayOutputStream#instance-init#

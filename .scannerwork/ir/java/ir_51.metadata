@@ -1,2 +1,2 @@
-vn.mobileid.exsig.PdfProfileCMS_Temp#checkLock(LPdfDictionary;)Z
-null
+vn.mobileid.exsig.PdfProfile#setBorder(Lvn/mobileid/exsig/Color;)V
+vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;

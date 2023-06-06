@@ -1,3 +1,1 @@
-vn.mobileid.exsig.PdfEsealCMS#setEsealIcon([B)V
-vn.mobileid.exsig.PdfEsealCMS$EsealIcon#<init>([BFFF)V
-vn.mobileid.exsig.PdfEsealCMS$EsealIcon#instance-init#
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLocation()Ljava/lang/String;

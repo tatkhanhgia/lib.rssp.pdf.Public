@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncryptionAlgorithm()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfileCMS#<init>()V

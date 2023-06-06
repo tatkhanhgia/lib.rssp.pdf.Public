@@ -1,49 +1,15 @@
 
-cvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;I)Ljava/lang/String;º
-­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java° °(*"1*‹
-1
-± ±(q
-o
-
-± ±(
-%0java.lang.String"__concat*
-
-± ±(
-\"*)
-
-± ±(
-
-fieldjava.lang.Stringo
-m
-
-± ±(#
-%1java.lang.String"__concat*&
-
-± ±(
-
-%0java.lang.String*
-
-± ±(#
-\":n
-l
-
-± ±(+
-%2java.lang.String"__concat*&
-
-± ±(#
-
-%1java.lang.String*
-
-±& ±(+
-"""&
-
-± ±(,
-
-%2java.lang.String:'
-
-°+ °(8
-fieldjava.lang.String: 
+7vn.mobileid.exsig.PDFSignatureProperties#getPdfData()[Bµ
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java? ?("1*¢
+1@ @(w
+u
+@ @(
+%0byte[]"__id*U
 
-__unknown_file (
-""B/"-
-+vn.mobileid.serialize.ProfileJSONSerializer
+__unknown_file (9*7*
+(vn.mobileid.exsig.PDFSignatureProperties"	
+pdfData"
+@ @(
+
+%0byte[]B,*
+(vn.mobileid.exsig.PDFSignatureProperties

@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)V

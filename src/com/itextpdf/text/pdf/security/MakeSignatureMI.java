@@ -63,7 +63,6 @@ import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.PdfSignatureAppearanceMI;
 import com.itextpdf.text.pdf.PdfString;
 import org.bouncycastle.asn1.esf.SignaturePolicyIdentifier;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -201,7 +200,7 @@ public class MakeSignatureMI {
 
         String hashAlgorithm = externalSignature.getHashAlgorithm();
         PdfPKCS7 sgn = new PdfPKCS7(null, chain, hashAlgorithm, null, externalDigest, false);
-        if (signaturePolicy != null) {
+        if (signaturePolicy != null) {            
             sgn.setSignaturePolicy(signaturePolicy);
         }
         InputStream data = sap.getRangeStream();

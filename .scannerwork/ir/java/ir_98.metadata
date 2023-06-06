@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfile#setFontSizeMin(F)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#setSignName(Ljava/lang/String;)V

@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfile#addRootCertificate(Z)V
+vn.mobileid.exsig.PdfProfile#sign(LSigningMethodSync;Ljava/util/List;Ljava/util/List;)Ljava/util/List;

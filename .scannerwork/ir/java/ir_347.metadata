@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getCertificate()Ljava/security/cert/Certificate;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setRenderingMode(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$RenderingMode;)V

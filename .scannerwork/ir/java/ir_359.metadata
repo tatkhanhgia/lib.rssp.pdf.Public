@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setRenderingMode(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$RenderingMode;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setLayer2Font(LFont;)V

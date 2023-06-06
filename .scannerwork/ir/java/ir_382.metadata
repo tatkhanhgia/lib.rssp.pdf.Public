@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setStamper(Lcom/itextpdf/text/pdf/PdfStamperMI;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addFieldMDP(LPdfDictionary;LPdfDictionary;)V
+null

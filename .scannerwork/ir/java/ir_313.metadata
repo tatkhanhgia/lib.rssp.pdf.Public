@@ -1,2 +1,3 @@
-vn.mobileid.exsig.PdfEsealCMS#imageProfileBottom()V
-null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#instance-init#
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

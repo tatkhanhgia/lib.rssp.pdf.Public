@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfProfile#containsHTMLChars(Ljava/lang/String;)Z
-java.lang.String#contains(Ljava/lang/CharSequence;)Z
+vn.mobileid.exsig.TextPlusXY#setY(F)V

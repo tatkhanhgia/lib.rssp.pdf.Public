@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#setLocation(Ljava/lang/String;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#update([BII)V
+java.security.Signature#update([BII)V

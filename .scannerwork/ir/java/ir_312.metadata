@@ -1,1 +1,7 @@
-vn.mobileid.exsig.PdfEsealCMS#imageProfileRight()V
+vn.mobileid.exsig.StringCoordinatesExtraction#unAccent(Ljava/lang/String;)Ljava/lang/String;
+java.text.Normalizer#normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+java.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+java.util.regex.Matcher#replaceAll(Ljava/lang/String;)Ljava/lang/String;
+java.lang.String#replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+java.util.regex.Pattern#compile(Ljava/lang/String;)Ljava/util/regex/Pattern;

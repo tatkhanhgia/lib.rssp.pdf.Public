@@ -1,49 +1,15 @@
 
-dvn.mobileid.serialize.ProfileJSONSerializer#writeBooleanField(Ljava/lang/String;Z)Ljava/lang/String;º
-­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.javaÚ Ú(+"1*‹
-1
-Û Û(q
-o
-
-Û Û(
-%0java.lang.String"__concat*
-
-Û Û(
-\"*)
-
-Û Û(
-
-fieldjava.lang.Stringo
-m
-
-Û Û(#
-%1java.lang.String"__concat*&
-
-Û Û(
-
-%0java.lang.String*
-
-Û Û(#
-\":n
-l
-
-Û Û(+
-%2java.lang.String"__concat*&
-
-Û Û(#
-
-%1java.lang.String*
-
-Û& Û(+
-"""&
-
-Û Û(,
-
-%2java.lang.String:'
-
-Ú, Ú(9
-fieldjava.lang.String: 
+Kvn.mobileid.exsig.PDFSignatureProperties#getPdfPassword()Ljava/lang/String;µ
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java_ _(#"1*¼
+1` `(†
+ƒ
+` `(
+%0java.lang.String"__id*Y
 
-__unknown_file (
-""B/"-
-+vn.mobileid.serialize.ProfileJSONSerializer
+__unknown_file (=*;*
+(vn.mobileid.exsig.PDFSignatureProperties"
+pdfPassword"$
+` `(
+
+%0java.lang.StringB,*
+(vn.mobileid.exsig.PDFSignatureProperties

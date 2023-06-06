@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setReasonCaption(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addDeveloperExtension(LPdfDeveloperExtension;)V

@@ -1,6 +1,3 @@
-vn.mobileid.exsig.PdfProfileCMS_Temp#sign(LSigningMethodSync;Ljava/util/List;)Ljava/util/List;
-java.lang.NullPointerException#<init>(Ljava/lang/String;)V
-java.lang.NullPointerException#instance-init#
-==
-generateHash vn.mobileid.exsig.PdfProfileCMS_Temp#generateHash(Ljava/util/List;)V
-appendSignautre vn.mobileid.exsig.PdfProfileCMS_Temp#appendSignautre(Ljava/util/List;)Ljava/util/List;
+vn.mobileid.exsig.PdfProfile#instance-init#
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

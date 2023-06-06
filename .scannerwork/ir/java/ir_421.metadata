@@ -1,2 +1,2 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#update([BII)V
-java.security.Signature#update([BII)V
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#findOcsp(LASN1Sequence;)V
+null

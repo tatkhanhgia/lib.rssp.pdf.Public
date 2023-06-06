@@ -1,1 +1,3 @@
-vn.mobileid.serialize.CustomSerializer#instance-init#
+vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+==
+setVisibleSignature vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V

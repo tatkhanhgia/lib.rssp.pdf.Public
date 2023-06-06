@@ -401,17 +401,21 @@ public class PdfPKCS7CMS {
             if (next < signerInfo.size() && signerInfo.getObjectAt(next) instanceof ASN1TaggedObject) {
                 ASN1TaggedObject taggedObject = (ASN1TaggedObject) signerInfo.getObjectAt(next);
                 ASN1Set unat = ASN1Set.getInstance(taggedObject, false);
+
                 AttributeTable attble = new AttributeTable(unat);
                 Attribute ts = attble.get(PKCSObjectIdentifiers.id_aa_signatureTimeStampToken);
                 if (ts != null && ts.getAttrValues().size() > 0) {
                     ASN1Set attributeValues = ts.getAttrValues();
-                    ASN1Sequence tokenSequence = ASN1Sequence.getInstance(attributeValues.getObjectAt(0));
-                    ContentInfo contentInfo = new ContentInfo(tokenSequence);
+//                    ASN1Sequence tokenSequence = ASN1Sequence.getInstance(attributeValues.getObjectAt(0));
+                    ContentInfo contentInfo = new ContentInfo(PKCSObjectIdentifiers.id_aa_signatureTimeStampToken, attributeValues.getObjectAt(0));
                     this.timeStampToken = new TimeStampToken(contentInfo);
                 }
             }
             if (isTsp) {
-                ContentInfo contentInfoTsp = new ContentInfo(signedData);
+//                ContentInfo contentInfoTsp = new ContentInfo(signedData);
+                ContentInfo contentInfoTsp = new ContentInfo(
+                        PKCSObjectIdentifiers.id_aa_signatureTimeStampToken,
+                        signedData);
                 this.timeStampToken = new TimeStampToken(contentInfoTsp);
                 TimeStampTokenInfo info = timeStampToken.getTimeStampInfo();
                 String algOID = info.getMessageImprintAlgOID().getId();
@@ -757,7 +761,8 @@ public class PdfPKCS7CMS {
             }
             ByteArrayOutputStream bOut = new ByteArrayOutputStream();
 
-            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+//            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
             dout.writeObject(new DEROctetString(digest));
             dout.close();
 
@@ -920,7 +925,8 @@ public class PdfPKCS7CMS {
 
             ByteArrayOutputStream bOut = new ByteArrayOutputStream();
 
-            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+//            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
             dout.writeObject(new DERSequence(whole));
             dout.close();
 
@@ -994,7 +1000,7 @@ public class PdfPKCS7CMS {
         }
     }
 
-        /**
+    /**
      * When using authenticatedAttributes the authentication process is
      * different. The document digest is generated and put inside the attribute.
      * The signing is done over the DER encoded authenticatedAttributes. This
@@ -1026,7 +1032,7 @@ public class PdfPKCS7CMS {
             throw new ExceptionConverter(e);
         }
     }
-    
+
     /**
      * This method provides that encoding and the parameters must be exactly the
      * same as in {@link #getEncodedPKCS7(byte[])}.
@@ -1044,7 +1050,7 @@ public class PdfPKCS7CMS {
             attribute.add(new DERSequence(v));
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_SIGNING_TIME));
-            v.add(new DERSet(new DERUTCTime(signedDate)));            
+            v.add(new DERSet(new DERUTCTime(signedDate)));
             attribute.add(new DERSequence(v));
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_MESSAGE_DIGEST));
@@ -1223,7 +1229,7 @@ public class PdfPKCS7CMS {
             throw new ExceptionConverter(e);
         }
     }
-    
+
     /*
      *	DIGITAL SIGNATURE VERIFICATION
      */

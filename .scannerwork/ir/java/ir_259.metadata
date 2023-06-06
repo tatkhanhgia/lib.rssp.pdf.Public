@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.PdfStamperMI#addViewerPreference(LPdfName;LPdfObject;)V
+com.itextpdf.text.pdf.PdfStamperMI#createXmlSignature(LPdfReader;Ljava/io/OutputStream;)Lcom/itextpdf/text/pdf/PdfStamperMI;
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#<init>(Lcom/itextpdf/text/pdf/PdfStamperImp;)V
+com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;)V
+com.itextpdf.text.pdf.XmlSignatureAppearanceMI#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#instance-init#

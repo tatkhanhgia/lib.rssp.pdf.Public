@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.SignaturePosition#getRectangle()LRectangle;
+vn.mobileid.exsig.PdfProfileCMS#sign(LSigningMethodSync;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+==
+sign vn.mobileid.exsig.PdfProfileCMS#sign(LSigningMethodSync;Ljava/util/List;)Ljava/util/List;

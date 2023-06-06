@@ -1,5 +1,1 @@
-vn.mobileid.exsig.PdfEsealCMS#createDefaultTitleFont()V
-null
-java.io.ByteArrayOutputStream#<init>()V
-java.io.ByteArrayOutputStream#instance-init#
-java.lang.Thread#currentThread()Ljava/lang/Thread;
+vn.mobileid.exsig.PdfEsealCMS#setEsealIcon(Lvn/mobileid/exsig/PdfEsealCMS$EsealIcon;)V

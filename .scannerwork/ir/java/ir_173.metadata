@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getPdfPassword()Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#getPage()Ljava/lang/String;

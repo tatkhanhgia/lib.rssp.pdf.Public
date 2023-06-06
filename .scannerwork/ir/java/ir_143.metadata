@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncryptionAlgorithm()Ljava/lang/String;
+vn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;I)Ljava/lang/String;

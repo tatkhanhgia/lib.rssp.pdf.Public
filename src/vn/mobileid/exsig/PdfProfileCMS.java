@@ -801,7 +801,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             }
             return true;
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
             throw new Exception("Error while checking locked Document!");
         }
     }

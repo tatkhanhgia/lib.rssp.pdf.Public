@@ -1,18 +1,19 @@
 
-Dvn.mobileid.exsig.PDFSignatureProperties#getText()Ljava/lang/String;·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaª ª("1*º
+:vn.mobileid.exsig.PDFSignatureProperties#getLayer0Icon()[B·
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java× ×(""1*«
 1
-« «(€
-~
+Ø Ø(|
+z
 
-« «(
-%0java.lang.String"__id*R
+Ø Ø(
+%0byte[]"__id*X
 
-__unknown_file (6*4*
-(vn.mobileid.exsig.PDFSignatureProperties"
-text"&
+__unknown_file (<*:*
+(vn.mobileid.exsig.PDFSignatureProperties"
 
-« «(
-
-%0java.lang.StringB,*
+layer0Icon"
+
+Ø Ø(
+
+%0byte[]B,*
 (vn.mobileid.exsig.PDFSignatureProperties

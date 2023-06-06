@@ -1,1 +1,2 @@
-vn.mobileid.exsig.PDFSignatureProperties#getTextAlignment()Lvn/mobileid/exsig/TextAlignment;
+com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;)V
+null

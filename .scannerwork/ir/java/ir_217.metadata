@@ -1,1 +1,4 @@
-vn.mobileid.exsig.TestJSONSerializer#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#close()V
+null
+==
+mergeVerification com.itextpdf.text.pdf.PdfStamperMI#mergeVerification()V

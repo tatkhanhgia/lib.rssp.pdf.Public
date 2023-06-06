@@ -1,1 +1,1 @@
-vn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;I)Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;

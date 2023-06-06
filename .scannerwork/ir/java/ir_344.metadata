@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getCryptoDictionary()Lcom/itextpdf/text/pdf/PdfDictionary;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setVisibleSignature(LRectangle;ILjava/lang/String;)V
+null
+java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V
+java.lang.String#indexOf(I)I
+java.lang.IllegalArgumentException#instance-init#

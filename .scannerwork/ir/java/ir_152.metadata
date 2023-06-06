@@ -1,1 +1,4 @@
-vn.mobileid.serialize.ProfileJSONSerializer#writeEndJSON()Ljava/lang/String;
+vn.mobileid.exsig.PDFSignatureProperties#instance-init#
+java.util.ArrayList#<init>()V
+java.util.Calendar#getInstance()Ljava/util/Calendar;
+java.util.ArrayList#instance-init#

@@ -1,2 +1,9 @@
-com.itextpdf.text.pdf.PdfStamperMI#makePackage(LPdfName;)V
+com.itextpdf.text.pdf.PdfStamperMI#createSignature(LPdfReader;Ljava/io/OutputStream;CLjava/io/File;Z)Lcom/itextpdf/text/pdf/PdfStamperMI;
 null
+java.io.File#createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+java.io.FileOutputStream#instance-init#
+java.io.FileOutputStream#<init>(Ljava/io/File;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#<init>(Lcom/itextpdf/text/pdf/PdfStamperImp;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;CZ)V

@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.SignaturePosition#setRectangle(LRectangle;)V
+vn.mobileid.exsig.PdfProfileCMS#createTemporalFile(LSigningMethodAsync;Ljava/util/List;Ljava/util/List;)[B
+==
+createTemporalFile vn.mobileid.exsig.PdfProfileCMS#createTemporalFile(LSigningMethodAsync;Ljava/util/List;)[B

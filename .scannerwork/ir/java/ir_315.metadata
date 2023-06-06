@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfEsealCMS#imageProfileCenter()V
-null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCertificationLevel(I)V

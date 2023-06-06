@@ -1,35 +1,49 @@
 
-fvn.mobileid.serialize.ProfileJSONSerializer#writeStartArrayField(Ljava/lang/String;)Ljava/lang/String;º
-­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java¨ ¨(."1*œ
+dvn.mobileid.serialize.ProfileJSONSerializer#writeBooleanField(Ljava/lang/String;Z)Ljava/lang/String;º
+­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.javaÚ Ú(+"1*‹
 1
-© ©(q
+Û Û(q
 o
 
-© ©(
+Û Û(
 %0java.lang.String"__concat*
 
-© ©(
+Û Û(
 \"*)
 
-© ©(
+Û Û(
 
-fieldjava.lang.Stringp
-n
+fieldjava.lang.Stringo
+m
 
-© ©($
+Û Û(#
 %1java.lang.String"__concat*&
 
-© ©(
+Û Û(
 
-%0java.lang.String*
+%0java.lang.String*
 
-© ©($
-\":["&
+Û Û(#
+\":n
+l
 
-© ©(%
+Û Û(+
+%2java.lang.String"__concat*&
+
+Û Û(#
 
-%1java.lang.String:'
+%1java.lang.String*
 
-¨/ ¨(;
-fieldjava.lang.StringB/"-
+Û& Û(+
+"""&
+
+Û Û(,
+
+%2java.lang.String:'
+
+Ú, Ú(9
+fieldjava.lang.String: 
+
+__unknown_file (
+""B/"-
 +vn.mobileid.serialize.ProfileJSONSerializer

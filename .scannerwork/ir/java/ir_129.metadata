@@ -1,4 +1,4 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#buildUnauthenticatedAttributes([B)LASN1EncodableVector;
-null
-java.io.ByteArrayInputStream#instance-init#
-java.io.ByteArrayInputStream#<init>([B)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getTimeStampDate()Ljava/util/Calendar;
+java.util.Calendar#setTime(Ljava/util/Date;)V
+java.util.GregorianCalendar#<init>()V
+java.util.GregorianCalendar#instance-init#

@@ -1,1 +1,1 @@
-vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;
+vn.mobileid.serialize.ProfileJSONSerializer#writeString(Ljava/lang/String;)Ljava/lang/String;

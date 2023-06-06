@@ -1,19 +1,26 @@
 
-Pcom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer2Text()Ljava/lang/String;Ω
-∞C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.java´ ´("1*«
+Ucom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getOriginalout()Ljava/io/OutputStream;Ω
+∞C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.java¶
+ ¶
+("1*–
 1
-¨ ¨(ç
-ä
+ß
+ ß
+(í
+è
 
-¨ ¨(
-%0java.lang.String"__id*^
+ß
+ ß
+(
+%0java.io.OutputStream"__id*_
 
-__unknown_file (B*@0
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"
+__unknown_file (C*A0
+.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"
+originalout"*
 
-layer2Text"&
-
-¨ ¨(
-
-%0java.lang.StringB20
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMIH
+ß
+ ß
+(
+
+%0java.io.OutputStreamB20
+.com.itextpdf.text.pdf.PdfSignatureAppearanceMI

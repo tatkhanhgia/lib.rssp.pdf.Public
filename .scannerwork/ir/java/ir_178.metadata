@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getTimeMillis()J
+vn.mobileid.exsig.PDFSignatureProperties#getPageAndPosition()Ljava/util/Map;

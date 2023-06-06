@@ -1,31 +1,106 @@
 
->com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7()[B¹
-¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7CMS.javaˆ ˆ(!"1*ú
-1
-‰ ‰(ÒÏ
+?com.itextpdf.text.pdf.security.PdfPKCS7CMS#isRevocationValid()Z¹
+¬C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7CMS.java¹ ¹($"19"20*%
+3
+É É(#"
 
-‰ ‰(J
-%0"scom.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7([BLTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B*J
+É É(#
+""*Ÿ
+15
+Á# Á(P‡
+„
+
+Á Á(Q*
+cs$java.security.cert.X509Certificate[]"__id*D
+
+__unknown_file ((
+&
+%2 java.security.cert.Certificate[]*
+8*ž
+16
+Á7 Á(N…‚
+
+Á7 Á(P&
+%2 java.security.cert.Certificate[]"ecom.itextpdf.text.pdf.security.PdfPKCS7CMS#getSignCertificateChain()[Ljava/security/cert/Certificate;*J
 
 __unknown_file (.,
-*com.itextpdf.text.pdf.security.PdfPKCS7CMS*"
-
-__unknown_file (
-""*"
-
-__unknown_file (
-""*"
-
-__unknown_file (
-""*"
-
-__unknown_file (
-""*"
-
-__unknown_file (
-""2FgetEncodedPKCS7([BLTSAClient;[BLjava/util/Collection;LCryptoStandard;)"
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS2getSignCertificateChain()*
+15*í
+6
+ÈE È(KÖÓ
 
-‰ ‰(K
-
-%0B.,
-*com.itextpdf.text.pdf.security.PdfPKCS7CMSH
+ÈE È(]
+%5java.math.BigInteger"Jjava.security.cert.X509Certificate#getSerialNumber()Ljava/math/BigInteger;*J
+
+__unknown_file (.
+,
+sigcer"java.security.cert.X509Certificate2getSerialNumber()*
+3*&
+18
+¾ ¾("
+
+¾ ¾(
+""*ä
+7
+Å Å(=‹
+ˆ
+
+Å Å(=,
+sigcer"java.security.cert.X509Certificate"__id*F
+
+__unknown_file (*
+(
+%3"java.security.cert.X509Certificate±
+®
+
+Æ% Æ(*(
+%4"java.security.cert.X509Certificate"
+__arrayGet*H
+
+__unknown_file (,
+*
+cs$java.security.cert.X509Certificate[]* 
+
+__unknown_file (2‹
+ˆ
+
+Æ Æ(+,
+isscer"java.security.cert.X509Certificate"__id*F
+
+__unknown_file (*
+(
+%4"java.security.cert.X509Certificate*
+6*¤
+19
+½ ½(Œ
+‰
+
+½ ½(
+%0java.util.Collection"__id*Y
+
+__unknown_file (=*;,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS"
+	signCertsyw
+
+½ ½(	
+%1int"java.util.Collection#size()I*8
+
+__unknown_file (
+
+%0java.util.Collection2size()*
+16
+18*ž
+8Ä Ä(ž†ƒ
+
+Å% Å(<(
+%3"java.security.cert.X509Certificate"fcom.itextpdf.text.pdf.security.PdfPKCS7CMS#getSigningCertificate()Ljava/security/cert/X509Certificate;*J
+
+__unknown_file (.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMS2getSigningCertificate()*
+7*&
+20
+» »("
+
+» »(
+""B.,
+*com.itextpdf.text.pdf.security.PdfPKCS7CMSHP

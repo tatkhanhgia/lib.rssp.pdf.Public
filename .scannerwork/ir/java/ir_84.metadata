@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfProfile#imageProfileBottom()V
-null
+vn.mobileid.exsig.PdfProfile#getBaseFont()LBaseFont;

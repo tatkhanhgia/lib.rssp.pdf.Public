@@ -1,9 +1,102 @@
 
-Nvn.mobileid.serialize.ProfileJSONSerializer#writeStartJSON()Ljava/lang/String;º
-­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java   (("1*$
+bvn.mobileid.serialize.ProfileJSONSerializer#writeByteField(Ljava/lang/String;[B)Ljava/lang/String;º
+­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.javaÌ Ì(("1*ì	
 1
-¡ ¡("
+Í! Í('š
+—
 
-¡ ¡(
-{B/"-
+Í! Í(4
+%0java.util.Base64$Encoder"7java.util.Base64#getEncoder()Ljava/util/Base64$Encoder;*0
+
+__unknown_file ("
+java.util.Base64çä
+
+Í! Í(J
+%1java.lang.String"=java.util.Base64$Encoder#encodeToString([B)Ljava/lang/String;*<
+
+__unknown_file ( 
+
+%0java.util.Base64$Encoder*-
+
+__unknown_file (
+
+valuebyte[]2encodeToString([B)86
+
+Í Í( 
+%2java.lang.String"java.lang.String¯
+¬
+
+Í Í(K
+%3",java.lang.String#<init>(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%1java.lang.Stringd
+b
+
+Í Í(L
+datajava.lang.String"__id*4
+
+__unknown_file (
+
+%2java.lang.Stringq
+o
+
+Î Î(
+%4java.lang.String"__concat*
+
+Î Î(
+\"*)
+
+Î Î(
+
+fieldjava.lang.Stringq
+o
+
+Î Î(%
+%5java.lang.String"__concat*&
+
+Î Î(
+
+%4java.lang.String*
+
+Î Î(%	
+\":\"ƒ
+€
+
+Î Î(,
+%6java.lang.String"__concat*&
+
+Î Î(%
+
+%5java.lang.String*(
+
+Î( Î(,
+
+datajava.lang.Stringn
+l
+
+Î Î(3
+%7java.lang.String"__concat*&
+
+Î Î(,
+
+%6java.lang.String*
+
+Î/ Î(3
+\""&
+
+Î Î(4
+
+%7java.lang.String:'
+
+Ì) Ì(6
+fieldjava.lang.String:
+
+Ì7 Ì(C
+valuebyte[]B/"-
 +vn.mobileid.serialize.ProfileJSONSerializer

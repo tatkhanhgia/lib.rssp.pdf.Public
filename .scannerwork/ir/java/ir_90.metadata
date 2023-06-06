@@ -1,5 +1,1 @@
-vn.mobileid.exsig.PdfProfile#verify([BLjava/lang/String;Z)Ljava/util/List;
-vn.mobileid.exsig.PdfVerify#instance-init#
-vn.mobileid.exsig.PdfVerify#<init>()V
-==
-verifySignature vn.mobileid.exsig.PdfVerify#verifySignature([BLjava/lang/String;Z)Ljava/util/List;
+vn.mobileid.exsig.TextPlusXY#setX(F)V

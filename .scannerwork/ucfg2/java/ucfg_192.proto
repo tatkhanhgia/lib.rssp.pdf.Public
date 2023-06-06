@@ -1,19 +1,18 @@
 
-Hvn.mobileid.exsig.PDFSignatureProperties#getFontName()Ljava/lang/String;·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java… …( "1*¿
+Mvn.mobileid.exsig.PDFSignatureProperties#getTextFinderArray()Ljava/util/List;·
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java­ ­(."1*Â
 1
-† †(…
-‚
+® ®(Š
+‡
 
-† †(
-%0java.lang.String"__id*V
+® ®(
+%0java.util.List"__id*]
 
-__unknown_file (:*8*
-(vn.mobileid.exsig.PDFSignatureProperties"
+__unknown_file (A*?*
+(vn.mobileid.exsig.PDFSignatureProperties"
+textFinderArray"$
 
-fontName"&
-
-† †(
-
-%0java.lang.StringB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+® ®(
+
+%0java.util.ListB,*
+(vn.mobileid.exsig.PDFSignaturePropertiesH

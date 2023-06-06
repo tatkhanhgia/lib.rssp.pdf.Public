@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCheckText(Z[F)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setFieldLockDict(LPdfSigLockDictionary;)V
