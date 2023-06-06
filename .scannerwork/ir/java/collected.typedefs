@@ -13,10 +13,31 @@
 getPath9vn.mobileid.exsig.DefaultFont#getPath()Ljava/lang/String;F
 getValue:vn.mobileid.exsig.DefaultFont#getValue()Ljava/lang/String;c
 valueOfXvn.mobileid.exsig.DefaultFont#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/DefaultFont;P
-valuesFvn.mobileid.exsig.DefaultFont#values()[Lvn/mobileid/exsig/DefaultFont;java.lang.Enumæ
+valuesFvn.mobileid.exsig.DefaultFont#values()[Lvn/mobileid/exsig/DefaultFont;java.lang.Enum–
++vn.mobileid.exsig.TestGetImageFromSignature?
+<init>5vn.mobileid.exsig.TestGetImageFromSignature#<init>()VN
+mainFvn.mobileid.exsig.TestGetImageFromSignature#main([Ljava/lang/String;)Vjava.lang.Objectˇ
+"vn.mobileid.exsig.PdfProfileCMS_V2X
+addLayer0IconGvn.mobileid.exsig.PdfProfileCMS_V2#addLayer0Icon([BLjava/lang/String;)V£
+addMoreSignaturePositionÜvn.mobileid.exsig.PdfProfileCMS_V2#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vg
+appendSignautreTvn.mobileid.exsig.PdfProfileCMS_V2#appendSignautre(Ljava/util/List;)Ljava/util/List;X
+checkPermissionEvn.mobileid.exsig.PdfProfileCMS_V2#checkPermission(Ljava/util/List;)ZX
+clearSignaturePositions=vn.mobileid.exsig.PdfProfileCMS_V2#clearSignaturePositions()VR
+generateHashBvn.mobileid.exsig.PdfProfileCMS_V2#generateHash(Ljava/util/List;)Vl
+generateHashMultipleFilesOvn.mobileid.exsig.PdfProfileCMS_V2#generateHashMultipleFiles(Ljava/util/List;)V^
+setRevocationDataIvn.mobileid.exsig.PdfProfileCMS_V2#setRevocationData([BLjava/util/List;)Vd
+setSignerCertificateLvn.mobileid.exsig.PdfProfileCMS_V2#setSignerCertificate(Ljava/lang/String;)Vjava.io.Serializablevn.mobileid.exsig.PdfProfile æ
 %vn.mobileid.exsig.testCheckPermission9
 <init>/vn.mobileid.exsig.testCheckPermission#<init>()VH
-main@vn.mobileid.exsig.testCheckPermission#main([Ljava/lang/String;)Vjava.lang.Object∂
+main@vn.mobileid.exsig.testCheckPermission#main([Ljava/lang/String;)Vjava.lang.Objectá
+!vn.mobileid.exsig.TestCreateEseal5
+<init>+vn.mobileid.exsig.TestCreateEseal#<init>()V[
+createBorder2PdfGvn.mobileid.exsig.TestCreateEseal#createBorder2Pdf(Ljava/lang/String;)VY
+createBorderPdfFvn.mobileid.exsig.TestCreateEseal#createBorderPdf(Ljava/lang/String;)Ve
+createDottedHeaderPdfLvn.mobileid.exsig.TestCreateEseal#createDottedHeaderPdf(Ljava/lang/String;)VY
+createDottedPdfFvn.mobileid.exsig.TestCreateEseal#createDottedPdf(Ljava/lang/String;)VW
+createRoundPdfEvn.mobileid.exsig.TestCreateEseal#createRoundPdf(Ljava/lang/String;)VD
+main<vn.mobileid.exsig.TestCreateEseal#main([Ljava/lang/String;)Vjava.lang.Object ∂
 vn.mobileid.exsig.ImageProfileI
 <init>?vn.mobileid.exsig.ImageProfile#<init>(Ljava/lang/String;IIIII)Ve
 valueOfZvn.mobileid.exsig.ImageProfile#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/ImageProfile;R
@@ -26,10 +47,26 @@
 valueOfVvn.mobileid.exsig.ImageAlgin#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/ImageAlgin;N
 valuesDvn.mobileid.exsig.ImageAlgin#values()[Lvn/mobileid/exsig/ImageAlgin;java.lang.Enumz
 vn.mobileid.exsig.TextFinderH
-<init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.Object&
-"com.itextpdf.text.pdf.AcroFieldsV4 b
-vn.mobileid.exsig.PdfVerify/
-<init>%vn.mobileid.exsig.PdfVerify#<init>()Vjava.lang.Object º#
+<init>>vn.mobileid.exsig.TextFinder#<init>(IIIIILjava/lang/String;Z)Vjava.lang.ObjectÙ
+$vn.mobileid.exsig.PdfProfileCMS_Temp8
+<init>.vn.mobileid.exsig.PdfProfileCMS_Temp#<init>()VZ
+addLayer0IconIvn.mobileid.exsig.PdfProfileCMS_Temp#addLayer0Icon([BLjava/lang/String;)VÄ
+addMoreSignaturePositiondvn.mobileid.exsig.PdfProfileCMS_Temp#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;)V•
+addMoreSignaturePositionàvn.mobileid.exsig.PdfProfileCMS_Temp#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vi
+appendSignautreVvn.mobileid.exsig.PdfProfileCMS_Temp#appendSignautre(Ljava/util/List;)Ljava/util/List;Z
+checkPermissionGvn.mobileid.exsig.PdfProfileCMS_Temp#checkPermission(Ljava/util/List;)ZT
+generateHashDvn.mobileid.exsig.PdfProfileCMS_Temp#generateHash(Ljava/util/List;)Vn
+generateHashMultipleFilesQvn.mobileid.exsig.PdfProfileCMS_Temp#generateHashMultipleFiles(Ljava/util/List;)V`
+setRevocationDataKvn.mobileid.exsig.PdfProfileCMS_Temp#setRevocationData([BLjava/util/List;)Vf
+setSignerCertificateNvn.mobileid.exsig.PdfProfileCMS_Temp#setSignerCertificate(Ljava/lang/String;)Vjava.io.Serializablevn.mobileid.exsig.PdfProfile ∆
+"com.itextpdf.text.pdf.AcroFieldsV4ù
+verifySignature_v4Ücom.itextpdf.text.pdf.AcroFieldsV4#verifySignature_v4(Ljava/lang/String;Ljava/lang/String;)Lcom/itextpdf/text/pdf/security/PdfPKCS7V4; ú
+&vn.mobileid.serialize.CustomSerializer:
+<init>0vn.mobileid.serialize.CustomSerializer#<init>()Vl
+deserialize]vn.mobileid.serialize.CustomSerializer#deserialize([BLjava/lang/Class;)Ljava/io/Serializable;[
+isSerializableIvn.mobileid.serialize.CustomSerializer#isSerializable(Ljava/lang/Class;)ZY
+
+serializerKvn.mobileid.serialize.CustomSerializer#serializer(Ljava/io/Serializable;)[Bjava.lang.Objectæ$
 vn.mobileid.exsig.PdfProfile0
 <init>&vn.mobileid.exsig.PdfProfile#<init>()VR
 addLayer0IconAvn.mobileid.exsig.PdfProfile#addLayer0Icon([BLjava/lang/String;)Vx
@@ -48,7 +85,8 @@
 imageProfileLeft0vn.mobileid.exsig.PdfProfile#imageProfileLeft()VF
 imageProfileRight1vn.mobileid.exsig.PdfProfile#imageProfileRight()VB
 imageProfileTop/vn.mobileid.exsig.PdfProfile#imageProfileTop()Vn
-initContent_vn.mobileid.exsig.PdfProfile#initContent(Ljava/util/Date;Ljava/security/cert/X509Certificate;)VW
+initContent_vn.mobileid.exsig.PdfProfile#initContent(Ljava/util/Date;Ljava/security/cert/X509Certificate;)V=
+setAutoScale-vn.mobileid.exsig.PdfProfile#setAutoScale(Z)VW
 setBackgroundFvn.mobileid.exsig.PdfProfile#setBackground(Lvn/mobileid/exsig/Color;)V@
 setBackground/vn.mobileid.exsig.PdfProfile#setBackground([B)VO
 	setBorderBvn.mobileid.exsig.PdfProfile#setBorder(Lvn/mobileid/exsig/Color;)V=
@@ -64,7 +102,8 @@ setDSImagezvn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobile
 setFontuvn.mobileid.exsig.PdfProfile#setFont(Ljava/lang/String;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)VR
 setFontGvn.mobileid.exsig.PdfProfile#setFont(Lvn/mobileid/exsig/DefaultFont;F)Vé
 setFontÇvn.mobileid.exsig.PdfProfile#setFont(Lvn/mobileid/exsig/DefaultFont;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)VÉ
-setFontxvn.mobileid.exsig.PdfProfile#setFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)VV
+setFontxvn.mobileid.exsig.PdfProfile#setFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)VA
+setFontSizeMin/vn.mobileid.exsig.PdfProfile#setFontSizeMin(F)VV
 setImageJvn.mobileid.exsig.PdfProfile#setImage([BLvn/mobileid/exsig/ImageProfile;)Vt
 setImagehvn.mobileid.exsig.PdfProfile#setImage([BLvn/mobileid/exsig/ImageProfile;Lvn/mobileid/exsig/ImageAlgin;)VL
 setLocation=vn.mobileid.exsig.PdfProfile#setLocation(Ljava/lang/String;)VH
@@ -78,7 +117,9 @@ setDSImagezvn.mobileid.exsig.PdfProfile#setDSImage(Ljava/lang/String;Lvn/mobile
 setVisibleSignatureivn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ví
 setVisibleSignature{vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VÅ
 setVisibleSignaturejvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Vk
-setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)Vjava.io.Serializable Ö
+setVisibleSignatureTvn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)Vjava.io.Serializable b
+vn.mobileid.exsig.PdfVerify/
+<init>%vn.mobileid.exsig.PdfVerify#<init>()Vjava.lang.Object Ö
 vn.mobileid.exsig.TextPlusXY0
 <init>&vn.mobileid.exsig.TextPlusXY#<init>()V2
 getPage'vn.mobileid.exsig.TextPlusXY#getPage()I,
@@ -128,10 +169,30 @@ getVersion7com.itextpdf.text.pdf.security.PdfPKCS7V4#getVersion()I}
 vn.mobileid.exsig.ColorD
 getAwtColor5vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;W
 valueOfLvn.mobileid.exsig.Color#valueOf(Ljava/lang/String;)Lvn/mobileid/exsig/Color;D
-values:vn.mobileid.exsig.Color#values()[Lvn/mobileid/exsig/Color;java.lang.Enum ≈'
+values:vn.mobileid.exsig.Color#values()[Lvn/mobileid/exsig/Color;java.lang.Enum Á
++vn.mobileid.serialize.ProfileJSONSerializerz
+<init>pvn.mobileid.serialize.ProfileJSONSerializer#<init>(Lvn/mobileid/serialize/ProfileJSONSerializer$TypeTimeStamp;)V~
+getFieldrvn.mobileid.serialize.ProfileJSONSerializer#getField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;y
+writeBooleanFielddvn.mobileid.serialize.ProfileJSONSerializer#writeBooleanField(Ljava/lang/String;Z)Ljava/lang/String;X
+	writeByteKvn.mobileid.serialize.ProfileJSONSerializer#writeByte([B)Ljava/lang/String;t
+writeByteFieldbvn.mobileid.serialize.ProfileJSONSerializer#writeByteField(Ljava/lang/String;[B)Ljava/lang/String;t
+writeClassFieldavn.mobileid.serialize.ProfileJSONSerializer#writeClassField(Ljava/lang/Object;)Ljava/lang/String;^
+writeEndArrayMvn.mobileid.serialize.ProfileJSONSerializer#writeEndArray()Ljava/lang/String;\
+writeEndJSONLvn.mobileid.serialize.ProfileJSONSerializer#writeEndJSON()Ljava/lang/String;w
+writeNumberFieldcvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;D)Ljava/lang/String;w
+writeNumberFieldcvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;F)Ljava/lang/String;w
+writeNumberFieldcvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;I)Ljava/lang/String;w
+writeNumberFieldcvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;J)Ljava/lang/String;l
+writeObject]vn.mobileid.serialize.ProfileJSONSerializer#writeObject(Ljava/lang/Object;)Ljava/lang/String;~
+writeStartArrayFieldfvn.mobileid.serialize.ProfileJSONSerializer#writeStartArrayField(Ljava/lang/String;)Ljava/lang/String;`
+writeStartJSONNvn.mobileid.serialize.ProfileJSONSerializer#writeStartJSON()Ljava/lang/String;l
+writeString]vn.mobileid.serialize.ProfileJSONSerializer#writeString(Ljava/lang/String;)Ljava/lang/String;à
+writeStringFieldtvn.mobileid.serialize.ProfileJSONSerializer#writeStringField(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;java.lang.Object∂+
 (vn.mobileid.exsig.PDFSignatureProperties<
 <init>2vn.mobileid.exsig.PDFSignatureProperties#<init>()V^
-addLayer0IconMvn.mobileid.exsig.PDFSignatureProperties#addLayer0Icon([BLjava/lang/String;)VU
+addLayer0IconMvn.mobileid.exsig.PDFSignatureProperties#addLayer0Icon([BLjava/lang/String;)VÑ
+addMoreSignaturePositionhvn.mobileid.exsig.PDFSignatureProperties#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;)V©
+addMoreSignaturePositionåvn.mobileid.exsig.PDFSignatureProperties#addMoreSignaturePosition(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)VU
 
 getBoxSizeGvn.mobileid.exsig.PDFSignatureProperties#getBoxSize()Ljava/lang/String;W
 getEncodingHvn.mobileid.exsig.PDFSignatureProperties#getEncoding()Ljava/lang/String;\
@@ -154,12 +215,14 @@ getBoxSizeGvn.mobileid.exsig.PDFSignatureProperties#getBoxSize()Ljava/lang/Stri
 getPdfData7vn.mobileid.exsig.PDFSignatureProperties#getPdfData()[B]
 getPdfPasswordKvn.mobileid.exsig.PDFSignatureProperties#getPdfPassword()Ljava/lang/String;W
 getPositionHvn.mobileid.exsig.PDFSignatureProperties#getPosition()Ljava/lang/String;S
-	getReasonFvn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;i
+	getReasonFvn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;W
+getSigPosLisGvn.mobileid.exsig.PDFSignatureProperties#getSigPosLis()Ljava/util/List;i
 getSignerCertificateQvn.mobileid.exsig.PDFSignatureProperties#getSignerCertificate()Ljava/lang/String;O
 getTextDvn.mobileid.exsig.PDFSignatureProperties#getText()Ljava/lang/String;p
 getTextAlignment\vn.mobileid.exsig.PDFSignatureProperties#getTextAlignment()Lvn/mobileid/exsig/TextAlignment;`
 getTextColorPvn.mobileid.exsig.PDFSignatureProperties#getTextColor()Lvn/mobileid/exsig/Color;]
-getTextContentKvn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;[
+getTextContentKvn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;c
+getTextFinderArrayMvn.mobileid.exsig.PDFSignatureProperties#getTextFinderArray()Ljava/util/List;[
 getTimeFormatJvn.mobileid.exsig.PDFSignatureProperties#getTimeFormat()Ljava/lang/String;J
 getTimeMillis9vn.mobileid.exsig.PDFSignatureProperties#getTimeMillis()J^
 getVisibleSignatureTypeCvn.mobileid.exsig.PDFSignatureProperties#getVisibleSignatureType()ID
@@ -185,7 +248,10 @@ setPdfData8vn.mobileid.exsig.PDFSignatureProperties#setPdfData([B)V^
 setVisibleSignatureuvn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vü
 setVisibleSignatureávn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vç
 setVisibleSignaturevvn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Vw
-setVisibleSignature`vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)Vjava.lang.Object™
+setVisibleSignature`vn.mobileid.exsig.PDFSignatureProperties#setVisibleSignature(Ljava/lang/String;Ljava/util/Map;)Vjava.lang.Objectª
+$vn.mobileid.exsig.TestJSONSerializer8
+<init>.vn.mobileid.exsig.TestJSONSerializer#<init>()VG
+main?vn.mobileid.exsig.TestJSONSerializer#main([Ljava/lang/String;)Vjava.lang.Object™
 "com.itextpdf.text.pdf.PdfStamperMI6
 <init>,com.itextpdf.text.pdf.PdfStamperMI#<init>()VÑ
 addFileAttachmentocom.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)VV
@@ -231,10 +297,33 @@ setPdfData8vn.mobileid.exsig.PDFSignatureProperties#setPdfData([B)V^
 length%vn.mobileid.exsig.TextPlusY#length()IR
 subSequenceCvn.mobileid.exsig.TextPlusY#subSequence(II)Ljava/lang/CharSequence;D
 toString8vn.mobileid.exsig.TextPlusY#toString()Ljava/lang/String;4
-yCoordAt(vn.mobileid.exsig.TextPlusY#yCoordAt(I)Fjava.lang.CharSequencejava.lang.Objectô
+yCoordAt(vn.mobileid.exsig.TextPlusY#yCoordAt(I)Fjava.lang.CharSequencejava.lang.Objectá
 !com.itextpdf.text.pdf.PdfReaderV47
 <init>-com.itextpdf.text.pdf.PdfReaderV4#<init>([B)V9
-<init>/com.itextpdf.text.pdf.PdfReaderV4#<init>([B[B)V †
+<init>/com.itextpdf.text.pdf.PdfReaderV4#<init>([B[B)Vl
+getAcroFields_v4Xcom.itextpdf.text.pdf.PdfReaderV4#getAcroFields_v4()Lcom/itextpdf/text/pdf/AcroFieldsV4; û
+vn.mobileid.exsig.PdfEsealCMSb
+appendSignautreOvn.mobileid.exsig.PdfEsealCMS#appendSignautre(Ljava/util/List;)Ljava/util/List;U
+createDefaultContentFont9vn.mobileid.exsig.PdfEsealCMS#createDefaultContentFont()VQ
+createDefaultTitleFont7vn.mobileid.exsig.PdfEsealCMS#createDefaultTitleFont()Vb
+createEsealSvn.mobileid.exsig.PdfEsealCMS#createEseal(IIILjava/lang/String;Ljava/lang/String;)VJ
+createEsealFrame6vn.mobileid.exsig.PdfEsealCMS#createEsealFrame(IIIII)VM
+generateHash=vn.mobileid.exsig.PdfEsealCMS#generateHash(Ljava/util/List;)VI
+imageProfileBottom3vn.mobileid.exsig.PdfEsealCMS#imageProfileBottom()VI
+imageProfileCenter3vn.mobileid.exsig.PdfEsealCMS#imageProfileCenter()VE
+imageProfileLeft1vn.mobileid.exsig.PdfEsealCMS#imageProfileLeft()VG
+imageProfileRight2vn.mobileid.exsig.PdfEsealCMS#imageProfileRight()VC
+imageProfileTop0vn.mobileid.exsig.PdfEsealCMS#imageProfileTop()Vù
+setEsealContentFontÖvn.mobileid.exsig.PdfEsealCMS#setEsealContentFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)VG
+setEsealFontSize3vn.mobileid.exsig.PdfEsealCMS#setEsealFontSize(II)Vf
+setEsealIconVvn.mobileid.exsig.PdfEsealCMS#setEsealIcon(Lvn/mobileid/exsig/PdfEsealCMS$EsealIcon;)V?
+setEsealIcon/vn.mobileid.exsig.PdfEsealCMS#setEsealIcon([B)VB
+setEsealIcon2vn.mobileid.exsig.PdfEsealCMS#setEsealIcon([BFFF)VQ
+setEsealTitle@vn.mobileid.exsig.PdfEsealCMS#setEsealTitle(Ljava/lang/String;)VT
+setEsealTitleCvn.mobileid.exsig.PdfEsealCMS#setEsealTitle(Ljava/lang/String;FFF)Vi
+setEsealTitleXvn.mobileid.exsig.PdfEsealCMS#setEsealTitle(Lvn/mobileid/exsig/PdfEsealCMS$EsealTitle;)Vô
+setEsealTitleFontÉvn.mobileid.exsig.PdfEsealCMS#setEsealTitleFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V_
+setSignerCertificateGvn.mobileid.exsig.PdfEsealCMS#setSignerCertificate(Ljava/lang/String;)Vvn.mobileid.exsig.PdfProfile †
 -vn.mobileid.exsig.StringCoordinatesExtractionp
 getCoordinate_vn.mobileid.exsig.StringCoordinatesExtraction#getCoordinate(Ljava/lang/String;)Ljava/util/List;
 getCoordinatenvn.mobileid.exsig.StringCoordinatesExtraction#getCoordinate(Ljava/lang/String;I)Lvn/mobileid/exsig/TextPlusXY;h

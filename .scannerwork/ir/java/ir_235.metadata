@@ -1,1 +1,2 @@
-vn.mobileid.exsig.TextPlusY#add(Ljava/lang/String;FF)Lvn/mobileid/exsig/TextPlusY;
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BII)V
+null

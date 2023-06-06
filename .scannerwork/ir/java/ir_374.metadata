@@ -1,3 +1,1 @@
-vn.mobileid.exsig.PdfProfileCMS#sign(LSigningMethodSync;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
-==
-sign vn.mobileid.exsig.PdfProfileCMS#sign(LSigningMethodSync;Ljava/util/List;)Ljava/util/List;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setLayer4Text(Ljava/lang/String;)V

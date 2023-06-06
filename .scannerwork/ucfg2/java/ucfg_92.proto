@@ -1,47 +1,188 @@
 
-\com.itextpdf.text.pdf.security.PdfPKCS7V4#getCertificates()[Ljava/security/cert/Certificate;¸
-«C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7V4.javaÿ ÿ(("1*â
+?vn.mobileid.exsig.PdfProfile#checkPermission(Ljava/util/List;)Z«
+žC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PdfProfile.java¢ ¢(""37*›
+35
+¨' ¨(+ƒ
+€
+
+¨' ¨(2
+%3byte[]"
+__arrayGet*4
+
+__unknown_file (
+
+datajava.util.List*"
+
+__unknown_file (
+""*
+3*õ
+36
+¤) ¤(DRP
+
+¤- ¤(B#
+%1java.io.ByteArrayOutputStream"java.io.ByteArrayOutputStream€
+~
+
+¤) ¤(D
+%2"'java.io.ByteArrayOutputStream#<init>()V*A
+
+__unknown_file (%
+#
+%1java.io.ByteArrayOutputStream*
+35
+32
+33*&
+14
+Ð+ Ð(0"
+
+Ð$ Ð(1
+""*Š
+37
+£ £(om
+
+£ £('	
+%0int"java.util.List#size()I*4
+
+__unknown_file (
+
+datajava.util.List2size()*
+36
+1*ç
+15
+Ï% Ï(.±
+®
+
+Ï% Ï(4
+%6"8vn.mobileid.exsig.PdfProfile#checkLock(LPdfDictionary;)Z*<
+
+__unknown_file ( "
+vn.mobileid.exsig.PdfProfile*"
+
+__unknown_file (
+""*!
+14
+15
+5
+18
+7
+9
+20
+22
+11*&
+18
+È' È(+"
+
+È  È(,
+""*%
 1
-€	 €	(‡
-„
+è è("
 
-€	 €	(
-%0java.util.Collection"__id*T
+è è(
+""*‚
+3
+² ²(Q
+O
+
+² ²(
+keyjava.lang.String"__id*"
 
-__unknown_file (8*6+
-)com.itextpdf.text.pdf.security.PdfPKCS7V4"
-certs‡
-„
+__unknown_file (
+""{
+y
 
-€	1 €	(6
-%1java.util.Collection"__id*T
+² ²(
+keyjava.lang.String"
+__arrayGet*"
 
-__unknown_file (8*6+
-)com.itextpdf.text.pdf.security.PdfPKCS7V4"
-certsyw
-
-€	1 €	(=	
-%2int"java.util.Collection#size()I*8
+__unknown_file (
+""*"
 
-__unknown_file (
-
-%1java.util.Collection2size()`^
+__unknown_file (
+""*!
+37
+15
+5
+18
+7
+9
+20
+22
+11*%
+4
+ä ä( "
 
-€	 €	(>*
-%3$java.security.cert.X509Certificate[]"$java.security.cert.X509Certificate[]£ 
+ä ä(!
+""*Ë
+5
+â â((±
+®
 
-€	 €	(?*
-%4$java.security.cert.X509Certificate[]"Djava.util.Collection#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*8
+â â(.
+%7"8vn.mobileid.exsig.PdfProfile#checkLock(LPdfDictionary;)Z*<
 
-__unknown_file (
-
-%0java.util.Collection*H
+__unknown_file ( "
+vn.mobileid.exsig.PdfProfile*"
 
-__unknown_file (,
-*
-%3$java.security.cert.X509Certificate[]2toArray([Ljava/lang/Object;)":
+__unknown_file (
+""*
+3
+4*%
+7
+Û' Û(+"
 
-€	 €	(@,
-*
-%4$java.security.cert.X509Certificate[]B-+
-)com.itextpdf.text.pdf.security.PdfPKCS7V4H
+Û  Û(,
+""*%
+9
+Ø' Ø(+"
+
+Ø  Ø(,
+""*&
+20
+Å' Å(+"
+
+Å  Å(,
+""*›
+32
+­+ ­(/ƒ
+€
+
+­+ ­(6
+%5byte[]"
+__arrayGet*4
+
+__unknown_file (
+
+datajava.util.List*"
+
+__unknown_file (
+""*
+3*&
+22
+Ã' Ã(,"
+
+Ã  Ã(-
+""*›
+33
+«+ «(/ƒ
+€
+
+«+ «(6
+%4byte[]"
+__arrayGet*4
+
+__unknown_file (
+
+datajava.util.List*"
+
+__unknown_file (
+""*
+3*&
+11
+Õ' Õ(,"
+
+Õ  Õ(-
+"":$
+
+¢# ¢(4
+datajava.util.ListB 
+vn.mobileid.exsig.PdfProfileHP

@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfProfile#<init>(LPdfForm;LAlgorithm;)V
-vn.mobileid.exsig.DefaultFont#getPath()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfileCMS_V2#clearSignaturePositions()V

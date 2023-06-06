@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getSigningCertificate()Ljava/security/cert/X509Certificate;
+vn.mobileid.exsig.PdfProfile#setFontSizeMin(F)V

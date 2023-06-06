@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfile#getSerialNumber(Ljava/security/cert/X509Certificate;)Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#<init>()V

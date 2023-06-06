@@ -1,1 +1,1 @@
-vn.mobileid.exsig.TextPlusXY#setX(F)V
+vn.mobileid.exsig.PdfProfile#setSigningTime(Ljava/util/Calendar;Ljava/lang/String;)V

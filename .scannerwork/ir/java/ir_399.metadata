@@ -1,1 +1,10 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setXmlLocator(LXmlLocator;)V
+vn.mobileid.exsig.test2#main([Ljava/lang/String;)V
+javax.imageio.ImageIO#read(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;
+java.io.File#<init>(Ljava/lang/String;)V
+java.util.Base64#getDecoder()Ljava/util/Base64$Decoder;
+java.io.ByteArrayInputStream#instance-init#
+javax.imageio.ImageIO#write(Ljava/awt/image/RenderedImage;Ljava/lang/String;Ljava/io/File;)Z
+java.io.ByteArrayInputStream#<init>([B)V
+java.lang.String#replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+java.io.File#instance-init#
+java.lang.String#getBytes()[B

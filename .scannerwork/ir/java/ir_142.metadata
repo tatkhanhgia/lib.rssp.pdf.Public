@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getImageAlign()Lvn/mobileid/exsig/ImageAlgin;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getFilterSubtype()LPdfName;

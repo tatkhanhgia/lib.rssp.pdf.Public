@@ -1,3 +1,5 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7()[B
+vn.mobileid.exsig.PdfProfile#verify([BLjava/lang/String;Z)Ljava/util/List;
+vn.mobileid.exsig.PdfVerify#instance-init#
+vn.mobileid.exsig.PdfVerify#<init>()V
 ==
-getEncodedPKCS7 com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7([BLjava/util/Calendar;LTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B
+verifySignature vn.mobileid.exsig.PdfVerify#verifySignature([BLjava/lang/String;Z)Ljava/util/List;

@@ -1,3 +1,6 @@
-vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+vn.mobileid.exsig.TestCreateEseal#createRoundPdf(Ljava/lang/String;)V
+null
+java.io.FileOutputStream#instance-init#
+java.io.FileOutputStream#<init>(Ljava/lang/String;)V
 ==
-setVisibleSignature vn.mobileid.exsig.PdfProfile#setVisibleSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+getCell vn.mobileid.exsig.TestCreateEseal#getCell(Ljava/lang/String;)LPdfPCell;

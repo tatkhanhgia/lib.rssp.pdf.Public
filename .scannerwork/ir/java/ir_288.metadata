@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setLayer2Text(Ljava/lang/String;)V
+vn.mobileid.exsig.TextPlusY#charAt(I)C
+java.lang.IndexOutOfBoundsException#<init>()V
+java.lang.String#length()I
+java.lang.String#charAt(I)C
+java.lang.IndexOutOfBoundsException#instance-init#

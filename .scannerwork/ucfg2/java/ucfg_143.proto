@@ -1,9 +1,49 @@
 
-7vn.mobileid.exsig.PDFSignatureProperties#getFontSize()F·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java‚ ‚("1*%
+cvn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;J)Ljava/lang/String;º
+­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java´ ´(*"1*‹
 1
-ƒ ƒ("
+µ µ(q
+o
 
-ƒ ƒ(
-""B,*
-(vn.mobileid.exsig.PDFSignaturePropertiesP
+µ µ(
+%0java.lang.String"__concat*
+
+µ µ(
+\"*)
+
+µ µ(
+
+fieldjava.lang.Stringo
+m
+
+µ µ(#
+%1java.lang.String"__concat*&
+
+µ µ(
+
+%0java.lang.String*
+
+µ µ(#
+\":n
+l
+
+µ µ(+
+%2java.lang.String"__concat*&
+
+µ µ(#
+
+%1java.lang.String*
+
+µ& µ(+
+"""&
+
+µ µ(,
+
+%2java.lang.String:'
+
+´+ ´(8
+fieldjava.lang.String: 
+
+__unknown_file (
+""B/"-
++vn.mobileid.serialize.ProfileJSONSerializer

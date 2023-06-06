@@ -1,1 +1,1 @@
-vn.mobileid.exsig.TextAlignment#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#getXmlSignatureAppearance()Lcom/itextpdf/text/pdf/XmlSignatureAppearanceMI;

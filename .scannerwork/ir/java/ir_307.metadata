@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getTempFile()Ljava/io/File;
+vn.mobileid.exsig.PdfEsealCMS#createTemporalFile(LSigningMethodAsync;Ljava/util/List;Ljava/util/List;)[B
+==
+createTemporalFile vn.mobileid.exsig.PdfEsealCMS#createTemporalFile(LSigningMethodAsync;Ljava/util/List;)[B

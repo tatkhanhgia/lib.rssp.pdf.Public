@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getXmlSignatureAppearance()Lcom/itextpdf/text/pdf/XmlSignatureAppearanceMI;
+vn.mobileid.exsig.PDFSignatureProperties#setSignerCertificate(Ljava/lang/String;)V

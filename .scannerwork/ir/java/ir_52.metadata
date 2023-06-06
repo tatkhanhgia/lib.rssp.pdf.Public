@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfile#createTemporalFile(LSigningMethodAsync;Ljava/util/List;Ljava/util/List;)[B
+vn.mobileid.exsig.PdfProfileCMS_Temp#createImage(ILFont;)LPdfPTable;

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setRotateContents(Z)V
+vn.mobileid.exsig.PDFSignatureProperties#getTimeFormat()Ljava/lang/String;

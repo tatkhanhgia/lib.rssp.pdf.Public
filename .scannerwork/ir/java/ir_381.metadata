@@ -1,5 +1,1 @@
-vn.mobileid.exsig.CmsProfile#appendSignautre(Ljava/util/List;)Ljava/util/List;
-null
-java.util.ArrayList#<init>()V
-java.util.Calendar#getInstance()Ljava/util/Calendar;
-java.util.ArrayList#instance-init#
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getStamper()Lcom/itextpdf/text/pdf/PdfStamperMI;

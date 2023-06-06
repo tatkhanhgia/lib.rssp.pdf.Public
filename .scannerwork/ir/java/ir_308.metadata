@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setTempFile(Ljava/io/File;)V
+vn.mobileid.exsig.PdfEsealCMS#setSignerCertificate(Ljava/lang/String;)V

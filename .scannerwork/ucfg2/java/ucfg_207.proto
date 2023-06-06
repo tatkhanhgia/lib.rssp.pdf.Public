@@ -1,19 +1,19 @@
 
-Ncom.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLocation()Ljava/lang/String;½
-°C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfSignatureAppearanceMI.java¤ ¤("1*Å
+?com.itextpdf.text.pdf.PdfStamperMI#getMoreInfo()Ljava/util/Map;±
+¤C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfStamperMI.java‚ ‚(*"1*±
 1
-¥ ¥(‹
-ˆ
+ƒ ƒ({
+y
 
-¥ ¥(
-%0java.lang.String"__id*\
+ƒ ƒ(
+%0java.util.Map"__id*P
 
-__unknown_file (@*>0
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"
+__unknown_file (4*2$
+"com.itextpdf.text.pdf.PdfStamperMI"
 
-location"&
+moreInfo"#
 
-¥ ¥(
-
-%0java.lang.StringB20
-.com.itextpdf.text.pdf.PdfSignatureAppearanceMIH
+ƒ ƒ(
+
+%0java.util.MapB&$
+"com.itextpdf.text.pdf.PdfStamperMIH

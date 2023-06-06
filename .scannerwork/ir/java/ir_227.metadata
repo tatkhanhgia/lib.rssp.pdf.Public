@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.security.MakeSignatureMI#signDeferred(LPdfReader;Ljava/lang/String;Ljava/io/OutputStream;LExternalSignatureContainer;)V
-null
+com.itextpdf.text.pdf.PdfStamperMI#getSignatureAppearance()Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;

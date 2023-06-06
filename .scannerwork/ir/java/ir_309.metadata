@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getFieldLockDict()LPdfSigLockDictionary;
+vn.mobileid.exsig.PdfEsealCMS#createDefaultTitleFont()V
+null
+java.io.ByteArrayOutputStream#<init>()V
+java.io.ByteArrayOutputStream#instance-init#
+java.lang.Thread#currentThread()Ljava/lang/Thread;

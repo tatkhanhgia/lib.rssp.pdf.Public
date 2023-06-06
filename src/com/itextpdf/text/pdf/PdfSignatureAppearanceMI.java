@@ -1464,6 +1464,7 @@ public class PdfSignatureAppearanceMI {
             if (pagesForInitials == null) {
                 {
                     PdfFormField sigField = PdfFormField.createSignature(writer);
+                    
                     sigField.setFieldName(name);
                     sigField.put(PdfName.V, refSig);
                     sigField.setFlags(PdfAnnotation.FLAGS_PRINT | PdfAnnotation.FLAGS_LOCKED);
@@ -1478,9 +1479,9 @@ public class PdfSignatureAppearanceMI {
                     } else {
                         sigField.setWidget(new Rectangle(0, 0), null);
                     }
-
+                                                           
                     sigField.setAppearance(PdfAnnotation.APPEARANCE_NORMAL, getAppearance());
-                    sigField.setPage(getPage());
+                    sigField.setPage(getPage());                    
                     writer.addAnnotation(sigField, getPage());
                 }
 
@@ -1503,7 +1504,8 @@ public class PdfSignatureAppearanceMI {
                     }
 
                     sigField.setAppearance(PdfAnnotation.APPEARANCE_NORMAL, getAppearance());
-                    sigField.setPage(sigPos.getPage());
+                    sigField.setPage(sigPos.getPage());              
+                    
                     writer.addAnnotation(sigField, sigPos.getPage());
                 }
             } else {

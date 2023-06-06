@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.PdfStamperMI#setXmpMetadata([B)V
+vn.mobileid.exsig.PDFSignatureProperties#setFont(Lvn/mobileid/exsig/DefaultFont;F)V
+==
+setFont vn.mobileid.exsig.PDFSignatureProperties#setFont(Lvn/mobileid/exsig/DefaultFont;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V

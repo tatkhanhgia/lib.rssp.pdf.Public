@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setOutlines(Ljava/util/List;)V
+vn.mobileid.exsig.PDFSignatureProperties#getImageProfile()Lvn/mobileid/exsig/ImageProfile;

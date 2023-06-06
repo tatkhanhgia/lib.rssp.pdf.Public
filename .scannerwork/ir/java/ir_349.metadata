@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#getSignCertificateChain()[Ljava/security/cert/Certificate;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getSignatureEvent()Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$SignatureEvent;

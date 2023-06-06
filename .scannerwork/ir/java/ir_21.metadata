@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.AcroFieldsV4#instance-init#
+vn.mobileid.exsig.PdfProfileCMS_V2#createTemporalFile(LSigningMethodAsync;Ljava/util/List;Ljava/util/List;)[B
+==
+createTemporalFile vn.mobileid.exsig.PdfProfileCMS_V2#createTemporalFile(LSigningMethodAsync;Ljava/util/List;)[B

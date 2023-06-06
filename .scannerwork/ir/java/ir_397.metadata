@@ -1,1 +1,6 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#setSignDate(Ljava/util/Calendar;)V
+vn.mobileid.exsig.Test#testShowTextAlignedVsSimpleColumnTopAlignment()V
+null
+java.io.FileOutputStream#instance-init#
+java.io.File#<init>(Ljava/lang/String;)V
+java.io.FileOutputStream#<init>(Ljava/io/File;)V
+java.io.File#instance-init#

@@ -1,18 +1,19 @@
 
-pvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation#getText()Ljava/lang/String;º
-ØC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/StringCoordinatesExtraction.javaç ç(!"1*Á
+8vn.mobileid.exsig.PDFSignatureProperties#getFontData()[B∑
+™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaô ô( "1*©
 1
-é é(≠
-™
+ö ö(z
+x
 
-é é(
-%0java.lang.String"__id*~
+ö ö(
+%0byte[]"__id*V
 
-__unknown_file (b*`V
-Tvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation"
-Text"&
+__unknown_file (:*8*
+(vn.mobileid.exsig.PDFSignatureProperties"
 
-é é(
-
-%0java.lang.StringBXV
-Tvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocationH
+fontData"
+
+ö ö(
+
+%0byte[]B,*
+(vn.mobileid.exsig.PDFSignatureProperties

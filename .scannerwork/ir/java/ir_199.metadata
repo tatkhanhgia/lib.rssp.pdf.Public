@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;LPdfFileSpecification;)V
+vn.mobileid.exsig.PDFSignatureProperties#getLayer0IconPosition()Ljava/lang/String;

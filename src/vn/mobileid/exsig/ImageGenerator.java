@@ -13,6 +13,7 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -71,7 +72,8 @@ public class ImageGenerator {
             bArray = baos.toByteArray();
         }
         return bArray;
-    }
+    }        
+    
     
     public static byte[] Border(int width, int height) throws IOException, FontFormatException {
         

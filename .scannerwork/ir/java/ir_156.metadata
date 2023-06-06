@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getTextAlignment()Lvn/mobileid/exsig/TextAlignment;
+vn.mobileid.serialize.ProfileJSONSerializer#writeNumberField(Ljava/lang/String;J)Ljava/lang/String;

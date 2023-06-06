@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#isRotateContents()Z
+vn.mobileid.exsig.PDFSignatureProperties#setSigningTime(Ljava/util/Calendar;Ljava/lang/String;)V

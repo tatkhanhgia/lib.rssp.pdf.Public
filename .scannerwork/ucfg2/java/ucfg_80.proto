@@ -1,18 +1,679 @@
 
-]com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestEncryptionAlgorithmOid()Ljava/lang/String;¸
-«C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7V4.javaå å(1"1*Ô
-1
-æ æ(+š
-—
+_vn.mobileid.exsig.PdfProfile#initContent(Ljava/util/Date;Ljava/security/cert/X509Certificate;)V«
+žC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PdfProfile.javaÐ Ð("28*î
+24
+Õ Õ(LÕÒ
 
-æ æ(+
-%0java.lang.String"__id*k
+Õ Õ(L
+%10java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*4
 
-__unknown_file (O*M+
-)com.itextpdf.text.pdf.security.PdfPKCS7V4"
-digestEncryptionAlgorithmOid"&
-
-æ æ(,
+__unknown_file (
 
-%0java.lang.StringB-+
-)com.itextpdf.text.pdf.security.PdfPKCS7V4H
+%8java.lang.String*&
+
+__unknown_file (
+
+{date}*4
+
+__unknown_file (
+
+%9java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+23*
+25
+Ô Ô(A{
+y
+
+Ô Ô(A/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*4
+
+__unknown_file (
+
+%7java.lang.String{
+y
+
+Õ Õ(%
+%8java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContentüù
+
+Õ8 Õ(K
+%9java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*B
+
+__unknown_file (&
+$
+formatjava.text.SimpleDateFormat*4
+
+__unknown_file (
+
+datejava.util.Date2format(Ljava/util/Date;)*
+24*á
+26
+Ó Ó(E{
+y
+
+Ó Ó(E/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*4
+
+__unknown_file (
+
+%4java.lang.String{
+y
+
+Ô Ô(%
+%5java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContentv
+t
+
+Ô: Ô(@
+%6java.lang.String"__id*H
+
+__unknown_file (,**
+vn.mobileid.exsig.PdfProfile"
+reasonÖÓ
+
+Ô Ô(A
+%7java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*4
+
+__unknown_file (
+
+%5java.lang.String*(
+
+__unknown_file (
+
+{reason}*4
+
+__unknown_file (
+
+%6java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+25*ä
+27
+Ò Ò(Gz
+x
+
+Ò Ò(G$
+formatjava.text.SimpleDateFormat"__id*>
+
+__unknown_file ("
+ 
+%0java.text.SimpleDateFormat{
+y
+
+Ó Ó(%
+%2java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContentx
+v
+
+Ó< Ó(D
+%3java.lang.String"__id*J
+
+__unknown_file (.*,
+vn.mobileid.exsig.PdfProfile"
+
+locationØÕ
+
+Ó Ó(E
+%4java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*4
+
+__unknown_file (
+
+%2java.lang.String**
+
+__unknown_file (
+
+{location}*4
+
+__unknown_file (
+
+%3java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+26*˜
+28
+Ò; Ò(ELJ
+
+Ò* Ò(: 
+%0java.text.SimpleDateFormat"java.text.SimpleDateFormat±
+®
+
+Ò& Ò(F
+%1"6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V*>
+
+__unknown_file ("
+ 
+%0java.text.SimpleDateFormat*"
+
+__unknown_file (
+""*
+27*ô
+10
+Ý Ý(bÜÙ
+
+Ý Ý(b
+%31java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%29java.lang.String*+
+
+__unknown_file (
+{givenname}*5
+
+__unknown_file (
+
+%30java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+9*¶
+11
+Ü Ü(^|
+z
+
+Ü Ü(^/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%28java.lang.String|
+z
+
+Ý Ý(%
+%29java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent¡ž
+
+Ý= Ý(a
+%30java.lang.String"yvn.mobileid.exsig.PdfProfile#getCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*(
+
+__unknown_file (
+
+2.5.4.422JgetCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)*
+10*ñ
+12
+Ü Ü(^ØÕ
+
+Ü Ü(^
+%28java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%26java.lang.String*'
+
+__unknown_file (	
+{title}*5
+
+__unknown_file (
+
+%27java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+11*¶
+13
+Ú Ú(^|
+z
+
+Ú Ú(^/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%25java.lang.String|
+z
+
+Ü Ü(%
+%26java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent¡ž
+
+Ü9 Ü(]
+%27java.lang.String"yvn.mobileid.exsig.PdfProfile#getCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*(
+
+__unknown_file (
+
+2.5.4.122JgetCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)*
+12*ñ
+14
+Ú Ú(^ØÕ
+
+Ú Ú(^
+%25java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%23java.lang.String*'
+
+__unknown_file (	
+{phone}*5
+
+__unknown_file (
+
+%24java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+13*¶
+15
+Ù Ù(j|
+z
+
+Ù Ù(j/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%22java.lang.String|
+z
+
+Ú Ú(%
+%23java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent¡ž
+
+Ú9 Ú(]
+%24java.lang.String"yvn.mobileid.exsig.PdfProfile#getCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*(
+
+__unknown_file (
+
+2.5.4.202JgetCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)*
+14*ñ
+16
+Ù Ù(jØÕ
+
+Ù Ù(j
+%22java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%20java.lang.String*'
+
+__unknown_file (	
+{email}*5
+
+__unknown_file (
+
+%21java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+15*Â
+17
+Ø Ø(i|
+z
+
+Ø Ø(i/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%19java.lang.String|
+z
+
+Ù Ù(%
+%20java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent­ª
+
+Ù9 Ù(i
+%21java.lang.String"yvn.mobileid.exsig.PdfProfile#getCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*4
+
+__unknown_file (
+1.2.840.113549.1.9.12JgetCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)*
+16*ü
+18
+Ø Ø(iãà
+
+Ø Ø(i
+%19java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%17java.lang.String*2
+
+__unknown_file (
+{organizationunit}*5
+
+__unknown_file (
+
+%18java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+17*¶
+19
+× ×(a|
+z
+
+× ×(a/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%16java.lang.String|
+z
+
+Ø Ø(%
+%17java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent¡ž
+
+ØD Ø(h
+%18java.lang.String"yvn.mobileid.exsig.PdfProfile#getCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*(
+
+__unknown_file (
+
+2.5.4.112JgetCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)*
+18*(
+0 "!
+
+ä ä(
+implicit return*’
+1
+à à(V|
+z
+
+à à(V/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%40java.lang.String*
+0*ö
+4
+à à(VßÜ
+
+à à(V
+%40java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%38java.lang.String*.
+
+__unknown_file (
+{enterpriseid}*5
+
+__unknown_file (
+
+%39java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+1*©
+5
+ß ß(R|
+z
+
+ß ß(R/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%37java.lang.String|
+z
+
+à à(%
+%38java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent–
+“
+
+à@ à(U
+%39java.lang.String"dvn.mobileid.exsig.PdfProfile#getEnterpriseID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*
+4*ô
+6
+ß ß(RÝÚ
+
+ß ß(R
+%37java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%35java.lang.String*,
+
+__unknown_file (
+{personalid}*5
+
+__unknown_file (
+
+%36java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+5*§
+7
+Þ Þ(V|
+z
+
+Þ Þ(V/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%34java.lang.String|
+z
+
+ß ß(%
+%35java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent”
+‘
+
+ß> ß(Q
+%36java.lang.String"bvn.mobileid.exsig.PdfProfile#getPersonalID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*
+6*ö
+8
+Þ Þ(VßÜ
+
+Þ Þ(V
+%34java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%32java.lang.String*.
+
+__unknown_file (
+{serialnumber}*5
+
+__unknown_file (
+
+%33java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+7*©
+9
+Ý Ý(b|
+z
+
+Ý Ý(b/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%31java.lang.String|
+z
+
+Þ Þ(%
+%32java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent–
+“
+
+Þ@ Þ(U
+%33java.lang.String"dvn.mobileid.exsig.PdfProfile#getSerialNumber(Ljava/security/cert/X509Certificate;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*
+8*ô
+20
+× ×(aÛØ
+
+× ×(a
+%16java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%14java.lang.String**
+
+__unknown_file (
+
+{organize}*5
+
+__unknown_file (
+
+%15java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+19*¶
+21
+Ö Ö(^|
+z
+
+Ö Ö(^/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%13java.lang.String|
+z
+
+× ×(%
+%14java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent¡ž
+
+×< ×(`
+%15java.lang.String"yvn.mobileid.exsig.PdfProfile#getCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*(
+
+__unknown_file (
+
+2.5.4.102JgetCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)*
+20*ò
+22
+Ö Ö(^ÙÖ
+
+Ö Ö(^
+%13java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%11java.lang.String*(
+
+__unknown_file (
+
+{signby}*5
+
+__unknown_file (
+
+%12java.lang.String29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
+21*µ
+23
+Õ Õ(L|
+z
+
+Õ Õ(L/
+vn.mobileid.exsig.PdfProfile"
+textContent"__id*5
+
+__unknown_file (
+
+%10java.lang.String|
+z
+
+Ö Ö(%
+%11java.lang.String"__id*M
+
+__unknown_file (1*/
+vn.mobileid.exsig.PdfProfile"
+textContent 
+
+Ö: Ö(]
+%12java.lang.String"yvn.mobileid.exsig.PdfProfile#getCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+vn.mobileid.exsig.PdfProfile*H
+
+__unknown_file (,
+*
+cert"java.security.cert.X509Certificate*'
+
+__unknown_file (	
+2.5.4.32JgetCertificateInfo(Ljava/security/cert/X509Certificate;Ljava/lang/String;)*
+22:$
+
+Ð Ð()
+datejava.util.Date:8
+
+Ð* Ð(>*
+cert"java.security.cert.X509CertificateB 
+vn.mobileid.exsig.PdfProfile

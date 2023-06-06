@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfileCMS#<init>(LAlgorithm;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer2Font()LFont;

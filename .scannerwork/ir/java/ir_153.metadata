@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getFontName()Ljava/lang/String;
+vn.mobileid.serialize.ProfileJSONSerializer#writeStartArrayField(Ljava/lang/String;)Ljava/lang/String;

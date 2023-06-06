@@ -1,16 +1,19 @@
 
-5vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;¤
-™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/Color.java, ,(%"1*¢
-1- -(o
-m
-- -(
-%0java.awt.Color"__id*E
-
-__unknown_file ()*'
-vn.mobileid.exsig.Color"
+Icom.itextpdf.text.pdf.security.PdfPKCS7V4#getSignName()Ljava/lang/String;¸
+«C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7V4.javaæ æ("1*À
+1
+ç ç(†
+ƒ
 
-awtColor""
-- -(
-
-%0java.awt.ColorB
-vn.mobileid.exsig.ColorH
+ç ç(
+%0java.lang.String"__id*W
+
+__unknown_file (;*9+
+)com.itextpdf.text.pdf.security.PdfPKCS7V4"
+
+signName"&
+
+ç ç(
+
+%0java.lang.StringB-+
+)com.itextpdf.text.pdf.security.PdfPKCS7V4H

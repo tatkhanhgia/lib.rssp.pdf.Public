@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getOffset()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSignCertificateChain()[Ljava/security/cert/Certificate;

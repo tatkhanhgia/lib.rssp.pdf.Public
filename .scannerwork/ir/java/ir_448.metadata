@@ -1,0 +1,3 @@
+vn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantText()Ljava/lang/String;
+==
+getResultantTextPlusY vn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantTextPlusY()Lvn/mobileid/exsig/TextPlusY;

@@ -1,1 +1,4 @@
-vn.mobileid.exsig.PDFSignatureProperties#getFontType()I
+vn.mobileid.serialize.ProfileJSONSerializer#writeByteField(Ljava/lang/String;[B)Ljava/lang/String;
+java.lang.String#instance-init#
+java.util.Base64#getEncoder()Ljava/util/Base64$Encoder;
+java.lang.String#<init>(Ljava/lang/String;)V

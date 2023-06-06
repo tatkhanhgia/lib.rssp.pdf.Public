@@ -1,2 +1,8 @@
-vn.mobileid.exsig.PdfProfile#setFont(Ljava/lang/String;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
-vn.mobileid.exsig.Color#getColor()Lcom/itextpdf/text/BaseColor;
+vn.mobileid.exsig.TestCreateEseal#createBorderPdf(Ljava/lang/String;)V
+null
+java.io.FileOutputStream#instance-init#
+java.io.FileOutputStream#<init>(Ljava/lang/String;)V
+vn.mobileid.exsig.TestCreateEseal$BorderEvent#<init>(Lvn/mobileid/exsig/TestCreateEseal;)V
+vn.mobileid.exsig.TestCreateEseal$BorderEvent#instance-init#
+==
+setRowCount vn.mobileid.exsig.TestCreateEseal$BorderEvent#setRowCount(I)V

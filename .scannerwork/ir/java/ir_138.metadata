@@ -1,1 +1,2 @@
-vn.mobileid.exsig.PDFSignatureProperties#getPageAndPosition()Ljava/util/Map;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#findOcsp(LASN1Sequence;)V
+null

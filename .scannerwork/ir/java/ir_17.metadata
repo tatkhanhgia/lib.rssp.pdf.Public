@@ -1,1 +1,1 @@
-vn.mobileid.exsig.ImageProfile#<init>(Ljava/lang/String;IIIII)V
+vn.mobileid.exsig.PdfProfileCMS_V2#<init>(LPdfForm;LAlgorithm;)V

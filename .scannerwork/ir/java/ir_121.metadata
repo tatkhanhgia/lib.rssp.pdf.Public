@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getPdfPassword()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestEncryptionAlgorithmOid()Ljava/lang/String;

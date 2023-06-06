@@ -1,276 +1,9 @@
 
-nvn.mobileid.exsig.StringCoordinatesExtraction#getCoordinate(Ljava/lang/String;I)Lvn/mobileid/exsig/TextPlusXY;∫
-ØC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/StringCoordinatesExtraction.javaN N(#"26*÷
-13[ [(:øº
-[ [(:
-%10void"%vn.mobileid.exsig.TextPlusXY#setY(F)V*H
-
-__unknown_file (,
-*
+7vn.mobileid.exsig.PDFSignatureProperties#getFontSize()F∑
+™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaâ â("1*%
+1
+ä ä("
 
-textPlusXYvn.mobileid.exsig.TextPlusXY*)
-
-__unknown_file (
-
-%9float2setY(F)*
-12*®
-24R R(Opn
-SA S(\3
-%0-vn.mobileid.exsig.TextPlusYExtractionStrategy"-vn.mobileid.exsig.TextPlusYExtractionStrategyü
-ú
-S= S(^
-%1"7vn.mobileid.exsig.TextPlusYExtractionStrategy#<init>()V*Q
-
-__unknown_file (5
-3
-%0-vn.mobileid.exsig.TextPlusYExtractionStrategy*
-23*◊
-14Z Z(-Ä
-~
-Z Z(-*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY"__id*@
-
-__unknown_file ($
-"
-%7vn.mobileid.exsig.TextPlusXYΩ∫
-[  [(9
-%9float"(vn.mobileid.exsig.TextPlusY#yCoordAt(I)F*F
-
-__unknown_file (*
-(
-	textPlusYvn.mobileid.exsig.TextPlusY*"
-
-__unknown_file (
-""2yCoordAt(I)*
-13*‚
-15Y Y(,NL
-Z! Z(+"
-%7vn.mobileid.exsig.TextPlusXY"vn.mobileid.exsig.TextPlusXY|
-z
-Z Z(-
-%8"&vn.mobileid.exsig.TextPlusXY#<init>()V*@
-
-__unknown_file ($
-"
-%7vn.mobileid.exsig.TextPlusXY*
-14*x
-26P  P($b
-`
-P P(%*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY"__id*"
-
-__unknown_file (
-""*
-24*ú
-16Y Y(#ÖÇ
-Y Y(+	
-%6int" java.util.regex.Matcher#start()I*@
-
-__unknown_file ($
-"
-matcherjava.util.regex.Matcher2start()*
-15*§
-18X X(áÑ
-X X(!
-%5boolean"java.util.regex.Matcher#find()Z*@
-
-__unknown_file ($
-"
-matcherjava.util.regex.Matcher2find()*
-
-16
-9
-1*â
-19W W(Ss
-q
-W W(S"
-matcherjava.util.regex.Matcher"__id*;
-
-__unknown_file (
-
-%4java.util.regex.Matcher*
-18*G
-1m m("8
-m m(,
-*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY*”
-3g g(æª
-g g(2
-%20void"(vn.mobileid.exsig.TextPlusXY#setPage(I)V*H
-
-__unknown_file (,
-*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY*"
-
-__unknown_file (
-""2
-setPage(I)*
-1*Õ
-4f f(∏µ
-f f(3
-%19void"%vn.mobileid.exsig.TextPlusXY#setX(F)V*H
-
-__unknown_file (,
-*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY*"
-
-__unknown_file (
-""2setX(F)*
-3*—
-5d d(1Å
-
-d d(1*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY"__id*A
-
-__unknown_file (%
-#
-%16vn.mobileid.exsig.TextPlusXY∏µ
-e e(3
-%18void"%vn.mobileid.exsig.TextPlusXY#setY(F)V*H
-
-__unknown_file (,
-*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY*"
-
-__unknown_file (
-""2setY(F)*
-4*„
-6d! d(1OM
-d% d(/#
-%16vn.mobileid.exsig.TextPlusXY"vn.mobileid.exsig.TextPlusXY~
-|
-d! d(1
-%17"&vn.mobileid.exsig.TextPlusXY#<init>()V*A
-
-__unknown_file (%
-#
-%16vn.mobileid.exsig.TextPlusXY*
-5*é
-7	b b(åı
-Ú
-	b b(åd
-textLocationTvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation"__id*y
-
-__unknown_file (]
-[
-%15Tvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation*
-6
-1*æ
-8a a(lÁ
-‰
-a a(ld
-textCoordinatesExtractionGvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction"__id*l
-
-__unknown_file (P
-N
-%13Gvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtractionøº
-	bF b(ã[
-%15Tvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation"¿vn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction#getCoordinate(Ljava/lang/String;I)Lvn/mobileid/exsig/StringCoordinatesExtraction$TextCoordinatesExtraction$TextLocation;*Ç
-
-__unknown_file (f
-d
-textCoordinatesExtractionGvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction*B
-
-__unknown_file (&
-$
-stringIdentifierjava.lang.String*"
-
-__unknown_file (
-""2"getCoordinate(Ljava/lang/String;I)*
-7*Ú
-9ad a(j¶£
-aJ a(cN
-%13Gvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction"Gvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction¥
-±
-aF a(k
-%14"ãvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction#<init>(Lvn/mobileid/exsig/StringCoordinatesExtraction;LPdfReader;)V*l
-
-__unknown_file (P
-N
-%13Gvn.mobileid.exsig.StringCoordinatesExtraction$TextCoordinatesExtraction*"
-
-__unknown_file (
-""*
-8*ø
-20WH W(Q®•
-W W(R
-%4java.util.regex.Matcher"Rjava.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;*;
-
-__unknown_file (
-
-%3java.util.regex.Pattern*F
-
-__unknown_file (*
-(
-	textPlusYvn.mobileid.exsig.TextPlusY2!matcher(Ljava/lang/CharSequence;)*
-19*ç
-21U U(M}
-{
-U U(M(
-	textPlusYvn.mobileid.exsig.TextPlusY"__id*?
-
-__unknown_file (#
-!
-%2vn.mobileid.exsig.TextPlusY˜
-Ù
-W W(?
-%3java.util.regex.Pattern"Ljava.util.regex.Pattern#compile(Ljava/lang/String;)Ljava/util/regex/Pattern;*7
-
-__unknown_file ("
-java.util.regex.Pattern*B
-
-__unknown_file (&
-$
-stringIdentifierjava.lang.String*
-20*ß
-22U" U(4êç
-U" U(L!
-%2vn.mobileid.exsig.TextPlusY"bvn.mobileid.exsig.TextPlusYExtractionStrategy#getResultantTextPlusY()Lvn/mobileid/exsig/TextPlusY;*a
-
-__unknown_file (E
-C
-extractionStrategy-vn.mobileid.exsig.TextPlusYExtractionStrategy2getResultantTextPlusY()*
-21*◊
-11\ \(6¿Ω
-\ \(6
-%12void"%vn.mobileid.exsig.TextPlusXY#setX(F)V*H
-
-__unknown_file (,
-*
-
-textPlusXYvn.mobileid.exsig.TextPlusXY**
-
-__unknown_file (
-
-%11float2setX(F)*
-18*±
-12\ \(öó
-\  \(5
-%11float"(vn.mobileid.exsig.TextPlusY#getxCoord()F*F
-
-__unknown_file (*
-(
-	textPlusYvn.mobileid.exsig.TextPlusY2getxCoord()*
-11*¬
-23S S(_´
-®
-S S(_C
-extractionStrategy-vn.mobileid.exsig.TextPlusYExtractionStrategy"__id*Q
-
-__unknown_file (5
-3
-%0-vn.mobileid.exsig.TextPlusYExtractionStrategy*
-22:0
-N$ N(B$
-stringIdentifierjava.lang.String: 
-
-__unknown_file (
-""B1/
--vn.mobileid.exsig.StringCoordinatesExtractionH
+ä ä(
+""B,*
+(vn.mobileid.exsig.PDFSignaturePropertiesP
