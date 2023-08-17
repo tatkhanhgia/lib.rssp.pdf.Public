@@ -81,6 +81,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     private String signerCertificate;
     protected List<Long> listTimeStamp = new ArrayList<>();
     protected transient List<TextFinder> textFinderArray = new ArrayList<>();    
+    private Algorithm signingAlgorithm = Algorithm.RSA;
 
     public PdfProfileCMS_V2(Algorithm algorithm) {
         super(PdfForm.B, algorithm);
@@ -89,6 +90,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public PdfProfileCMS_V2(PdfForm form, Algorithm algorithm) {
         super(form, algorithm);
     }
+    
+    
 
     @Override
     List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
@@ -142,7 +145,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
             RandomAccessSource readerSource = reader.getSafeFile().createSourceView();
             byte[] extSignature = Base64.decode(signatureList.get(i));
-            sgn.setExternalDigest(extSignature, null, "RSA");
+            sgn.setExternalDigest(extSignature, null, algorithm.getValue());
 
             byte[] signedContent = sgn.getEncodedPKCS7(
                     otherList.get(i),
@@ -1118,6 +1121,11 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public void clearSignaturePositions() {
         this.sigPosList.clear();
         this.textFinderArray.clear();
-    }
+    }   
 
+   
+
+    public void setSigningAlgorithm(Algorithm algorithm) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

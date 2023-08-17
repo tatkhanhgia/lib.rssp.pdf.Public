@@ -32,7 +32,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 public class TestGetImageFromSignature {
 
     public static void main(String[] args) throws IOException, GeneralSecurityException {
-        String file = "C:\\Users\\Admin\\Downloads\\eLaborContract - Ph_m Phú Qu_c - 089098019007 (12).pdf";
+        String file = "C:\\Users\\Admin\\Downloads\\sample.pdf";
         byte[] src = Files.readAllBytes(new File(file).toPath());
         PdfReader reader = new PdfReader(src);
         AcroFields acro = reader.getAcroFields();

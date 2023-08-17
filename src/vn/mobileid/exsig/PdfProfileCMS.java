@@ -68,8 +68,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
 
     private transient final Logger log = LoggerFactory.getLogger(PdfProfileCMS.class);
 
-    private String signerCertificate;
-
+    private String signerCertificate;    
+    
     public PdfProfileCMS() {
     }
 
@@ -84,7 +84,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
     @Override
     public List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
         Calendar signingTime = Calendar.getInstance();
-//        signingTime.setTimeInMillis(Long.parseLong("1683715768258"));
         signingTime.setTimeInMillis(timeMillis);
         X509Certificate[] cert = this.certificates.toArray(new X509Certificate[certificates.size()]);
         List<byte[]> result = new ArrayList<>();
@@ -350,10 +349,14 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             BouncyCastleDigest digest = new BouncyCastleDigest();
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             sgn.setSignDate(signingTime);
-            byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
+            byte[] hash = DigestAlgorithms.digest(
+                    rg,
+                    digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
             byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
-            byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
+            byte[] hashData = DigestAlgorithms.digest(
+                    new ByteArrayInputStream(sh),
+                    digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
     }

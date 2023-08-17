@@ -806,8 +806,8 @@ public class PdfPKCS7CMS {
      * @since	2.1.6
      */
     public byte[] getEncodedPKCS7(byte secondDigest[], TSAClient tsaClient, byte[] ocsp, Collection<byte[]> crlBytes, CryptoStandard sigtype) {
-        try {
-            if (externalDigest != null) {
+        try {            
+            if (externalDigest != null) {                                
                 digest = externalDigest;
                 if (RSAdata != null) {
                     RSAdata = externalRSAdata;
@@ -889,8 +889,9 @@ public class PdfPKCS7CMS {
             v.add(DERNull.INSTANCE);
             signerinfo.add(new DERSequence(v));
 
-            // Add the digest
+            // Add the digest            
             signerinfo.add(new DEROctetString(digest));
+            
 
             // When requested, go get and add the timestamp. May throw an exception.
             // Added by Martin Brunecky, 07/12/2007 folowing Aiken Sam, 2006-11-15
