@@ -271,7 +271,10 @@ public class MakeSignatureMI {
      * @throws IOException
      * @throws DocumentException
      */
-    public static void signExternalContainer(PdfSignatureAppearanceMI sap, ExternalSignatureContainer externalSignatureContainer, int estimatedSize) throws GeneralSecurityException, IOException, DocumentException {
+    public static void signExternalContainer(
+            PdfSignatureAppearanceMI sap, 
+            ExternalSignatureContainer externalSignatureContainer, 
+            int estimatedSize) throws GeneralSecurityException, IOException, DocumentException {
         PdfSignature dic = new PdfSignature(null, null);
         dic.setReason(sap.getReason());
         dic.setLocation(sap.getLocation());

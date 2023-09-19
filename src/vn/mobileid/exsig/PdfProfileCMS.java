@@ -22,7 +22,6 @@ import com.itextpdf.text.pdf.ByteBuffer;
 import com.itextpdf.text.pdf.ColumnText;
 import com.itextpdf.text.pdf.PdfArray;
 import com.itextpdf.text.pdf.PdfDictionary;
-import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfNumber;
 import com.itextpdf.text.pdf.PdfReader;
@@ -35,14 +34,11 @@ import com.itextpdf.text.pdf.security.ExternalBlankSignatureContainer;
 import com.itextpdf.text.pdf.security.ExternalSignatureContainer;
 import com.itextpdf.text.pdf.security.MakeSignature;
 import com.itextpdf.text.pdf.security.MakeSignatureMI;
-import com.itextpdf.text.pdf.security.PdfPKCS7;
 import com.itextpdf.text.pdf.security.PdfPKCS7CMS;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
-import java.awt.SecondaryLoop;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -93,7 +89,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
         }
 
         for (int i = 0; i < tempDataList.size(); i++) {
-
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             BouncyCastleDigest digest = new BouncyCastleDigest();
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, cert, algorithm.getValue(), null, digest, false);
@@ -112,9 +107,9 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
 
             //Check Permission
             //Check Security of the PDF file
-            if (!checkPermission(reader)) {
-                throw new Exception("This document was Locked or Certified");
-            }
+//            if (!checkPermission(reader)) {
+//                throw new Exception("This document was Locked or Certified");
+//            }
 
             AcroFields af = reader.getAcroFields();
             PdfDictionary v = af.getSignatureDictionary(signatureId);
@@ -243,9 +238,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                 position.setRight(iRec.getRight() + position.getLeft());
                 position.setTop(position.getBottom() + iRec.getTop());
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
-                appearance.setSignDate(signingTime);
+                appearance.setSignDate(signingTime);                
                 if (writeAll) {
-
                     int[] pages = new int[totalNumOfPages];
                     for (int j = 0; j < totalNumOfPages; j++) {
                         pages[j] = j + 1;
@@ -725,6 +719,12 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
     public void setRevocationData(byte[] ocsp, List<byte[]> crls) {
         this.ocsp = ocsp;
         this.crls = crls;
+        if(ocsp != null){
+            ltvSize += 4192;
+        }
+        if(crls != null && !crls.isEmpty()){
+            ltvSize += 4192;
+        }
     }
 
     //Update 20222311 by GiaTK    

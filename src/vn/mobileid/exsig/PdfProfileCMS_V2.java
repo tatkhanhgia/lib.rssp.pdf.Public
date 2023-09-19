@@ -145,7 +145,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
             RandomAccessSource readerSource = reader.getSafeFile().createSourceView();
             byte[] extSignature = Base64.decode(signatureList.get(i));
-            sgn.setExternalDigest(extSignature, null, algorithm.getValue());
+            sgn.setExternalDigest(extSignature, null, signingAlgorithm.getValue());
 
             byte[] signedContent = sgn.getEncodedPKCS7(
                     otherList.get(i),
@@ -202,8 +202,10 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         signingTime.setTimeInMillis(timeMillis);
         Date date = signingTime.getTime();
 
+        if(signatureId == null || signatureId.isEmpty()){
         signatureId = "sig-"
                 + Calendar.getInstance().getTimeInMillis();
+        }
 
         Font font = null;
         BaseFont baseFont = null;
@@ -1126,6 +1128,6 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
    
 
     public void setSigningAlgorithm(Algorithm algorithm) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.signingAlgorithm = algorithm;
     }
 }

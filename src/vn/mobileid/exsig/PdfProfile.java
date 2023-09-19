@@ -625,7 +625,7 @@ public class PdfProfile extends Profile implements Serializable {
         try {
             ColumnText ct = null;
             int status = 0;
-            if(maxFontSize <= fontSizeMin){
+            if (maxFontSize <= fontSizeMin) {
                 return fontSizeMin;
             }
             if (maxFontSize <= 0) {
@@ -647,11 +647,10 @@ public class PdfProfile extends Profile implements Serializable {
             ct = new ColumnText(null);
             ct.setSimpleColumn(ph, rect.getLeft(), rect.getBottom(), rect.getRight(), rect.getTop(), maxFontSize, Element.ALIGN_LEFT);
             ct.setRunDirection(runDirection);
-            status = ct.go(true);
-            float temppp = ct.getLinesWritten() * maxFontSize * lineSpacing;
+            status = ct.go(true);            
             if ((status == ColumnText.NO_MORE_TEXT)
                     && ct.getExtraParagraphSpace() >= 0
-                    && (ct.getLinesWritten() * maxFontSize * lineSpacing <= rect.getHeight())) {
+                    && (((ct.getLinesWritten() * maxFontSize) + (ct.getLeading()*(ct.getLinesWritten() - 1))) <= rect.getHeight())) {
                 return maxFontSize;
             }
             if (this.autoScale) {
@@ -720,7 +719,7 @@ public class PdfProfile extends Profile implements Serializable {
             float size = maxFontSize;
             for (int k = 0; k < 50; ++k) { //just in case it doesn't converge                
                 size = max * precision;
-                if(size <= fontSizeMin){                    
+                if (size <= fontSizeMin) {
                     return fontSizeMin;
                 }
                 ct = new ColumnText(null);
@@ -728,10 +727,10 @@ public class PdfProfile extends Profile implements Serializable {
                 Phrase q = new Phrase(text, font);
                 ct.setSimpleColumn(q, rect.getLeft(), rect.getBottom(), rect.getRight(), rect.getTop(), size, Element.ALIGN_LEFT);
                 ct.setRunDirection(runDirection);
-                status = ct.go(true);               
+                status = ct.go(true);
                 if ((status == ColumnText.NO_MORE_TEXT)
                         && ct.getExtraParagraphSpace() >= 0
-                        && (ct.getLinesWritten() * size * lineSpacing <= rect.getHeight())) {
+                        && (((ct.getLinesWritten() * size) + (ct.getLeading()*(ct.getLinesWritten() - 1))) <= rect.getHeight())) {
                     return size * precision;
 //                if ((status & ColumnText.NO_MORE_TEXT) != 0) {                    
 //                    if (max - min < size * precision) {
@@ -1160,9 +1159,10 @@ public class PdfProfile extends Profile implements Serializable {
                     float finalFontSize = -1;
                     while (finalFontSize <= 0) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
-                    }           
+//                        finalFontSize = fitText(font, textContent, iRec, 20, PdfWriter.RUN_DIRECTION_DEFAULT);
+                    }
 //                    System.out.println("MaxSize:"+font.getCalculatedSize());
-//                    System.out.println("FinalFontSize"+finalFontSize);
+                    System.out.println("FinalFontSize"+finalFontSize);
                     font.setSize(finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
@@ -1222,9 +1222,10 @@ public class PdfProfile extends Profile implements Serializable {
                     float finalFontSize = 0;
                     while (finalFontSize < 1) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
-                    }                
+                    }
 //                    System.out.println("MaxSize:"+font.getCalculatedSize());
-//                    System.out.println("FinalFontSize"+finalFontSize);
+                    System.out.println("FinalFontSize" + finalFontSize);
+//                    finalFontSize = 11.11;
                     font.setSize(finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
@@ -1791,8 +1792,8 @@ public class PdfProfile extends Profile implements Serializable {
         }
         return false;
     }
-    
-    public void setFontSizeMin(float fontSize){
+
+    public void setFontSizeMin(float fontSize) {
         this.fontSizeMin = fontSize;
     }
 }
@@ -1944,6 +1945,5 @@ class PdfVerify {
         }
         return null;
     }
-    
- 
+
 }
