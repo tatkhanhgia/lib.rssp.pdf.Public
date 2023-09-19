@@ -760,6 +760,12 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public void setRevocationData(byte[] ocsp, List<byte[]> crls) {
         this.ocsp = ocsp;
         this.crls = crls;
+        if(ocsp != null){
+            ltvSize += 4192;
+        }
+        if(crls != null && !crls.isEmpty()){
+            ltvSize += 4192;
+        }
     }
 
     //Update 20222311 by GiaTK    

@@ -274,7 +274,8 @@ public class MakeSignatureMI {
     public static void signExternalContainer(
             PdfSignatureAppearanceMI sap, 
             ExternalSignatureContainer externalSignatureContainer, 
-            int estimatedSize) throws GeneralSecurityException, IOException, DocumentException {
+            int estimatedSize) throws GeneralSecurityException, IOException, DocumentException, NotEnoughSpaceException {
+        System.out.println("Estimate size:"+estimatedSize);
         PdfSignature dic = new PdfSignature(null, null);
         dic.setReason(sap.getReason());
         dic.setLocation(sap.getLocation());
@@ -292,7 +293,7 @@ public class MakeSignatureMI {
         byte[] encodedSig = externalSignatureContainer.sign(data);
 
         if (estimatedSize < encodedSig.length) {
-            throw new IOException("Not enough space");
+            throw new NotEnoughSpaceException("Not enough space");
         }
 
         byte[] paddedSig = new byte[estimatedSize];
