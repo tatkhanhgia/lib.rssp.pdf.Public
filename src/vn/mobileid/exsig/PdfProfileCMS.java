@@ -195,7 +195,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             try {
                 BaseFont baseFont = getBaseFont();
                 if (fontName != null && baseFont == null) {
-                    System.out.println("invalid basefont => get from name");
                     baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
 //                BaseFont baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
