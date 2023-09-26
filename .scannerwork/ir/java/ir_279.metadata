@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setRenderingMode(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$RenderingMode;)V
+vn.mobileid.exsig.TextPlusY#add(Ljava/lang/String;FF)Lvn/mobileid/exsig/TextPlusY;

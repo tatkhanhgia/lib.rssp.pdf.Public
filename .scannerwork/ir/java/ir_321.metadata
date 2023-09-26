@@ -1,9 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#<init>(Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;Ljava/lang/String;LExternalDigest;Z)V
-java.security.NoSuchAlgorithmException#instance-init#
-java.util.HashSet#<init>()V
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;
-java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V
-java.lang.String#equals(Ljava/lang/Object;)Z
-java.util.HashSet#instance-init#
-==
-getHashAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7CMS#getHashAlgorithm()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setLocation(Ljava/lang/String;)V

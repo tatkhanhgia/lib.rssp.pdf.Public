@@ -1,1 +1,3 @@
-vn.mobileid.exsig.TextPlusY#add(Ljava/lang/String;FF)Lvn/mobileid/exsig/TextPlusY;
+com.itextpdf.text.pdf.PdfStamperMI#addSignature(Ljava/lang/String;IFFFF)LPdfFormField;
+==
+addAnnotation com.itextpdf.text.pdf.PdfStamperMI#addAnnotation(LPdfAnnotation;I)V

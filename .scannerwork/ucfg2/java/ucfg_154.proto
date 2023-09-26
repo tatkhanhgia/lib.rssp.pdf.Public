@@ -1,18 +1,16 @@
 
-kcom.itextpdf.text.pdf.PdfStamperMI#getSignatureAppearance()Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;±
-¤C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/PdfStamperMI.java¬$ ¬(:"1*ó
-1
-­ ­(›
-˜
-
-­ ­(4
-%0.com.itextpdf.text.pdf.PdfSignatureAppearanceMI"__id*N
+Jvn.mobileid.exsig.PDFSignatureProperties#getTimeFormat()Ljava/lang/String;µ
+ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaq q(""1*»
+1r r(…
+‚
+r r(
+%0java.lang.String"__id*X
 
-__unknown_file (2*0$
-"com.itextpdf.text.pdf.PdfStamperMI"
-sigApp"D
+__unknown_file (<*:*
+(vn.mobileid.exsig.PDFSignatureProperties"
 
-­ ­(6
-4
-%0.com.itextpdf.text.pdf.PdfSignatureAppearanceMIB&$
-"com.itextpdf.text.pdf.PdfStamperMIH
+timeFormat"$
+r r(
+
+%0java.lang.StringB,*
+(vn.mobileid.exsig.PDFSignatureProperties

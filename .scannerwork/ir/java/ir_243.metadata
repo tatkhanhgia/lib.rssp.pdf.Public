@@ -1,1 +1,1 @@
-vn.mobileid.exsig.StringCoordinatesExtraction#<init>(LPdfReader;)V
+com.itextpdf.text.pdf.PdfStamperMI#addFileAttachment(Ljava/lang/String;LPdfFileSpecification;)V

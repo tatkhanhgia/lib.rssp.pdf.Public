@@ -1,1 +1,4 @@
-com.itextpdf.text.pdf.PdfStamperMI#markUsed(LPdfObject;)V
+com.itextpdf.text.pdf.PdfStamperMI#close()V
+null
+==
+mergeVerification com.itextpdf.text.pdf.PdfStamperMI#mergeVerification()V

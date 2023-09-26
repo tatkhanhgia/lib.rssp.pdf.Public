@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7([B)[B
-==
-getEncodedPKCS7 com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncodedPKCS7([BLTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#isInvisible()Z

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getWriter()LPdfWriter;
+vn.mobileid.exsig.PDFSignatureProperties#setImage([BLvn/mobileid/exsig/ImageProfile;Lvn/mobileid/exsig/ImageAlgin;)V

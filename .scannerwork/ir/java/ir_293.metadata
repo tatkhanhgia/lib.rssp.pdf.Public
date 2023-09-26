@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getRunDirection()I
+vn.mobileid.exsig.PdfEsealCMS#setEsealContentFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
+null

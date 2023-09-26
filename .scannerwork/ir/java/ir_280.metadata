@@ -1,1 +1,4 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getSignatureGraphic()LImage;
+vn.mobileid.exsig.TextPlusY#yCoordAt(I)F
+java.lang.IndexOutOfBoundsException#<init>()V
+java.lang.String#length()I
+java.lang.IndexOutOfBoundsException#instance-init#

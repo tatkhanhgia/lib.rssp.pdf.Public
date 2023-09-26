@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7()[B
-==
-getEncodedPKCS7 com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7([BLjava/util/Calendar;LTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B
+vn.mobileid.exsig.TextPlusXY#setX(F)V

@@ -1,7 +1,2 @@
-vn.mobileid.exsig.CmsProfile#generateHash(Ljava/util/List;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addFieldMDP(LPdfDictionary;LPdfDictionary;)V
 null
-java.lang.String#instance-init#
-java.util.Calendar#getInstance()Ljava/util/Calendar;
-java.io.ByteArrayInputStream#instance-init#
-java.io.ByteArrayInputStream#<init>([B)V
-java.lang.String#<init>(Ljava/lang/String;)V

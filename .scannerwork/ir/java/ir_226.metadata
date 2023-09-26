@@ -1,6 +1,2 @@
-com.itextpdf.text.pdf.security.MakeSignatureMI#signExternalContainer(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;LExternalSignatureContainer;I)V
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption([Ljava/security/cert/Certificate;[II)V
 null
-java.util.HashMap#<init>()V
-java.io.IOException#instance-init#
-java.io.IOException#<init>(Ljava/lang/String;)V
-java.lang.System#arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V

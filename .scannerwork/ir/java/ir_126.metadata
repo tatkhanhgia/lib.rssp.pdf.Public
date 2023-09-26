@@ -1,1 +1,2 @@
-vn.mobileid.exsig.PDFSignatureProperties#getTimeMillis()J
+com.itextpdf.text.pdf.security.PdfPKCS7V4#findOcsp(LASN1Sequence;)V
+null

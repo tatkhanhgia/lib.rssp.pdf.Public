@@ -1,5 +1,1 @@
-vn.mobileid.exsig.TextPlusY#charAt(I)C
-java.lang.IndexOutOfBoundsException#<init>()V
-java.lang.String#length()I
-java.lang.String#charAt(I)C
-java.lang.IndexOutOfBoundsException#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#setFreeTextFlattening(Z)V

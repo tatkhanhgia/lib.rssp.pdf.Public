@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#addAnnotation(LPdfAnnotation;I)V
+vn.mobileid.exsig.PDFSignatureProperties#setFont(Ljava/lang/String;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V

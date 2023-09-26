@@ -1,18 +1,16 @@
 
-Gvn.mobileid.exsig.PDFSignatureProperties#getBoxSize()Ljava/lang/String;∑
-™C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaü ü("1*æ
-1
-† †(Ñ
-Å
-
-† †(
-%0java.lang.String"__id*U
+5vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;§
+ôC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/Color.java, ,(%"1*¢
+1- -(o
+m
+- -(
+%0java.awt.Color"__id*E
 
-__unknown_file (9*7*
-(vn.mobileid.exsig.PDFSignatureProperties"	
-boxSize"&
+__unknown_file ()*'
+vn.mobileid.exsig.Color"
 
-† †(
-
-%0java.lang.StringB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+awtColor""
+- -(
+
+%0java.awt.ColorB
+vn.mobileid.exsig.ColorH

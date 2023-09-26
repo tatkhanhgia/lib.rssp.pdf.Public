@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestEncryptionAlgorithmOid()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#getBaseFont()LBaseFont;

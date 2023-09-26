@@ -1,1 +1,7 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setLayer2Text(Ljava/lang/String;)V
+vn.mobileid.exsig.PdfEsealCMS#createEsealTable(LFont;LFont;)LPdfPTable;
+null
+java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;
+vn.mobileid.exsig.PdfEsealCMS#calculateLeftPadding(LRectangle;)F
+vn.mobileid.exsig.PdfEsealCMS$CellBackground#instance-init#
+vn.mobileid.exsig.PdfEsealCMS$CellBackground#<init>(Lvn/mobileid/exsig/PdfEsealCMS;LFont;)V
+vn.mobileid.exsig.PdfEsealCMS#calculateTopPadding(LRectangle;)F

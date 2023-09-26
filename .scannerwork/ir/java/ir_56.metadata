@@ -1,2 +1,3 @@
-vn.mobileid.exsig.PdfProfile#containsHTMLChars(Ljava/lang/String;)Z
-java.lang.String#contains(Ljava/lang/CharSequence;)Z
+vn.mobileid.exsig.PdfProfile#setFont(Lvn/mobileid/exsig/DefaultFont;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
+vn.mobileid.exsig.DefaultFont#getPath()Ljava/lang/String;
+vn.mobileid.exsig.Color#getColor()Lcom/itextpdf/text/BaseColor;

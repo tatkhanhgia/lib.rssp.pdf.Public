@@ -1,1 +1,3 @@
-vn.mobileid.exsig.PDFSignatureProperties#setTextContent(Ljava/lang/String;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7([BLjava/util/Calendar;)[B
+==
+getEncodedPKCS7 com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncodedPKCS7([BLjava/util/Calendar;LTSAClient;[BLjava/util/Collection;LCryptoStandard;)[B

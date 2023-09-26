@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#getLineSpacing()F
+vn.mobileid.exsig.PDFSignatureProperties#getTextContent()Ljava/lang/String;

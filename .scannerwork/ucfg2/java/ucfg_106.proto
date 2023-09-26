@@ -1,15 +1,114 @@
 
-Fvn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;µ
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.javaH H("1*¶
-1I I(€
-~
-I I(
-%0java.lang.String"__id*T
+lcom.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;¸
+«C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/com/itextpdf/text/pdf/security/PdfPKCS7V4.java¥ ¥(#"4*­
+2
+ª ª(!Ú×
+
+ª. ª(B
+%3java.lang.String"Pcom.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;*I
 
-__unknown_file (8*6*
-(vn.mobileid.exsig.PDFSignatureProperties"
-reason"$
-I I(
+__unknown_file (-+
+)com.itextpdf.text.pdf.security.PdfPKCS7V42getDigestAlgorithm()†
+ƒ
+
+ªD ª(L
+%4java.lang.String"__id*W
+
+__unknown_file (;*9+
+)com.itextpdf.text.pdf.security.PdfPKCS7V4"
+
+provider·
+´
+
+ª ª(M
+%5java.security.Signature"bjava.security.Signature#getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;*7
+
+__unknown_file ("
+java.security.Signature*4
+
+__unknown_file (
 
-%0java.lang.StringB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+%3java.lang.String*4
+
+__unknown_file (
+
+%4java.lang.Stringw
+u
+
+ª ª(M$
+	signaturejava.security.Signature"__id*;
+
+__unknown_file (
+
+%5java.security.Signature*
+1*Ü
+3
+¨ ¨(!Ú×
+
+¨. ¨(B
+%1java.lang.String"Pcom.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;*I
+
+__unknown_file (-+
+)com.itextpdf.text.pdf.security.PdfPKCS7V42getDigestAlgorithm()ï
+ì
+
+¨ ¨(C
+%2java.security.Signature"Pjava.security.Signature#getInstance(Ljava/lang/String;)Ljava/security/Signature;*7
+
+__unknown_file ("
+java.security.Signature*4
+
+__unknown_file (
+
+%1java.lang.Stringw
+u
+
+¨ ¨(C$
+	signaturejava.security.Signature"__id*;
+
+__unknown_file (
+
+%2java.security.Signature*
+1*€
+4
+¦ ¦(^
+\
+
+¦ ¦($
+	signaturejava.security.Signature"__id*"
+
+__unknown_file (
+""†
+ƒ
+
+§ §(
+%0java.lang.String"__id*W
+
+__unknown_file (;*9+
+)com.itextpdf.text.pdf.security.PdfPKCS7V4"
+
+provider*
+2
+3*Ë
+1
+« «(ƒ€
+
+« «(
+
+%6void"=java.security.Signature#initSign(Ljava/security/PrivateKey;)V*B
+
+__unknown_file (&
+$
+	signaturejava.security.Signature*=
+
+__unknown_file (!
+
+keyjava.security.PrivateKey2$initSign(Ljava/security/PrivateKey;)"4
+
+¬ ¬(&
+$
+	signaturejava.security.Signature:-
+
+¥$ ¥(2
+keyjava.security.PrivateKeyB-+
+)com.itextpdf.text.pdf.security.PdfPKCS7V4

@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#addLayer0Icon([BLjava/lang/String;)V
+vn.mobileid.serialize.ProfileJSONSerializer#writeString(Ljava/lang/String;)Ljava/lang/String;

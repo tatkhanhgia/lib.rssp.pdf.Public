@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getCRLs()Ljava/util/Collection;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getReason()Ljava/lang/String;

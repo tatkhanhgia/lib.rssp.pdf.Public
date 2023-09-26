@@ -1,1 +1,1 @@
-vn.mobileid.exsig.Color#instance-init#
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getHashAlgorithm()Ljava/lang/String;

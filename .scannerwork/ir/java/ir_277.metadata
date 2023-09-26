@@ -1,4 +1,8 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setVisibleSignature(Ljava/lang/String;)V
-null
-java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V
-java.lang.IllegalArgumentException#instance-init#
+vn.mobileid.exsig.TextPlusY#subSequence(II)Ljava/lang/CharSequence;
+vn.mobileid.exsig.TextPlusY#<init>()V
+java.lang.String#length()I
+java.lang.String#substring(I)Ljava/lang/String;
+vn.mobileid.exsig.TextPlusY#instance-init#
+java.lang.String#substring(II)Ljava/lang/String;
+==
+add vn.mobileid.exsig.TextPlusY#add(Ljava/lang/String;FF)Lvn/mobileid/exsig/TextPlusY;

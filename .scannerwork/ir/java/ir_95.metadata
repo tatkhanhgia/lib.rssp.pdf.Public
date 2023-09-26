@@ -1,3 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#verifyTimestampImprint()Z
-null
-java.util.Arrays#equals([B[B)Z
+com.itextpdf.text.pdf.security.PdfPKCS7V4#instance-init#

@@ -1,1 +1,4 @@
-vn.mobileid.exsig.PDFSignatureProperties#getReason()Ljava/lang/String;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#buildUnauthenticatedAttributes([B)LASN1EncodableVector;
+null
+java.io.ByteArrayInputStream#instance-init#
+java.io.ByteArrayInputStream#<init>([B)V

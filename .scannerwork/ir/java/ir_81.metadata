@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getSigningInfoVersion()I
+vn.mobileid.exsig.PdfProfile#getPersonalID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;
+null
+java.lang.String#length()I
+java.lang.String#substring(I)Ljava/lang/String;
+java.lang.String#contains(Ljava/lang/CharSequence;)Z

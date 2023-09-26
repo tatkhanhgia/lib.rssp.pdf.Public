@@ -1,19 +1,9 @@
 
-Hvn.mobileid.exsig.PDFSignatureProperties#getPosition()Ljava/lang/String;·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java¯ ¯( "1*¿
+Nvn.mobileid.serialize.ProfileJSONSerializer#writeStartJSON()Ljava/lang/String;º
+­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java   (("1*$
 1
-° °(…
-‚
+¡ ¡("
 
-° °(
-%0java.lang.String"__id*V
-
-__unknown_file (:*8*
-(vn.mobileid.exsig.PDFSignatureProperties"
-
-position"&
-
-° °(
-
-%0java.lang.StringB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+¡ ¡(
+{B/"-
++vn.mobileid.serialize.ProfileJSONSerializer

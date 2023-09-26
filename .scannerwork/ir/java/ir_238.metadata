@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfReaderV4#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#setThumbnail(LImage;I)V

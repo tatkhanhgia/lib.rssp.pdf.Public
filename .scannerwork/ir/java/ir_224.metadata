@@ -1,2 +1,3 @@
-com.itextpdf.text.pdf.security.MakeSignatureMI#signDetached(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;LExternalDigest;LExternalSignature;[Ljava/security/cert/Certificate;Ljava/util/Collection;LOcspClient;LTSAClient;ILMakeSignature/CryptoStandard;LSignaturePolicyInfo;)V
-com.itextpdf.text.pdf.security.MakeSignatureMI#signDetached(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI;LExternalDigest;LExternalSignature;[Ljava/security/cert/Certificate;Ljava/util/Collection;LOcspClient;LTSAClient;ILMakeSignature/CryptoStandard;LSignaturePolicyInfo;)V
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption(ZLjava/lang/String;Ljava/lang/String;I)V
+==
+setEncryption com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BIZ)V

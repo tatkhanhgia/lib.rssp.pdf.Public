@@ -1,10 +1,1 @@
-vn.mobileid.exsig.PdfProfileCMS#appendSignautre(Ljava/util/List;)Ljava/util/List;
-java.util.ArrayList#<init>()V
-null
-java.util.ArrayList#instance-init#
-java.io.ByteArrayOutputStream#<init>()V
-java.lang.Exception#<init>(Ljava/lang/String;)V
-java.io.ByteArrayOutputStream#instance-init#
-java.lang.Exception#instance-init#
-==
-checkPermission vn.mobileid.exsig.PdfProfileCMS#checkPermission(Ljava/util/List;)Z
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSigout(LByteBuffer;)V

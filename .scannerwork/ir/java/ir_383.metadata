@@ -1,5 +1,1 @@
-vn.mobileid.exsig.CmsProfile#verify([B[BZ)Ljava/util/List;
-vn.mobileid.exsig.CmsVerify#<init>()V
-vn.mobileid.exsig.CmsVerify#instance-init#
-==
-verifySignature vn.mobileid.exsig.CmsVerify#verifySignature([B[BZ)Ljava/util/List;
+vn.mobileid.exsig.Test#instance-init#

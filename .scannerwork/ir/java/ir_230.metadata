@@ -1,3 +1,1 @@
-vn.mobileid.exsig.TextPlusY#instance-init#
-java.util.ArrayList#<init>()V
-java.util.ArrayList#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#getAcroFields()LAcroFields;

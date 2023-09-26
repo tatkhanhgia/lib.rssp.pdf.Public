@@ -1,3 +1,4 @@
-vn.mobileid.exsig.ImageGenerator#CreateColorBackground(IILjava/awt/Color;)Ljava/awt/image/BufferedImage;
-java.awt.image.BufferedImage#instance-init#
-java.awt.image.BufferedImage#<init>(III)V
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithm()Ljava/lang/String;
+==
+getEncryptionAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7CMS#getEncryptionAlgorithm()Ljava/lang/String;
+getHashAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7CMS#getHashAlgorithm()Ljava/lang/String;

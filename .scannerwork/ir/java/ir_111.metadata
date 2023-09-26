@@ -1,1 +1,5 @@
-vn.mobileid.exsig.Color#getAwtColor()Ljava/awt/Color;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#setExternalDigest([B[BLjava/lang/String;)V
+null
+java.security.NoSuchAlgorithmException#instance-init#
+java.lang.String#equals(Ljava/lang/Object;)Z
+java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V

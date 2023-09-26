@@ -1,5 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#setExternalDigest([B[BLjava/lang/String;)V
-null
-java.security.NoSuchAlgorithmException#instance-init#
-java.lang.String#equals(Ljava/lang/Object;)Z
-java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setSignatureEvent(Lcom/itextpdf/text/pdf/PdfSignatureAppearanceMI$SignatureEvent;)V

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#getPdfLayers()Ljava/util/Map;
+com.itextpdf.text.pdf.PdfStamperMI#getXmlSignatureAppearance()Lcom/itextpdf/text/pdf/XmlSignatureAppearanceMI;

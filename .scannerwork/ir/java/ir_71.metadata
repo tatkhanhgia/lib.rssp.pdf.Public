@@ -1,11 +1,2 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#<init>(Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/lang/String;Ljava/lang/String;LExternalDigest;Z)V
-java.util.ArrayList#<init>()V
-java.security.NoSuchAlgorithmException#instance-init#
-java.util.HashSet#<init>()V
-java.security.NoSuchAlgorithmException#<init>(Ljava/lang/String;)V
-java.util.ArrayList#instance-init#
-java.lang.String#equals(Ljava/lang/Object;)Z
-com.itextpdf.text.pdf.security.PdfPKCS7V4#initSignature(Ljava/security/PrivateKey;)Ljava/security/Signature;
-java.util.HashSet#instance-init#
-==
-getHashAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getHashAlgorithm()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#imageProfileRight()V
+null

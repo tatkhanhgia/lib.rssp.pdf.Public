@@ -1,1 +1,3 @@
-com.itextpdf.text.pdf.SignaturePosition#<init>(ILRectangle;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setRunDirection(I)V
+java.lang.RuntimeException#<init>(Ljava/lang/String;)V
+java.lang.RuntimeException#instance-init#

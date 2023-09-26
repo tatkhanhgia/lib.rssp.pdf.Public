@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getCryptoDictionary()Lcom/itextpdf/text/pdf/PdfDictionary;
+com.itextpdf.text.pdf.PdfStamperMI#mergeVerification()V

@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#setLocation(Ljava/lang/String;)V
+vn.mobileid.exsig.PdfProfile#sign(LSigningMethodSync;Ljava/util/List;Ljava/util/List;)Ljava/util/List;

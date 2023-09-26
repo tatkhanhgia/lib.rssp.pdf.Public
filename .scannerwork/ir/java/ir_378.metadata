@@ -1,2 +1,1 @@
-vn.mobileid.exsig.PdfProfileCMS#checkLock(LPdfDictionary;)Z
-null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setFieldLockDict(LPdfSigLockDictionary;)V

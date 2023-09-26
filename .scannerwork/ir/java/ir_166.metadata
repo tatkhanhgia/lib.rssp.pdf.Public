@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#<init>(LPdfReader;Ljava/io/OutputStream;CZ)V
-null
+vn.mobileid.exsig.PDFSignatureProperties#getTimeMillis()J

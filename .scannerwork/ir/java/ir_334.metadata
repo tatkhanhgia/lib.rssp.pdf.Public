@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7CMS#getDigestAlgorithmOid()Ljava/lang/String;
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCertificate(Ljava/security/cert/Certificate;)V

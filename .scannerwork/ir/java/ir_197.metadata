@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#addJavaScript(Ljava/lang/String;Ljava/lang/String;)V
+vn.mobileid.exsig.PDFSignatureProperties#getTextColor()Lvn/mobileid/exsig/Color;

@@ -1,1 +1,1 @@
-vn.mobileid.exsig.TextPlusYExtractionStrategy#<init>(LTextChunkLocationStrategy;)V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setCheckText(Z[F)V

@@ -1,2 +1,5 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addFieldMDP(LPdfDictionary;LPdfDictionary;)V
-null
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#<init>(LPdfStamperImp;)V
+java.util.GregorianCalendar#<init>()V
+java.util.GregorianCalendar#instance-init#
+==
+getNewSigName com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getNewSigName()Ljava/lang/String;

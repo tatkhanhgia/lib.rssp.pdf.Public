@@ -1,1 +1,4 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#addDeveloperExtension(LPdfDeveloperExtension;)V
+com.itextpdf.text.pdf.PdfStamperMI#addNamedDestination(Ljava/lang/String;ILPdfDestination;)Z
+null
+==
+getReader com.itextpdf.text.pdf.PdfStamperMI#getReader()LPdfReader;

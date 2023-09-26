@@ -1,3 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setRunDirection(I)V
-java.lang.RuntimeException#<init>(Ljava/lang/String;)V
-java.lang.RuntimeException#instance-init#
+vn.mobileid.exsig.PdfEsealCMS#setEsealTitleFont([BLjava/lang/String;ZFFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
+null

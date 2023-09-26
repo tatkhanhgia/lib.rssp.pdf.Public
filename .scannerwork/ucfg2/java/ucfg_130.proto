@@ -1,18 +1,35 @@
 
-Zvn.mobileid.exsig.PDFSignatureProperties#getImageProfile()Lvn/mobileid/exsig/ImageProfile;·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java· ·(*"1*ß
+fvn.mobileid.serialize.ProfileJSONSerializer#writeStartArrayField(Ljava/lang/String;)Ljava/lang/String;º
+­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java¨ ¨(."1*œ
 1
-¸ ¸(—
-”
+© ©(q
+o
 
-¸ ¸($
-%0vn.mobileid.exsig.ImageProfile"__id*Z
-
-__unknown_file (>*<*
-(vn.mobileid.exsig.PDFSignatureProperties"
-imageProfile"4
+© ©(
+%0java.lang.String"__concat*
 
-¸ ¸(&
-$
-%0vn.mobileid.exsig.ImageProfileB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+© ©(
+\"*)
+
+© ©(
+
+fieldjava.lang.Stringp
+n
+
+© ©($
+%1java.lang.String"__concat*&
+
+© ©(
+
+%0java.lang.String*
+
+© ©($
+\":["&
+
+© ©(%
+
+%1java.lang.String:'
+
+¨/ ¨(;
+fieldjava.lang.StringB/"-
++vn.mobileid.serialize.ProfileJSONSerializer

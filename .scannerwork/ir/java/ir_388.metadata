@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getStamper()Lcom/itextpdf/text/pdf/PdfStamperMI;
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#instance-init#

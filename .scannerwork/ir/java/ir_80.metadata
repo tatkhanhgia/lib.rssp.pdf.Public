@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getVersion()I
+vn.mobileid.exsig.PdfProfile#containsHTMLChars(Ljava/lang/String;)Z
+java.lang.String#contains(Ljava/lang/CharSequence;)Z

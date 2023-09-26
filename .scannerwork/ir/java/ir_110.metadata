@@ -1,1 +1,4 @@
-vn.mobileid.exsig.Color#getColor()Lcom/itextpdf/text/BaseColor;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getDigestAlgorithm()Ljava/lang/String;
+==
+getHashAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getHashAlgorithm()Ljava/lang/String;
+getEncryptionAlgorithm com.itextpdf.text.pdf.security.PdfPKCS7V4#getEncryptionAlgorithm()Ljava/lang/String;

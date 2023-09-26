@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getTopLayer()LPdfTemplate;
-null
+vn.mobileid.exsig.PdfEsealCMS#setSignerCertificate(Ljava/lang/String;)V

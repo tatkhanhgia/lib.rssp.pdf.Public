@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#createSignature(LPdfReader;Ljava/io/OutputStream;CLjava/io/File;)Lcom/itextpdf/text/pdf/PdfStamperMI;
-com.itextpdf.text.pdf.PdfStamperMI#createSignature(LPdfReader;Ljava/io/OutputStream;CLjava/io/File;Z)Lcom/itextpdf/text/pdf/PdfStamperMI;
+com.itextpdf.text.pdf.PdfStamperMI#insertPage(ILRectangle;)V

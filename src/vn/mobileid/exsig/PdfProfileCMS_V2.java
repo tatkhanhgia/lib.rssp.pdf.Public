@@ -7,9 +7,13 @@ package vn.mobileid.exsig;
 
 import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Chunk;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.io.RASInputStream;
 import com.itextpdf.text.io.RandomAccessSource;
@@ -24,10 +28,14 @@ import com.itextpdf.text.pdf.PdfArray;
 import com.itextpdf.text.pdf.PdfDictionary;
 import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfNumber;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.PdfSignatureAppearanceMI.RenderingMode;
 import com.itextpdf.text.pdf.PdfSignatureAppearanceMI;
 import com.itextpdf.text.pdf.PdfStamperMI;
 import com.itextpdf.text.pdf.PdfTemplate;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.SignaturePosition;
 import com.itextpdf.text.pdf.security.BouncyCastleDigest;
 import com.itextpdf.text.pdf.security.DigestAlgorithms;
@@ -38,6 +46,7 @@ import com.itextpdf.text.pdf.security.MakeSignatureMI;
 import com.itextpdf.text.pdf.security.PdfPKCS7CMS;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
+import java.awt.FontFormatException;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -53,6 +62,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import javax.naming.InvalidNameException;
 import javax.xml.bind.DatatypeConverter;
 import org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory;
 import org.bouncycastle.util.encoders.Base64;
@@ -70,7 +80,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
     private String signerCertificate;
     protected List<Long> listTimeStamp = new ArrayList<>();
-    protected transient List<TextFinder> textFinderArray = new ArrayList<>();
+    protected transient List<TextFinder> textFinderArray = new ArrayList<>();    
+    private Algorithm signingAlgorithm = Algorithm.RSA;
 
     public PdfProfileCMS_V2(Algorithm algorithm) {
         super(PdfForm.B, algorithm);
@@ -79,12 +90,14 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public PdfProfileCMS_V2(PdfForm form, Algorithm algorithm) {
         super(form, algorithm);
     }
+    
+    
 
     @Override
     List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
         Calendar signingTime = Calendar.getInstance();
         signingTime.setTimeInMillis(timeMillis);
-        
+
         X509Certificate[] cert = this.certificates.toArray(new X509Certificate[certificates.size()]);
         List<byte[]> result = new ArrayList<>();
         TSAClient tsaClient = null;
@@ -132,7 +145,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
             RandomAccessSource readerSource = reader.getSafeFile().createSourceView();
             byte[] extSignature = Base64.decode(signatureList.get(i));
-            sgn.setExternalDigest(extSignature, null, "RSA");
+            sgn.setExternalDigest(extSignature, null, signingAlgorithm.getValue());
 
             byte[] signedContent = sgn.getEncodedPKCS7(
                     otherList.get(i),
@@ -189,14 +202,17 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         signingTime.setTimeInMillis(timeMillis);
         Date date = signingTime.getTime();
 
+        if(signatureId == null || signatureId.isEmpty()){
         signatureId = "sig-"
                 + Calendar.getInstance().getTimeInMillis();
+        }
 
         Font font = null;
-
+        BaseFont baseFont = null;
+        
         if (position != null || textFinder != null || pageAndPosition != null) {
             try {
-                BaseFont baseFont = getBaseFont();
+                 baseFont = getBaseFont();                 
                 if (fontName != null && baseFont == null) {
                     baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
@@ -232,15 +248,16 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
             PdfStamperMI stamper = PdfStamperMI.createSignature(reader, baos, '\0', null, true);
             PdfSignatureAppearanceMI appearance = stamper.getSignatureAppearance();
-            if (position != null || textFinder != null || pageAndPosition != null || !textFinderArray.isEmpty()) {                
+            if (position != null || textFinder != null || pageAndPosition != null || !textFinderArray.isEmpty()) {
                 initPosition(reader); //initPosition
                 initPositionOfTextFinderArray(reader);
-                sigTable = createImage(font);
-                
+                sigTable =  createImage(font);
+
                 position.setRight(iRec.getRight() + position.getLeft());
                 position.setTop(position.getBottom() + iRec.getTop());
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
                 appearance.setSignDate(signingTime);
+
                 if (writeAll) {
 
                     int[] pages = new int[totalNumOfPages];
@@ -267,9 +284,9 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
                 if (image != null) {
                     n2.addImage(image);
                 }
-                
+
                 PdfTemplate n0 = appearance.getLayer(0);
-                if (background != null) {                    
+                if (background != null) {
                     n0.addImage(background);
                 }
 
@@ -290,9 +307,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
                 } catch (Exception ex) {
                     throw new Exception("Can't add default border");
                 }
-                
-                
-                if (layer0Icons != null) {                    
+
+                if (layer0Icons != null) {
                     for (Image layer0Icon : layer0Icons) {
                         n0.addImage(layer0Icon);
                     }
@@ -300,7 +316,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
                 appearance.setCheckMark(checkMark, checkMarkPosition);
                 appearance.setCheckText(checkText, checkTextPosition);
-                appearance.setSigPosList(sigPosList);
+                appearance.setSigPosList(sigPosList);                
 
             } else {
                 appearance.setVisibleSignature(new Rectangle(0, 0, 0, 0), 1, signatureId);
@@ -350,13 +366,13 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             sgn.setSignDate(signingTime);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
-            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash,signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
+            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
     }
 
-    void generateHashMultipleFiles(List<PDFSignatureProperties> pdfSignaturePropertieses) throws Exception {       
+    void generateHashMultipleFiles(List<PDFSignatureProperties> pdfSignaturePropertieses) throws Exception {
         signatureId = "sig-"
                 + Calendar.getInstance().getTimeInMillis();
 
@@ -370,14 +386,13 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             this.image = null;
             this.imageAlgin = null;
             this.imageProfile = null;
-            this.layer0Icons.clear();      
+            this.layer0Icons.clear();
             this.sigPosList = pdfSignatureProperties.getSigPosLis();
-            this.textFinderArray = pdfSignatureProperties.getTextFinderArray();
-
+            this.textFinderArray = pdfSignatureProperties.getTextFinderArray();            
             this.fontName = DefaultFont.Times.getPath();
             this.fontSize = 13;
             this.textAlignment = TextAlignment.ALIGN_LEFT;
-            this.textColor = BaseColor.BLACK;
+            this.textColor = BaseColor.BLACK;            
 
             //set variables
             setTextContent(pdfSignatureProperties.getTextContent());
@@ -471,7 +486,6 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
 
             //sigPosList.clear(); // FIX MULTIPLE FILE, DIFFERENT PAGES NUMBER
-            
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             PdfReader.unethicalreading = true;
             PdfReader reader;
@@ -519,9 +533,9 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
                 if (image != null) {
                     n2.addImage(image);
                 }
-                
+
                 PdfTemplate n0 = appearance.getLayer(0);
-                if (background != null) {                    
+                if (background != null) {
                     n0.addImage(background);
                 }
 
@@ -542,9 +556,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
                 } catch (Exception ex) {
                     throw new Exception("Can't add default border");
                 }
-                
-                
-                if (layer0Icons != null) {                    
+
+                if (layer0Icons != null) {
                     for (Image layer0Icon : layer0Icons) {
                         n0.addImage(layer0Icon);
                     }
@@ -552,7 +565,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
                 appearance.setCheckMark(checkMark, checkMarkPosition);
                 appearance.setCheckText(checkText, checkTextPosition);
-                appearance.setSigPosList(sigPosList);
+                appearance.setSigPosList(sigPosList);                
             } else {
                 appearance.setVisibleSignature(new Rectangle(0, 0, 0, 0), 1, signatureId);
             }
@@ -602,7 +615,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
-            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(),ocsp, crls, MakeSignature.CryptoStandard.CMS);
+            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
@@ -664,7 +677,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         } catch (Exception e) {
             throw new Exception("Cannot generate hash: ", e);
         }
-        signingMethod.generateTempFile(hashList);             
+        signingMethod.generateTempFile(hashList);
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             try ( ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
@@ -747,6 +760,12 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public void setRevocationData(byte[] ocsp, List<byte[]> crls) {
         this.ocsp = ocsp;
         this.crls = crls;
+        if(ocsp != null){
+            ltvSize += 4192;
+        }
+        if(crls != null && !crls.isEmpty()){
+            ltvSize += 4192;
+        }
     }
 
     //Update 20222311 by GiaTK    
@@ -826,8 +845,8 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             }
             return true;
         } catch (Exception ex) {
-            ex.printStackTrace();
-            throw new Exception("Error while checking locked Document!");
+//            ex.printStackTrace();
+            throw new Exception("Error while checking locked Document!", ex);
         }
     }
 
@@ -927,83 +946,83 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         try {
             totalNumOfPages = reader.getNumberOfPages();
 //            if (pageAndPosition == null) {
-                for (int i = 0; i < textFinderArray.size(); i++) {
-                    SignaturePosition signature = new SignaturePosition(0, iRec);
+            for (int i = 0; i < textFinderArray.size(); i++) {
+                SignaturePosition signature = new SignaturePosition(0, iRec);
 
-                    TextPlusXY textPlusXY = null;
-                    StringCoordinatesExtraction stringCoordinatesExtraction = new StringCoordinatesExtraction(reader);
-                    if (textFinderArray.get(i).page != -1) {
-                        //tim tren 1 trang xac dinh
-                        if (textFinderArray.get(i).page == 0) {
-                            signature.setPage(totalNumOfPages); // last
-                        } else {
-                            signature.setPage(textFinderArray.get(i).page);
-                            if (signature.getPage() > totalNumOfPages) {
-                                throw new Exception("Page " + signature.getPage() + " not found");
-                            }
-                        }
-                        textPlusXY = stringCoordinatesExtraction.getCoordinate(textFinderArray.get(i).text, signature.getPage());
-                        if (textPlusXY == null) {
-                            throw new Exception("TEXT [" + textFinderArray.get(i).text + "] not found");
-                        }
+                TextPlusXY textPlusXY = null;
+                StringCoordinatesExtraction stringCoordinatesExtraction = new StringCoordinatesExtraction(reader);
+                if (textFinderArray.get(i).page != -1) {
+                    //tim tren 1 trang xac dinh
+                    if (textFinderArray.get(i).page == 0) {
+                        signature.setPage(totalNumOfPages); // last
                     } else {
-                        //tim tat ca cac trang
-                        //update 03/08/2021
-                        List<TextPlusXY> textPlusXYs = stringCoordinatesExtraction.getCoordinate(textFinderArray.get(i).text);
-                        if (textPlusXYs.isEmpty()) {
-                            throw new Exception("TEXT [" + textFinderArray.get(i).text + "] not found");
-                        }
-                        textPlusXY = textPlusXYs.get(0);
-                        signature.setPage(textPlusXY.getPage());
-
-                        //update 2023/04/05
-                        if (textFinderArray.get(i).placeAll) {
-                            try {
-                                for (int j = 1; j < textPlusXYs.size(); j++) {
-                                    TextPlusXY otherTextPlusXY = textPlusXYs.get(j);
-                                    int detectedLowerX = (int) Math.ceil(otherTextPlusXY.getX());
-                                    int detectedLowerY = (int) Math.ceil(otherTextPlusXY.getY());
-                                    detectedLowerX += textFinderArray.get(i).offsetX;
-                                    detectedLowerY += textFinderArray.get(i).offsetY;
-                                    int calculatedUpperX = (int) (detectedLowerX + textFinderArray.get(i).width);
-                                    int calculatedUpperY = (int) (detectedLowerY + textFinderArray.get(i).height);
-                                    sigPosList.add(new SignaturePosition(otherTextPlusXY.getPage(), new Rectangle(detectedLowerX, detectedLowerY, calculatedUpperX, calculatedUpperY)));
-                                }
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                            }
+                        signature.setPage(textFinderArray.get(i).page);
+                        if (signature.getPage() > totalNumOfPages) {
+                            throw new Exception("Page " + signature.getPage() + " not found");
                         }
                     }
-
+                    textPlusXY = stringCoordinatesExtraction.getCoordinate(textFinderArray.get(i).text, signature.getPage());
                     if (textPlusXY == null) {
-                        throw new NullPointerException("The text : '" + textFinderArray.get(i).text + "' not found ");
+                        throw new Exception("TEXT [" + textFinderArray.get(i).text + "] not found");
                     }
+                } else {
+                    //tim tat ca cac trang
+                    //update 03/08/2021
+                    List<TextPlusXY> textPlusXYs = stringCoordinatesExtraction.getCoordinate(textFinderArray.get(i).text);
+                    if (textPlusXYs.isEmpty()) {
+                        throw new Exception("TEXT [" + textFinderArray.get(i).text + "] not found");
+                    }
+                    textPlusXY = textPlusXYs.get(0);
+                    signature.setPage(textPlusXY.getPage());
 
-                    int detectedLowerX = (int) Math.ceil(textPlusXY.getX());
-                    int detectedLowerY = (int) Math.ceil(textPlusXY.getY());
-
-                    detectedLowerX += textFinderArray.get(i).offsetX;
-                    detectedLowerY += textFinderArray.get(i).offsetY;
-
-                    int calculatedUpperX = (int) (detectedLowerX + textFinderArray.get(i).width);
-                    int calculatedUpperY = (int) (detectedLowerY + textFinderArray.get(i).height);
-                    sigPosList.add(new SignaturePosition(signature.getPage(), new Rectangle(detectedLowerX, detectedLowerY, calculatedUpperX, calculatedUpperY)));
+                    //update 2023/04/05
+                    if (textFinderArray.get(i).placeAll) {
+                        try {
+                            for (int j = 1; j < textPlusXYs.size(); j++) {
+                                TextPlusXY otherTextPlusXY = textPlusXYs.get(j);
+                                int detectedLowerX = (int) Math.ceil(otherTextPlusXY.getX());
+                                int detectedLowerY = (int) Math.ceil(otherTextPlusXY.getY());
+                                detectedLowerX += textFinderArray.get(i).offsetX;
+                                detectedLowerY += textFinderArray.get(i).offsetY;
+                                int calculatedUpperX = (int) (detectedLowerX + textFinderArray.get(i).width);
+                                int calculatedUpperY = (int) (detectedLowerY + textFinderArray.get(i).height);
+                                sigPosList.add(new SignaturePosition(otherTextPlusXY.getPage(), new Rectangle(detectedLowerX, detectedLowerY, calculatedUpperX, calculatedUpperY)));
+                            }
+                        } catch (Exception ex) {
+                            throw new Exception("Error while detect text!", ex);
+                        }
+                    }
                 }
 
-                if (!sigPosList.isEmpty()) {
-                    List<SignaturePosition> newSigPosList = new ArrayList<>();
-                    for (SignaturePosition signaturePosition : sigPosList) {
-                        if (signaturePosition.getPage() > totalNumOfPages) {
-                            throw new Exception("Page " + signaturePosition.getPage() + " not found");
-                        }
-                        if (signaturePosition.getPage() == 0) {
-                            newSigPosList.add(new SignaturePosition(totalNumOfPages, signaturePosition.getRectangle()));
-                        } else {
-                            newSigPosList.add(new SignaturePosition(signaturePosition.getPage(), signaturePosition.getRectangle()));
-                        }
-                    }
-                    sigPosList = newSigPosList;
+                if (textPlusXY == null) {
+                    throw new NullPointerException("The text : '" + textFinderArray.get(i).text + "' not found ");
                 }
+
+                int detectedLowerX = (int) Math.ceil(textPlusXY.getX());
+                int detectedLowerY = (int) Math.ceil(textPlusXY.getY());
+
+                detectedLowerX += textFinderArray.get(i).offsetX;
+                detectedLowerY += textFinderArray.get(i).offsetY;
+
+                int calculatedUpperX = (int) (detectedLowerX + textFinderArray.get(i).width);
+                int calculatedUpperY = (int) (detectedLowerY + textFinderArray.get(i).height);
+                sigPosList.add(new SignaturePosition(signature.getPage(), new Rectangle(detectedLowerX, detectedLowerY, calculatedUpperX, calculatedUpperY)));
+            }
+
+            if (!sigPosList.isEmpty()) {
+                List<SignaturePosition> newSigPosList = new ArrayList<>();
+                for (SignaturePosition signaturePosition : sigPosList) {
+                    if (signaturePosition.getPage() > totalNumOfPages) {
+                        throw new Exception("Page " + signaturePosition.getPage() + " not found");
+                    }
+                    if (signaturePosition.getPage() == 0) {
+                        newSigPosList.add(new SignaturePosition(totalNumOfPages, signaturePosition.getRectangle()));
+                    } else {
+                        newSigPosList.add(new SignaturePosition(signaturePosition.getPage(), signaturePosition.getRectangle()));
+                    }
+                }
+                sigPosList = newSigPosList;
+            }
 
 //            } else {
 //                Map<Integer, String> pageAndPositionAsTreeMap = new TreeMap<>(pageAndPosition);
@@ -1051,7 +1070,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 //                sigPosList.remove(0);
 //            }
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
             throw new Exception("Can't init signature position", ex);
         }
     }
@@ -1110,5 +1129,11 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public void clearSignaturePositions() {
         this.sigPosList.clear();
         this.textFinderArray.clear();
-    }    
+    }   
+
+   
+
+    public void setSigningAlgorithm(Algorithm algorithm) {
+        this.signingAlgorithm = algorithm;
+    }
 }

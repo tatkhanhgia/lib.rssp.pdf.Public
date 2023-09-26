@@ -1,2 +1,3 @@
-vn.mobileid.exsig.PdfProfile#imageProfileLeft()V
-null
+vn.mobileid.exsig.PdfProfile#instance-init#
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

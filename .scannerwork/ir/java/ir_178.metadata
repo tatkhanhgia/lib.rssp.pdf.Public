@@ -1,2 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BIZ)V
-null
+vn.mobileid.exsig.PDFSignatureProperties#getPageAndPosition()Ljava/util/Map;

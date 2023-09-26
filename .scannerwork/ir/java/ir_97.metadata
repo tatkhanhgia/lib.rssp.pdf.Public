@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getSignCertificateChain()[Ljava/security/cert/Certificate;
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSignName()Ljava/lang/String;

@@ -212,11 +212,12 @@ class CmsVerify {
                                 BouncyCastleProvider.PROVIDER_NAME);
                         signingMethod = md.getAlgorithm();
                         x509 = x509CertificateConverter.getCertificate(certHolder);
+                        
                         AttributeTable atab = signer.getSignedAttributes();
                         id = signer.getSID().getSerialNumber().toString();
                         if (atab != null) {
 
-                            Attribute attr = atab.get(CMSAttributes.signingTime);
+                            org.bouncycastle.asn1.cms.Attribute attr = atab.get(CMSAttributes.signingTime);
                             if (attr != null) {
                                 Time t = Time.getInstance(attr.getAttrValues().getObjectAt(0)
                                         .toASN1Primitive());

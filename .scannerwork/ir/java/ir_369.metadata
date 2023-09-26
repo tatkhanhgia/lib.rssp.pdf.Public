@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PdfProfileCMS#<init>()V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getStamper()Lcom/itextpdf/text/pdf/PdfStamperMI;

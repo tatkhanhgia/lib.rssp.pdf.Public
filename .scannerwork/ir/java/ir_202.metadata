@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfStamperMI#setViewerPreferences(I)V
+vn.mobileid.exsig.PDFSignatureProperties#getFont()Lvn/mobileid/exsig/DefaultFont;

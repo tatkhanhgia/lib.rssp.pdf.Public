@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.security.PdfPKCS7V4#getHashAlgorithm()Ljava/lang/String;
+vn.mobileid.exsig.PdfProfile#getSerialNumber(Ljava/security/cert/X509Certificate;)Ljava/lang/String;

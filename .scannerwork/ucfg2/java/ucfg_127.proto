@@ -1,18 +1,30 @@
 
-Lvn.mobileid.exsig.PDFSignatureProperties#getPageAndPosition()Ljava/util/Map;·
-ªC:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/exsig/PDFSignatureProperties.java«# «(5"1*À
-1
-¬ ¬(‰
-†
+rvn.mobileid.serialize.ProfileJSONSerializer#getField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;º
+­C:/Users/Admin/Documents/NetBeansProjects/File_Certificate_P12/Library_RSSP_SDK/ProjectRSSP_20230411/lib.rssp.pdf.Public/src/vn/mobileid/serialize/ProfileJSONSerializer.java“ “(!"7*>
+6
+• •(5"-
 
-¬ ¬(
-%0java.util.Map"__id*]
+• •(5
+
+%0java.lang.reflect.Field*¯
+7
+• •(˜•
+
+• •(4
+%0java.lang.reflect.Field"Mjava.lang.Class#getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;*6
 
-__unknown_file (A*?*
-(vn.mobileid.exsig.PDFSignatureProperties"
-pageAndPosition"#
+__unknown_file (
+
+clazzjava.lang.Class*;
+
+__unknown_file (
+
+	fieldNamejava.lang.String2$getDeclaredField(Ljava/lang/String;)*
+6:&
 
-¬ ¬(
-
-%0java.util.MapB,*
-(vn.mobileid.exsig.PDFSignatureProperties
+“" “(.
+clazzjava.lang.Class:+
+
+“/ “(?
+	fieldNamejava.lang.StringB/"-
++vn.mobileid.serialize.ProfileJSONSerializer

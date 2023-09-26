@@ -22,7 +22,6 @@ import com.itextpdf.text.pdf.ByteBuffer;
 import com.itextpdf.text.pdf.ColumnText;
 import com.itextpdf.text.pdf.PdfArray;
 import com.itextpdf.text.pdf.PdfDictionary;
-import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfNumber;
 import com.itextpdf.text.pdf.PdfReader;
@@ -35,14 +34,12 @@ import com.itextpdf.text.pdf.security.ExternalBlankSignatureContainer;
 import com.itextpdf.text.pdf.security.ExternalSignatureContainer;
 import com.itextpdf.text.pdf.security.MakeSignature;
 import com.itextpdf.text.pdf.security.MakeSignatureMI;
-import com.itextpdf.text.pdf.security.PdfPKCS7;
+import com.itextpdf.text.pdf.security.NotEnoughSpaceException;
 import com.itextpdf.text.pdf.security.PdfPKCS7CMS;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
-import java.awt.SecondaryLoop;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -84,7 +81,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
     @Override
     public List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
         Calendar signingTime = Calendar.getInstance();
-//        signingTime.setTimeInMillis(Long.parseLong("1683715768258"));
         signingTime.setTimeInMillis(timeMillis);
         X509Certificate[] cert = this.certificates.toArray(new X509Certificate[certificates.size()]);
         List<byte[]> result = new ArrayList<>();
@@ -94,7 +90,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
         }
 
         for (int i = 0; i < tempDataList.size(); i++) {
-
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             BouncyCastleDigest digest = new BouncyCastleDigest();
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, cert, algorithm.getValue(), null, digest, false);
@@ -113,10 +108,9 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
 
             //Check Permission
             //Check Security of the PDF file
-            if (!checkPermission(reader)) {
-                throw new Exception("This document was Locked or Certified");
-            }
-
+//            if (!checkPermission(reader)) {
+//                throw new Exception("This document was Locked or Certified");
+//            }
             AcroFields af = reader.getAcroFields();
             PdfDictionary v = af.getSignatureDictionary(signatureId);
             if (v == null) {
@@ -154,7 +148,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             ByteBuffer bb = new ByteBuffer(spaceAvailable * 2);
             for (byte bi : signedContent) {
                 bb.appendHex(bi);
-            }          
+            }
 
             int remain = (spaceAvailable - signedContent.length) * 2;
             for (int k = 0; k < remain; ++k) {
@@ -201,6 +195,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             try {
                 BaseFont baseFont = getBaseFont();
                 if (fontName != null && baseFont == null) {
+                    System.out.println("invalid basefont => get from name");
                     baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
 //                BaseFont baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
@@ -208,7 +203,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                 X509Certificate signingCert = null;
                 if (signerCertificate != null) {
                     CertificateFactory cf = new CertificateFactory();
-                    try ( ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
+                    try (ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
                         signingCert = (X509Certificate) cf.engineGenerateCertificate(bais);
                     }
                 }
@@ -245,7 +240,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
                 appearance.setSignDate(signingTime);
                 if (writeAll) {
-
                     int[] pages = new int[totalNumOfPages];
                     for (int j = 0; j < totalNumOfPages; j++) {
                         pages[j] = j + 1;
@@ -314,7 +308,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             }
 
             ExternalSignatureContainer external = new ExternalBlankSignatureContainer(PdfName.ADOBE_PPKLITE, PdfName.ADBE_PKCS7_DETACHED);
-            MakeSignatureMI.signExternalContainer(appearance, external, 10240 + ltvSize + tsaSize);
+
+            MakeSignatureMI.signExternalContainer(appearance, external, 10240 + tsaSize + ltvSize);
             tempDataList.add(baos.toByteArray());
         }
 
@@ -349,10 +344,14 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             BouncyCastleDigest digest = new BouncyCastleDigest();
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             sgn.setSignDate(signingTime);
-            byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
+            byte[] hash = DigestAlgorithms.digest(
+                    rg,
+                    digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
             byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
-            byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
+            byte[] hashData = DigestAlgorithms.digest(
+                    new ByteArrayInputStream(sh),
+                    digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
     }
@@ -457,7 +456,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                     X509Certificate signingCert = null;
                     if (signerCertificate != null) {
                         CertificateFactory cf = new CertificateFactory();
-                        try ( ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
+                        try (ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
                             signingCert = (X509Certificate) cf.engineGenerateCertificate(bais);
                         }
                     }
@@ -607,7 +606,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
         try {
             Profile profile;
             List<String> sigList = signingMethod.pack();
-            try ( ByteArrayInputStream bais = new ByteArrayInputStream(temp)) {
+            try (ByteArrayInputStream bais = new ByteArrayInputStream(temp)) {
                 ObjectInputStream oi = new ObjectInputStream(bais);
                 profile = (Profile) oi.readObject();
             }
@@ -641,7 +640,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
         signingMethod.generateTempFile(hashList);
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            try ( ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
+            try (ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
                 objectOut.writeObject(this);
             }
             return baos.toByteArray();
@@ -669,7 +668,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
         signingMethod.generateTempFile(hashList);
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            try ( ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
+            try (ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
                 objectOut.writeObject(this);
             }
             return baos.toByteArray();
@@ -721,6 +720,14 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
     public void setRevocationData(byte[] ocsp, List<byte[]> crls) {
         this.ocsp = ocsp;
         this.crls = crls;
+        if (crls != null) {
+            for (byte[] temp : crls) {
+                ltvSize += temp.length;
+            }
+        }
+        if (ocsp != null) {
+            ltvSize += ocsp.length;
+        }
     }
 
     //Update 20222311 by GiaTK    
@@ -800,7 +807,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             }
             return true;
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
             throw new Exception("Error while checking locked Document!");
         }
     }

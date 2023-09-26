@@ -1,2 +1,1 @@
-vn.mobileid.exsig.Test#main([Ljava/lang/String;)V
-vn.mobileid.exsig.Test#testShowTextAlignedVsSimpleColumnTopAlignment()V
+com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getCertificationLevel()I

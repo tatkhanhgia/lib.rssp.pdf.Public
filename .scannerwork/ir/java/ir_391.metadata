@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.XmlSignatureAppearanceMI#getCertificate()Ljava/security/cert/Certificate;
+com.itextpdf.text.pdf.security.PdfPKCS7CMS#setSignaturePolicy(LSignaturePolicyIdentifier;)V

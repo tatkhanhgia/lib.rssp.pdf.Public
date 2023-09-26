@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.security.MakeSignatureMI#instance-init#
+com.itextpdf.text.pdf.PdfStamperMI#setEncryption([B[BIZ)V
+null

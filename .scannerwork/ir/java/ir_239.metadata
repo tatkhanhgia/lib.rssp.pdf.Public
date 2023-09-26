@@ -1,1 +1,1 @@
-com.itextpdf.text.pdf.PdfReaderV4#<init>([B)V
+com.itextpdf.text.pdf.PdfStamperMI#partialFormFlattening(Ljava/lang/String;)Z

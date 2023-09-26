@@ -1,5 +1,2 @@
-vn.mobileid.exsig.PdfProfile#getPersonalID(Ljava/security/cert/X509Certificate;)Ljava/lang/String;
-null
-java.lang.String#length()I
-java.lang.String#substring(I)Ljava/lang/String;
-java.lang.String#contains(Ljava/lang/CharSequence;)Z
+vn.mobileid.exsig.PdfProfile#setFont(Ljava/lang/String;FFLvn/mobileid/exsig/TextAlignment;Lvn/mobileid/exsig/Color;)V
+vn.mobileid.exsig.Color#getColor()Lcom/itextpdf/text/BaseColor;

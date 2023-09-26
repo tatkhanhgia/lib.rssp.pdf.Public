@@ -1,1 +1,1 @@
-vn.mobileid.exsig.PDFSignatureProperties#setSigningTime(JLjava/lang/String;)V
+com.itextpdf.text.pdf.security.PdfPKCS7V4#getSigningCertificate()Ljava/security/cert/X509Certificate;

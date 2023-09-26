@@ -1,1 +1,5 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#setOriginalout(Ljava/io/OutputStream;)V
+vn.mobileid.exsig.PdfEsealCMS#setEsealTitle(Ljava/lang/String;)V
+vn.mobileid.exsig.PdfEsealCMS$EsealTitle#instance-init#
+vn.mobileid.exsig.PdfEsealCMS$EsealTitle#<init>()V
+==
+setTitle vn.mobileid.exsig.PdfEsealCMS$EsealTitle#setTitle(Ljava/lang/String;)V

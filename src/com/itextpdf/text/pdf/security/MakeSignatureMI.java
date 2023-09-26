@@ -63,7 +63,6 @@ import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.PdfSignatureAppearanceMI;
 import com.itextpdf.text.pdf.PdfString;
 import org.bouncycastle.asn1.esf.SignaturePolicyIdentifier;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -201,7 +200,7 @@ public class MakeSignatureMI {
 
         String hashAlgorithm = externalSignature.getHashAlgorithm();
         PdfPKCS7 sgn = new PdfPKCS7(null, chain, hashAlgorithm, null, externalDigest, false);
-        if (signaturePolicy != null) {
+        if (signaturePolicy != null) {            
             sgn.setSignaturePolicy(signaturePolicy);
         }
         InputStream data = sap.getRangeStream();
@@ -272,7 +271,11 @@ public class MakeSignatureMI {
      * @throws IOException
      * @throws DocumentException
      */
-    public static void signExternalContainer(PdfSignatureAppearanceMI sap, ExternalSignatureContainer externalSignatureContainer, int estimatedSize) throws GeneralSecurityException, IOException, DocumentException {
+    public static void signExternalContainer(
+            PdfSignatureAppearanceMI sap, 
+            ExternalSignatureContainer externalSignatureContainer, 
+            int estimatedSize) throws GeneralSecurityException, IOException, DocumentException, NotEnoughSpaceException {
+        System.out.println("Estimate size:"+estimatedSize);
         PdfSignature dic = new PdfSignature(null, null);
         dic.setReason(sap.getReason());
         dic.setLocation(sap.getLocation());
@@ -290,7 +293,7 @@ public class MakeSignatureMI {
         byte[] encodedSig = externalSignatureContainer.sign(data);
 
         if (estimatedSize < encodedSig.length) {
-            throw new IOException("Not enough space");
+            throw new NotEnoughSpaceException("Not enough space");
         }
 
         byte[] paddedSig = new byte[estimatedSize];

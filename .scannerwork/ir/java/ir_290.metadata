@@ -1,1 +1,2 @@
-com.itextpdf.text.pdf.PdfSignatureAppearanceMI#getLayer2Font()LFont;
+vn.mobileid.exsig.PdfEsealCMS#calculateLeftPadding(LRectangle;)F
+java.lang.Enum#equals(Ljava/lang/Object;)Z
