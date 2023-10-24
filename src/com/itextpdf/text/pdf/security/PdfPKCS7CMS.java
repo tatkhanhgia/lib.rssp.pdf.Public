@@ -761,8 +761,8 @@ public class PdfPKCS7CMS {
             }
             ByteArrayOutputStream bOut = new ByteArrayOutputStream();
 
-//            ASN1OutputStream dout = new ASN1OutputStream(bOut);
-            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
+            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+//            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
             dout.writeObject(new DEROctetString(digest));
             dout.close();
 
@@ -926,8 +926,8 @@ public class PdfPKCS7CMS {
 
             ByteArrayOutputStream bOut = new ByteArrayOutputStream();
 
-//            ASN1OutputStream dout = new ASN1OutputStream(bOut);
-            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
+            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+//            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
             dout.writeObject(new DERSequence(whole));
             dout.close();
 
