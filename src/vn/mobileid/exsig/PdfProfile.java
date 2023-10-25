@@ -1162,7 +1162,6 @@ public class PdfProfile extends Profile implements Serializable {
 //                        finalFontSize = fitText(font, textContent, iRec, 20, PdfWriter.RUN_DIRECTION_DEFAULT);
                     }
 //                    System.out.println("MaxSize:"+font.getCalculatedSize());
-                    System.out.println("FinalFontSize"+finalFontSize);
                     font.setSize(finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
@@ -1224,7 +1223,6 @@ public class PdfProfile extends Profile implements Serializable {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
                     }
 //                    System.out.println("MaxSize:"+font.getCalculatedSize());
-                    System.out.println("FinalFontSize" + finalFontSize);
 //                    finalFontSize = 11.11;
                     font.setSize(finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);

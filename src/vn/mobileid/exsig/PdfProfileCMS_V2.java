@@ -7,13 +7,9 @@ package vn.mobileid.exsig;
 
 import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chunk;
 import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Phrase;
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.io.RASInputStream;
 import com.itextpdf.text.io.RandomAccessSource;
@@ -28,14 +24,10 @@ import com.itextpdf.text.pdf.PdfArray;
 import com.itextpdf.text.pdf.PdfDictionary;
 import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfNumber;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.PdfSignatureAppearanceMI.RenderingMode;
 import com.itextpdf.text.pdf.PdfSignatureAppearanceMI;
 import com.itextpdf.text.pdf.PdfStamperMI;
 import com.itextpdf.text.pdf.PdfTemplate;
-import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.SignaturePosition;
 import com.itextpdf.text.pdf.security.BouncyCastleDigest;
 import com.itextpdf.text.pdf.security.DigestAlgorithms;
@@ -46,10 +38,8 @@ import com.itextpdf.text.pdf.security.MakeSignatureMI;
 import com.itextpdf.text.pdf.security.PdfPKCS7CMS;
 import com.itextpdf.text.pdf.security.TSAClient;
 import com.itextpdf.text.pdf.security.TSAClientBouncyCastle;
-import java.awt.FontFormatException;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -61,14 +51,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
-import javax.naming.InvalidNameException;
 import javax.xml.bind.DatatypeConverter;
 import org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory;
 import org.bouncycastle.util.encoders.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import vn.mobileid.serialize.ProfileJSONSerializer;
 
 /**
  *
@@ -367,6 +354,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
             byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
+//            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
@@ -615,7 +603,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, null, algorithm.getValue(), null, digest, false);
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
-            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
+            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }

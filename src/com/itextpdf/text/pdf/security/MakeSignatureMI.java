@@ -275,7 +275,6 @@ public class MakeSignatureMI {
             PdfSignatureAppearanceMI sap, 
             ExternalSignatureContainer externalSignatureContainer, 
             int estimatedSize) throws GeneralSecurityException, IOException, DocumentException, NotEnoughSpaceException {
-        System.out.println("Estimate size:"+estimatedSize);
         PdfSignature dic = new PdfSignature(null, null);
         dic.setReason(sap.getReason());
         dic.setLocation(sap.getLocation());

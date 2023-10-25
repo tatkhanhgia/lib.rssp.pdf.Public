@@ -291,7 +291,6 @@ public class PdfEsealCMS extends PdfProfile {
                     reader = new PdfReader(dataToBeSign.get(i), passwordList.get(i).getBytes());
                 }
             }
-            System.out.println("PageSize:" + reader.getPageSize(1));
             PdfStamperMI stamper = PdfStamperMI.createSignature(reader, baos, '\0', null, true);
             PdfSignatureAppearanceMI appearance = stamper.getSignatureAppearance();
             appearance = createEsealAttribute(appearance);
@@ -413,6 +412,7 @@ public class PdfEsealCMS extends PdfProfile {
             byte[] hash = DigestAlgorithms.digest(rg, digest.getMessageDigest(algorithm.getValue()));
             otherList.add(hash);
             byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, signingTime.getTime(), ocsp, crls, MakeSignature.CryptoStandard.CMS);
+//            byte[] sh = sgn.getAuthenticatedAttributeBytes(hash, ocsp, crls, MakeSignature.CryptoStandard.CMS);
             byte[] hashData = DigestAlgorithms.digest(new ByteArrayInputStream(sh), digest.getMessageDigest(algorithm.getValue()));
             hashList.add(new String(Base64.encode(hashData)));
         }
@@ -435,7 +435,7 @@ public class PdfEsealCMS extends PdfProfile {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             BouncyCastleDigest digest = new BouncyCastleDigest();
             PdfPKCS7CMS sgn = new PdfPKCS7CMS(null, cert, algorithm.getValue(), null, digest, false);
-            sgn.setSignDate(signingTime);
+//            sgn.setSignDate(signingTime);
             PdfReader.unethicalreading = true;
             PdfReader reader;
             if (passwordList == null) {

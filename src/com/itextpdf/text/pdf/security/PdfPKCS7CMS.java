@@ -761,8 +761,8 @@ public class PdfPKCS7CMS {
             }
             ByteArrayOutputStream bOut = new ByteArrayOutputStream();
 
-//            ASN1OutputStream dout = new ASN1OutputStream(bOut);
-            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
+            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+//            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
             dout.writeObject(new DEROctetString(digest));
             dout.close();
 
@@ -868,21 +868,21 @@ public class PdfPKCS7CMS {
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(digestAlgorithmOid));
             v.add(DERNull.INSTANCE);
-            signerinfo.add(new DERSequence(v));
-
+            signerinfo.add(new DERSequence(v));           
+            
             // add the authenticated attribute if present
-            if (secondDigest != null && signDate != null) {
+            if (secondDigest != null) {
                 signerinfo.add(
                         new DERTaggedObject(
                                 false,
                                 0,
                                 getAuthenticatedAttributeSet(
                                         secondDigest,
-                                        signDate.getTime(),
                                         ocsp,
                                         crlBytes,
                                         sigtype)));
             }
+            
             // Add the digestEncryptionAlgorithm
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(digestEncryptionAlgorithmOid));
@@ -926,8 +926,153 @@ public class PdfPKCS7CMS {
 
             ByteArrayOutputStream bOut = new ByteArrayOutputStream();
 
-//            ASN1OutputStream dout = new ASN1OutputStream(bOut);
-            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
+            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+//            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
+            dout.writeObject(new DERSequence(whole));
+            dout.close();
+
+            return bOut.toByteArray();
+        } catch (Exception e) {
+            throw new ExceptionConverter(e);
+        }
+    }
+    
+    /**
+     * Gets the bytes for the PKCS7SignedData object. Optionally the
+     * authenticatedAttributes in the signerInfo can also be set, OR a
+     * time-stamp-authority client may be provided.
+     *
+     * @param secondDigest the digest in the authenticatedAttributes
+     * @param tsaClient TSAClient - null or an optional time stamp authority
+     * client
+     * @return byte[] the bytes for the PKCS7SignedData object
+     * @since	2.1.6
+     */
+    public byte[] getEncodedPKCS7_GIATK(byte secondDigest[], TSAClient tsaClient, byte[] ocsp, Collection<byte[]> crlBytes, CryptoStandard sigtype) {
+        try {            
+            if (externalDigest != null) {                                
+                digest = externalDigest;
+                if (RSAdata != null) {
+                    RSAdata = externalRSAdata;
+                }
+            } else if (externalRSAdata != null && RSAdata != null) {
+                RSAdata = externalRSAdata;
+                sig.update(RSAdata);
+                digest = sig.sign();
+            } else {
+                if (RSAdata != null) {
+                    RSAdata = messageDigest.digest();
+                    sig.update(RSAdata);
+                }
+                digest = sig.sign();
+            }
+
+            // Create the set of Hash algorithms
+            ASN1EncodableVector digestAlgorithms = new ASN1EncodableVector();
+            for (Object element : digestalgos) {
+                ASN1EncodableVector algos = new ASN1EncodableVector();
+                algos.add(new ASN1ObjectIdentifier((String) element));
+                algos.add(DERNull.INSTANCE);
+                digestAlgorithms.add(new DERSequence(algos));
+            }
+
+            // Create the contentInfo.
+            ASN1EncodableVector v = new ASN1EncodableVector();
+            v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_PKCS7_DATA));
+            if (RSAdata != null) {
+                v.add(new DERTaggedObject(0, new DEROctetString(RSAdata)));
+            }
+            DERSequence contentinfo = new DERSequence(v);
+
+            // Get all the certificates
+            //
+            v = new ASN1EncodableVector();
+            for (Object element : certs) {
+                ASN1InputStream tempstream = new ASN1InputStream(new ByteArrayInputStream(((X509Certificate) element).getEncoded()));
+                v.add(tempstream.readObject());
+            }
+
+            DERSet dercertificates = new DERSet(v);
+
+            // Create signerinfo structure.
+            //
+            ASN1EncodableVector signerinfo = new ASN1EncodableVector();
+
+            // Add the signerInfo version
+            //
+            signerinfo.add(new ASN1Integer(signerversion));
+
+            v = new ASN1EncodableVector();
+            v.add(CertificateInfo.getIssuer(signCert.getTBSCertificate()));
+            v.add(new ASN1Integer(signCert.getSerialNumber()));
+            signerinfo.add(new DERSequence(v));
+
+            // Add the digestAlgorithm
+            v = new ASN1EncodableVector();
+            v.add(new ASN1ObjectIdentifier(digestAlgorithmOid));
+            v.add(DERNull.INSTANCE);
+            signerinfo.add(new DERSequence(v));
+
+            //GIATK ADD
+            // add the authenticated attribute if present
+            if (secondDigest != null && signDate != null) {
+                signerinfo.add(
+                        new DERTaggedObject(
+                                false,
+                                0,
+                                getAuthenticatedAttributeSet(
+                                        secondDigest,
+                                        signDate.getTime(),
+                                        ocsp,
+                                        crlBytes,
+                                        sigtype)));
+            }
+            
+            // Add the digestEncryptionAlgorithm
+            v = new ASN1EncodableVector();
+            v.add(new ASN1ObjectIdentifier(digestEncryptionAlgorithmOid));
+            v.add(DERNull.INSTANCE);
+            signerinfo.add(new DERSequence(v));
+
+            // Add the digest            
+            signerinfo.add(new DEROctetString(digest));
+            
+
+            // When requested, go get and add the timestamp. May throw an exception.
+            // Added by Martin Brunecky, 07/12/2007 folowing Aiken Sam, 2006-11-15
+            // Sam found Adobe expects time-stamped SHA1-1 of the encrypted digest
+            if (tsaClient != null) {
+                byte[] tsImprint = tsaClient.getMessageDigest().digest(digest);
+                byte[] tsToken = tsaClient.getTimeStampToken(tsImprint);
+                if (tsToken != null) {
+                    ASN1EncodableVector unauthAttributes = buildUnauthenticatedAttributes(tsToken);
+                    if (unauthAttributes != null) {
+                        signerinfo.add(new DERTaggedObject(false, 1, new DERSet(unauthAttributes)));
+                    }
+                }
+            }
+
+            // Finally build the body out of all the components above
+            ASN1EncodableVector body = new ASN1EncodableVector();
+            body.add(new ASN1Integer(version));
+            body.add(new DERSet(digestAlgorithms));
+            body.add(contentinfo);
+            body.add(new DERTaggedObject(false, 0, dercertificates));
+
+            // Only allow one signerInfo
+            body.add(new DERSet(new DERSequence(signerinfo)));
+
+            // Now we have the body, wrap it in it's PKCS7Signed shell
+            // and return it
+            //
+            ASN1EncodableVector whole = new ASN1EncodableVector();
+            whole.add(new ASN1ObjectIdentifier(SecurityIDs.ID_PKCS7_SIGNED_DATA));
+            whole.add(new DERTaggedObject(0, new DERSequence(body)));
+
+            ByteArrayOutputStream bOut = new ByteArrayOutputStream();
+
+            ASN1OutputStream dout = new ASN1OutputStream(bOut);
+//            ASN1OutputStream dout = ASN1OutputStream.create(bOut);
             dout.writeObject(new DERSequence(whole));
             dout.close();
 
@@ -967,7 +1112,7 @@ public class PdfPKCS7CMS {
         return unauthAttributes;
     }
 
-    // Authenticated attributes
+    // Authenticated attributes by GIATK
     /**
      * When using authenticatedAttributes the authentication process is
      * different. The document digest is generated and put inside the attribute.
@@ -1034,6 +1179,7 @@ public class PdfPKCS7CMS {
         }
     }
 
+    //GIA TK MODIFIED
     /**
      * This method provides that encoding and the parameters must be exactly the
      * same as in {@link #getEncodedPKCS7(byte[])}.
@@ -1149,7 +1295,6 @@ public class PdfPKCS7CMS {
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_CONTENT_TYPE));
             v.add(new DERSet(new ASN1ObjectIdentifier(SecurityIDs.ID_PKCS7_DATA)));
             attribute.add(new DERSequence(v));
-            v = new ASN1EncodableVector();
             v = new ASN1EncodableVector();
             v.add(new ASN1ObjectIdentifier(SecurityIDs.ID_MESSAGE_DIGEST));
             v.add(new DERSet(new DEROctetString(secondDigest)));
