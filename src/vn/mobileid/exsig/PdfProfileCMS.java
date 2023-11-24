@@ -194,7 +194,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             try {
                 BaseFont baseFont = getBaseFont();
                 if (fontName != null && baseFont == null) {
-                    System.out.println("invalid basefont => get from name");
                     baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
 //                BaseFont baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
@@ -230,10 +229,8 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             PdfStamperMI stamper = PdfStamperMI.createSignature(reader, baos, '\0', null, true);
             PdfSignatureAppearanceMI appearance = stamper.getSignatureAppearance();
             if (position != null || textFinder != null || pageAndPosition != null) {
-                //if (i == 0) {
                 initPosition(reader); //initPosition
                 sigTable = createImage(font);
-                //}
                 position.setRight(iRec.getRight() + position.getLeft());
                 position.setTop(position.getBottom() + iRec.getTop());
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
@@ -356,9 +353,10 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
     }
 
     void generateHashMultipleFiles(List<PDFSignatureProperties> pdfSignaturePropertieses) throws Exception {
-        Calendar signingTime = Calendar.getInstance();
-        signingTime.setTimeInMillis(timeMillis);
-        Date date = signingTime.getTime();
+//        Calendar signingTime = Calendar.getInstance();
+//        signingTime.setTimeInMillis(timeMillis);
+//        System.out.println("Time set1:"+timeMillis);
+//        Date date = signingTime.getTime();
 
         signatureId = "sig-"
                 + Calendar.getInstance().getTimeInMillis();
@@ -383,6 +381,9 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             //set variables
             setTextContent(pdfSignatureProperties.getTextContent());
             setSigningTime(pdfSignatureProperties.getTimeMillis(), pdfSignatureProperties.getTimeFormat());
+            Calendar signingTime = Calendar.getInstance();
+            signingTime.setTimeInMillis(timeMillis);
+            Date date = signingTime.getTime();
             if (pdfSignatureProperties.getReason() != null) {
                 setReason(pdfSignatureProperties.getReason());
             }
