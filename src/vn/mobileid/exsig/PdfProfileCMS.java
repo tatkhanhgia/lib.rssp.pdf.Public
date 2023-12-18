@@ -12,7 +12,7 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.io.RASInputStream;
-import com.itextpdf.text.io.RandomAccessSource;
+import com.itextpdf.text.io.RandomAccessSource; 
 import com.itextpdf.text.io.RandomAccessSourceFactory;
 import com.itextpdf.text.io.StreamUtil;
 import com.itextpdf.text.pdf.AcroFields;
@@ -185,9 +185,10 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
         signingTime.setTimeInMillis(timeMillis);
         Date date = signingTime.getTime();
 
-        signatureId = "sig-"
-                + Calendar.getInstance().getTimeInMillis();
-
+        if (signatureId == null || signatureId.isEmpty()) {
+            signatureId = "sig-"
+                    + Calendar.getInstance().getTimeInMillis();
+        }
         Font font = null;
 
         if (position != null || textFinder != null || pageAndPosition != null) {
@@ -196,7 +197,6 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                 if (fontName != null && baseFont == null) {
                     baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
-//                BaseFont baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 font = new Font(baseFont, fontSize, Font.NORMAL, textColor);
                 X509Certificate signingCert = null;
                 if (signerCertificate != null) {
@@ -231,8 +231,11 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             if (position != null || textFinder != null || pageAndPosition != null) {
                 initPosition(reader); //initPosition
                 sigTable = createImage(font);
-                position.setRight(iRec.getRight() + position.getLeft());
-                position.setTop(position.getBottom() + iRec.getTop());
+                
+                //Bỏ vì lý do thêm image vào top => position bị sai
+//                position.setRight(iRec.getRight() + position.getLeft());
+//                position.setTop(position.getBottom() + iRec.getTop());
+
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
                 appearance.setSignDate(signingTime);
                 if (writeAll) {
@@ -258,6 +261,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                 }
 
                 if (image != null) {
+                    image.setBorder(Rectangle.BOX);
                     n2.addImage(image);
                 }
 
@@ -272,6 +276,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                     bgIMG.setAbsolutePosition(0, 0);
                     n0.addImage(bgIMG);
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     throw new Exception("Can't add default background");
                 }
 
@@ -281,6 +286,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                     bgIMG.setAbsolutePosition(0, 0);
                     n0.addImage(bgIMG);
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     throw new Exception("Can't add default border");
                 }
 

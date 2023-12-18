@@ -27,10 +27,12 @@ import com.itextpdf.text.pdf.AcroFieldsV4;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.ByteBuffer;
 import com.itextpdf.text.pdf.ColumnText;
+import com.itextpdf.text.pdf.PRIndirectReference;
 import com.itextpdf.text.pdf.PdfArray;
 import com.itextpdf.text.pdf.PdfDictionary;
 import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfNumber;
+import com.itextpdf.text.pdf.PdfObject;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfReader;
@@ -61,6 +63,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
 import java.security.Security;
 import java.security.cert.CRL;
 import java.security.cert.Certificate;
@@ -71,6 +74,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.TreeMap;
 import javax.naming.InvalidNameException;
@@ -85,6 +89,7 @@ import org.bouncycastle.tsp.TimeStampToken;
 import org.bouncycastle.util.encoders.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.mobileid.exception.SignatureNotInAcroformException;
 
 /**
  *
@@ -103,6 +108,8 @@ public class PdfProfile extends Profile implements Serializable {
     protected transient Image background;
     protected transient Image image;
     protected transient boolean dsImage;
+
+    protected transient TextProfile textProfile;
 
     protected transient boolean writeAll;
     protected transient String fontName;
@@ -378,11 +385,51 @@ public class PdfProfile extends Profile implements Serializable {
             String[] sGrid = position.replace("\n", "").replace("\t", "").replace(" ", "").split(",");
             for (int i = 0; i < 4; i++) {
                 iGrid[i] = Integer.parseInt(sGrid[i]);
-//                if ((iGrid[i] < 0)) {
-//                    throw new Exception("Invalid position parameter");
-//                }
             }
             this.position = new Rectangle(iGrid[0], iGrid[1], iGrid[2], iGrid[3]);
+        } catch (Exception ex) {
+            throw new Exception("Invalid position parameter", ex);
+        }
+    }
+
+    public void setVisibleSignature(String page, String position, boolean isItextRectangle) throws Exception {
+        System.out.println("Input position:" + position);
+        if (page == null) {
+            throw new Exception("page is null");
+        }
+        if (position == null) {
+            throw new Exception("position is null");
+        }
+        try {
+            switch (page.toUpperCase()) {
+                case "FIRST":
+                    signingPageInt = 1;
+                    break;
+                case "LAST":
+                    signingPageInt = 0;
+                    break;
+                default:
+                    signingPageInt = Integer.parseInt(page);
+                    if (signingPageInt < 1) {
+                        throw new Exception("Invalid page number");
+                    }
+                    break;
+            }
+        } catch (Exception ex) {
+            throw new Exception("Invalid page number " + page, ex);
+        }
+
+        int[] iGrid = new int[4];
+        try {
+            String[] sGrid = position.replace("\n", "").replace("\t", "").replace(" ", "").split(",");
+            for (int i = 0; i < 4; i++) {
+                iGrid[i] = Integer.parseInt(sGrid[i]);
+            }
+            if (isItextRectangle) {
+                this.position = new Rectangle(iGrid[0], iGrid[1], iGrid[2], iGrid[3]);
+            } else {
+                this.position = new Rectangle(iGrid[0], iGrid[1], iGrid[2] + iGrid[0], iGrid[3] + iGrid[1]);
+            }
         } catch (Exception ex) {
             throw new Exception("Invalid position parameter", ex);
         }
@@ -564,7 +611,12 @@ public class PdfProfile extends Profile implements Serializable {
     }
 
     public void setTextContent(String textContent) {
+        setTextContent(textContent, TextProfile.TEXT_BOTTOM_LEFT);
+    }
+
+    public void setTextContent(String textContent, TextProfile file) {
         this.textContent = textContent;
+        this.textProfile = textProfile;
     }
 
     public void setTextContent(String textContent, float paddingLeft, float paddingRight) {
@@ -623,6 +675,7 @@ public class PdfProfile extends Profile implements Serializable {
 
     public float fitText(Font font, String text, Rectangle rect, float maxFontSize, int runDirection) {
         try {
+//            System.out.println("Input font:"+maxFontSize);
             ColumnText ct = null;
             int status = 0;
             if (maxFontSize <= fontSizeMin) {
@@ -646,11 +699,21 @@ public class PdfProfile extends Profile implements Serializable {
             Phrase ph = new Phrase(text, font);
             ct = new ColumnText(null);
             ct.setSimpleColumn(ph, rect.getLeft(), rect.getBottom(), rect.getRight(), rect.getTop(), maxFontSize, Element.ALIGN_LEFT);
+            ct.setLeading(0, 1.5f);
             ct.setRunDirection(runDirection);
-            status = ct.go(true);            
-            if ((status == ColumnText.NO_MORE_TEXT)
+            status = ct.go(true);
+            int maxLine = text.split("\n").length;
+//            System.out.println("Status1:" + (ct.getExtraParagraphSpace() >= 0));
+//            System.out.println("Line:" + ct.getLinesWritten());
+//            System.out.println("MaxLine:" + maxLine);
+//            System.out.println("Spacing:" + (ct.getCurrentLeading() - maxFontSize));
+//            System.out.println("Rect Height:" + rect.getHeight());
+//            System.out.println("Status2:" + (((ct.getLinesWritten() * maxFontSize) + ((ct.getCurrentLeading() - maxFontSize) * (ct.getLinesWritten() - 1))) <= rect.getHeight()));
+//            
+            if ( //                    (status == ColumnText.NO_MORE_TEXT) &&
+                    ct.getLinesWritten() >= maxLine
                     && ct.getExtraParagraphSpace() >= 0
-                    && (((ct.getLinesWritten() * maxFontSize) + (ct.getLeading()*(ct.getLinesWritten() - 1))) <= rect.getHeight())) {
+                    && (((ct.getLinesWritten() * maxFontSize) + ((ct.getCurrentLeading() - maxFontSize) * (ct.getLinesWritten() - 1))) <= rect.getHeight())) {
                 return maxFontSize;
             }
             if (this.autoScale) {
@@ -705,7 +768,7 @@ public class PdfProfile extends Profile implements Serializable {
                         ct.setRunDirection(runDirection);
                         status = ct.go(true);
                         if (status == ColumnText.NO_MORE_TEXT) {
-                            return size * precision;
+                            return size;
                         } else {
                             max = size;
                         }
@@ -719,6 +782,7 @@ public class PdfProfile extends Profile implements Serializable {
             float size = maxFontSize;
             for (int k = 0; k < 50; ++k) { //just in case it doesn't converge                
                 size = max * precision;
+//                System.out.println("FitText - Size:" + size);
                 if (size <= fontSizeMin) {
                     return fontSizeMin;
                 }
@@ -726,12 +790,22 @@ public class PdfProfile extends Profile implements Serializable {
                 font.setSize(size);
                 Phrase q = new Phrase(text, font);
                 ct.setSimpleColumn(q, rect.getLeft(), rect.getBottom(), rect.getRight(), rect.getTop(), size, Element.ALIGN_LEFT);
+                ct.setLeading(0, 1.5f);
                 ct.setRunDirection(runDirection);
                 status = ct.go(true);
-                if ((status == ColumnText.NO_MORE_TEXT)
+//                System.out.println("Status1:" + (status == ColumnText.NO_MORE_TEXT));
+//                System.out.println("Status2:" + (ct.getExtraParagraphSpace() >= 0));
+//                System.out.println("MAXLINE:"+maxLine);
+//                System.out.println("Line:" + ct.getLinesWritten());
+//                System.out.println("Spacing:" + (ct.getCurrentLeading() - size));
+//                System.out.println("Rect Height:" + rect.getHeight());
+//                System.out.println("Status3:" + (((ct.getLinesWritten() * size) + ((ct.getCurrentLeading() - size) * (ct.getLinesWritten() - 1))) <= rect.getHeight()));
+//                System.out.println("============");
+                if ( //                        (status == ColumnText.NO_MORE_TEXT) &&
+                        ct.getLinesWritten() >= maxLine
                         && ct.getExtraParagraphSpace() >= 0
-                        && (((ct.getLinesWritten() * size) + (ct.getLeading()*(ct.getLinesWritten() - 1))) <= rect.getHeight())) {
-                    return size * precision;
+                        && (((ct.getLinesWritten() * size) + ((ct.getCurrentLeading() - size) * (ct.getLinesWritten() - 1))) <= rect.getHeight())) {
+                    return size;
 //                if ((status & ColumnText.NO_MORE_TEXT) != 0) {                    
 //                    if (max - min < size * precision) {
 //                        return size;
@@ -1019,8 +1093,8 @@ public class PdfProfile extends Profile implements Serializable {
     }
 
     protected void imageProfileBottom() {
-        image.scaleToFit(position.getRight() - position.getLeft() - imageProfile.border * 2,
-                (position.getTop() - position.getBottom()) / 2 - imageProfile.border * 2
+        image.scaleToFit(position.getWidth() - imageProfile.border * 2,
+                position.getHeight() / 2 - imageProfile.border * 2
         );
         if (imageAlgin == null) {
             image.setAbsolutePosition((position.getRight() - position.getLeft()) / 2 - image.getScaledWidth() / 2, 0);
@@ -1098,6 +1172,7 @@ public class PdfProfile extends Profile implements Serializable {
     protected PdfPTable createImage(Font font) throws Exception {
         try {
             PdfPTable table = new PdfPTable(1);
+
             if (lineSpacing == 0) {
                 lineSpacing = 1f;
             }
@@ -1158,15 +1233,16 @@ public class PdfProfile extends Profile implements Serializable {
                     PdfPCell textCell = new PdfPCell();
                     float finalFontSize = -1;
                     while (finalFontSize <= 0) {
-                        finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
+                        finalFontSize = fitText(font, textContent, iRec, font.getSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
+//                        finalFontSize = fitText(font, textContent, iRec, font.getCalculatSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
 //                        finalFontSize = fitText(font, textContent, iRec, 20, PdfWriter.RUN_DIRECTION_DEFAULT);
                     }
-//                    System.out.println("MaxSize:"+font.getCalculatedSize());
+                    System.out.println("FinalSize:" + finalFontSize);
                     font.setSize(finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
-                    textCell.setVerticalAlignment(imageProfile.vertical);
-                    textCell.setHorizontalAlignment(imageProfile.horizontal);
+                    textCell.setVerticalAlignment(Element.ALIGN_BOTTOM);
+                    textCell.setHorizontalAlignment(Element.ALIGN_LEFT);
                     textCell.setFixedHeight(iRec.getTop() - iRec.getBottom());
 
                     //Update 09/03/2021
@@ -1202,7 +1278,10 @@ public class PdfProfile extends Profile implements Serializable {
                         par.setAlignment(textAlignment.value);
                     }
 
-                    par.setLeading(0.1f, lineSpacing);
+//                    par.setLeading(0.1f, lineSpacing);
+                    if (lineSpacing > 0) {
+                        par.setMultipliedLeading(lineSpacing);
+                    }
                     textCell.addElement(par);
                     table.addCell(textCell);
 
@@ -1222,8 +1301,187 @@ public class PdfProfile extends Profile implements Serializable {
                     while (finalFontSize < 1) {
                         finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
                     }
-//                    System.out.println("MaxSize:"+font.getCalculatedSize());
-//                    finalFontSize = 11.11;
+                    System.out.println("FinalFontSize:" + finalFontSize);
+                    font.setSize(finalFontSize);
+                    textCell.setBorder(Rectangle.NO_BORDER);
+                    textCell.setNoWrap(false);
+                    textCell.setVerticalAlignment(Element.ALIGN_MIDDLE);
+                    textCell.setHorizontalAlignment(Element.ALIGN_LEFT);
+                    textCell.setFixedHeight(iRec.getTop() - iRec.getBottom());
+
+                    Paragraph par = new Paragraph();
+                    if (!containsHTMLChars(textContent)) {
+                        par.add(new Phrase(new Chunk(textContent, font)));
+                    } else {
+                        int index = 0;
+                        List<String> array = new ArrayList<>();
+                        String temporaryTextContent = textContent;
+                        while (index != -1) {
+                            index = temporaryTextContent.indexOf(HTML_BREAK);
+                            if (index == -1) {
+                                array.add(temporaryTextContent);
+                                break;
+                            }
+                            String s = temporaryTextContent.substring(0, index);
+                            temporaryTextContent = temporaryTextContent.substring(index + HTML_BREAK.length());
+                            array.add(s);
+                        }
+                        if (array.size() == 1) {
+                            processParagraph(par, array.get(0));
+                        } else {
+                            for (int i = 0; i < array.size(); i++) {
+                                processParagraph(par, array.get(i));
+                                par.add("\n");
+                            }
+                        }
+                    }
+                    if (textAlignment == null) {
+                        par.setAlignment(Element.ALIGN_LEFT);
+                    } else {
+                        par.setAlignment(textAlignment.value);
+                    }
+                    par.setLeading(0.1f, lineSpacing);
+                    textCell.addElement(par);
+                    table.addCell(textCell);
+                }
+            }
+            return table;
+        } catch (DocumentException | FontFormatException | IOException | InvalidNameException ex) {
+            throw new Exception("Can't generate signature text box", ex);
+        }
+    }
+
+    protected PdfPTable createImage_V2(Font font) throws Exception {
+        try {
+            PdfPTable table = new PdfPTable(1);
+
+            if (lineSpacing == 0) {
+                lineSpacing = 1f;
+            }
+
+            if (background != null) {
+                background.scaleAbsolute(position);
+                background.setAbsolutePosition((position.getRight() - position.getLeft()) / 2 - background.getScaledWidth() / 2,
+                        (position.getTop() - position.getBottom()) / 2 - background.getScaledHeight() / 2);
+            }
+
+            if (dsImage) {
+                image = Image.getInstance(ImageGenerator.remoteSign(header,
+                        titleFont,
+                        signatureFont,
+                        getCertificateInfo((X509Certificate) certificates.get(0), "CN"),
+                        ((X509Certificate) certificates.get(0)).getSerialNumber().toString()));
+                image.scaleAbsolute(position);
+                image.setAbsolutePosition((position.getRight() - position.getLeft()) / 2 - image.getScaledWidth() / 2,
+                        (position.getTop() - position.getBottom()) / 2 - image.getScaledHeight() / 2);
+                return null;
+            } else {
+                if (image != null) {
+                    switch (imageProfile) {
+                        case IMAGE_LEFT:
+                            imageProfileLeft();
+                            break;
+                        case IMAGE_RIGHT:
+                            imageProfileRight();
+                            break;
+                        case IMAGE_BOTTOM:
+                            imageProfileBottom();
+                            break;
+                        case IMAGE_BOTTOM_TEXT_BOTTOM:
+                            imageProfileBottom();
+                            break;
+                        case IMAGE_TOP:
+                            imageProfileTop();
+                            break;
+                        case IMAGE_TOP_TEXT_TOP:
+                            imageProfileTop();
+                            break;
+                        case IMAGE_CENTER:
+                            imageProfileCenter();
+                            break;
+                        default:
+                            iRec = new Rectangle(
+                                    (position.getWidth() / 2 - (position.getWidth() * 0.9f) / 2) + this.paddingLeft,
+                                    position.getHeight() / 2 - (position.getHeight() * 0.9f) / 2,
+                                    (position.getWidth() / 2 + (position.getWidth() * 0.9f) / 2) - this.paddingRight,
+                                    position.getHeight() / 2 + (position.getHeight() * 0.9f) / 2);
+                    }
+
+                    table.setSpacingAfter(0);
+                    table.setSpacingBefore(0);
+                    table.setWidthPercentage(100);
+                    table.setWidths(new int[]{1});
+
+                    PdfPCell textCell = new PdfPCell();
+                    float finalFontSize = -1;
+                    while (finalFontSize <= 0) {
+                        finalFontSize = fitText(font, textContent, iRec, font.getSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
+                    }
+                    System.out.println("FinalSize:" + finalFontSize);
+                    font.setSize(finalFontSize);
+                    textCell.setBorder(Rectangle.NO_BORDER);
+                    textCell.setNoWrap(false);
+                    textCell.setVerticalAlignment(textProfile.vertical);
+                    textCell.setHorizontalAlignment(textProfile.horizontal);
+                    textCell.setFixedHeight(iRec.getTop() - iRec.getBottom());
+
+                    //Update 09/03/2021
+                    Paragraph par = new Paragraph();
+                    if (!containsHTMLChars(textContent)) {
+                        par.add(new Phrase(new Chunk(textContent, font)));
+                    } else {
+                        int index = 0;
+                        List<String> array = new ArrayList<>();
+                        String temporaryTextContent = textContent;
+                        while (index != -1) {
+                            index = temporaryTextContent.indexOf(HTML_BREAK);
+                            if (index == -1) {
+                                array.add(temporaryTextContent);
+                                break;
+                            }
+                            String s = temporaryTextContent.substring(0, index);
+                            temporaryTextContent = temporaryTextContent.substring(index + HTML_BREAK.length());
+                            array.add(s);
+                        }
+                        if (array.size() == 1) {
+                            processParagraph(par, array.get(0));
+                        } else {
+                            for (int i = 0; i < array.size(); i++) {
+                                processParagraph(par, array.get(i));
+                                par.add("\n");
+                            }
+                        }
+                    }
+                    if (textAlignment == null) {
+                        par.setAlignment(imageProfile.textAlign);
+                    } else {
+                        par.setAlignment(textAlignment.value);
+                    }
+
+//                    par.setLeading(0.1f, lineSpacing);
+                    if (lineSpacing > 0) {
+                        par.setMultipliedLeading(lineSpacing);
+                    }
+                    textCell.addElement(par);
+                    table.addCell(textCell);
+
+                } else {
+                    iRec = new Rectangle(
+                            0 + this.paddingLeft,
+                            0,
+                            position.getWidth() + this.paddingRight,
+                            position.getHeight());
+                    table.setSpacingAfter(0);
+                    table.setSpacingBefore(0);
+                    table.setWidthPercentage(100);
+                    table.setWidths(new int[]{1});
+
+                    PdfPCell textCell = new PdfPCell();
+                    float finalFontSize = 0;
+                    while (finalFontSize < 1) {
+                        finalFontSize = fitText(font, textContent, iRec, font.getCalculatedSize(), PdfWriter.RUN_DIRECTION_DEFAULT);
+                    }
+                    System.out.println("FinalFontSize:" + finalFontSize);
                     font.setSize(finalFontSize);
                     textCell.setBorder(Rectangle.NO_BORDER);
                     textCell.setNoWrap(false);
@@ -1568,6 +1826,34 @@ public class PdfProfile extends Profile implements Serializable {
         return pdfVerify.verifySignature(data, null, certificateStatusEnabled);
     }
 
+    public static boolean verify(byte[] data, String password) throws IOException, GeneralSecurityException {
+        try {
+            PdfReaderV4.unethicalreading = true;
+            PdfReaderV4 reader;
+            if (password == null) {
+                reader = new PdfReaderV4(data);
+            } else {
+                reader = new PdfReaderV4(data, password.getBytes());
+            }
+            BouncyCastleProvider provider = new BouncyCastleProvider();
+            Security.addProvider(provider);
+            AcroFieldsV4 acroFields = reader.getAcroFields_v4();
+            List<String> signatureNames = acroFields.getSignatureNames();
+            if (signatureNames != null || !signatureNames.isEmpty()) {
+                for (String name : signatureNames) {
+                    PdfPKCS7 pkcs = acroFields.verifySignature(name, provider.getName());
+                    if (!pkcs.verify()) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        } catch (Exception ex) {
+            return false;
+        }
+        return true;
+    }
+
     protected boolean containsHTMLChars(String content) {
         if (content.contains(HTML_BREAK)
                 || content.contains(HTML_FONT_STYLE_BOLD_BEGIN)
@@ -1798,18 +2084,30 @@ public class PdfProfile extends Profile implements Serializable {
 
 class PdfVerify {
 
-    public List<VerifyResult> verifySignature(byte[] signedData, String password, boolean revocationEnabled) {
-        try {
-            PdfReaderV4.unethicalreading = true;
-            PdfReaderV4 reader;
-            if (password == null) {
-                reader = new PdfReaderV4(signedData);
-            } else {
-                reader = new PdfReaderV4(signedData, password.getBytes());
+    public List<VerifyResult> verifySignature(byte[] signedData, String password, boolean revocationEnabled) throws Exception {
+
+        PdfReaderV4.unethicalreading = true;
+        PdfReaderV4 reader;
+        if (password == null) {
+            reader = new PdfReaderV4(signedData);
+        } else {
+            reader = new PdfReaderV4(signedData, password.getBytes());
+        }
+        Security.addProvider(new BouncyCastleProvider());
+        AcroFieldsV4 acroFields = reader.getAcroFields_v4();
+        List<String> signatureNames = acroFields.getSignatureNames();
+
+        //Update 2023-12-18 by GIATK
+        List<String> signatureNames_ = getSignatureInPage(reader);
+        if (signatureNames_ != null) {
+            for (String name : signatureNames_) {
+                if (!signatureNames.contains(name)) {
+                    throw new SignatureNotInAcroformException("Signature not exist in Acroform!");
+                }
             }
-            Security.addProvider(new BouncyCastleProvider());
-            AcroFieldsV4 acroFields = reader.getAcroFields_v4();
-            List<String> signatureNames = acroFields.getSignatureNames();
+        }
+
+        try {
             List<VerifyResult> verifyResults = new ArrayList<>();
 
             boolean isTsp = false;
@@ -1918,7 +2216,6 @@ class PdfVerify {
                             }
                         }
                     } catch (Exception ex) {
-
                     }
 
                     if (dateTime != null) {
@@ -1944,4 +2241,28 @@ class PdfVerify {
         return null;
     }
 
+    private static List<String> getSignatureInPage(PdfReader reader) {
+        try {
+            List<String> signatureNames = new ArrayList<>();
+            for (int i = 1; i <= reader.getNumberOfPages(); i++) {
+                PdfDictionary page = reader.getPageN(i);
+                PdfArray annots = page.getAsArray(PdfName.ANNOTS);
+                ListIterator<PdfObject> lists = annots.listIterator();
+                while (lists.hasNext()) {
+                    PRIndirectReference reference = (PRIndirectReference) lists.next();
+                    PdfDictionary dict = (PdfDictionary) PdfReaderV4.getPdfObject(reference);
+                    try {
+                        if (dict.getAsName(PdfName.FT).equals(PdfName.SIG)) {
+                            signatureNames.add(dict.getAsString(PdfName.T).toUnicodeString());
+                        }
+                    } catch (Exception ex) {
+                    }
+                }
+            }
+            return signatureNames;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }
 }
