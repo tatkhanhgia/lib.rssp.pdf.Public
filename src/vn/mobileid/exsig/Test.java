@@ -25,12 +25,9 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 public class Test {
 
     public static void main(String[] args) throws IOException, Exception {
-        byte[] file = Files.readAllBytes(Paths.get("C:\\Users\\Admin\\Downloads\\Check\\decoded-file-7.pdf"));
-//        PdfProfileCMS profile = new PdfProfileCMS(Algorithm.SHA256);
-        List<VerifyResult> result = PdfProfile.verify(file, true);
-        for(VerifyResult verify : result){
-            System.out.println("Is Signature Valid:"+verify.isSignatureValid());
-        }
+        byte[] file = Files.readAllBytes(Paths.get("C:\\Users\\Admin\\Downloads\\Check\\decoded-file-15.pdf"));
+        System.out.println("Is Valid:"+PdfProfile.verify(file, null));
+//        PdfProfileCMS profile = new PdfProfileCMS(Algorithm.SHA256);        }
 //        byte[] file = Files.readAllBytes(Paths.get("C:\\Users\\Admin\\Downloads\\Check\\decoded-file-7.pdf"));
 //        String password = null;
 //        PdfReaderV4.unethicalreading = true;

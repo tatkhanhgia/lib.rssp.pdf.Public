@@ -1839,6 +1839,7 @@ public class PdfProfile extends Profile implements Serializable {
             Security.addProvider(provider);
             AcroFieldsV4 acroFields = reader.getAcroFields_v4();
             List<String> signatureNames = acroFields.getSignatureNames();
+            List<String> signatureNames_ = PdfVerify.getSignatureInPage(reader);
             if (signatureNames != null || !signatureNames.isEmpty()) {
                 for (String name : signatureNames) {
                     PdfPKCS7 pkcs = acroFields.verifySignature(name, provider.getName());
@@ -1846,7 +1847,16 @@ public class PdfProfile extends Profile implements Serializable {
                         return false;
                     }
                 }
+                if(signatureNames_ != null && !signatureNames_.isEmpty()){
+                    for(String signature : signatureNames_){
+                        if(!signatureNames.contains(signature)){return false;}
+                    }
+                }
                 return true;
+            } else {
+                if(signatureNames_ != null && !signatureNames_.isEmpty()){
+                    return false;
+                }
             }
         } catch (Exception ex) {
             return false;
@@ -2241,13 +2251,15 @@ class PdfVerify {
         return null;
     }
 
-    private static List<String> getSignatureInPage(PdfReader reader) {
+    public static List<String> getSignatureInPage(PdfReader reader) {
         try {
             List<String> signatureNames = new ArrayList<>();
             for (int i = 1; i <= reader.getNumberOfPages(); i++) {
                 PdfDictionary page = reader.getPageN(i);
                 PdfArray annots = page.getAsArray(PdfName.ANNOTS);
+                if(annots == null){continue;}
                 ListIterator<PdfObject> lists = annots.listIterator();
+                if(lists == null){continue;}
                 while (lists.hasNext()) {
                     PRIndirectReference reference = (PRIndirectReference) lists.next();
                     PdfDictionary dict = (PdfDictionary) PdfReaderV4.getPdfObject(reference);
