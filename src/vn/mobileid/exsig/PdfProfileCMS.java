@@ -12,7 +12,7 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.io.RASInputStream;
-import com.itextpdf.text.io.RandomAccessSource; 
+import com.itextpdf.text.io.RandomAccessSource;
 import com.itextpdf.text.io.RandomAccessSourceFactory;
 import com.itextpdf.text.io.StreamUtil;
 import com.itextpdf.text.pdf.AcroFields;
@@ -230,12 +230,17 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             PdfSignatureAppearanceMI appearance = stamper.getSignatureAppearance();
             if (position != null || textFinder != null || pageAndPosition != null) {
                 initPosition(reader); //initPosition
-                sigTable = createImage(font);
-                
+
+                //Update 2024-01-26 by GiaTK - Add Version2
+                if (textProfile != null) {
+                    sigTable = createImage_V2(font);
+                } else {
+                    sigTable = createImage(font);
+                }
+
                 //Bỏ vì lý do thêm image vào top => position bị sai
 //                position.setRight(iRec.getRight() + position.getLeft());
 //                position.setTop(position.getBottom() + iRec.getTop());
-
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
                 appearance.setSignDate(signingTime);
                 if (writeAll) {

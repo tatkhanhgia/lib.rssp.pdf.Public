@@ -109,7 +109,7 @@ public class PdfProfile extends Profile implements Serializable {
     protected transient Image image;
     protected transient boolean dsImage;
 
-    protected transient TextProfile textProfile;
+    protected transient TextProfile textProfile = TextProfile.TEXT_TOP_LEFT;
 
     protected transient boolean writeAll;
     protected transient String fontName;
@@ -127,7 +127,7 @@ public class PdfProfile extends Profile implements Serializable {
     protected transient int totalNumOfPages;
     protected transient int signingPageInt;
     protected transient PdfPTable sigTable;
-    protected transient TextAlignment textAlignment = TextAlignment.ALIGN_LEFT;
+    protected transient TextAlignment textAlignment;
     protected transient BaseColor textColor = BaseColor.BLACK;
     protected transient float[] checkMarkPosition;
     protected transient float[] checkTextPosition;
