@@ -185,19 +185,18 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
         signingTime.setTimeInMillis(timeMillis);
         Date date = signingTime.getTime();
 
-        signatureId = "sig-"
-                + Calendar.getInstance().getTimeInMillis();
-
+        if (signatureId == null || signatureId.isEmpty()) {
+            signatureId = "sig-"
+                    + Calendar.getInstance().getTimeInMillis();
+        }
         Font font = null;
 
         if (position != null || textFinder != null || pageAndPosition != null) {
             try {
                 BaseFont baseFont = getBaseFont();
                 if (fontName != null && baseFont == null) {
-                    System.out.println("invalid basefont => get from name");
                     baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
-//                BaseFont baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 font = new Font(baseFont, fontSize, Font.NORMAL, textColor);
                 X509Certificate signingCert = null;
                 if (signerCertificate != null) {
@@ -230,12 +229,18 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             PdfStamperMI stamper = PdfStamperMI.createSignature(reader, baos, '\0', null, true);
             PdfSignatureAppearanceMI appearance = stamper.getSignatureAppearance();
             if (position != null || textFinder != null || pageAndPosition != null) {
-                //if (i == 0) {
                 initPosition(reader); //initPosition
-                sigTable = createImage(font);
-                //}
-                position.setRight(iRec.getRight() + position.getLeft());
-                position.setTop(position.getBottom() + iRec.getTop());
+
+                //Update 2024-01-26 by GiaTK - Add Version2
+                if (textProfile != null) {
+                    sigTable = createImage_V2(font);
+                } else {
+                    sigTable = createImage(font);
+                }
+
+                //Bỏ vì lý do thêm image vào top => position bị sai
+//                position.setRight(iRec.getRight() + position.getLeft());
+//                position.setTop(position.getBottom() + iRec.getTop());
                 appearance.setVisibleSignature(position, signingPageInt, signatureId);
                 appearance.setSignDate(signingTime);
                 if (writeAll) {
@@ -261,6 +266,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                 }
 
                 if (image != null) {
+                    image.setBorder(Rectangle.BOX);
                     n2.addImage(image);
                 }
 
@@ -275,6 +281,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                     bgIMG.setAbsolutePosition(0, 0);
                     n0.addImage(bgIMG);
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     throw new Exception("Can't add default background");
                 }
 
@@ -284,6 +291,7 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
                     bgIMG.setAbsolutePosition(0, 0);
                     n0.addImage(bgIMG);
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     throw new Exception("Can't add default border");
                 }
 
@@ -356,9 +364,10 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
     }
 
     void generateHashMultipleFiles(List<PDFSignatureProperties> pdfSignaturePropertieses) throws Exception {
-        Calendar signingTime = Calendar.getInstance();
-        signingTime.setTimeInMillis(timeMillis);
-        Date date = signingTime.getTime();
+//        Calendar signingTime = Calendar.getInstance();
+//        signingTime.setTimeInMillis(timeMillis);
+//        System.out.println("Time set1:"+timeMillis);
+//        Date date = signingTime.getTime();
 
         signatureId = "sig-"
                 + Calendar.getInstance().getTimeInMillis();
@@ -383,6 +392,9 @@ public class PdfProfileCMS extends PdfProfile implements Serializable {
             //set variables
             setTextContent(pdfSignatureProperties.getTextContent());
             setSigningTime(pdfSignatureProperties.getTimeMillis(), pdfSignatureProperties.getTimeFormat());
+            Calendar signingTime = Calendar.getInstance();
+            signingTime.setTimeInMillis(timeMillis);
+            Date date = signingTime.getTime();
             if (pdfSignatureProperties.getReason() != null) {
                 setReason(pdfSignatureProperties.getReason());
             }

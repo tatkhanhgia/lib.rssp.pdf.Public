@@ -67,7 +67,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
     private String signerCertificate;
     protected List<Long> listTimeStamp = new ArrayList<>();
-    protected transient List<TextFinder> textFinderArray = new ArrayList<>();    
+    protected transient List<TextFinder> textFinderArray = new ArrayList<>();
     private Algorithm signingAlgorithm = Algorithm.RSA;
 
     public PdfProfileCMS_V2(Algorithm algorithm) {
@@ -77,8 +77,6 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public PdfProfileCMS_V2(PdfForm form, Algorithm algorithm) {
         super(form, algorithm);
     }
-    
-    
 
     @Override
     List<byte[]> appendSignautre(List<String> signatureList) throws Exception {
@@ -189,26 +187,25 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         signingTime.setTimeInMillis(timeMillis);
         Date date = signingTime.getTime();
 
-        if(signatureId == null || signatureId.isEmpty()){
-        signatureId = "sig-"
-                + Calendar.getInstance().getTimeInMillis();
+        if (signatureId == null || signatureId.isEmpty()) {
+            signatureId = "sig-"
+                    + Calendar.getInstance().getTimeInMillis();
         }
 
         Font font = null;
         BaseFont baseFont = null;
-        
+
         if (position != null || textFinder != null || pageAndPosition != null) {
             try {
-                 baseFont = getBaseFont();                 
+                baseFont = getBaseFont();
                 if (fontName != null && baseFont == null) {
                     baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
-//                BaseFont baseFont = BaseFont.createFont(fontName, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 font = new Font(baseFont, fontSize, Font.NORMAL, textColor);
                 X509Certificate signingCert = null;
                 if (signerCertificate != null) {
                     CertificateFactory cf = new CertificateFactory();
-                    try ( ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
+                    try (ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
                         signingCert = (X509Certificate) cf.engineGenerateCertificate(bais);
                     }
                 }
@@ -238,7 +235,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             if (position != null || textFinder != null || pageAndPosition != null || !textFinderArray.isEmpty()) {
                 initPosition(reader); //initPosition
                 initPositionOfTextFinderArray(reader);
-                sigTable =  createImage(font);
+                sigTable = createImage(font);
 
                 position.setRight(iRec.getRight() + position.getLeft());
                 position.setTop(position.getBottom() + iRec.getTop());
@@ -303,7 +300,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
                 appearance.setCheckMark(checkMark, checkMarkPosition);
                 appearance.setCheckText(checkText, checkTextPosition);
-                appearance.setSigPosList(sigPosList);                
+                appearance.setSigPosList(sigPosList);
 
             } else {
                 appearance.setVisibleSignature(new Rectangle(0, 0, 0, 0), 1, signatureId);
@@ -376,11 +373,11 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
             this.imageProfile = null;
             this.layer0Icons.clear();
             this.sigPosList = pdfSignatureProperties.getSigPosLis();
-            this.textFinderArray = pdfSignatureProperties.getTextFinderArray();            
+            this.textFinderArray = pdfSignatureProperties.getTextFinderArray();
             this.fontName = DefaultFont.Times.getPath();
             this.fontSize = 13;
             this.textAlignment = TextAlignment.ALIGN_LEFT;
-            this.textColor = BaseColor.BLACK;            
+            this.textColor = BaseColor.BLACK;
 
             //set variables
             setTextContent(pdfSignatureProperties.getTextContent());
@@ -463,7 +460,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
                     X509Certificate signingCert = null;
                     if (signerCertificate != null) {
                         CertificateFactory cf = new CertificateFactory();
-                        try ( ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
+                        try (ByteArrayInputStream bais = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(signerCertificate))) {
                             signingCert = (X509Certificate) cf.engineGenerateCertificate(bais);
                         }
                     }
@@ -553,7 +550,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
 
                 appearance.setCheckMark(checkMark, checkMarkPosition);
                 appearance.setCheckText(checkText, checkTextPosition);
-                appearance.setSigPosList(sigPosList);                
+                appearance.setSigPosList(sigPosList);
             } else {
                 appearance.setVisibleSignature(new Rectangle(0, 0, 0, 0), 1, signatureId);
             }
@@ -634,7 +631,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         try {
             Profile profile;
             List<String> sigList = signingMethod.pack();
-            try ( ByteArrayInputStream bais = new ByteArrayInputStream(temp)) {
+            try (ByteArrayInputStream bais = new ByteArrayInputStream(temp)) {
                 ObjectInputStream oi = new ObjectInputStream(bais);
                 profile = (Profile) oi.readObject();
             }
@@ -668,7 +665,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         signingMethod.generateTempFile(hashList);
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            try ( ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
+            try (ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
                 objectOut.writeObject(this);
             }
             return baos.toByteArray();
@@ -696,7 +693,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
         signingMethod.generateTempFile(hashList);
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            try ( ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
+            try (ObjectOutputStream objectOut = new ObjectOutputStream(baos)) {
                 objectOut.writeObject(this);
             }
             return baos.toByteArray();
@@ -748,10 +745,10 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public void setRevocationData(byte[] ocsp, List<byte[]> crls) {
         this.ocsp = ocsp;
         this.crls = crls;
-        if(ocsp != null){
+        if (ocsp != null) {
             ltvSize += 4192;
         }
-        if(crls != null && !crls.isEmpty()){
+        if (crls != null && !crls.isEmpty()) {
             ltvSize += 4192;
         }
     }
@@ -1117,9 +1114,7 @@ public class PdfProfileCMS_V2 extends PdfProfile implements Serializable {
     public void clearSignaturePositions() {
         this.sigPosList.clear();
         this.textFinderArray.clear();
-    }   
-
-   
+    }
 
     public void setSigningAlgorithm(Algorithm algorithm) {
         this.signingAlgorithm = algorithm;
